@@ -167,7 +167,7 @@ export function HeroVideo() {
         <div className="relative aspect-video w-full bg-[#03060d] flex items-center justify-center overflow-hidden">
           
           {/* Native Video Element */}
-          <video
+          <video preload="metadata" playsInline
             ref={videoRef}
             src={videoSrc}
             playsInline

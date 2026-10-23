@@ -9,9 +9,9 @@ public/*.zip
 public/*.blockmap
 
 # Large video files
-public/demo.mp4
-public/*.mp4
-*.mp4
+# public/demo.mp4 included
+# public/*source.mp4 included
+*source.mp4
 
 # Dev & Git
 .git

@@ -6,8 +6,8 @@ export const DOWNLOADS_DATA = {
     size: "383.9 MB",
     osSupport: "Windows 10 / Windows 11 (Build 19041+)",
     sha256: "b968f1417ea1053c42dfe2c5c8d561e4099c23a432aecfb5dd5749c7d7ac3cce",
-    installerUrl: "/downloads/Aegis-AI-Setup-v1.0.0-Beta-x64.exe",
-    portableUrl: "/downloads/Aegis-AI-Portable-v1.0.0-Beta-x64.zip",
+    installerUrl: "https://github.com/zinnahkhan01/Aegis-Web/releases/download/v1.0.0-beta/Aegis-AI-Setup-v1.0.0-Beta-x64.exe",
+    portableUrl: "https://github.com/zinnahkhan01/Aegis-Web/releases/download/v1.0.0-beta/Aegis-AI-Portable-v1.0.0-Beta-x64.zip",
     releaseDate: "October 2026",
     features: [
       "Full CEO Agent orchestration engine",

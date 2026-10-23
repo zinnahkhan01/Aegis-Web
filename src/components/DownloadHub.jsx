@@ -28,18 +28,24 @@ export function DownloadHub({ onOpenReleaseNotes, onOpenQrCode, onOpenAdbGuide, 
 
   const handleDownload = (filename) => {
     const isWindowsExe = filename.endsWith(".exe");
-    const localUrl = `/downloads/${filename}`;
-    const remoteUrl = isWindowsExe
-      ? "https://github.com/zinnahkhan01/Aegis-Web/releases/download/v1.0.0-beta/Aegis-AI-Setup-v1.0.0-Beta-x64.exe"
-      : "https://github.com/zinnahkhan01/Aegis-Web/releases/download/v1.0.0-beta/Aegis-AI-Portable-v1.0.0-Beta-x64.zip";
+    const isLocal = typeof window !== "undefined" && (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1");
 
-    const link = document.createElement("a");
-    const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
-    link.href = isLocal ? localUrl : (DOWNLOADS_DATA.windows.installerUrl || remoteUrl);
-    link.download = filename;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    if (isLocal) {
+      const link = document.createElement("a");
+      link.href = `/downloads/${filename}`;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      return;
+    }
+
+    const downloadUrl = isWindowsExe 
+      ? DOWNLOADS_DATA.windows.installerUrl 
+      : DOWNLOADS_DATA.windows.portableUrl;
+
+    // Direct browser file download from high-speed GitHub Release CDN
+    window.location.href = downloadUrl;
   };
 
   return (
