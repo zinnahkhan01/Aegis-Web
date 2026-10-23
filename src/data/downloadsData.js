@@ -6,8 +6,8 @@ export const DOWNLOADS_DATA = {
     size: "380.5 MB",
     osSupport: "Windows 10 / Windows 11 (Build 19041+)",
     sha256: "0afc510a00d2bc0fe9e0e2e36e948b07ad09e90b7700e2cb1ce7b1c214fa1fd6",
-    installerUrl: "https://github.com/zinnahkhan01/Supervex-Web/releases/download/v1.0.0-beta/Supervex-AI-Setup-v1.0.0-Beta-x64.exe",
-    portableUrl: "https://github.com/zinnahkhan01/Supervex-Web/releases/download/v1.0.0-beta/Supervex-AI-Portable-v1.0.0-Beta-x64.zip",
+    installerUrl: "https://github.com/zinnahkhan01/Aegis-Web/releases/download/v1.0.0-beta/Supervex-AI-Setup-v1.0.0-Beta-x64.exe",
+    portableUrl: "https://github.com/zinnahkhan01/Aegis-Web/releases/download/v1.0.0-beta/Supervex-AI-Portable-v1.0.0-Beta-x64.zip",
     releaseDate: "October 2026",
     features: [
       "Full CEO Agent orchestration engine",
@@ -20,7 +20,7 @@ export const DOWNLOADS_DATA = {
   android: {
     title: "Android Mobile Companion",
     version: "v1.0.0 Beta (Planned)",
-    packageName: "ai.aegis.companion",
+    packageName: "ai.supervex.companion",
     size: "28.4 MB",
     osSupport: "Android 10.0+ (API Level 29+)",
     apkUrl: "#download-android-apk",
