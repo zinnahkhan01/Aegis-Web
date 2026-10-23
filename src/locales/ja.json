@@ -1,0 +1,122 @@
+{
+  "nav": {
+    "features": "機能",
+    "architecture": "アーキテクチャ",
+    "simulator": "シミュレーター",
+    "downloads": "ダウンロードハブ",
+    "security": "セキュリティ",
+    "faq": "よくある質問",
+    "version": "v1.0.1 オンライン",
+    "tagline": "自律型デスクトップ知能",
+    "downloadBtn": "ダウンロード",
+    "systemHealth": "システム正常: 100%"
+  },
+  "hero": {
+    "announcement": "自律型マルチモーダル・デスクトップ・インテリジェンス・システム",
+    "titleMain": "声ひとつでPC、ブラウザ、スマートフォンを",
+    "titleGradient": "完全に自律制御。",
+    "subtitle": "Supervex AIは思考と実行の境界を無くします。自然な会話やテキスト指示でWindows PCを自在に操作し、広告なしでブラウジングし、ワイヤレスADBでAndroidスマートフォンを自律制御します。",
+    "downloadWindows": "Windows版をダウンロード (.exe)",
+    "downloadWindowsSub": "v1.0.1 • 64ビット公式リリース",
+    "downloadAndroid": "Android用を入手 (.apk)",
+    "downloadAndroidSub": "ワイヤレスADBブリッジ • v1.4.2",
+    "iosCompanion": "iOSコンパニオン / ウェイティングリスト",
+    "statLatencyVal": "< 120ms",
+    "statLatency": "Gemini Live 音声応答遅延",
+    "statLocalVal": "100% ローカル",
+    "statLocal": "テレメトリ漏洩ゼロ",
+    "statAgentsVal": "9つのエージェント",
+    "statAgents": "自律型CEOエンジン",
+    "statAdbVal": "ワイヤレスADB",
+    "statAdb": "PC-スマホ連携ブリッジ"
+  },
+  "video": {
+    "title": "SUPERVEX AI :: リアルタイムショーケース",
+    "tag": "HD 60FPS",
+    "badge": "ライブ・マルチモーダル録画",
+    "sub": "Windows デスクトップ • Gemini Live 音声 • ワイヤレスADBモバイルブリッジ",
+    "footer": "実ハードウェア上での自律自動化"
+  },
+  "features": {
+    "tag": "システム機能",
+    "title": "自律型マルチエージェント・マトリックス",
+    "subtitle": "9つの専門エージェントがローカルで連携し、ユーザーの意図を把握し、画面を認識してアプリや端末を操作します。",
+    "f1_title": "自律型デスクトップ制御",
+    "f1_desc": "ネイティブWindows UI自動化。アプリの起動、ファイル編集、ウィンドウ管理を自律実行。",
+    "f2_title": "Gemini Live 音声エンジン",
+    "f2_desc": "120ms未満の超低遅延ストリーミング、割り込み認識、ローカル音声合成。",
+    "f3_title": "視覚と画面認識",
+    "f3_desc": "リアルタイムOCRとレイアウト認識により、複雑なソフトウェアも的確に操作。",
+    "f4_title": "ワイヤレスADBスマホ連携",
+    "f4_desc": "Wi-Fi経由でAndroid端末を操作。メッセージ送信やアプリ操作を自動実行。",
+    "f5_title": "ステルス・ブラウザ自動化",
+    "f5_desc": "Playwright搭載のChromium自動化。広告ブロックと並行リサーチ抽出。",
+    "f6_title": "主権的オフライン・プライバシー",
+    "f6_desc": "テレメトリゼロ。画面データ、キー入力、音声は端末内に完全に保護されます。"
+  },
+  "architecture": {
+    "tag": "コア・アーキテクチャ",
+    "title": "ハイブリッド・ブレイン＆マルチエージェント",
+    "subtitle": "超高速ローカル指揮とGemini Liveストリーミングのシームレスな統合。",
+    "ceoTitle": "自律型CEOオーケストレーター",
+    "ceoDesc": "複雑な指示をサブタスクに分解し、最適な専門エージェントに自動委任。",
+    "memoryTitle": "ベクトル記憶とコンテキスト",
+    "memoryDesc": "過去の対話や好みを瞬時に記憶・想起するローカルSQLiteベクトルストレージ。",
+    "safetyTitle": "ハードウェア・セーフティ・インターロック",
+    "safetyDesc": "重要ファイルの削除やシステム変更前には必ずユーザー確認を実施。"
+  },
+  "simulator": {
+    "tag": "インタラクティブ実行",
+    "title": "マルチエージェントの動作をテスト",
+    "subtitle": "以下のコマンドを選択し、CEOエージェントが連携してタスクを完遂する様子をご覧ください。",
+    "runCommand": "自律プランを実行",
+    "statusComplete": "実行完了",
+    "step": "ステップ"
+  },
+  "security": {
+    "tag": "完全なプライバシー",
+    "title": "テレメトリゼロ。100%エアギャップ設計。",
+    "subtitle": "キー入力、画面、音声がユーザーの許可なく外部へ送信されることはありません。",
+    "p1_title": "ローカル暗号化ボールト",
+    "p1_desc": "すべてのAPIキーと履歴はAES-256 GCMで安全に暗号化。",
+    "p2_title": "監査済みオープンソース",
+    "p2_desc": "隠されたトラッカーのない、完全に透明なソースコード。",
+    "p3_title": "完全オフライン稼働",
+    "p3_desc": "ローカルLLM（Ollama、LM Studio）と連携し、ネット接続なしでも利用可能。"
+  },
+  "downloads": {
+    "tag": "公式ビルド",
+    "title": "マルチプラットフォーム配布ハブ",
+    "subtitle": "WindowsおよびAndroid向けの検証済みバイナリを安全にダウンロード。",
+    "tabWindows": "Windows (デスクトップ)",
+    "tabAndroid": "Android (コンパニオン)",
+    "tabIos": "iOS (TestFlight)",
+    "btnDownloadExe": "インストーラーを入手 (.exe)",
+    "btnDownloadZip": "ポータブル版を入手 (.zip)",
+    "btnDownloadApk": "APKを入手 (.apk)",
+    "shaLabel": "SHA-256 ハッシュ",
+    "copySha": "SHA-256をコピー",
+    "copiedSha": "コピー完了！",
+    "verifiedSafe": "暗号学的に検証された安全なファイル"
+  },
+  "faq": {
+    "tag": "ナレッジベース",
+    "title": "よくあるご質問",
+    "subtitle": "Supervex AIのアーキテクチャ、ライセンス、セキュリティに関する情報。"
+  },
+  "footer": {
+    "tagline": "自律型マルチエージェント・デスクトップ＆モバイル知能システム。",
+    "rights": "All rights reserved. 開発・所有者: MD ZINNAH KHAN.",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "github": "GitHubリリースページ",
+    "status": "システム正常稼働中"
+  },
+  "toast": {
+    "visitingFrom": "検出された地域:",
+    "languageSwitched": "言語が設定されました:",
+    "keep": "このまま保持",
+    "change": "言語を変更",
+    "selectLang": "言語を選択してください"
+  }
+}

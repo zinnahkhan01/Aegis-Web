@@ -1,0 +1,122 @@
+{
+  "nav": {
+    "features": "Tính năng",
+    "architecture": "Kiến trúc",
+    "simulator": "Mô phỏng",
+    "downloads": "Trung tâm Tải về",
+    "security": "Bảo mật",
+    "faq": "Hỏi đáp",
+    "version": "v1.0.1 TRỰC TUYẾN",
+    "tagline": "TRÍ TUỆ MÁY TÍNH TỰ HÀNH",
+    "downloadBtn": "Tải về ngay",
+    "systemHealth": "TRẠNG THÁI HỆ THỐNG: 100% HOÀN HẢO"
+  },
+  "hero": {
+    "announcement": "Hệ thống Trí tuệ Máy tính Đa phương thức Tự hành",
+    "titleMain": "Điều khiển Toàn bộ PC, Trình duyệt & Điện thoại bằng",
+    "titleGradient": "Giọng nói Tự hành.",
+    "subtitle": "Supervex AI xóa bỏ khoảng cách giữa suy nghĩ và hành động. Nói tự nhiên hoặc nhập lệnh để điều khiển PC Windows, duyệt web không quảng cáo và chỉ huy điện thoại Android qua ADB không dây.",
+    "downloadWindows": "Tải cho Windows (.exe)",
+    "downloadWindowsSub": "v1.0.1 • Bản chính thức 64-bit",
+    "downloadAndroid": "Tải bản Android (.apk)",
+    "downloadAndroidSub": "Cầu nối ADB Không dây • v1.4.2",
+    "iosCompanion": "Bản iOS / Danh sách chờ",
+    "statLatencyVal": "< 120ms",
+    "statLatency": "Độ trễ Giọng nói Gemini Live",
+    "statLocalVal": "100% Cục bộ",
+    "statLocal": "Không rò rỉ dữ liệu",
+    "statAgentsVal": "9 Đặc vụ",
+    "statAgents": "Động cơ CEO Tự hành",
+    "statAdbVal": "ADB Không dây",
+    "statAdb": "Cầu nối PC tới Điện thoại"
+  },
+  "video": {
+    "title": "SUPERVEX AI :: TRÌNH DIỄN THỰC TẾ",
+    "tag": "HD 60FPS",
+    "badge": "GHI HÌNH TRỰC TIẾP ĐA PHƯƠNG THỨC",
+    "sub": "Windows Desktop • Giọng nói Gemini Live • Cầu nối ADB Không dây",
+    "footer": "Tự động hóa trên Phần cứng Thực"
+  },
+  "features": {
+    "tag": "NĂNG LỰC HỆ THỐNG",
+    "title": "Ma trận Đa Đặc vụ Tự hành",
+    "subtitle": "9 đặc vụ nhận thức phối hợp cục bộ để thấu hiểu ý định, quan sát màn hình và điều khiển phần cứng của bạn.",
+    "f1_title": "Điều khiển PC Tự hành",
+    "f1_desc": "Tự động hóa giao diện Windows. Mở ứng dụng, sửa đổi tệp và sắp xếp cửa sổ mượt mà.",
+    "f2_title": "Động cơ Giọng nói Gemini Live",
+    "f2_desc": "Truyền âm thanh dưới 120ms với khả năng nhận diện ngắt lời và tổng hợp giọng nói thần kinh.",
+    "f3_title": "Thị giác & Nhận thức Màn hình",
+    "f3_desc": "OCR thời gian thực và nhận diện bố cục để thao tác trên các phần mềm phức tạp.",
+    "f4_title": "Cầu nối Điện thoại ADB Không dây",
+    "f4_desc": "Điều khiển thiết bị Android qua Wi-Fi. Gửi tin nhắn và mở ứng dụng tự động.",
+    "f5_title": "Tự động hóa Trình duyệt Ẩn danh",
+    "f5_desc": "Tự động hóa Chromium với Playwright, chặn quảng cáo và trích xuất dữ liệu mượt mà.",
+    "f6_title": "Bảo mật Ngoại tuyến Tuyệt đối",
+    "f6_desc": "Không thu thập dữ liệu. Hình ảnh màn hình, phím gõ và âm thanh hoàn toàn ở lại trên máy bạn."
+  },
+  "architecture": {
+    "tag": "KIẾN TRÚC CỐT LÕI",
+    "title": "Bộ não Lai & Vòng lặp Đa Đặc vụ",
+    "subtitle": "Điều phối siêu tốc cục bộ kết hợp với truyền phát trực tiếp Gemini Live.",
+    "ceoTitle": "Đặc vụ Điều phối CEO Tự hành",
+    "ceoDesc": "Phân rã các yêu cầu phức tạp thành các nhiệm vụ con và giao cho các đặc vụ chuyên trách.",
+    "memoryTitle": "Bộ nhớ Vector & Ngữ cảnh",
+    "memoryDesc": "Lưu trữ ngữ nghĩa SQLite cục bộ để ghi nhớ tức thì các cuộc trò chuyện trước đây.",
+    "safetyTitle": "Khóa An toàn Phần cứng",
+    "safetyDesc": "Bắt buộc người dùng xác nhận trước khi xóa tệp quan trọng hoặc chạy lệnh hệ thống."
+  },
+  "simulator": {
+    "tag": "MÔI TRƯỜNG TƯƠNG TÁC",
+    "title": "Thử nghiệm Điều phối Đa Đặc vụ",
+    "subtitle": "Chọn một lệnh bên dưới để xem đặc vụ CEO thực hiện công việc trực tiếp trong thời gian thực.",
+    "runCommand": "Chạy Kế hoạch Tự hành",
+    "statusComplete": "THỰC THI HOÀN TẤT",
+    "step": "Bước"
+  },
+  "security": {
+    "tag": "QUYỀN RIÊNG TƯ TỐI THƯỢNG",
+    "title": "Không Thu thập Dữ liệu. 100% Cách ly Thiết bị.",
+    "subtitle": "Phím gõ, màn hình và giọng nói của bạn không bao giờ rời khỏi máy tính nếu không có sự đồng ý.",
+    "p1_title": "Két sắt Mã hóa Cục bộ",
+    "p1_desc": "Mọi khóa API và lịch sử đều được mã hóa bằng AES-256 GCM.",
+    "p2_title": "Mã nguồn Mở được Kiểm toán",
+    "p2_desc": "Mã nguồn minh bạch tuyệt đối, không có trình theo dõi hay gửi dữ liệu ẩn.",
+    "p3_title": "Hoạt động Hoàn toàn Ngoại tuyến",
+    "p3_desc": "Có thể chạy hoàn toàn không cần internet với các mô hình AI cục bộ (Ollama, LM Studio)."
+  },
+  "downloads": {
+    "tag": "BẢN PHÁT HÀNH CHÍNH THỨC",
+    "title": "Trung tâm Phân phối Đa Nền tảng",
+    "subtitle": "Tải về các tệp tin cài đặt an toàn đã được chứng thực cho Windows và Android.",
+    "tabWindows": "Windows (Máy tính)",
+    "tabAndroid": "Android (Đồng hành)",
+    "tabIos": "iOS (TestFlight)",
+    "btnDownloadExe": "Tải Bản Cài đặt (.exe)",
+    "btnDownloadZip": "Tải Bản Di động (.zip)",
+    "btnDownloadApk": "Tải Bản APK (.apk)",
+    "shaLabel": "Mã băm SHA-256",
+    "copySha": "Sao chép SHA-256",
+    "copiedSha": "Đã sao chép!",
+    "verifiedSafe": "Tệp tin Đã Xác minh An toàn"
+  },
+  "faq": {
+    "tag": "TRUNG TÂM KIẾN THỨC",
+    "title": "Câu hỏi Thường gặp",
+    "subtitle": "Mọi điều bạn cần biết về Supervex AI, kiến trúc và tính bảo mật."
+  },
+  "footer": {
+    "tagline": "Hệ thống Trí tuệ Đa Đặc vụ Tự hành cho Máy tính & Di động.",
+    "rights": "Bảo lưu mọi quyền. Phát triển và Sở hữu bởi MD ZINNAH KHAN.",
+    "privacy": "Chính sách Bảo mật",
+    "terms": "Điều khoản Dịch vụ",
+    "github": "Bản phát hành GitHub",
+    "status": "Hệ thống Trực tuyến"
+  },
+  "toast": {
+    "visitingFrom": "Vị trí của bạn:",
+    "languageSwitched": "Đã thiết lập ngôn ngữ sang:",
+    "keep": "Giữ nguyên",
+    "change": "Đổi ngôn ngữ",
+    "selectLang": "Chọn ngôn ngữ của bạn"
+  }
+}

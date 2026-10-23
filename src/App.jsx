@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+﻿import React, { useState } from "react";
+import { LanguageProvider } from "./context/LanguageContext";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { FeatureGrid } from "./components/FeatureGrid";
@@ -9,8 +10,9 @@ import { SecurityPrivacy } from "./components/SecurityPrivacy";
 import { FaqSection } from "./components/FaqSection";
 import { Footer } from "./components/Footer";
 import { Modals } from "./components/Modals";
+import { GeoLanguageToast } from "./components/GeoLanguageToast";
 
-export function App() {
+export function AppContent() {
   const [activeModal, setActiveModal] = useState(null);
 
   const handleOpenDownload = () => {
@@ -68,7 +70,18 @@ export function App() {
         activeModal={activeModal}
         onClose={() => setActiveModal(null)}
       />
+
+      {/* Floating Geo-IP Detected Language Confirmation Toast */}
+      <GeoLanguageToast />
     </div>
+  );
+}
+
+export function App() {
+  return (
+    <LanguageProvider>
+      <AppContent />
+    </LanguageProvider>
   );
 }
 

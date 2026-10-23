@@ -1,0 +1,122 @@
+{
+  "nav": {
+    "features": "核心特性",
+    "architecture": "系统架构",
+    "simulator": "交互模拟器",
+    "downloads": "下载中心",
+    "security": "安全与隐私",
+    "faq": "常见问题",
+    "version": "v1.0.1 在线",
+    "tagline": "自主桌面智能系统",
+    "downloadBtn": "下载中心",
+    "systemHealth": "系统健康: 100% 正常"
+  },
+  "hero": {
+    "announcement": "自主多模态桌面智能操作系统",
+    "titleMain": "仅凭自发言语，掌控您的整个",
+    "titleGradient": "电脑、浏览器与手机。",
+    "subtitle": "Supervex AI 消除思维与操作之间的隔阂。用自然的语音或文字指令操控您的 Windows 电脑，享受隐身无广告网页浏览，并通过无线 ADB 彻底接管您的安卓手机。",
+    "downloadWindows": "下载 Windows 版 (.exe)",
+    "downloadWindowsSub": "v1.0.1 • 64位 官方正式版",
+    "downloadAndroid": "获取安卓伴侣 (.apk)",
+    "downloadAndroidSub": "无线 ADB 桥接 • v1.4.2",
+    "iosCompanion": "iOS 伴侣 / 候补名单",
+    "statLatencyVal": "< 120ms",
+    "statLatency": "Gemini 实时语音延迟",
+    "statLocalVal": "100% 本地运行",
+    "statLocal": "零遥测数据外泄",
+    "statAgentsVal": "9 大智能体",
+    "statAgents": "自主 CEO 调度引擎",
+    "statAdbVal": "无线 ADB",
+    "statAdb": "电脑-手机无线桥接"
+  },
+  "video": {
+    "title": "SUPERVEX AI :: 实时运行演示",
+    "tag": "高清 60FPS",
+    "badge": "多模态实机录制",
+    "sub": "Windows 桌面 • Gemini 实时语音 • 无线 ADB 移动桥接",
+    "footer": "真实物理硬件自动化"
+  },
+  "features": {
+    "tag": "系统能力",
+    "title": "自主多智能体协作矩阵",
+    "subtitle": "9 个专门的认知智能体在本地无缝协作，理解您的意图，观察您的屏幕，并全面操控软硬件接口。",
+    "f1_title": "自主桌面操控",
+    "f1_desc": "原生 Windows UI 自动化。自动启动软件、编辑文件并管理多任务窗口。",
+    "f2_title": "Gemini 实时语音引擎",
+    "f2_desc": "低于 120ms 的超快语音流式传输，支持随时打断对话与神经语音合成。",
+    "f3_title": "视觉与屏幕感知",
+    "f3_desc": "实时多显示器 OCR 与视觉定位，轻松看懂报错并操控复杂工业软件。",
+    "f4_title": "无线 ADB 手机桥接",
+    "f4_desc": "通过 Wi-Fi 深度控制安卓设备。自动发信息、打开应用并点击屏幕。",
+    "f5_title": "隐身浏览器自动化",
+    "f5_desc": "Playwright 驱动的防指纹 Chromium 自动化，自带广告拦截与并行数据采集。",
+    "f6_title": "主权级离线隐私",
+    "f6_desc": "零遥测外泄。您的屏幕图像、按键记录和语音数据完全留在本地电脑。"
+  },
+  "architecture": {
+    "tag": "底层架构",
+    "title": "混合大脑与多智能体闭环",
+    "subtitle": "极速本地调度与云端/本地大模型深度融合，实现毫秒级响应。",
+    "ceoTitle": "自主 CEO 编排器",
+    "ceoDesc": "将复杂任务分解为有向无环图，并精准派发给相应的专业子智能体。",
+    "memoryTitle": "向量记忆与上下文",
+    "memoryDesc": "本地 SQLite 语义向量存储，长久记住过去的对话偏好与历史工作文件。",
+    "safetyTitle": "硬件级安全防护锁",
+    "safetyDesc": "在删除关键文件或执行敏感系统命令前，必须经过人工确认。"
+  },
+  "simulator": {
+    "tag": "交互测试环境",
+    "title": "体验多智能体协同运行",
+    "subtitle": "从下方选择指令，亲眼观察 CEO 智能体如何在屏幕、浏览器与手机上分工协作。",
+    "runCommand": "执行自主规划",
+    "statusComplete": "任务圆满完成",
+    "step": "步骤"
+  },
+  "security": {
+    "tag": "至高隐私保障",
+    "title": "零遥测跟踪。100% 物理级物理隔离。",
+    "subtitle": "未经您的明确许可，任何按键、屏幕或声音数据绝不离开您的本地设备。",
+    "p1_title": "本地加密金库",
+    "p1_desc": "所有 API 密钥与历史记录均采用 AES-256 GCM 高强度加密。",
+    "p2_title": "公开代码审计",
+    "p2_desc": "代码完全透明，杜绝任何隐蔽的数据回传信标与分析埋点。",
+    "p3_title": "全离线纯净模式",
+    "p3_desc": "支持配合本地离线大模型（Ollama、LM Studio）使用，断网亦能顺畅工作。"
+  },
+  "downloads": {
+    "tag": "官方构建版",
+    "title": "多平台发布与下载中心",
+    "subtitle": "下载经官方签名验证的 Windows 与 Android 生产版程序。",
+    "tabWindows": "Windows (桌面客户端)",
+    "tabAndroid": "Android (安卓伴侣)",
+    "tabIos": "iOS (TestFlight 测试)",
+    "btnDownloadExe": "下载安装包 (.exe)",
+    "btnDownloadZip": "下载便携免安装版 (.zip)",
+    "btnDownloadApk": "下载 APK 安装包 (.apk)",
+    "shaLabel": "SHA-256 哈希值",
+    "copySha": "复制哈希值",
+    "copiedSha": "已复制！",
+    "verifiedSafe": "通过密码学验证的纯净程序"
+  },
+  "faq": {
+    "tag": "常见问题指南",
+    "title": "常见问题与答疑",
+    "subtitle": "全面了解 Supervex AI 的工作原理、授权方式与离线隐私机制。"
+  },
+  "footer": {
+    "tagline": "自主多智能体桌面与移动端终极智慧系统。",
+    "rights": "版权所有。软件作者及拥有者：MD ZINNAH KHAN。",
+    "privacy": "隐私保护政策",
+    "terms": "服务使用协议",
+    "github": "GitHub 源码与发布",
+    "status": "核心服务正常在线"
+  },
+  "toast": {
+    "visitingFrom": "检测到您的访问位置:",
+    "languageSwitched": "已自动为您切换语言至:",
+    "keep": "保持当前语言",
+    "change": "更改语言",
+    "selectLang": "选择您的语言"
+  }
+}

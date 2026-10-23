@@ -1,4 +1,5 @@
-import React, { useState, useRef } from "react";
+﻿import React, { useState, useRef } from "react";
+import { useLanguage } from "../context/LanguageContext";
 import { 
   Play, 
   Pause, 
@@ -11,6 +12,7 @@ import {
 } from "lucide-react";
 
 export function HeroVideo() {
+  const { t } = useLanguage();
   const videoRef = useRef(null);
   
   const [isPlaying, setIsPlaying] = useState(false);
@@ -91,14 +93,14 @@ export function HeroVideo() {
             <div className="h-4 w-px bg-white/10 mx-1" />
             <span className="font-mono text-xs font-semibold tracking-wider text-slate-300 flex items-center gap-1.5">
               <ShieldCheck className="w-3.5 h-3.5 text-[#00F2FF]" />
-              SUPERVEX AI :: RUNTIME SHOWCASE
+              {t("video.title", "SUPERVEX AI :: RUNTIME SHOWCASE")}
             </span>
           </div>
 
           <div className="flex items-center gap-2">
             <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center gap-1">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping inline-block" />
-              HD 60FPS
+              {t("video.tag", "HD 60FPS")}
             </span>
           </div>
         </div>
@@ -119,7 +121,7 @@ export function HeroVideo() {
             className="w-full h-full object-cover cursor-pointer"
           />
 
-          {/* Floating Center Play Button (When video is loaded but paused) */}
+          {/* Floating Center Play Button */}
           {!videoError && !isPlaying && (
             <div 
               onClick={togglePlay}
@@ -154,7 +156,7 @@ export function HeroVideo() {
             </div>
           )}
 
-          {/* Video Control Bar Overlay (Shows on Hover & When Paused) */}
+          {/* Video Control Bar Overlay */}
           {!videoError && (
             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/95 via-black/60 to-transparent opacity-95 group-hover:opacity-100 transition-opacity z-20 space-y-2">
               
@@ -215,22 +217,22 @@ export function HeroVideo() {
 
         </div>
 
-        {/* Video Card Bottom Info Pill (Clean, without file path / debug clutter) */}
+        {/* Video Card Bottom Info Pill */}
         <div className="px-4 py-2.5 bg-[#050811] border-t border-white/5 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-slate-400">
           <div className="flex items-center gap-3">
             <span className="flex items-center gap-1.5 text-cyan-300 font-semibold">
               <Radio className="w-3.5 h-3.5 text-[#00F2FF] animate-pulse" />
-              LIVE MULTI-MODAL RECORDING
+              {t("video.badge", "LIVE MULTI-MODAL RECORDING")}
             </span>
             <span className="text-slate-600 hidden sm:inline">|</span>
             <span className="hidden sm:inline text-slate-400">
-              Windows Desktop • Gemini Live Voice • Wireless ADB Mobile Bridge
+              {t("video.sub", "Windows Desktop • Gemini Live Voice • Wireless ADB Mobile Bridge")}
             </span>
           </div>
 
           <div className="flex items-center gap-2 text-[11px] text-slate-400">
             <span className="w-2 h-2 rounded-full bg-emerald-400 inline-block" />
-            <span>Real Hardware Automation</span>
+            <span>{t("video.footer", "Real Hardware Automation")}</span>
           </div>
         </div>
 
@@ -239,3 +241,5 @@ export function HeroVideo() {
     </div>
   );
 }
+
+export default HeroVideo;

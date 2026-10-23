@@ -1,0 +1,122 @@
+{
+  "nav": {
+    "features": "Ciri-ciri",
+    "architecture": "Seni Bina",
+    "simulator": "Simulator",
+    "downloads": "Hab Muat Turun",
+    "security": "Keselamatan",
+    "faq": "Soalan Lazim",
+    "version": "v1.0.1 DALAM TALIAN",
+    "tagline": "INTELLIGENCE DESKTOP AUTONOMOUS",
+    "downloadBtn": "Hab Muat Turun",
+    "systemHealth": "KESIHATAN SISTEM: 100% NOMINAL"
+  },
+  "hero": {
+    "announcement": "Sistem Kepintaran Desktop Multi-Modal Autonomus",
+    "titleMain": "Kawal Keseluruhan PC, Pelayar & Telefon Anda Dengan",
+    "titleGradient": "Suara Autonomus.",
+    "subtitle": "Supervex AI merapatkan jurang antara pemikiran dan pelaksanaan. Bercakap secara semula jadi atau taip arahan untuk mengawal PC Windows anda, menyemak imbas bebas iklan, dan kawal telefon Android anda melalui ADB tanpa wayar.",
+    "downloadWindows": "Muat turun untuk Windows (.exe)",
+    "downloadWindowsSub": "v1.0.1 • Keluaran Rasmi 64-bit",
+    "downloadAndroid": "Dapatkan Rakan Android (.apk)",
+    "downloadAndroidSub": "Jambatan ADB Tanpa Wayar • v1.4.2",
+    "iosCompanion": "Rakan iOS / Senarai Menunggu",
+    "statLatencyVal": "< 120ms",
+    "statLatency": "Kependaman Suara Gemini Live",
+    "statLocalVal": "100% Tempatan",
+    "statLocal": "Sifar Kebocoran Telemetri",
+    "statAgentsVal": "9 Ejen",
+    "statAgents": "Enjin CEO Autonomus",
+    "statAdbVal": "ADB Tanpa Wayar",
+    "statAdb": "Jambatan PC-ke-Android"
+  },
+  "video": {
+    "title": "SUPERVEX AI :: PAMERAN RUNTIME",
+    "tag": "HD 60FPS",
+    "badge": "RAKAMAN MULTI-MODAL LANGSUNG",
+    "sub": "Windows Desktop • Suara Gemini Live • Jambatan Mudah Alih ADB Tanpa Wayar",
+    "footer": "Automasi Perkakasan Sebenar"
+  },
+  "features": {
+    "tag": "KEUPAYAAN SISTEM",
+    "title": "Matriks Pelbagai Ejen Autonomus",
+    "subtitle": "9 ejen kognitif bekerjasama secara tempatan untuk memahami niat anda, memerhati skrin, dan mengawal antara muka perkakasan.",
+    "f1_title": "Kawalan Desktop Autonomus",
+    "f1_desc": "Automasi UI Windows asli. Membuka aplikasi, menyunting fail dan mengurus tetingkap.",
+    "f2_title": "Enjin Suara Gemini Live",
+    "f2_desc": "Penstriman audio bawah 120ms dengan kesedaran gangguan dan sintesis suara saraf.",
+    "f3_title": "Persepsi Penglihatan & Skrin",
+    "f3_desc": "OCR masa nyata dan pemahaman susun atur UI untuk menavigasi perisian kompleks.",
+    "f4_title": "Jambatan Telefon ADB Tanpa Wayar",
+    "f4_desc": "Mengawal peranti Android melalui Wi-Fi secara autonomi.",
+    "f5_title": "Automasi Pelayar Senyap",
+    "f5_desc": "Automasi Chromium dikuasakan Playwright dengan penyekatan iklan.",
+    "f6_title": "Privasi Luar Talian Berdaulat",
+    "f6_desc": "Sifar telemetri. Data skrin, ketukan kekunci dan audio kekal pada perkakasan anda."
+  },
+  "architecture": {
+    "tag": "SENI BINA TERAS",
+    "title": "Otak Hibrid & Gelung Multi-Ejen",
+    "subtitle": "Orkestrasi tempatan ultra-pantas ditambah dengan penstriman Gemini Live.",
+    "ceoTitle": "Pengorkestra CEO Autonomus",
+    "ceoDesc": "Membahagikan permintaan rumit kepada sub-tugas dan mewakilkan kepada ejen pakar.",
+    "memoryTitle": "Memori Vektor & Konteks",
+    "memoryDesc": "Storan vektor semantik SQLite tempatan untuk mengingat perbualan lepas.",
+    "safetyTitle": "Kunci Keselamatan Perkakasan",
+    "safetyDesc": "Pengesahan pengguna untuk pemadaman fail penting dan perintah sistem."
+  },
+  "simulator": {
+    "tag": "RUNTIME INTERAKTIF",
+    "title": "Uji Pelaksanaan Multi-Ejen",
+    "subtitle": "Pilih arahan di bawah untuk melihat ejen CEO melaksanakan tugas secara langsung.",
+    "runCommand": "Jalankan Pelan Autonomus",
+    "statusComplete": "PELAKSANAAN SELESAI",
+    "step": "Langkah"
+  },
+  "security": {
+    "tag": "PRIVASI BERDAULAT",
+    "title": "Sifar Telemetri. 100% Perlindungan Luar Talian.",
+    "subtitle": "Ketukan kekunci, skrin dan audio anda tidak pernah meninggalkan perkakasan tempatan.",
+    "p1_title": "Bilik Kebal Kriptografi Tempatan",
+    "p1_desc": "Semua kunci API disulitkan dengan AES-256 GCM.",
+    "p2_title": "Sumber Terbuka Diaudit",
+    "p2_desc": "Kod sumber telus sepenuhnya tanpa sebarang penjejak tersembunyi.",
+    "p3_title": "Operasi Luar Talian Penuh",
+    "p3_desc": "Boleh dijalankan sepenuhnya di luar talian dengan LLM tempatan (Ollama, LM Studio)."
+  },
+  "downloads": {
+    "tag": "KELUARAN RASMI",
+    "title": "Hab Pengedaran Pelbagai Platform",
+    "subtitle": "Muat turun binari pengeluaran yang disahkan untuk Windows dan Android.",
+    "tabWindows": "Windows (Desktop)",
+    "tabAndroid": "Android (Rakan)",
+    "tabIos": "iOS (TestFlight)",
+    "btnDownloadExe": "Muat Turun Pemasang (.exe)",
+    "btnDownloadZip": "Muat Turun Mudah Alih (.zip)",
+    "btnDownloadApk": "Muat Turun APK (.apk)",
+    "shaLabel": "Hash SHA-256",
+    "copySha": "Salin SHA-256",
+    "copiedSha": "Disalin!",
+    "verifiedSafe": "Binari Disahkan Selamat"
+  },
+  "faq": {
+    "tag": "PANGKALAN PENGETAHUAN",
+    "title": "Soalan Lazim",
+    "subtitle": "Semua yang anda perlu tahu mengenai Supervex AI, seni bina, dan privasi."
+  },
+  "footer": {
+    "tagline": "Sistem Kepintaran Desktop & Mudah Alih Pelbagai Ejen Autonomus.",
+    "rights": "Hak cipta terpelihara. Dibangunkan & Dimiliki oleh MD ZINNAH KHAN.",
+    "privacy": "Dasar Privasi",
+    "terms": "Syarat Perkhidmatan",
+    "github": "Keluaran GitHub",
+    "status": "Sistem Dalam Talian"
+  },
+  "toast": {
+    "visitingFrom": "Lokasi dikesan:",
+    "languageSwitched": "Bahasa ditetapkan ke:",
+    "keep": "Kekalkan",
+    "change": "Tukar Bahasa",
+    "selectLang": "Pilih Bahasa Anda"
+  }
+}

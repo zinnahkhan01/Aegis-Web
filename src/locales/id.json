@@ -1,0 +1,122 @@
+{
+  "nav": {
+    "features": "Fitur",
+    "architecture": "Arsitektur",
+    "simulator": "Simulator",
+    "downloads": "Pusat Unduhan",
+    "security": "Keamanan",
+    "faq": "Tanya Jawab",
+    "version": "v1.0.1 ONLINE",
+    "tagline": "KECERDASAN DESKTOP OTONOM",
+    "downloadBtn": "Pusat Unduhan",
+    "systemHealth": "KESEHATAN SISTEM: 100% NOMINAL"
+  },
+  "hero": {
+    "announcement": "Sistem Kecerdasan Desktop Multi-Modal Otonom",
+    "titleMain": "Kendalikan Seluruh PC, Browser & Ponsel Anda Dengan",
+    "titleGradient": "Suara Otonom.",
+    "subtitle": "Supervex AI menjembatani pikiran dan tindakan. Bicara secara alami atau ketik instruksi untuk mengontrol PC Windows, menjelajah tanpa iklan, dan perintah ponsel Android melalui wireless ADB.",
+    "downloadWindows": "Unduh untuk Windows (.exe)",
+    "downloadWindowsSub": "v1.0.1 • Rilis Resmi 64-bit",
+    "downloadAndroid": "Dapatkan Android Companion (.apk)",
+    "downloadAndroidSub": "Jembatan Wireless ADB • v1.4.2",
+    "iosCompanion": "iOS Companion / Daftar Tunggu",
+    "statLatencyVal": "< 120ms",
+    "statLatency": "Latensi Suara Gemini Live",
+    "statLocalVal": "100% Lokal",
+    "statLocal": "Nol Kebocoran Telemetri",
+    "statAgentsVal": "9 Agen",
+    "statAgents": "Mesin CEO Otonom",
+    "statAdbVal": "Wireless ADB",
+    "statAdb": "Jembatan PC ke Ponsel"
+  },
+  "video": {
+    "title": "SUPERVEX AI :: PAMERAN REAL-TIME",
+    "tag": "HD 60FPS",
+    "badge": "REKAMAN MULTI-MODAL LANGSUNG",
+    "sub": "Windows Desktop • Suara Gemini Live • Jembatan Ponsel Wireless ADB",
+    "footer": "Otomatisasi Perangkat Keras Nyata"
+  },
+  "features": {
+    "tag": "KEMAMPUAN SISTEM",
+    "title": "Matriks Multi-Agen Otonom",
+    "subtitle": "9 agen kognitif berkolaborasi secara lokal untuk memahami maksud Anda, mengamati layar, dan mengontrol perangkat keras.",
+    "f1_title": "Kontrol Desktop Otonom",
+    "f1_desc": "Otomatisasi UI Windows asli. Membuka aplikasi, mengedit file, dan mengelola jendela.",
+    "f2_title": "Mesin Suara Gemini Live",
+    "f2_desc": "Streaming audio di bawah 120ms dengan deteksi interupsi dan sintesis suara saraf lokal.",
+    "f3_title": "Visi & Persepsi Layar",
+    "f3_desc": "OCR real-time dan pemahaman tata letak visual untuk menjalankan perangkat lunak rumit.",
+    "f4_title": "Jembatan Ponsel Wireless ADB",
+    "f4_desc": "Mengontrol perangkat Android melalui Wi-Fi. Mengirim pesan dan membuka aplikasi secara mandiri.",
+    "f5_title": "Otomatisasi Browser Siluman",
+    "f5_desc": "Otomatisasi Chromium bertenaga Playwright dengan pemblokiran iklan dan scraping riset.",
+    "f6_title": "Privasi Offline Berdaulat",
+    "f6_desc": "Nol telemetri. Data layar, penekanan tombol, dan audio Anda tetap aman di perangkat Anda."
+  },
+  "architecture": {
+    "tag": "ARSITEKTUR UTAMA",
+    "title": "Otak Hibrida & Siklus Multi-Agen",
+    "subtitle": "Orkestrasi lokal super cepat dipadukan dengan streaming Gemini Live.",
+    "ceoTitle": "Orkestrator CEO Otonom",
+    "ceoDesc": "Membagi permintaan rumit menjadi subtugas dan mendelegasikannya ke agen yang tepat.",
+    "memoryTitle": "Memori Vektor & Konteks",
+    "memoryDesc": "Penyimpanan vektor semantik SQLite lokal untuk mengingat percakapan sebelumnya.",
+    "safetyTitle": "Kunci Keamanan Perangkat Keras",
+    "safetyDesc": "Konfirmasi pengguna sebelum penghapusan file penting atau perintah sistem."
+  },
+  "simulator": {
+    "tag": "RUNTIME INTERAKTIF",
+    "title": "Uji Eksekusi Multi-Agen",
+    "subtitle": "Pilih perintah di bawah untuk melihat agen CEO menyelesaikan tugas secara langsung.",
+    "runCommand": "Jalankan Rencana Otonom",
+    "statusComplete": "EKSEKUSI SELESAI",
+    "step": "Langkah"
+  },
+  "security": {
+    "tag": "PRIVASI PENUH",
+    "title": "Nol Telemetri. 100% Terisolasi Sesuai Desain.",
+    "subtitle": "Tombol, layar, dan audio Anda tidak pernah meninggalkan perangkat tanpa izin.",
+    "p1_title": "Brankas Kriptografi Lokal",
+    "p1_desc": "Semua kunci API dan riwayat dienkripsi dengan AES-256 GCM.",
+    "p2_title": "Sumber Terbuka Diaudit",
+    "p2_desc": "Kode transparan sepenuhnya tanpa pelacak tersembunyi.",
+    "p3_title": "Operasi Tanpa Internet",
+    "p3_desc": "Dapat beroperasi sepenuhnya offline dengan model lokal (Ollama, LM Studio)."
+  },
+  "downloads": {
+    "tag": "RILIS RESMI",
+    "title": "Pusat Distribusi Multi-Platform",
+    "subtitle": "Unduh file biner terverifikasi untuk Windows dan Android dengan aman.",
+    "tabWindows": "Windows (Desktop)",
+    "tabAndroid": "Android (Companion)",
+    "tabIos": "iOS (TestFlight)",
+    "btnDownloadExe": "Unduh Installer (.exe)",
+    "btnDownloadZip": "Unduh Portabel (.zip)",
+    "btnDownloadApk": "Unduh APK (.apk)",
+    "shaLabel": "Hash SHA-256",
+    "copySha": "Salin SHA-256",
+    "copiedSha": "Tersalin!",
+    "verifiedSafe": "Biner Terverifikasi Kriptografi"
+  },
+  "faq": {
+    "tag": "BASIS PENGETAHUAN",
+    "title": "Pertanyaan yang Sering Diajukan",
+    "subtitle": "Semua yang perlu Anda ketahui tentang Supervex AI, arsitektur, dan privasi."
+  },
+  "footer": {
+    "tagline": "Sistem Kecerdasan Desktop & Ponsel Multi-Agen Otonom.",
+    "rights": "Hak cipta dilindungi. Dikembangkan & Dimiliki oleh MD ZINNAH KHAN.",
+    "privacy": "Kebijakan Privasi",
+    "terms": "Syarat Layanan",
+    "github": "Rilis GitHub",
+    "status": "Sistem Online"
+  },
+  "toast": {
+    "visitingFrom": "Lokasi Anda terdeteksi:",
+    "languageSwitched": "Bahasa disetel ke:",
+    "keep": "Pertahankan",
+    "change": "Ubah Bahasa",
+    "selectLang": "Pilih Bahasa Anda"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "nav": {
+    "features": "Características",
+    "architecture": "Arquitectura",
+    "simulator": "Simulador",
+    "downloads": "Descargas",
+    "security": "Seguridad",
+    "faq": "Preguntas Frecuentes",
+    "version": "v1.0.1 EN LÍNEA",
+    "tagline": "INTELIGENCIA DE ESCRITORIO AUTÓNOMA",
+    "downloadBtn": "Descargas",
+    "systemHealth": "ESTADO DEL SISTEMA: 100% NOMINAL"
+  },
+  "hero": {
+    "announcement": "El Sistema de Inteligencia de Escritorio Multimodal Autónomo",
+    "titleMain": "Controla Todo tu PC, Navegador y Teléfono con",
+    "titleGradient": "Voz Autónoma.",
+    "subtitle": "Supervex AI une el pensamiento y la ejecución. Habla de forma natural o escribe instrucciones para controlar tu PC con Windows, navegar sin anuncios y mandar en tu teléfono Android vía ADB inalámbrico.",
+    "downloadWindows": "Descargar para Windows (.exe)",
+    "downloadWindowsSub": "v1.0.1 • Lanzamiento Oficial 64-bit",
+    "downloadAndroid": "Obtener Compañero Android (.apk)",
+    "downloadAndroidSub": "Puente ADB Inalámbrico • v1.4.2",
+    "iosCompanion": "Compañero iOS / Lista de Espera",
+    "statLatencyVal": "< 120ms",
+    "statLatency": "Latencia de Voz Gemini Live",
+    "statLocalVal": "100% Local",
+    "statLocal": "Cero Fuga de Telemetría",
+    "statAgentsVal": "9 Agentes",
+    "statAgents": "Motor CEO Autónomo",
+    "statAdbVal": "ADB Inalámbrico",
+    "statAdb": "Puente PC a Android"
+  },
+  "video": {
+    "title": "SUPERVEX AI :: DEMOSTRACIÓN EN TIEMPO REAL",
+    "tag": "HD 60FPS",
+    "badge": "GRABACIÓN MULTIMODAL EN VIVO",
+    "sub": "Escritorio Windows • Voz Gemini Live • Puente Móvil ADB Inalámbrico",
+    "footer": "Automatización en Hardware Real"
+  },
+  "features": {
+    "tag": "CAPACIDADES DEL SISTEMA",
+    "title": "Matriz Multi-Agente Autónoma",
+    "subtitle": "9 agentes cognitivos especializados que colaboran localmente para comprender tu intención, observar tu pantalla y controlar interfaces.",
+    "f1_title": "Control Autónomo de Escritorio",
+    "f1_desc": "Automatización nativa de la interfaz de Windows. Abre aplicaciones, edita archivos y gestiona ventanas fluidamente.",
+    "f2_title": "Motor de Voz Gemini Live",
+    "f2_desc": "Transmisión de audio conversacional en menos de 120 ms con detección de interrupciones y síntesis de voz neuronal.",
+    "f3_title": "Visión y Percepción de Pantalla",
+    "f3_desc": "OCR en tiempo real y comprensión de la distribución de pantalla para navegar software complejo.",
+    "f4_title": "Puente Telefónico ADB Inalámbrico",
+    "f4_desc": "Controla dispositivos Android conectados por Wi-Fi. Envía mensajes y abre apps automáticamente.",
+    "f5_title": "Automatización de Navegador Sigilosa",
+    "f5_desc": "Automatización de Chromium con Playwright indetectable, con bloqueo de publicidad y extracción de datos.",
+    "f6_title": "Privacidad Soberana Desconectada",
+    "f6_desc": "Cero telemetría. Tus datos de pantalla, pulsaciones de teclas y audio permanecen en tu hardware."
+  },
+  "architecture": {
+    "tag": "ARQUITECTURA PRINCIPAL",
+    "title": "Cerebro Híbrido y Bucle Multi-Agente",
+    "subtitle": "Orquestación local ultrarrápida combinada con transmisión Gemini Live para respuestas en milisegundos.",
+    "ceoTitle": "Orquestador CEO Autónomo",
+    "ceoDesc": "Descompone solicitudes complejas en subtareas y las delega en agentes especializados.",
+    "memoryTitle": "Memoria Vectorial y Contexto",
+    "memoryDesc": "Almacenamiento de vectores semánticos en SQLite local para recordar conversaciones pasadas de inmediato.",
+    "safetyTitle": "Enclavamiento de Seguridad",
+    "safetyDesc": "Confirmación del usuario para eliminación de archivos críticos y comandos del sistema."
+  },
+  "simulator": {
+    "tag": "TIEMPO DE EJECUCIÓN INTERACTIVO",
+    "title": "Prueba la Ejecución Multi-Agente",
+    "subtitle": "Selecciona un comando abajo para ver al agente CEO coordinar tareas en tiempo real.",
+    "runCommand": "Ejecutar Plan Autónomo",
+    "statusComplete": "EJECUCIÓN COMPLETADA",
+    "step": "Paso"
+  },
+  "security": {
+    "tag": "PRIVACIDAD SOBERANA",
+    "title": "Cero Telemetría. 100% Aislado por Diseño.",
+    "subtitle": "Tus pulsaciones, pantalla y audio nunca salen de tu hardware local sin tu aprobación.",
+    "p1_title": "Bóveda Criptográfica Local",
+    "p1_desc": "Todas las claves API e historiales están encriptados con AES-256 GCM.",
+    "p2_title": "Código Abierto Auditado",
+    "p2_desc": "Transparencia total de código sin rastreadores ni telemetría oculta.",
+    "p3_title": "Operación Sin Conexión",
+    "p3_desc": "Opción de ejecutar modelos locales (Ollama, LM Studio) totalmente desconectado de internet."
+  },
+  "downloads": {
+    "tag": "VERSIONES OFICIALES",
+    "title": "Centro de Distribución Multiplataforma",
+    "subtitle": "Descarga binarios de producción verificados para Windows y Android.",
+    "tabWindows": "Windows (Escritorio)",
+    "tabAndroid": "Android (Compañero)",
+    "tabIos": "iOS (TestFlight)",
+    "btnDownloadExe": "Descargar Instalador (.exe)",
+    "btnDownloadZip": "Descargar Portable (.zip)",
+    "btnDownloadApk": "Descargar APK (.apk)",
+    "shaLabel": "Hash SHA-256",
+    "copySha": "Copiar SHA-256",
+    "copiedSha": "¡Copiado!",
+    "verifiedSafe": "Binario Verificado Criptográficamente"
+  },
+  "faq": {
+    "tag": "BASE DE CONOCIMIENTOS",
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Todo lo que necesitas saber sobre Supervex AI, arquitectura y privacidad."
+  },
+  "footer": {
+    "tagline": "El Sistema de Inteligencia de Escritorio y Móvil Multi-Agente Autónomo.",
+    "rights": "Todos los derechos reservados. Desarrollado y propiedad de MD ZINNAH KHAN.",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio",
+    "github": "Lanzamientos en GitHub",
+    "status": "Sistema En Línea"
+  },
+  "toast": {
+    "visitingFrom": "Ubicación detectada:",
+    "languageSwitched": "Idioma configurado a:",
+    "keep": "Mantener",
+    "change": "Cambiar Idioma",
+    "selectLang": "Selecciona tu Idioma"
+  }
+}

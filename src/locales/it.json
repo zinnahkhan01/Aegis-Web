@@ -1,0 +1,122 @@
+{
+  "nav": {
+    "features": "Funzionalità",
+    "architecture": "Architettura",
+    "simulator": "Simulatore",
+    "downloads": "Download",
+    "security": "Sicurezza",
+    "faq": "FAQ",
+    "version": "v1.0.1 ONLINE",
+    "tagline": "INTELLIGENZA DESKTOP AUTONOMA",
+    "downloadBtn": "Download Hub",
+    "systemHealth": "STATO SISTEMA: 100% NOMINALE"
+  },
+  "hero": {
+    "announcement": "Il Sistema di Intelligenza Desktop Multimodale Autonomo",
+    "titleMain": "Controlla Tutto il tuo PC, Browser e Telefono con la",
+    "titleGradient": "Voce Autonoma.",
+    "subtitle": "Supervex AI unisce il pensiero all'azione. Parla liberamente o digita istruzioni per gestire il tuo PC Windows, navigare senza annunci e comandare il tuo smartphone Android via wireless ADB.",
+    "downloadWindows": "Scarica per Windows (.exe)",
+    "downloadWindowsSub": "v1.0.1 • Versione Ufficiale 64-bit",
+    "downloadAndroid": "Scarica per Android (.apk)",
+    "downloadAndroidSub": "Ponte Wireless ADB • v1.4.2",
+    "iosCompanion": "Compagno iOS / Lista d'Attesa",
+    "statLatencyVal": "< 120ms",
+    "statLatency": "Latenza Vocale Gemini Live",
+    "statLocalVal": "100% Locale",
+    "statLocal": "Zero Fuga di Telemetria",
+    "statAgentsVal": "9 Agenti",
+    "statAgents": "Motore CEO Autonomo",
+    "statAdbVal": "ADB Wireless",
+    "statAdb": "Ponte PC verso Telefono"
+  },
+  "video": {
+    "title": "SUPERVEX AI :: DIMOSTRAZIONE IN TEMPO REALE",
+    "tag": "HD 60FPS",
+    "badge": "REGISTRAZIONE MULTIMODALE DAL VIVO",
+    "sub": "Windows Desktop • Voce Gemini Live • Ponte Mobile Wireless ADB",
+    "footer": "Automazione su Hardware Reale"
+  },
+  "features": {
+    "tag": "CAPACITÀ DEL SISTEMA",
+    "title": "Matrice Multi-Agente Autonoma",
+    "subtitle": "9 agenti cognitivi specializzati collaborano localmente per comprendere le tue intenzioni e controllare le interfacce.",
+    "f1_title": "Controllo Desktop Autonomo",
+    "f1_desc": "Automazione nativa dell'interfaccia di Windows. Apre applicazioni, modifica file e gestisce finestre.",
+    "f2_title": "Motore Vocale Gemini Live",
+    "f2_desc": "Streaming audio sotto i 120ms con rilevamento delle interruzioni e sintesi vocale neurale.",
+    "f3_title": "Visione e Percezione dello Schermo",
+    "f3_desc": "OCR in tempo reale e comprensione visiva per interagire con software complessi.",
+    "f4_title": "Ponte Wireless ADB per Telefono",
+    "f4_desc": "Controlla dispositivi Android tramite Wi-Fi. Invia messaggi e avvia app automaticamente.",
+    "f5_title": "Navigazione Stealth Automatizzata",
+    "f5_desc": "Automazione Chromium con Playwright impercettibile, blocco della pubblicità ed estrazione dati.",
+    "f6_title": "Sovranità e Privacy Offline",
+    "f6_desc": "Zero telemetria. Schermo, digitazione e audio rimangono strettamente sul tuo hardware."
+  },
+  "architecture": {
+    "tag": "ARCHITETTURA DI BASE",
+    "title": "Cervello Ibrido e Ciclo Multi-Agente",
+    "subtitle": "Orchestrazione locale ultra-veloce integrata con streaming Gemini Live per risposte in millisecondi.",
+    "ceoTitle": "Orchestratore CEO Autonomo",
+    "ceoDesc": "Scompone richieste complesse in sotto-attività e le affida agli agenti competenti.",
+    "memoryTitle": "Memoria Vettoriale e Contesto",
+    "memoryDesc": "Archiviazione vettoriale semantica in SQLite locale per ricordare le conversazioni precedenti.",
+    "safetyTitle": "Blocco di Sicurezza Hardware",
+    "safetyDesc": "Conferma obbligatoria dell'utente prima di eliminare file critici o eseguire comandi di sistema."
+  },
+  "simulator": {
+    "tag": "AMBIENTE INTERATTIVO",
+    "title": "Verifica l'Esecuzione Multi-Agente",
+    "subtitle": "Seleziona un comando qui sotto per osservare l'agente CEO coordinare le attività in diretta.",
+    "runCommand": "Esegui Piano Autonomo",
+    "statusComplete": "ESECUZIONE COMPLETATA",
+    "step": "Fase"
+  },
+  "security": {
+    "tag": "PRIVACY SOVRANA",
+    "title": "Zero Telemetria. 100% Isolato per Progettazione.",
+    "subtitle": "I tuoi tasti, schermo e audio non lasciano mai il tuo computer senza esplicito consenso.",
+    "p1_title": "Cassaforte Crittografica Locale",
+    "p1_desc": "Tutte le chiavi API e le sessioni sono crittografate con AES-256 GCM.",
+    "p2_title": "Codice Sorgente Aperto e Verificato",
+    "p2_desc": "Totale trasparenza del codice senza tracker nascosti o invio dati in background.",
+    "p3_title": "Funzionamento Offline Completo",
+    "p3_desc": "Supporta modelli AI locali (Ollama, LM Studio) senza alcuna necessità di connessione internet."
+  },
+  "downloads": {
+    "tag": "RELEASE UFFICIALI",
+    "title": "Centro di Distribuzione Multipiattaforma",
+    "subtitle": "Scarica gli eseguibili verificati per Windows e Android in totale sicurezza.",
+    "tabWindows": "Windows (Desktop)",
+    "tabAndroid": "Android (Compagno)",
+    "tabIos": "iOS (TestFlight)",
+    "btnDownloadExe": "Scarica Installer (.exe)",
+    "btnDownloadZip": "Scarica Portabile (.zip)",
+    "btnDownloadApk": "Scarica APK (.apk)",
+    "shaLabel": "Hash SHA-256",
+    "copySha": "Copia SHA-256",
+    "copiedSha": "Copiato!",
+    "verifiedSafe": "File Verificato Crittograficamente"
+  },
+  "faq": {
+    "tag": "BASE DI CONOSCENZA",
+    "title": "Domande Frequenti",
+    "subtitle": "Tutto ciò che devi sapere su Supervex AI, architettura e sicurezza."
+  },
+  "footer": {
+    "tagline": "Il Sistema di Intelligenza Autonomo Multi-Agente per Desktop e Mobile.",
+    "rights": "Tutti i diritti riservati. Sviluppato e di proprietà di MD ZINNAH KHAN.",
+    "privacy": "Informativa sulla Privacy",
+    "terms": "Termini di Servizio",
+    "github": "Release su GitHub",
+    "status": "Sistema Online"
+  },
+  "toast": {
+    "visitingFrom": "Posizione rilevata:",
+    "languageSwitched": "Lingua impostata su:",
+    "keep": "Mantieni",
+    "change": "Cambia Lingua",
+    "selectLang": "Seleziona la tua Lingua"
+  }
+}

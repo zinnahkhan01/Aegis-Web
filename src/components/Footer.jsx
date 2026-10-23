@@ -1,49 +1,43 @@
-import React from "react";
-import { Shield, Mail, ExternalLink, ShieldCheck, FileText } from "lucide-react";
+﻿import React from "react";
+import { useLanguage } from "../context/LanguageContext";
+import { 
+  Shield, 
+  Mail, 
+  ExternalLink, 
+  FileText, 
+  ShieldCheck
+} from "lucide-react";
 
 export function Footer({ onOpenPrivacy, onOpenTerms }) {
-  const scrollTo = (href) => {
-    const el = document.querySelector(href);
+  const { t } = useLanguage();
+
+  const scrollTo = (id) => {
+    const el = document.querySelector(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <footer className="bg-[#020409] border-t border-white/5 relative overflow-hidden">
-      {/* Real-Time System Telemetry Ticker */}
-      <div className="py-2.5 px-4 bg-[#050811] border-b border-white/5 text-[11px] font-mono text-slate-400">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-emerald-400 font-semibold">ALL SYSTEMS NOMINAL</span>
-            <span className="text-slate-600 hidden sm:inline">|</span>
-            <span className="hidden sm:inline">API GATEWAY: 22ms</span>
-            <span className="text-slate-600 hidden sm:inline">|</span>
-            <span className="hidden sm:inline">ACTIVE AGENTS: 9/9 ONLINE</span>
-          </div>
-          
-          <div className="flex items-center gap-4 text-slate-500">
-            <span>ZERO CLOUD TELEMETRY</span>
-            <span>BUILD: v1.0.0-BETA</span>
-          </div>
-        </div>
-      </div>
+    <footer className="relative bg-[#03060e] border-t border-white/5 pt-16 pb-12 overflow-hidden">
+      {/* Background cyber lines */}
+      <div className="absolute inset-0 bg-cyber-grid opacity-20 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12">
           
-          {/* Brand Info */}
+          {/* Main Brand Column */}
           <div className="lg:col-span-2 space-y-4">
             <a href="#" className="flex items-center gap-2.5">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#00F2FF]/20 to-[#7C3AED]/20 border border-[#00F2FF]/40 flex items-center justify-center">
-                <Shield className="w-4 h-4 text-[#00F2FF]" />
+                <img src="/icon.png" alt="Supervex AI" className="w-5 h-5 object-cover rounded" />
               </div>
               <span className="font-display font-extrabold text-lg tracking-wider text-white">
-                AEGIS<span className="text-[#00F2FF]">::</span>AI
+                SUPERVEX<span className="text-[#00F2FF]">::</span>AI
               </span>
             </a>
 
             <p className="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-sm">
-              The autonomous multi-modal desktop intelligence system. Unified control over PC, browser, and mobile phone through natural voice or text commands.
+              {t("footer.tagline", "The Autonomous Multi-Agent Desktop & Mobile Intelligence System. Unified control over PC, browser, and mobile phone through natural voice or text commands.")}
             </p>
 
             {/* Official Support & GitHub Links */}
@@ -79,7 +73,7 @@ export function Footer({ onOpenPrivacy, onOpenTerms }) {
           {/* Column 1: Core Navigation */}
           <div className="space-y-3">
             <span className="text-xs font-mono font-bold text-white uppercase tracking-wider block">
-              Capabilities
+              {t("nav.features", "Capabilities")}
             </span>
             <ul className="space-y-2 text-xs text-slate-400">
               <li><button onClick={() => scrollTo("#features")} className="hover:text-[#00F2FF] transition-colors cursor-pointer">Gemini Live Voice</button></li>
@@ -93,21 +87,21 @@ export function Footer({ onOpenPrivacy, onOpenTerms }) {
           {/* Column 2: Platform Downloads */}
           <div className="space-y-3">
             <span className="text-xs font-mono font-bold text-white uppercase tracking-wider block">
-              Downloads
+              {t("nav.downloads", "Downloads")}
             </span>
             <ul className="space-y-2 text-xs text-slate-400">
-              <li><button onClick={() => scrollTo("#downloads")} className="hover:text-[#00F2FF] transition-colors cursor-pointer">Windows Installer (.exe)</button></li>
-              <li><button onClick={() => scrollTo("#downloads")} className="hover:text-[#00F2FF] transition-colors cursor-pointer">Windows Portable (.zip)</button></li>
-              <li><button onClick={() => scrollTo("#downloads")} className="hover:text-emerald-400 transition-colors cursor-pointer">Android Companion APK</button></li>
-              <li><button onClick={() => scrollTo("#downloads")} className="hover:text-violet-400 transition-colors cursor-pointer">iOS TestFlight Beta</button></li>
-              <li><button onClick={() => scrollTo("#downloads")} className="hover:text-slate-200 transition-colors cursor-pointer">System Requirements</button></li>
+              <li><button onClick={() => scrollTo("#downloads")} className="hover:text-[#00F2FF] transition-colors cursor-pointer">{t("downloads.btnDownloadExe", "Windows Installer (.exe)")}</button></li>
+              <li><button onClick={() => scrollTo("#downloads")} className="hover:text-[#00F2FF] transition-colors cursor-pointer">{t("downloads.btnDownloadZip", "Windows Portable (.zip)")}</button></li>
+              <li><button onClick={() => scrollTo("#downloads")} className="hover:text-emerald-400 transition-colors cursor-pointer">{t("downloads.btnDownloadApk", "Android Companion APK")}</button></li>
+              <li><button onClick={() => scrollTo("#downloads")} className="hover:text-violet-400 transition-colors cursor-pointer">iOS TestFlight</button></li>
+              <li><button onClick={() => scrollTo("#downloads")} className="hover:text-slate-200 transition-colors cursor-pointer">{t("downloads.verifiedSafe", "Verified Safe Binaries")}</button></li>
             </ul>
           </div>
 
           {/* Column 3: Trust & Governance */}
           <div className="space-y-3">
             <span className="text-xs font-mono font-bold text-white uppercase tracking-wider block">
-              Trust & Legal
+              {t("nav.security", "Security & Legal")}
             </span>
             <ul className="space-y-2 text-xs text-slate-400">
               <li>
@@ -116,7 +110,7 @@ export function Footer({ onOpenPrivacy, onOpenTerms }) {
                   className="hover:text-emerald-400 transition-colors cursor-pointer flex items-center gap-1.5"
                 >
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>Privacy Policy</span>
+                  <span>{t("footer.privacy", "Privacy Policy")}</span>
                 </button>
               </li>
               <li>
@@ -125,12 +119,12 @@ export function Footer({ onOpenPrivacy, onOpenTerms }) {
                   className="hover:text-[#00F2FF] transition-colors cursor-pointer flex items-center gap-1.5"
                 >
                   <FileText className="w-3.5 h-3.5 text-[#00F2FF]" />
-                  <span>Terms of Service</span>
+                  <span>{t("footer.terms", "Terms of Service")}</span>
                 </button>
               </li>
-              <li><button onClick={() => scrollTo("#security")} className="hover:text-emerald-400 transition-colors cursor-pointer">100% Local Privacy</button></li>
-              <li><button onClick={() => scrollTo("#architecture")} className="hover:text-[#00F2FF] transition-colors cursor-pointer">CEO Agent DAG Routing</button></li>
-              <li><button onClick={() => scrollTo("#faq")} className="hover:text-slate-200 transition-colors cursor-pointer">FAQ & Knowledge Base</button></li>
+              <li><button onClick={() => scrollTo("#security")} className="hover:text-emerald-400 transition-colors cursor-pointer">{t("security.title", "100% Local Privacy")}</button></li>
+              <li><button onClick={() => scrollTo("#architecture")} className="hover:text-[#00F2FF] transition-colors cursor-pointer">{t("architecture.title", "Multi-Agent Architecture")}</button></li>
+              <li><button onClick={() => scrollTo("#faq")} className="hover:text-slate-200 transition-colors cursor-pointer">{t("nav.faq", "FAQ & Knowledge Base")}</button></li>
             </ul>
           </div>
 
@@ -138,21 +132,21 @@ export function Footer({ onOpenPrivacy, onOpenTerms }) {
 
         {/* Bottom Copyright & Legal Row */}
         <div className="pt-8 border-t border-white/5 flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-slate-500">
-          <p>&copy; 2026 Supervex AI. Owned &amp; developed by <span className="text-slate-300 font-semibold">MD ZINNAH KHAN</span>. All rights reserved.</p>
+          <p>&copy; 2026 Supervex AI. {t("footer.rights", "Developed & Owned by MD ZINNAH KHAN. All rights reserved.")}</p>
           
           <div className="flex items-center gap-4 text-xs">
             <button 
               onClick={onOpenPrivacy} 
               className="text-slate-400 hover:text-white transition-colors cursor-pointer"
             >
-              Privacy Policy
+              {t("footer.privacy", "Privacy Policy")}
             </button>
             <span className="text-slate-700">•</span>
             <button 
               onClick={onOpenTerms} 
               className="text-slate-400 hover:text-white transition-colors cursor-pointer"
             >
-              Terms of Service
+              {t("footer.terms", "Terms of Service")}
             </button>
             <span className="text-slate-700">•</span>
             <a 
@@ -168,3 +162,5 @@ export function Footer({ onOpenPrivacy, onOpenTerms }) {
     </footer>
   );
 }
+
+export default Footer;

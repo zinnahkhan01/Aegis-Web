@@ -1,0 +1,122 @@
+{
+  "nav": {
+    "features": "주요 기능",
+    "architecture": "아키텍처",
+    "simulator": "시뮬레이터",
+    "downloads": "다운로드 허브",
+    "security": "보안 및 개인정보",
+    "faq": "자주 묻는 질문",
+    "version": "v1.0.1 온라인",
+    "tagline": "자율 데스크톱 인텔리전스",
+    "downloadBtn": "다운로드 허브",
+    "systemHealth": "시스템 상태: 100% 정상"
+  },
+  "hero": {
+    "announcement": "자율 멀티모달 데스크톱 인텔리전스 시스템",
+    "titleMain": "음성 하나로 PC, 브라우저 및 스마트폰을",
+    "titleGradient": "자율적으로 제어하세요.",
+    "subtitle": "Supervex AI는 생각과 실행 사이의 장벽을 허뭅니다. 자연스러운 대화나 텍스트로 Windows PC를 제어하고, 광고 없는 웹 서핑을 즐기며, 무선 ADB로 Android 스마트폰을 자유롭게 명령하세요.",
+    "downloadWindows": "Windows용 다운로드 (.exe)",
+    "downloadWindowsSub": "v1.0.1 • 64비트 공식 릴리스",
+    "downloadAndroid": "Android 컴패니언 받기 (.apk)",
+    "downloadAndroidSub": "무선 ADB 브리지 • v1.4.2",
+    "iosCompanion": "iOS 컴패니언 / 대기자 등록",
+    "statLatencyVal": "< 120ms",
+    "statLatency": "Gemini Live 음성 지연시간",
+    "statLocalVal": "100% 로컬",
+    "statLocal": "원격 원격측정 유출 제로",
+    "statAgentsVal": "9개 에이전트",
+    "statAgents": "자율 CEO 오케스트레이션",
+    "statAdbVal": "무선 ADB",
+    "statAdb": "PC-스마트폰 무선 브리지"
+  },
+  "video": {
+    "title": "SUPERVEX AI :: 런타임 쇼케이스",
+    "tag": "HD 60FPS",
+    "badge": "실시간 멀티모달 녹화",
+    "sub": "Windows 데스크톱 • Gemini Live 음성 • 무선 ADB 모바일 브리지",
+    "footer": "실제 하드웨어 자율화"
+  },
+  "features": {
+    "tag": "시스템 역량",
+    "title": "자율 멀티 에이전트 매트릭스",
+    "subtitle": "9개의 특화된 인지 에이전트가 로컬에서 협력하여 사용자의 의도를 파악하고, 화면을 관찰하며 인터페이스를 제어합니다.",
+    "f1_title": "자율 데스크톱 제어",
+    "f1_desc": "기본 Windows UI 자동화. 앱 실행, 파일 편집, 창 관리를 사람처럼 매끄럽게 처리합니다.",
+    "f2_title": "Gemini Live 음성 엔진",
+    "f2_desc": "120ms 이하의 초저지연 대화형 오디오 스트리밍, 대화 끼어들기 감지 및 로컬 음성 합성.",
+    "f3_title": "비전 및 화면 인식",
+    "f3_desc": "실시간 멀티 모니터 OCR 및 시각적 그라운딩으로 복잡한 소프트웨어를 완벽하게 조작합니다.",
+    "f4_title": "무선 ADB 스마트폰 브리지",
+    "f4_desc": "Wi-Fi를 통해 연결된 Android 기기를 제어합니다. 메시지 발송, 앱 실행을 자율적으로 수행합니다.",
+    "f5_title": "스텔스 브라우저 자동화",
+    "f5_desc": "Playwright 기반 Chromium 자동화로 감지되지 않는 브라우징 및 자동 리서치 수행.",
+    "f6_title": "완벽한 오프라인 프라이버시",
+    "f6_desc": "원격 측정 제로. 화면 데이터, 키 입력, 오디오가 로컬 기기 외부에 절대 유출되지 않습니다."
+  },
+  "architecture": {
+    "tag": "핵심 아키텍처",
+    "title": "하이브리드 브레인 및 멀티 에이전트 루프",
+    "subtitle": "초고속 로컬 오케스트레이션과 Gemini Live 스트리밍의 강력한 결합.",
+    "ceoTitle": "자율 CEO 오케스트레이터",
+    "ceoDesc": "복잡한 요구사항을 하위 작업으로 분해하고 전문 에이전트에게 자동으로 위임합니다.",
+    "memoryTitle": "벡터 메모리 및 컨텍스트",
+    "memoryDesc": "과거 대화, 파일 및 선호도를 즉시 기억하는 로컬 SQLite 기반 시맨틱 벡터 저장소.",
+    "safetyTitle": "하드웨어 세이프티 인터록",
+    "safetyDesc": "중요 파일 삭제 및 시스템 명령 실행 전 사용자의 명시적 승인을 거칩니다."
+  },
+  "simulator": {
+    "tag": "인터랙티브 런타임",
+    "title": "멀티 에이전트 실행 테스트",
+    "subtitle": "아래 명령을 선택하여 CEO 에이전트가 화면, 브라우저, 모바일에서 실시간 작업하는 모습을 확인하세요.",
+    "runCommand": "자율 계획 실행",
+    "statusComplete": "실행 완료",
+    "step": "단계"
+  },
+  "security": {
+    "tag": "자주적 프라이버시",
+    "title": "원격 측정 제로. 100% 에어갭 설계.",
+    "subtitle": "키 입력, 화면, 오디오가 사용자의 승인 없이 로컬 하드웨어를 벗어나지 않습니다.",
+    "p1_title": "로컬 암호화 볼트",
+    "p1_desc": "모든 API 키와 세션 기록은 Windows DPAPI 및 AES-256 GCM으로 안전하게 암호화됩니다.",
+    "p2_title": "감사 완료된 오픈소스",
+    "p2_desc": "완전한 소스 코드 투명성. 숨겨진 분석기나 백그라운드 추적기가 일체 없습니다.",
+    "p3_title": "에어갭 완벽 지원",
+    "p3_desc": "인터넷 연결 없이 로컬 오프라인 LLM(Ollama, LM Studio)으로 완벽하게 구동 가능합니다."
+  },
+  "downloads": {
+    "tag": "공식 빌드",
+    "title": "멀티 플랫폼 배포 허브",
+    "subtitle": "Windows 및 Android용 검증된 정식 빌드를 안전하게 다운로드하세요.",
+    "tabWindows": "Windows (데스크톱)",
+    "tabAndroid": "Android (컴패니언)",
+    "tabIos": "iOS (TestFlight)",
+    "btnDownloadExe": "설치 프로그램 다운로드 (.exe)",
+    "btnDownloadZip": "포터블 버전 다운로드 (.zip)",
+    "btnDownloadApk": "APK 다운로드 (.apk)",
+    "shaLabel": "SHA-256 해시",
+    "copySha": "SHA-256 복사",
+    "copiedSha": "복사 완료!",
+    "verifiedSafe": "암호학적으로 검증된 안전한 바이너리"
+  },
+  "faq": {
+    "tag": "기술 지식 베이스",
+    "title": "자주 묻는 질문",
+    "subtitle": "Supervex AI의 아키텍처, 라이선스, 오프라인 프라이버시에 관한 모든 정보."
+  },
+  "footer": {
+    "tagline": "자율 멀티 에이전트 데스크톱 및 모바일 인텔리전스 시스템.",
+    "rights": "All rights reserved. 개발 및 소유자: MD ZINNAH KHAN.",
+    "privacy": "개인정보 처리방침",
+    "terms": "이용 약관",
+    "github": "GitHub 릴리스",
+    "status": "시스템 정상 작동 중"
+  },
+  "toast": {
+    "visitingFrom": "방문 지역:",
+    "languageSwitched": "언어가 다음으로 설정되었습니다:",
+    "keep": "유지",
+    "change": "언어 변경",
+    "selectLang": "언어 선택"
+  }
+}

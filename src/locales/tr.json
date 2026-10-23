@@ -1,0 +1,122 @@
+{
+  "nav": {
+    "features": "Özellikler",
+    "architecture": "Mimari",
+    "simulator": "Simülatör",
+    "downloads": "İndirme Merkezi",
+    "security": "Güvenlik",
+    "faq": "SSS",
+    "version": "v1.0.1 ÇEVRİMİÇİ",
+    "tagline": "OTONOM MASAÜSTÜ ZEKASI",
+    "downloadBtn": "İndirme Merkezi",
+    "systemHealth": "SİSTEM DURUMU: %100 NOMİNAL"
+  },
+  "hero": {
+    "announcement": "Otonom Çok Modlu Masaüstü Zeka Sistemi",
+    "titleMain": "Tüm Bilgisayarınızı, Tarayıcınızı ve Telefonunuzu",
+    "titleGradient": "Otonom Sesle Yönetin.",
+    "subtitle": "Supervex AI düşünce ile eylem arasındaki boşluğu kapatır. Windows bilgisayarınızı yönetmek, reklamsız gezinmek ve Android telefonunuzu kablosuz ADB ile kontrol etmek için doğal konuşun veya yazın.",
+    "downloadWindows": "Windows İçin İndir (.exe)",
+    "downloadWindowsSub": "v1.0.1 • 64-bit Resmi Sürüm",
+    "downloadAndroid": "Android Yardımcısını Al (.apk)",
+    "downloadAndroidSub": "Kablosuz ADB Köprüsü • v1.4.2",
+    "iosCompanion": "iOS Yardımcısı / Bekleme Listesi",
+    "statLatencyVal": "< 120ms",
+    "statLatency": "Gemini Live Ses Gecikmesi",
+    "statLocalVal": "%100 Yerel",
+    "statLocal": "Sıfır Telemetri Sızıntısı",
+    "statAgentsVal": "9 Ajan",
+    "statAgents": "Otonom CEO Motoru",
+    "statAdbVal": "Kablosuz ADB",
+    "statAdb": "PC-Telefon Köprüsü"
+  },
+  "video": {
+    "title": "SUPERVEX AI :: CANLI VİTRİN",
+    "tag": "HD 60FPS",
+    "badge": "CANLI ÇOK MODLU KAYIT",
+    "sub": "Windows Masaüstü • Gemini Live Ses • Kablosuz ADB Köprüsü",
+    "footer": "Gerçek Donanım Otomasyonu"
+  },
+  "features": {
+    "tag": "SİSTEM YETENEKLERİ",
+    "title": "Otonom Çoklu Ajan Matrisi",
+    "subtitle": "Niyetinizi anlamak, ekranınızı incelemek ve masaüstü arayüzlerini kontrol etmek için yerel olarak işbirliği yapan 9 uzman ajan.",
+    "f1_title": "Otonom Masaüstü Kontrolü",
+    "f1_desc": "Yerel Windows otomasyonu. Uygulamaları açar, dosyaları düzenler ve pencereleri yönetir.",
+    "f2_title": "Gemini Live Ses Motoru",
+    "f2_desc": "120ms altı gecikmeyle kesinti algılamalı ve yerel sinirsel ses sentezli sesli akış.",
+    "f3_title": "Vizyon ve Ekran Algılama",
+    "f3_desc": "Gerçek zamanlı OCR ve görsel yerleştirme ile karmaşık yazılımları hatasız kullanır.",
+    "f4_title": "Kablosuz ADB Telefon Köprüsü",
+    "f4_desc": "Wi-Fi üzerinden bağlı Android cihazları kontrol eder. Mesaj gönderir ve uygulamaları açar.",
+    "f5_title": "Gizli Tarayıcı Otomasyonu",
+    "f5_desc": "Playwright destekli reklam engellemeli ve tespit edilemeyen Chromium otomasyonu.",
+    "f6_title": "Kusursuz Çevrimdışı Gizlilik",
+    "f6_desc": "Sıfır telemetri. Ekran verileriniz, tuş vuruşlarınız ve sesiniz donanımınızda kalır."
+  },
+  "architecture": {
+    "tag": "ÇEKİRDEK MİMARİ",
+    "title": "Hibrit Beyin ve Çoklu Ajan Döngüsü",
+    "subtitle": "Milisaniye düzeyinde yanıt için ultra hızlı yerel düzenleme ve Gemini Live akışı.",
+    "ceoTitle": "Otonom CEO Yöneticisi",
+    "ceoDesc": "Karmaşık talepleri alt görevlere böler ve uzman ajanlara devreder.",
+    "memoryTitle": "Vektör Belleği ve Bağlam",
+    "memoryDesc": "Geçmiş konuşmaları anında hatırlamak için yerel SQLite anlamsal vektör depolaması.",
+    "safetyTitle": "Donanım Güvenlik Kilidi",
+    "safetyDesc": "Kritik dosya silme veya sistem komutları için kullanıcı onayı gereklidir."
+  },
+  "simulator": {
+    "tag": "İNTERAKTİF ÇALIŞMA",
+    "title": "Çoklu Ajan Yürütmesini Test Edin",
+    "subtitle": "CEO ajanının görevleri ekranda ve telefonda nasıl yürüttüğünü görmek için bir komut seçin.",
+    "runCommand": "Otonom Planı Başlat",
+    "statusComplete": "YÜRÜTME TAMAMLANDI",
+    "step": "Adım"
+  },
+  "security": {
+    "tag": "KUSURSUZ GİZLİLİK",
+    "title": "Sıfır Telemetri. %100 Yalıtılmış Tasarım.",
+    "subtitle": "Tuş vuruşlarınız, ekranınız ve sesiniz onayınız olmadan cihazınızdan asla ayrılmaz.",
+    "p1_title": "Yerel Kriptografik Kasa",
+    "p1_desc": "Tüm API anahtarları AES-256 GCM ile şifrelenir.",
+    "p2_title": "Denetlenmiş Açık Kaynak",
+    "p2_desc": "Gizli izleyiciler olmadan tamamen şeffaf kaynak kodu.",
+    "p3_title": "Tam Çevrimdışı Çalışma",
+    "p3_desc": "İnternet olmadan yerel modellerle (Ollama, LM Studio) tamamen çevrimdışı çalışabilir."
+  },
+  "downloads": {
+    "tag": "RESMİ SÜRÜMLER",
+    "title": "Çoklu Platform Dağıtım Merkezi",
+    "subtitle": "Windows ve Android için doğrulanmış kararlı sürümleri indirin.",
+    "tabWindows": "Windows (Masaüstü)",
+    "tabAndroid": "Android (Yardımcı)",
+    "tabIos": "iOS (TestFlight)",
+    "btnDownloadExe": "Yükleyiciyi İndir (.exe)",
+    "btnDownloadZip": "Taşınabilir Sürümü İndir (.zip)",
+    "btnDownloadApk": "APK İndir (.apk)",
+    "shaLabel": "SHA-256 Özeti",
+    "copySha": "SHA-256 Kopyala",
+    "copiedSha": "Kopyalandı!",
+    "verifiedSafe": "Kriptografik Olarak Doğrulanmış Dosya"
+  },
+  "faq": {
+    "tag": "BİLGİ BANKASI",
+    "title": "Sıkça Sorulan Sorular",
+    "subtitle": "Supervex AI, mimari, lisanslama ve gizlilik hakkında bilmeniz gereken her şey."
+  },
+  "footer": {
+    "tagline": "Otonom Çoklu Ajan Masaüstü ve Mobil Zeka Sistemi.",
+    "rights": "Tüm hakları saklıdır. Geliştirici ve Sahibi: MD ZINNAH KHAN.",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Şartları",
+    "github": "GitHub Sürümleri",
+    "status": "Sistem Çevrimiçi"
+  },
+  "toast": {
+    "visitingFrom": "Konumunuz tespit edildi:",
+    "languageSwitched": "Dil şu şekilde ayarlandı:",
+    "keep": "Koru",
+    "change": "Dili Değiştir",
+    "selectLang": "Dilinizi Seçin"
+  }
+}

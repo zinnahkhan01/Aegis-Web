@@ -1,0 +1,122 @@
+{
+  "nav": {
+    "features": "Features",
+    "architecture": "Architecture",
+    "simulator": "Simulator",
+    "downloads": "Download Hub",
+    "security": "Security",
+    "faq": "FAQ",
+    "version": "v1.0.1 ONLINE",
+    "tagline": "AUTONOMOUS DESKTOP INTELLIGENCE",
+    "downloadBtn": "Download Hub",
+    "systemHealth": "SYSTEM HEALTH: 100% NOMINAL"
+  },
+  "hero": {
+    "announcement": "The Autonomous Multi-Modal Desktop Intelligence System",
+    "titleMain": "Command Your Entire PC, Browser & Phone With",
+    "titleGradient": "Autonomous Voice.",
+    "subtitle": "Supervex AI bridges the gap between thought and execution. Speak naturally or type instructions to control your Windows PC, browse ad-free with stealth Playwright automation, and command your Android phone via wireless ADB.",
+    "downloadWindows": "Download for Windows (.exe)",
+    "downloadWindowsSub": "v1.0.1 • 64-bit Official Release",
+    "downloadAndroid": "Get Android Companion (.apk)",
+    "downloadAndroidSub": "Wireless ADB Bridge • v1.4.2",
+    "iosCompanion": "iOS Companion / Waitlist",
+    "statLatencyVal": "< 120ms",
+    "statLatency": "Gemini Live Voice Latency",
+    "statLocalVal": "100% Local",
+    "statLocal": "Zero Telemetry Leakage",
+    "statAgentsVal": "9 Agents",
+    "statAgents": "Autonomous CEO Engine",
+    "statAdbVal": "Wireless ADB",
+    "statAdb": "PC-to-Android Bridge"
+  },
+  "video": {
+    "title": "SUPERVEX AI :: RUNTIME SHOWCASE",
+    "tag": "HD 60FPS",
+    "badge": "LIVE MULTI-MODAL RECORDING",
+    "sub": "Windows Desktop • Gemini Live Voice • Wireless ADB Mobile Bridge",
+    "footer": "Real Hardware Automation"
+  },
+  "features": {
+    "tag": "SYSTEM CAPABILITIES",
+    "title": "Autonomous Multi-Agent Matrix",
+    "subtitle": "9 specialized cognitive agents collaborating locally to understand your intent, observe your screen, and control physical desktop and mobile interfaces.",
+    "f1_title": "Autonomous Desktop Control",
+    "f1_desc": "Native Windows UI automation using PyAutoGUI & Win32 APIs. Opens apps, edits files, and manages windows effortlessly.",
+    "f2_title": "Gemini Live Voice Engine",
+    "f2_desc": "Sub-120ms conversational audio streaming with interruption awareness, local whisper transcription, and neural voice synthesis.",
+    "f3_title": "Vision & Screen Perception",
+    "f3_desc": "Real-time multi-monitor OCR and visual grounding. Analyzes errors, reads UI layouts, and navigates complex software.",
+    "f4_title": "Wireless ADB Phone Bridge",
+    "f4_desc": "Seamlessly controls connected Android devices over Wi-Fi. Launches apps, sends messages, and taps coordinates autonomously.",
+    "f5_title": "Stealth Browser Automation",
+    "f5_desc": "Playwright-powered Chromium automation with undetectable browser fingerprinting, ad-blocking, and parallel research scraping.",
+    "f6_title": "Sovereign Offline Privacy",
+    "f6_desc": "Zero telemetry and air-gapped core architecture. Your screen data, keystrokes, and audio remain on your hardware."
+  },
+  "architecture": {
+    "tag": "CORE ARCHITECTURE",
+    "title": "Hybrid Brain & Multi-Agent Loop",
+    "subtitle": "Local ultra-fast orchestration coupled with Gemini Live streaming for millisecond-level responsiveness.",
+    "ceoTitle": "Autonomous CEO Orchestrator",
+    "ceoDesc": "Decomposes complex requests into directed acyclic dependency graphs and delegates subtasks to specialized agents.",
+    "memoryTitle": "Vector Memory & Context",
+    "memoryDesc": "Local SQLite-backed semantic vector storage for instant recall of past conversations, files, and user preferences.",
+    "safetyTitle": "Hardware Safety Interlock",
+    "safetyDesc": "Human-in-the-loop confirmation for critical file deletions, system reboots, and network shell commands."
+  },
+  "simulator": {
+    "tag": "INTERACTIVE RUNTIME",
+    "title": "Test Multi-Agent Execution",
+    "subtitle": "Select a command below to watch the autonomous CEO agent delegate tasks across screen vision, browser, and mobile bridges in real-time.",
+    "runCommand": "Run Autonomous Plan",
+    "statusComplete": "EXECUTION FINISHED",
+    "step": "Step"
+  },
+  "security": {
+    "tag": "SOVEREIGN PRIVACY",
+    "title": "Zero Telemetry. 100% Air-Gapped by Design.",
+    "subtitle": "Your keystrokes, personal screen, audio input, and terminal executions never leave your local hardware without explicit approval.",
+    "p1_title": "Local Cryptographic Vault",
+    "p1_desc": "All API keys, session histories, and local memories are encrypted with AES-256 GCM using Windows DPAPI keys.",
+    "p2_title": "Open Source Audited",
+    "p2_desc": "Complete source code visibility. Zero hidden analytics, zero trackers, and zero background analytics beaconing.",
+    "p3_title": "Air-Gapped Operation",
+    "p3_desc": "Optionally run local offline LLM backends (Ollama, LM Studio) without requiring an internet connection."
+  },
+  "downloads": {
+    "tag": "OFFICIAL BUILDS",
+    "title": "Multi-Platform Distribution Hub",
+    "subtitle": "Download verified production binaries for Windows and Android, or preview the iOS mobile companion.",
+    "tabWindows": "Windows (Desktop)",
+    "tabAndroid": "Android (Companion)",
+    "tabIos": "iOS (TestFlight)",
+    "btnDownloadExe": "Download Installer (.exe)",
+    "btnDownloadZip": "Download Portable (.zip)",
+    "btnDownloadApk": "Download APK (.apk)",
+    "shaLabel": "SHA-256 Hash",
+    "copySha": "Copy SHA-256",
+    "copiedSha": "Copied!",
+    "verifiedSafe": "Cryptographically Verified Binary"
+  },
+  "faq": {
+    "tag": "KNOWLEDGE BASE",
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about Supervex AI, architecture, licensing, and offline privacy."
+  },
+  "footer": {
+    "tagline": "The Autonomous Multi-Agent Desktop & Mobile Intelligence System.",
+    "rights": "All rights reserved. Developed & Owned by MD ZINNAH KHAN.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "github": "GitHub Releases",
+    "status": "System Online"
+  },
+  "toast": {
+    "visitingFrom": "Visiting from",
+    "languageSwitched": "Language set to",
+    "keep": "Keep",
+    "change": "Change Language",
+    "selectLang": "Select Your Language"
+  }
+}

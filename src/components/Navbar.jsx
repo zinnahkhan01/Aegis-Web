@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from "react";
+﻿import React, { useState, useEffect } from "react";
 import { Shield, Download, Menu, X, ChevronRight } from "lucide-react";
+import { useLanguage } from "../context/LanguageContext";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export function Navbar({ onOpenDownload }) {
+  const { t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -14,12 +17,12 @@ export function Navbar({ onOpenDownload }) {
   }, []);
 
   const navLinks = [
-    { label: "Features", href: "#features" },
-    { label: "Architecture", href: "#architecture" },
-    { label: "Simulator", href: "#simulator" },
-    { label: "Download Hub", href: "#downloads" },
-    { label: "Security", href: "#security" },
-    { label: "FAQ", href: "#faq" }
+    { label: t("nav.features", "Features"), href: "#features" },
+    { label: t("nav.architecture", "Architecture"), href: "#architecture" },
+    { label: t("nav.simulator", "Simulator"), href: "#simulator" },
+    { label: t("nav.downloads", "Download Hub"), href: "#downloads" },
+    { label: t("nav.security", "Security"), href: "#security" },
+    { label: t("nav.faq", "FAQ"), href: "#faq" }
   ];
 
   const handleLinkClick = (e, href) => {
@@ -42,10 +45,10 @@ export function Navbar({ onOpenDownload }) {
         : "bg-transparent py-5"
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-4">
           
           {/* Logo & Status Badge */}
-          <a href="#" className="flex items-center gap-3 group">
+          <a href="#" className="flex items-center gap-3 group shrink-0">
             <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-[#00F2FF]/20 via-[#7C3AED]/20 to-transparent border border-[#00F2FF]/40 shadow-glow-cyan/50 group-hover:border-[#00F2FF] transition-all duration-300">
               <img src="/icon.png" alt="Supervex AI" className="w-7 h-7 object-cover rounded-lg transition-transform duration-300 group-hover:scale-110" />
               <div className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-400 rounded-full animate-ping" />
@@ -59,17 +62,17 @@ export function Navbar({ onOpenDownload }) {
                 </span>
                 <span className="hidden sm:inline-flex items-center gap-1 text-[10px] font-mono font-medium px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                  v1.0.0 BETA ONLINE
+                  {t("nav.version", "v1.0.1 ONLINE")}
                 </span>
               </div>
               <span className="text-[10px] text-slate-400 font-mono tracking-tight hidden sm:block">
-                AUTONOMOUS DESKTOP INTELLIGENCE
+                {t("nav.tagline", "AUTONOMOUS DESKTOP INTELLIGENCE")}
               </span>
             </div>
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-1 lg:gap-2 px-3 py-1.5 rounded-full bg-[#0a0f1d]/60 border border-white/5 backdrop-blur-md">
+          <nav className="hidden lg:flex items-center gap-1 px-3 py-1.5 rounded-full bg-[#0a0f1d]/60 border border-white/5 backdrop-blur-md">
             {navLinks.map((link) => (
               <a
                 key={link.label}
@@ -82,26 +85,32 @@ export function Navbar({ onOpenDownload }) {
             ))}
           </nav>
 
-          {/* Header Action Button */}
-          <div className="hidden sm:flex items-center gap-3">
+          {/* Header Action Buttons (Language Switcher + Download) */}
+          <div className="hidden sm:flex items-center gap-2.5">
+            {/* 23-Language Selector Dropdown */}
+            <LanguageSwitcher />
+
             <a
               href="#downloads"
               onClick={(e) => handleLinkClick(e, "#downloads")}
-              className="relative group overflow-hidden px-4 py-2 rounded-xl text-xs font-semibold tracking-wide text-slate-950 bg-gradient-to-r from-[#00F2FF] to-cyan-300 hover:from-cyan-300 hover:to-[#00F2FF] shadow-glow-cyan transition-all duration-300 flex items-center gap-2"
+              className="relative group overflow-hidden px-4 py-2 rounded-xl text-xs font-semibold tracking-wide text-slate-950 bg-gradient-to-r from-[#00F2FF] to-cyan-300 hover:from-cyan-300 hover:to-[#00F2FF] shadow-glow-cyan transition-all duration-300 flex items-center gap-2 shrink-0"
             >
               <Download className="w-3.5 h-3.5 text-slate-950 transition-transform group-hover:-translate-y-0.5" />
-              <span>Download Hub</span>
+              <span>{t("nav.downloadBtn", "Download Hub")}</span>
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 focus:outline-none"
-            aria-label="Toggle navigation"
-          >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Mobile Actions (Language Switcher + Hamburger) */}
+          <div className="flex sm:hidden items-center gap-2">
+            <LanguageSwitcher />
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 focus:outline-none cursor-pointer"
+              aria-label="Toggle navigation"
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -111,9 +120,9 @@ export function Navbar({ onOpenDownload }) {
           <div className="flex items-center justify-between pb-3 border-b border-white/5 px-2">
             <span className="text-xs font-mono text-emerald-400 flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              SYSTEM HEALTH: 100% NOMINAL
+              {t("nav.systemHealth", "SYSTEM HEALTH: 100% NOMINAL")}
             </span>
-            <span className="text-xs text-slate-400 font-mono">v1.0.0 Beta</span>
+            <span className="text-xs text-slate-400 font-mono">v1.0.1</span>
           </div>
 
           {navLinks.map((link) => (
@@ -135,7 +144,7 @@ export function Navbar({ onOpenDownload }) {
               className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold text-slate-950 bg-gradient-to-r from-[#00F2FF] to-cyan-300 shadow-glow-cyan"
             >
               <Download className="w-4 h-4" />
-              <span>Go to Download Hub</span>
+              <span>{t("nav.downloadBtn", "Download Hub")}</span>
             </a>
           </div>
         </div>
@@ -143,3 +152,5 @@ export function Navbar({ onOpenDownload }) {
     </header>
   );
 }
+
+export default Navbar;
