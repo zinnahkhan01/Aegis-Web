@@ -1,0 +1,19 @@
+# Dependencies
+node_modules
+
+# Large binaries (downloads are served from GitHub Releases)
+public/downloads
+public/downloads/*
+public/*.exe
+public/*.zip
+public/*.blockmap
+
+# Large video files
+public/demo.mp4
+public/*.mp4
+*.mp4
+
+# Dev & Git
+.git
+.vscode
+dist
