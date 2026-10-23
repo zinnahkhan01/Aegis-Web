@@ -67,7 +67,7 @@ export function FeatureGrid() {
           <h2 className="font-display text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
             The 9 Sovereign Powers of{" "}
             <span className="bg-gradient-to-r from-[#00F2FF] to-[#7C3AED] bg-clip-text text-transparent">
-              Aegis-AI
+              Supervex AI
             </span>
           </h2>
 

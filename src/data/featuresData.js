@@ -15,7 +15,7 @@ export const FEATURES_DATA = [
       "Cognitive CEO Agent orchestration across all sub-agents",
       "Dynamic prompt synthesis and real-time context streaming"
     ],
-    sampleCommand: "Aegis, let's design an automated backup plan for my project folder.",
+    sampleCommand: "Supervex, let's design an automated backup plan for my project folder.",
     toolSnippet: `// Gemini Live Duplex Stream
 const session = await geminiLive.connect({
   model: "gemini-2.5-flash-native-audio",
@@ -79,7 +79,7 @@ await browser.player.setVolume(70);`
     id: "mobile-adb",
     number: "04",
     agentCode: "MOBILE::ADB_BRIDGE",
-    title: "Mobile Control & ADB (Aegis Companion)",
+    title: "Mobile Control & ADB (Supervex Companion)",
     category: "web_mobile",
     badge: "PC-to-Android Bridge",
     accent: "emerald",
@@ -107,7 +107,7 @@ await phone.simulateTap({ x: 540, y: 1920 });`
     badge: "Hands-Free Messaging",
     accent: "emerald",
     shortDesc: "Intelligent contact resolution and automated hands-free messaging straight through WhatsApp Web.",
-    description: "Never leave your keyboard or flow state. Simply dictate your message and recipient name; Aegis resolves the closest contact match, opens the chat session, formats text, and dispatches it in seconds.",
+    description: "Never leave your keyboard or flow state. Simply dictate your message and recipient name; Supervex resolves the closest contact match, opens the chat session, formats text, and dispatches it in seconds.",
     highlights: [
       "Fuzzy contact matching from local or synced address books",
       "Hands-free message dictation and confirmation preview",
@@ -132,7 +132,7 @@ await whatsapp.sendMessage({
     badge: "Native App Dispatcher",
     accent: "violet",
     shortDesc: "Instant native app launching (VS Code, Notepad, VLC) and secure CLI script execution.",
-    description: "Full control over your operating system environment. Aegis launches native applications, handles window states, runs automated PowerShell/Bash developer workflows, and manages background processes safely.",
+    description: "Full control over your operating system environment. Supervex launches native applications, handles window states, runs automated PowerShell/Bash developer workflows, and manages background processes safely.",
     highlights: [
       "Universal launcher for native desktop programs and utilities",
       "Script runner with output capturing and error recovery",
@@ -142,7 +142,7 @@ await whatsapp.sendMessage({
     sampleCommand: "Open VS Code in my project directory and run the dev server in PowerShell.",
     toolSnippet: `// Native OS Application Dispatcher
 await desktopAgent.launchApplication("code", {
-  args: ["C:\\Projects\\Aegis-Web"],
+  args: ["C:\\Projects\\Supervex-Web"],
   workspace: true
 });
 await desktopAgent.runScript("npm run dev", { background: true });`
@@ -156,7 +156,7 @@ await desktopAgent.runScript("npm run dev", { background: true });`
     badge: "see_screen & see_camera",
     accent: "cyan",
     shortDesc: "Real-time display screen capture analysis (see_screen) and webcam environmental perception (see_camera).",
-    description: "Give your AI real eyes. Aegis inspects whatever is on your desktop monitor to diagnose coding bugs, summarize charts, inspect UI layouts, or switch to your webcam to see physical documents and objects in your room.",
+    description: "Give your AI real eyes. Supervex inspects whatever is on your desktop monitor to diagnose coding bugs, summarize charts, inspect UI layouts, or switch to your webcam to see physical documents and objects in your room.",
     highlights: [
       "High-speed display frame capture with privacy redaction",
       "Multi-modal OCR, UI widget recognition, and error log debugging",
@@ -190,7 +190,7 @@ return analysis.summary;`
     ],
     sampleCommand: "Show system health and current AI core latency on the Command Center.",
     toolSnippet: `// Telemetry WebSocket Stream
-const dashboard = new AegisTelemetryStream();
+const dashboard = new SupervexTelemetryStream();
 dashboard.subscribe(["cpu", "memory", "agent_status", "llm_latency"]);
 dashboard.on("metric_update", (telemetry) => {
   renderGlassHud(telemetry);

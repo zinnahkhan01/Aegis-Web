@@ -13,7 +13,7 @@ export const SIMULATOR_COMMANDS = [
       { step: 1, title: "Voice & Intent Analysis", detail: "VAD captured voice command. CEO Agent recognized intent: OS_APP_LAUNCH & TEXT_INPUT.", status: "done" },
       { step: 2, title: "CEO Agent Delegation", detail: "Routing execution payload to DesktopAgent (native process manager).", status: "done" },
       { step: 3, title: "Process Spawn & Hook", detail: "Spawned process 'notepad.exe' (PID: 14280) with window title 'Untitled - Notepad'.", status: "done" },
-      { step: 4, title: "Keystroke Injection", detail: "Injected text: '# Project Aegis Architecture Notes\\n- CEO Agent v1.0.0 Beta\\n- Playwright Stealth Active'.", status: "done" },
+      { step: 4, title: "Keystroke Injection", detail: "Injected text: '# Project Supervex Architecture Notes\\n- CEO Agent v1.0.0 Beta\\n- Playwright Stealth Active'.", status: "done" },
       { step: 5, title: "Completion Telemetry", detail: "Window state: FOCUSED. Memory overhead: 14.2 MB. Dispatched spoken confirmation.", status: "done" }
     ],
     logs: [
@@ -30,7 +30,7 @@ export const SIMULATOR_COMMANDS = [
       method: "desktop_open_and_type",
       params: {
         application: "notepad.exe",
-        content: "# Aegis-AI Launch Notes\n- Realtime Voice Engine: Active\n- ADB Mobile Bridge: Connected",
+        content: "# Supervex AI Launch Notes\n- Realtime Voice Engine: Active\n- ADB Mobile Bridge: Connected",
         focus: true
       }
     }
@@ -84,7 +84,7 @@ export const SIMULATOR_COMMANDS = [
     duration: "0.8s",
     voiceResponse: "Restored 'Q3_Financial_Summary.xlsx' to your Documents folder from the Recycle Bin.",
     steps: [
-      { step: 1, title: "Transactional Log Lookup", detail: "FileAgent inspected sqlite journal in %APPDATA%/AegisAI/file_transactions.db.", status: "done" },
+      { step: 1, title: "Transactional Log Lookup", detail: "FileAgent inspected sqlite journal in %APPDATA%/SupervexAI/file_transactions.db.", status: "done" },
       { step: 2, title: "Operation Match", detail: "Found Op #8842: Soft-delete on 'Documents\\Q3_Financial_Summary.xlsx' 4 minutes ago.", status: "done" },
       { step: 3, title: "Safe Restoration", detail: "Invoked Win32 IFileOperation / Recycle Bin Shell API to reverse deletion.", status: "done" },
       { step: 4, title: "Integrity Verification", detail: "Checked file hash (SHA-256 match). Permissions and metadata restored 100%.", status: "done" },
@@ -114,7 +114,7 @@ export const SIMULATOR_COMMANDS = [
     chip: "Unlock phone and send WhatsApp to Rahul",
     description: "Wake Android screen via Wireless ADB, submit secure PIN, launch WhatsApp, resolve contact 'Rahul', and dispatch message.",
     category: "Mobile & ADB Bridge",
-    targetAgent: "CEO Agent -> AegisCompanion (ADB)",
+    targetAgent: "CEO Agent -> SupervexCompanion (ADB)",
     statusBadge: "CROSS_DEVICE_ADB",
     accent: "emerald",
     duration: "2.8s",
@@ -128,7 +128,7 @@ export const SIMULATOR_COMMANDS = [
     ],
     logs: [
       "[00:00.10] [AUDIO_IN] Stream captured: 'Unlock phone and send WhatsApp to Rahul'",
-      "[00:00.38] [CEO_BRAIN] Cross-device route: ADB Wireless -> Aegis Companion",
+      "[00:00.38] [CEO_BRAIN] Cross-device route: ADB Wireless -> Supervex Companion",
       "[00:00.82] [ADB_DAEMON] TCP handshake 192.168.1.104:5555 [State: DEVICE_ONLINE]",
       "[00:01.19] [KEYGUARD] adb shell input keyevent 224 && input swipe 540 1600 540 400",
       "[00:01.71] [PIN_AUTH] Dispatched secure credentials -> Screen unlocked",
@@ -137,13 +137,13 @@ export const SIMULATOR_COMMANDS = [
       "[00:02.80] [STATUS] SUCCESS: Message delivered via mobile carrier/Wi-Fi"
     ],
     toolCall: {
-      agent: "AegisCompanion",
+      agent: "SupervexCompanion",
       method: "adb_whatsapp_dispatch",
       params: {
         deviceIp: "192.168.1.104:5555",
         unlockRequired: true,
         contactName: "Rahul",
-        message: "Hey Rahul, sending this hands-free from Aegis-AI!"
+        message: "Hey Rahul, sending this hands-free from Supervex AI!"
       }
     }
   }

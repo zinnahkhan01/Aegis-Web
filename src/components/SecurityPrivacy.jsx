@@ -15,14 +15,14 @@ export function SecurityPrivacy() {
       title: "100% Local Database Storage",
       color: "text-[#00F2FF]",
       border: "border-cyan-500/30",
-      description: "All transactional file history, task queues, and user configurations are stored locally inside %APPDATA%\\AegisAI on your machine in encrypted SQLite databases. Zero cloud sync required."
+      description: "All transactional file history, task queues, and user configurations are stored locally inside %APPDATA%\\SupervexAI on your machine in encrypted SQLite databases. Zero cloud sync required."
     },
     {
       icon: EyeOff,
       title: "Zero Telemetry Leaks",
       color: "text-emerald-400",
       border: "border-emerald-500/30",
-      description: "Aegis-AI contains no tracking cookies, analytics SDKs, or cloud telemetry beacons. Your prompts, voice audio, and files remain strictly your own property."
+      description: "Supervex AI contains no tracking cookies, analytics SDKs, or cloud telemetry beacons. Your prompts, voice audio, and files remain strictly your own property."
     },
     {
       icon: Lock,
@@ -62,7 +62,7 @@ export function SecurityPrivacy() {
           </h2>
 
           <p className="text-slate-400 text-base sm:text-lg">
-            Unlike cloud-tethered assistants that siphon your desktop activity to corporate servers, Aegis-AI is architected from the ground up for strict local privacy.
+            Unlike cloud-tethered assistants that siphon your desktop activity to corporate servers, Supervex AI is architected from the ground up for strict local privacy.
           </p>
         </div>
 

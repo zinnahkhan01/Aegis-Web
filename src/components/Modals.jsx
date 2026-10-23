@@ -54,7 +54,7 @@ export function Modals({
         body: JSON.stringify({
           email: waitlistEmail,
           platform: "iOS TestFlight and Early Access",
-          source: "Aegis-Web Official",
+          source: "Supervex-Web Official",
           submittedAt: new Date().toISOString()
         })
       });
@@ -102,7 +102,7 @@ export function Modals({
               </div>
               <div>
                 <h3 className="font-display text-2xl font-bold text-white">
-                  Aegis-AI Release Notes
+                  Supervex AI Release Notes
                 </h3>
                 <span className="text-xs font-mono text-slate-400">
                   Version history and changelog
@@ -195,7 +195,7 @@ export function Modals({
                 onClick={() => {
                   const el = document.createElement("a");
                   el.href = "#";
-                  el.download = "Aegis-Companion-v1.4.2.apk";
+                  el.download = "Supervex-Companion-v1.4.2.apk";
                   el.click();
                 }}
                 className="flex-1 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs font-mono transition-colors flex items-center justify-center gap-2 cursor-pointer"
@@ -225,7 +225,7 @@ export function Modals({
                   Wireless ADB Setup Guide
                 </h3>
                 <span className="text-xs font-mono text-slate-400">
-                  Pair your Android device with Aegis-AI in 3 simple steps
+                  Pair your Android device with Supervex AI in 3 simple steps
                 </span>
               </div>
             </div>
@@ -249,7 +249,7 @@ export function Modals({
                   <span>Connect Over Local Wi-Fi</span>
                 </div>
                 <p className="text-slate-400 font-sans pl-7">
-                  Check your phone's IP address and Port under Wireless Debugging, then run or let Aegis auto-detect:
+                  Check your phone's IP address and Port under Wireless Debugging, then run or let Supervex auto-detect:
                 </p>
                 <div className="ml-7 p-2.5 rounded-lg bg-[#020409] border border-white/10 flex items-center justify-between text-cyan-200">
                   <code>adb connect 192.168.1.104:5555</code>
@@ -266,10 +266,10 @@ export function Modals({
               <div className="p-4 rounded-xl bg-[#050811] border border-white/5 space-y-2">
                 <div className="flex items-center gap-2 text-violet-400 font-bold">
                   <span className="w-5 h-5 rounded-full bg-violet-500/20 flex items-center justify-center text-[10px]">3</span>
-                  <span>Launch Aegis Companion & Grant Accessibility</span>
+                  <span>Launch Supervex Companion & Grant Accessibility</span>
                 </div>
                 <p className="text-slate-400 font-sans pl-7">
-                  Open the Aegis Companion app on your phone and enable the <strong>Aegis Gesture Service</strong>. This enables hands-free screen touches, swipes, and app control.
+                  Open the Supervex Companion app on your phone and enable the <strong>Supervex Gesture Service</strong>. This enables hands-free screen touches, swipes, and app control.
                 </p>
               </div>
             </div>
@@ -371,7 +371,7 @@ export function Modals({
                   <span className="text-emerald-400">1.</span> Sovereign Local Architecture
                 </h4>
                 <p className="text-slate-400">
-                  Aegis AI operates on a strictly local architecture. All decision graphs, file automation, terminal commands, and local memory engines (SQLite and ChromaDB vector stores) execute exclusively on your machine.
+                  Supervex AI operates on a strictly local architecture. All decision graphs, file automation, terminal commands, and local memory engines (SQLite and ChromaDB vector stores) execute exclusively on your machine.
                 </p>
               </div>
 
@@ -380,7 +380,7 @@ export function Modals({
                   <span className="text-emerald-400">2.</span> Zero Telemetry & Screen Privacy
                 </h4>
                 <p className="text-slate-400">
-                  No screen captures, window inspection texts, audio recordings, or typed prompts are ever sent to central Aegis servers. Aegis AI collects zero tracking analytics, zero user profiles, and zero telemetry data.
+                  No screen captures, window inspection texts, audio recordings, or typed prompts are ever sent to central Supervex servers. Supervex AI collects zero tracking analytics, zero user profiles, and zero telemetry data.
                 </p>
               </div>
 
@@ -398,7 +398,7 @@ export function Modals({
                   <span className="text-emerald-400">4.</span> Developer & Inquiries
                 </h4>
                 <p className="text-slate-400">
-                  For questions or audit inquiries regarding data sovereignty, contact: <a href="mailto:support@aegis-ai.com" className="text-[#00F2FF] hover:underline font-mono">support@aegis-ai.com</a>. Project owned and developed by <strong>MD ZINNAH KHAN</strong>.
+                  For questions or audit inquiries regarding data sovereignty, contact: <a href="mailto:support@supervexai.com" className="text-[#00F2FF] hover:underline font-mono">support@supervexai.com</a>. Project owned and developed by <strong>MD ZINNAH KHAN</strong>.
                 </p>
               </div>
             </div>
@@ -424,7 +424,7 @@ export function Modals({
                   Terms of Service & Licensing
                 </h3>
                 <span className="text-xs font-mono text-slate-400">
-                  Aegis-AI Sovereign Desktop Client • v1.0.0 Beta
+                  Supervex AI Sovereign Desktop Client • v1.0.0 Beta
                 </span>
               </div>
             </div>
@@ -435,7 +435,7 @@ export function Modals({
                   <span className="text-[#00F2FF]">1.</span> License & Ownership
                 </h4>
                 <p className="text-slate-400">
-                  Aegis AI is created, owned, and maintained by <strong>MD ZINNAH KHAN</strong>. You are granted a personal, non-exclusive license to run and automate workflows on your own hardware.
+                  Supervex AI is created, owned, and maintained by <strong>MD ZINNAH KHAN</strong>. You are granted a personal, non-exclusive license to run and automate workflows on your own hardware.
                 </p>
               </div>
 
@@ -444,7 +444,7 @@ export function Modals({
                   <span className="text-[#00F2FF]">2.</span> Responsible Automation
                 </h4>
                 <p className="text-slate-400">
-                  Aegis AI includes built-in safety guardrails (System Path Protection, Recycle Bin transactional undo, and non-destructive file operations). Users agree to use automation features, Android wireless bridges, and browser automation lawfully and responsibly.
+                  Supervex AI includes built-in safety guardrails (System Path Protection, Recycle Bin transactional undo, and non-destructive file operations). Users agree to use automation features, Android wireless bridges, and browser automation lawfully and responsibly.
                 </p>
               </div>
 
@@ -462,7 +462,7 @@ export function Modals({
                   <span className="text-[#00F2FF]">4.</span> Official Support
                 </h4>
                 <p className="text-slate-400">
-                  For bug reports, enterprise inquiries, or feature suggestions, reach out to our team at <a href="mailto:contact@aegis-ai.com" className="text-[#00F2FF] hover:underline font-mono">contact@aegis-ai.com</a> or <a href="mailto:support@aegis-ai.com" className="text-[#00F2FF] hover:underline font-mono">support@aegis-ai.com</a>.
+                  For bug reports, enterprise inquiries, or feature suggestions, reach out to our team at <a href="mailto:contact@supervexai.com" className="text-[#00F2FF] hover:underline font-mono">contact@supervexai.com</a> or <a href="mailto:support@supervexai.com" className="text-[#00F2FF] hover:underline font-mono">support@supervexai.com</a>.
                 </p>
               </div>
             </div>

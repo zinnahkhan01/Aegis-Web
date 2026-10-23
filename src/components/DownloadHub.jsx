@@ -62,14 +62,14 @@ export function DownloadHub({ onOpenReleaseNotes, onOpenQrCode, onOpenAdbGuide, 
           </div>
 
           <h2 className="font-display text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
-            Download Aegis-AI For{" "}
+            Download Supervex AI For{" "}
             <span className="bg-gradient-to-r from-[#00F2FF] to-cyan-300 bg-clip-text text-transparent">
               All Your Devices
             </span>
           </h2>
 
           <p className="text-slate-400 text-base sm:text-lg">
-            Deploy the sovereign desktop client on Windows, pair your Android phone wirelessly with the Aegis Companion APK, and experience seamless cross-device intelligence.
+            Deploy the sovereign desktop client on Windows, pair your Android phone wirelessly with the Supervex Companion APK, and experience seamless cross-device intelligence.
           </p>
         </div>
 
@@ -101,13 +101,13 @@ export function DownloadHub({ onOpenReleaseNotes, onOpenQrCode, onOpenAdbGuide, 
               </div>
 
               <p className="text-sm text-slate-300 mb-6 leading-relaxed">
-                The flagship Aegis-AI client. Bundles the CEO Agent brain, Gemini Live audio engine, Playwright stealth browser, and transactional file journal in an optimized standalone installer.
+                The flagship Supervex AI client. Bundles the CEO Agent brain, Gemini Live audio engine, Playwright stealth browser, and transactional file journal in an optimized standalone installer.
               </p>
 
               {/* Action Buttons */}
               <div className="flex flex-wrap items-center gap-3 mb-6">
                 <button
-                  onClick={() => handleDownload("Aegis-AI-Setup-v1.0.0-Beta-x64.exe")}
+                  onClick={() => handleDownload("Supervex-AI-Setup-v1.0.0-Beta-x64.exe")}
                   className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#00F2FF] via-cyan-400 to-[#00F2FF] hover:to-cyan-300 text-slate-950 font-bold text-sm tracking-wide shadow-glow-cyan hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2 cursor-pointer"
                 >
                   <Download className="w-4 h-4 text-slate-950" />
@@ -115,7 +115,7 @@ export function DownloadHub({ onOpenReleaseNotes, onOpenQrCode, onOpenAdbGuide, 
                 </button>
 
                 <button
-                  onClick={() => handleDownload("Aegis-AI-Portable-v1.0.0-Beta-x64.zip")}
+                  onClick={() => handleDownload("Supervex-AI-Portable-v1.0.0-Beta-x64.zip")}
                   className="px-5 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-slate-200 text-sm font-semibold transition-all flex items-center gap-2 cursor-pointer"
                 >
                   <Download className="w-4 h-4 text-slate-400" />
@@ -188,7 +188,7 @@ export function DownloadHub({ onOpenReleaseNotes, onOpenQrCode, onOpenAdbGuide, 
             <div className="space-y-2.5 pt-4 border-t border-white/5">
               <div className="grid grid-cols-2 gap-2">
                 <button
-                  onClick={() => handleDownload("Aegis-Companion-v1.0.0-Beta.apk")}
+                  onClick={() => handleDownload("Supervex-Companion-v1.0.0-Beta.apk")}
                   className="w-full px-3 py-2.5 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/40 text-emerald-300 font-bold text-xs font-mono transition-all flex items-center justify-center gap-1.5 cursor-pointer"
                 >
                   <Download className="w-3.5 h-3.5" />
@@ -235,7 +235,7 @@ export function DownloadHub({ onOpenReleaseNotes, onOpenQrCode, onOpenAdbGuide, 
               </span>
 
               <p className="text-xs text-slate-300 mb-6 leading-relaxed">
-                Control your Aegis PC remotely from your iPhone or iPad. Includes progressive web app dashboard, Siri Shortcuts bridge, and bi-directional clipboard sync.
+                Control your Supervex PC remotely from your iPhone or iPad. Includes progressive web app dashboard, Siri Shortcuts bridge, and bi-directional clipboard sync.
               </p>
             </div>
 

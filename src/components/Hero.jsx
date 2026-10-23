@@ -64,7 +64,7 @@ export function Hero({ onOpenDownload, onOpenReleaseNotes, onOpenAdbGuide, onOpe
 
           {/* Pitch Subtitle */}
           <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto font-normal leading-relaxed">
-            Aegis-AI bridges the gap between thought and execution. Speak naturally or type instructions to control your Windows PC, browse ad-free with stealth Playwright automation, and command your Android phone via wireless ADB.
+            Supervex AI bridges the gap between thought and execution. Speak naturally or type instructions to control your Windows PC, browse ad-free with stealth Playwright automation, and command your Android phone via wireless ADB.
           </p>
         </div>
 
@@ -210,7 +210,7 @@ export function Hero({ onOpenDownload, onOpenReleaseNotes, onOpenAdbGuide, onOpe
                   <div className="mt-3 flex items-center justify-between text-[11px] font-mono text-slate-400">
                     <span className="flex items-center gap-1.5 text-cyan-300">
                       <Volume2 className="w-3.5 h-3.5" />
-                      Listening: "Aegis, play coding music and check phone battery..."
+                      Listening: "Supervex, play coding music and check phone battery..."
                     </span>
                     <span className="text-slate-500">48kHz PCM</span>
                   </div>
@@ -314,7 +314,7 @@ export function Hero({ onOpenDownload, onOpenReleaseNotes, onOpenAdbGuide, onOpe
             {/* Bottom Window Bar */}
             <div className="px-4 py-2.5 bg-[#050811] border-t border-white/5 flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono text-slate-400">
               <div className="flex items-center gap-4">
-                <span>LOCAL DB: %APPDATA%\AegisAI</span>
+                <span>LOCAL DB: %APPDATA%\SupervexAI</span>
                 <span className="hidden sm:inline">|</span>
                 <span className="text-emerald-400 hidden sm:inline">ZERO CLOUD TELEMETRY</span>
               </div>

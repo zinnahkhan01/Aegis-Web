@@ -28,7 +28,7 @@ export function FaqSection() {
           </h2>
 
           <p className="text-slate-400 text-base sm:text-lg">
-            Everything you need to know about setting up Aegis-AI, managing your Gemini API keys, pairing your Android phone, and safeguarding your files.
+            Everything you need to know about setting up Supervex AI, managing your Gemini API keys, pairing your Android phone, and safeguarding your files.
           </p>
         </div>
 

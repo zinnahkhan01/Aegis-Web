@@ -54,7 +54,7 @@ export function CommandSimulator() {
     const dynamicCmd = {
       ...matched,
       chip: customInput,
-      voiceResponse: `Understood. Executing: "${customInput}" across active Aegis sub-agents.`
+      voiceResponse: `Understood. Executing: "${customInput}" across active Supervex sub-agents.`
     };
 
     startSimulation(dynamicCmd);
@@ -77,7 +77,7 @@ export function CommandSimulator() {
           <h2 className="font-display text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
             Try A Command &{" "}
             <span className="bg-gradient-to-r from-[#00F2FF] to-[#7C3AED] bg-clip-text text-transparent">
-              Watch Aegis Think
+              Watch Supervex Think
             </span>
           </h2>
 

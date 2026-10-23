@@ -91,7 +91,7 @@ export function HeroVideo() {
             <div className="h-4 w-px bg-white/10 mx-1" />
             <span className="font-mono text-xs font-semibold tracking-wider text-slate-300 flex items-center gap-1.5">
               <ShieldCheck className="w-3.5 h-3.5 text-[#00F2FF]" />
-              AEGIS AI :: RUNTIME SHOWCASE
+              SUPERVEX AI :: RUNTIME SHOWCASE
             </span>
           </div>
 
@@ -137,7 +137,7 @@ export function HeroVideo() {
               <div className="w-16 h-16 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
                 <Sparkles className="w-8 h-8 animate-pulse" />
               </div>
-              <h3 className="font-display text-lg font-bold text-white">Aegis AI Demonstration</h3>
+              <h3 className="font-display text-lg font-bold text-white">Supervex AI Demonstration</h3>
               <p className="text-xs text-slate-400 max-w-sm">Video stream is buffering from the edge CDN.</p>
               <button
                 onClick={() => {

@@ -47,7 +47,7 @@ export function Navbar({ onOpenDownload }) {
           {/* Logo & Status Badge */}
           <a href="#" className="flex items-center gap-3 group">
             <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-[#00F2FF]/20 via-[#7C3AED]/20 to-transparent border border-[#00F2FF]/40 shadow-glow-cyan/50 group-hover:border-[#00F2FF] transition-all duration-300">
-              <Shield className="w-5 h-5 text-[#00F2FF] transition-transform duration-300 group-hover:scale-110" />
+              <img src="/icon.png" alt="Supervex AI" className="w-7 h-7 object-cover rounded-lg transition-transform duration-300 group-hover:scale-110" />
               <div className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-400 rounded-full animate-ping" />
               <div className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-400 rounded-full" />
             </div>
@@ -55,7 +55,7 @@ export function Navbar({ onOpenDownload }) {
             <div className="flex flex-col">
               <div className="flex items-center gap-2">
                 <span className="font-display font-extrabold text-xl tracking-wider bg-gradient-to-r from-white via-slate-100 to-[#00F2FF] bg-clip-text text-transparent">
-                  AEGIS<span className="text-[#00F2FF]">::</span>AI
+                  SUPERVEX<span className="text-[#00F2FF]">::</span>AI
                 </span>
                 <span className="hidden sm:inline-flex items-center gap-1 text-[10px] font-mono font-medium px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />

@@ -17,7 +17,7 @@ export function Architecture() {
 
   const nodes = {
     ceo: {
-      title: 'CEO Agent (Aegis Core Brain)',
+      title: 'CEO Agent (Supervex Core Brain)',
       tag: 'CENTRALIZED ORCHESTRATOR',
       desc: 'The primary cognitive hub. It intercepts user goals via streaming voice or text, parses multi-step intent, decomposes complex objectives into discrete dependency graphs, dispatches instructions to specialized sub-agents, and reconciles state telemetry.',
       tech: 'Gemini 2.5 Flash / Pro Reasoning • Async Pipeline • Directed Acyclic Graph (DAG) Dispatcher'
@@ -35,7 +35,7 @@ export function Architecture() {
       tech: 'Playwright Headless/Headed • Network Request Routing • Ad-Block Socket Drop'
     },
     adb: {
-      title: 'Aegis Mobile Companion',
+      title: 'Supervex Mobile Companion',
       tag: 'WIRELESS ADB DAEMON',
       desc: 'Bridges your desktop with your Android phone over local TCP port 5555. Dispatches keyguard unlocks with automated PIN typing, executes accessibility touch gestures, and sends SMS messages.',
       tech: 'Android Debug Bridge (ADB) • Android Accessibility Service • TCP Socket Daemon'
@@ -83,7 +83,7 @@ export function Architecture() {
           </h2>
 
           <p className='text-slate-400 text-base sm:text-lg'>
-            Unlike rigid single-purpose scripts, Aegis uses a resilient multi-tier architecture where specialized micro-agents operate in parallel under strict safety guardrails.
+            Unlike rigid single-purpose scripts, Supervex uses a resilient multi-tier architecture where specialized micro-agents operate in parallel under strict safety guardrails.
           </p>
         </div>
 
@@ -195,7 +195,7 @@ export function Architecture() {
 
               <div>
                 <h3 className='font-display text-xl font-bold text-white mb-2'>
-                  {nodes[selectedNode]?.title || 'Aegis Component'}
+                  {nodes[selectedNode]?.title || 'Supervex Component'}
                 </h3>
                 <p className='text-sm text-slate-300 leading-relaxed'>
                   {nodes[selectedNode]?.desc || 'Click on any node in the diagram to inspect its internal logic and communication protocols.'}
