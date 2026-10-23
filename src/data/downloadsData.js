@@ -1,13 +1,13 @@
 export const DOWNLOADS_DATA = {
   windows: {
     title: "Windows Desktop Application",
-    version: "v1.0.0 Beta",
+    version: "v1.0.1 Beta",
     architecture: "x64 (64-bit Native)",
     size: "380.5 MB",
     osSupport: "Windows 10 / Windows 11 (Build 19041+)",
-    sha256: "956aac20da301acbbc1611fb39c66f4e536697bc0c0738fd10aad0c2ec2b2f77",
-    installerUrl: "https://github.com/zinnahkhan01/Aegis-Web/releases/download/v1.0.0-beta/Supervex-AI-Setup-v1.0.0-Beta-x64.exe",
-    portableUrl: "https://github.com/zinnahkhan01/Aegis-Web/releases/download/v1.0.0-beta/Supervex-AI-Portable-v1.0.0-Beta-x64.zip",
+    sha256: "9bd7b04cdf9c1208eebab4cba4d6fc703b2efd5d00257f0a508731d6ab243655",
+    installerUrl: "https://github.com/zinnahkhan01/Aegis-Web/releases/download/v1.0.1/Supervex-AI-Setup-v1.0.1-Beta-x64.exe",
+    portableUrl: "https://github.com/zinnahkhan01/Aegis-Web/releases/download/v1.0.1/Supervex-AI-Portable-v1.0.1-Beta-x64.zip",
     releaseDate: "October 2026",
     features: [
       "Full CEO Agent orchestration engine",
