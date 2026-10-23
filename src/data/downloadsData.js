@@ -5,7 +5,7 @@ export const DOWNLOADS_DATA = {
     architecture: "x64 (64-bit Native)",
     size: "380.5 MB",
     osSupport: "Windows 10 / Windows 11 (Build 19041+)",
-    sha256: "0afc510a00d2bc0fe9e0e2e36e948b07ad09e90b7700e2cb1ce7b1c214fa1fd6",
+    sha256: "956aac20da301acbbc1611fb39c66f4e536697bc0c0738fd10aad0c2ec2b2f77",
     installerUrl: "https://github.com/zinnahkhan01/Aegis-Web/releases/download/v1.0.0-beta/Supervex-AI-Setup-v1.0.0-Beta-x64.exe",
     portableUrl: "https://github.com/zinnahkhan01/Aegis-Web/releases/download/v1.0.0-beta/Supervex-AI-Portable-v1.0.0-Beta-x64.zip",
     releaseDate: "October 2026",
