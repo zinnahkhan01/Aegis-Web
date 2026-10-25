@@ -55,6 +55,7 @@ export function Hero({ onOpenDownload, onOpenReleaseNotes, onOpenAdbGuide, onOpe
 
           {/* Main Headline */}
           <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] text-white">
+            <span className="sr-only">Supervex AI - </span>
             {t("hero.titleMain", "Command Your Entire PC, Browser & Phone With")}{" "}
             <span className="relative inline-block bg-gradient-to-r from-[#00F2FF] via-cyan-200 to-[#7C3AED] bg-clip-text text-transparent glow-text-cyan">
               {t("hero.titleGradient", "Autonomous Voice.")}

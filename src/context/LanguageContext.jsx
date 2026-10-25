@@ -107,6 +107,20 @@ export function LanguageProvider({ children }) {
     document.documentElement.lang = currentLang;
     document.documentElement.dir = isRtl ? 'rtl' : 'ltr';
 
+    const localizedTitles = {
+      bn: 'সুপারভেক্স এআই (Supervex AI) :: স্বায়ত্তশাসিত মাল্টি-মোডাল ডেস্কটপ ইন্টেলিজেন্স সিস্টেম',
+      hi: 'Supervex AI :: स्वायत्त मल्टी-मोडल डेस्कटॉप इंटेलिजेंस सिस्टम',
+      ms: 'Supervex AI :: Sistem Perisikan Desktop Multi-Modal Autonomi',
+      ru: 'Supervex AI :: Автономная мультимодальная система для ПК',
+      es: 'Supervex AI :: Sistema de Inteligencia de Escritorio Autónomo',
+      fr: 'Supervex AI :: Système d\'Intelligence Desktop Autonome',
+      de: 'Supervex AI :: Autonomes Multi-Modales Desktop-System',
+      zh: 'Supervex AI :: 自主多模态桌面智能操作系统',
+      ja: 'Supervex AI :: 自律型マルチモーダルデスクトップAIシステム',
+      ar: 'Supervex AI :: نظام ذكاء اصطناعي مكتبي ذاتي ومتعدد الوسائط'
+    };
+    document.title = localizedTitles[currentLang] || 'Supervex AI :: Autonomous Multi-Modal Desktop Intelligence System';
+
     return () => { isCancelled = true; };
   }, [currentLang]);
 
