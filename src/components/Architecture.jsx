@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 import { 
   Cpu, 
   Mic, 
@@ -13,111 +14,91 @@ import {
 } from 'lucide-react';
 
 export function Architecture() {
+  const { t } = useLanguage();
   const [selectedNode, setSelectedNode] = useState('ceo');
 
   const nodes = {
     ceo: {
-      title: 'CEO Agent (Supervex Core Brain)',
-      tag: 'CENTRALIZED ORCHESTRATOR',
-      desc: 'The primary cognitive hub. It intercepts user goals via streaming voice or text, parses multi-step intent, decomposes complex objectives into discrete dependency graphs, dispatches instructions to specialized sub-agents, and reconciles state telemetry.',
-      tech: 'Gemini 2.5 Flash / Pro Reasoning • Async Pipeline • Directed Acyclic Graph (DAG) Dispatcher'
+      title: t('architecture.ceo_title', 'CEO Agent (Supervex Core Brain)'),
+      tag: t('architecture.core_hub', 'CENTRALIZED ORCHESTRATOR'),
+      desc: t('architecture.ceo_desc', 'The primary cognitive hub. It intercepts user goals via streaming voice or text, parses multi-step intent, decomposes complex objectives into discrete dependency graphs, dispatches instructions to specialized sub-agents, and reconciles state telemetry.'),
+      tech: t('architecture.ceo_tech', 'Gemini 2.5 Flash / Pro Reasoning • Async Pipeline • Directed Acyclic Graph (DAG) Dispatcher')
     },
     voice: {
-      title: 'Voice & Audio Engine',
+      title: t('architecture.sub_voice', 'Voice & Audio Engine'),
       tag: 'DUPLEX STREAMING',
-      desc: 'Manages bidirectional audio frames with Google Gemini Live API. Implements client-side Voice Activity Detection (VAD) to allow continuous natural voice interruption without waiting for completion.',
+      desc: t('architecture.desc_voice', 'Manages bidirectional audio frames with Google Gemini Live API. Implements client-side Voice Activity Detection (VAD) to allow continuous natural voice interruption without waiting for completion.'),
       tech: '48kHz PCM Audio • Silero VAD / WebRTC • Gemini Live WebSockets'
     },
     browser: {
-      title: 'Browser Stealth Agent',
+      title: t('architecture.sub_browser', 'Browser Stealth Agent'),
       tag: 'PLAYWRIGHT AUTOMATION',
-      desc: 'Runs hardened Playwright instances with anti-fingerprinting patches. Intercepts video ad packets, controls YouTube playback directly, and scrapes deep web research while remaining undetected.',
+      desc: t('architecture.desc_browser', 'Runs hardened Playwright instances with anti-fingerprinting patches. Intercepts video ad packets, controls YouTube playback directly, and scrapes deep web research while remaining undetected.'),
       tech: 'Playwright Headless/Headed • Network Request Routing • Ad-Block Socket Drop'
     },
     adb: {
-      title: 'Supervex Mobile Companion',
+      title: t('architecture.sub_mobile', 'Supervex Mobile Companion'),
       tag: 'WIRELESS ADB DAEMON',
-      desc: 'Bridges your desktop with your Android phone over local TCP port 5555. Dispatches keyguard unlocks with automated PIN typing, executes accessibility touch gestures, and sends SMS messages.',
+      desc: t('architecture.desc_mobile', 'Bridges your desktop with your Android phone over local TCP port 5555. Dispatches keyguard unlocks with automated PIN typing, executes accessibility touch gestures, and sends SMS messages.'),
       tech: 'Android Debug Bridge (ADB) • Android Accessibility Service • TCP Socket Daemon'
     },
     file: {
-      title: 'Advanced File Agent',
+      title: t('architecture.sub_file', 'Advanced File Agent'),
       tag: 'TRANSACTIONAL STORAGE',
-      desc: 'Spatial directory memory allows back navigation like a human user. Intercepts deletes with transactional SQLite snapshots, sends files safely to Windows Recycle Bin, and provides instant single-command undo.',
+      desc: t('architecture.desc_file', 'Spatial directory memory allows back navigation like a human user. Intercepts deletes with transactional SQLite snapshots, sends files safely to Windows Recycle Bin, and provides instant single-command undo.'),
       tech: 'Win32 Shell API • SQLite WAL Journal • Safe-Execution Sandboxing'
     },
     vision: {
-      title: 'Vision & Environmental Agent',
+      title: t('architecture.sub_vision', 'Vision & Environmental Agent'),
       tag: 'MULTI-MODAL PERCEPTION',
-      desc: 'Perceives the digital and physical environment on demand. Takes single-frame desktop screenshots (see_screen) or webcam captures (see_camera), extracts UI widgets and bugs, and disposes frames from RAM immediately.',
-      tech: 'Desktop Frame Buffer • OpenCV / UVC Camera Capture • Zero-Disk Storage'
+      desc: t('architecture.desc_vision', 'Perceives the digital and physical environment on demand. Takes instantaneous RAM snapshots of your display monitor to debug code or summarizes webcam feeds with zero disk writes.'),
+      tech: 'Ephemeral In-Memory Frame Buffer • Gemini 2.5 Flash Vision • Zero Disk Writes'
+    },
+    desktop: {
+      title: t('architecture.sub_desktop', 'Desktop Control & CLI Dispatcher'),
+      tag: 'WIN32 OS INTERACTION',
+      desc: t('architecture.desc_desktop', 'Interacts natively with the Windows OS. Spawns desktop software processes, focuses target windows, simulates natural keyboard typing, and executes sandboxed PowerShell/CLI commands.'),
+      tech: 'Win32 Shell Hook • Windows Process API • Sandboxed PowerShell Runtime'
     }
   };
 
   const subAgents = [
-    { id: 'voice', label: 'Voice Engine', icon: Mic, color: 'text-[#00F2FF]', border: 'border-cyan-500/40' },
-    { id: 'browser', label: 'Browser Agent', icon: Globe, color: 'text-cyan-400', border: 'border-cyan-400/40' },
-    { id: 'adb', label: 'Mobile Companion', icon: Smartphone, color: 'text-emerald-400', border: 'border-emerald-500/40' },
-    { id: 'file', label: 'File Management', icon: FolderArchive, color: 'text-violet-400', border: 'border-violet-500/40' },
-    { id: 'vision', label: 'Vision Core', icon: Eye, color: 'text-[#00F2FF]', border: 'border-cyan-500/40' },
-    { id: 'desktop', label: 'Desktop Runner', icon: Terminal, color: 'text-amber-400', border: 'border-amber-500/40' },
+    { id: 'voice', icon: Mic, label: t('architecture.sub_voice', 'Voice Duplex'), color: 'text-[#00F2FF]', border: 'border-cyan-500/30' },
+    { id: 'browser', icon: Globe, label: t('architecture.sub_browser', 'Stealth Browser'), color: 'text-cyan-400', border: 'border-cyan-500/30' },
+    { id: 'adb', icon: Smartphone, label: t('architecture.sub_mobile', 'Mobile ADB'), color: 'text-emerald-400', border: 'border-emerald-500/30' },
+    { id: 'file', icon: FolderArchive, label: t('architecture.sub_file', 'File Agent'), color: 'text-violet-400', border: 'border-violet-500/30' },
+    { id: 'vision', icon: Eye, label: t('architecture.sub_vision', 'Vision Multi-Modal'), color: 'text-[#00F2FF]', border: 'border-cyan-500/30' },
+    { id: 'desktop', icon: Terminal, label: t('architecture.sub_desktop', 'Desktop Agent'), color: 'text-violet-300', border: 'border-violet-500/30' }
   ];
 
   return (
     <section id='architecture' className='py-24 relative overflow-hidden bg-[#070b16] border-y border-white/5'>
-      <div className='absolute inset-0 bg-cyber-grid opacity-30 pointer-events-none' />
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
         
-        {/* Header */}
+        {/* Section Header */}
         <div className='text-center max-w-3xl mx-auto mb-16 space-y-4'>
-          <div className='inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00F2FF]/10 border border-[#00F2FF]/30 text-[#00F2FF] text-xs font-mono'>
-            <GitBranch className='w-3.5 h-3.5' />
-            <span>DECOUPLED AGENT ORCHESTRATION</span>
+          <div className='inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/30 text-violet-300 text-xs font-mono'>
+            <GitBranch className='w-3.5 h-3.5 text-violet-400' />
+            <span>{t('architecture.tag', 'SYSTEM ARCHITECTURE & TELEMETRY')}</span>
           </div>
 
           <h2 className='font-display text-3xl sm:text-5xl font-extrabold tracking-tight text-white'>
-            How The CEO Agent{' '}
-            <span className='bg-gradient-to-r from-[#00F2FF] via-cyan-200 to-[#7C3AED] bg-clip-text text-transparent'>
-              Controls Your Stack
-            </span>
+            {t('architecture.title', 'Centralized CEO Brain & Autonomous Pipeline')}
           </h2>
 
           <p className='text-slate-400 text-base sm:text-lg'>
-            Unlike rigid single-purpose scripts, Supervex uses a resilient multi-tier architecture where specialized micro-agents operate in parallel under strict safety guardrails.
+            {t('architecture.subtitle', 'A multi-layered neural architecture delegating complex desktop, web, and mobile tasks with local IPC speed.')}
           </p>
         </div>
 
-        {/* Interactive Architecture Flow Diagram */}
-        <div className='grid grid-cols-1 lg:grid-cols-12 gap-8 items-center'>
+        {/* Interactive Architecture Map */}
+        <div className='grid grid-cols-1 lg:grid-cols-12 gap-8 items-start'>
           
           {/* Visual Architecture Tree */}
           <div className='lg:col-span-7 space-y-4'>
             
-            {/* Input Tier */}
-            <div className='p-4 rounded-xl bg-[#0a0f1d] border border-white/10 flex flex-wrap items-center justify-between gap-3'>
-              <span className='text-xs font-mono font-semibold text-slate-400 uppercase tracking-wider'>
-                1. Multi-Modal Ingestion
-              </span>
-              <div className='flex items-center gap-2'>
-                <span className='px-2.5 py-1 rounded-lg bg-white/5 text-[11px] font-mono text-cyan-300 border border-white/5 flex items-center gap-1.5'>
-                  <Mic className='w-3 h-3 text-[#00F2FF]' /> Gemini Live Mic
-                </span>
-                <span className='px-2.5 py-1 rounded-lg bg-white/5 text-[11px] font-mono text-violet-300 border border-white/5 flex items-center gap-1.5'>
-                  <Terminal className='w-3 h-3 text-violet-400' /> CLI / Text
-                </span>
-                <span className='px-2.5 py-1 rounded-lg bg-white/5 text-[11px] font-mono text-emerald-300 border border-white/5 flex items-center gap-1.5'>
-                  <Eye className='w-3 h-3 text-emerald-400' /> Screen & Cam
-                </span>
-              </div>
-            </div>
-
-            {/* Connecting Pipe */}
-            <div className='flex justify-center'>
-              <div className='w-0.5 h-6 bg-gradient-to-b from-[#00F2FF] to-[#7C3AED]' />
-            </div>
-
-            {/* CEO Agent Hub */}
-            <div 
+            {/* CEO Agent Main Hub */}
+            <div
               onClick={() => setSelectedNode('ceo')}
               className={'p-6 rounded-2xl cursor-pointer transition-all duration-300 border ' + (
                 selectedNode === 'ceo'
@@ -131,12 +112,12 @@ export function Architecture() {
                     <Cpu className='w-6 h-6 text-[#00F2FF] animate-pulse' />
                   </div>
                   <div>
-                    <span className='text-[10px] font-mono text-cyan-300 block'>CORE COGNITIVE HUB</span>
-                    <h3 className='font-display text-lg font-bold text-white'>CEO Agent Orchestrator</h3>
+                    <span className='text-[10px] font-mono text-cyan-300 block'>{t('architecture.core_hub', 'CORE COGNITIVE HUB')}</span>
+                    <h3 className='font-display text-lg font-bold text-white'>{t('architecture.ceo_title', 'CEO Agent Orchestrator')}</h3>
                   </div>
                 </div>
                 <span className='text-xs font-mono px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30'>
-                  DAG DISPATCHER READY
+                  {t('architecture.dag_ready', 'DAG DISPATCHER READY')}
                 </span>
               </div>
             </div>
@@ -163,7 +144,7 @@ export function Architecture() {
                   >
                     <Icon className={'w-4 h-4 ' + sub.color + ' mb-2'} />
                     <span className='block text-xs font-mono font-bold text-slate-200'>{sub.label}</span>
-                    <span className='text-[10px] font-mono text-slate-500'>Autonomous Unit</span>
+                    <span className='text-[10px] font-mono text-slate-500'>{t('architecture.autonomous_unit', 'Autonomous Unit')}</span>
                   </button>
                 );
               })}
@@ -173,9 +154,9 @@ export function Architecture() {
             <div className='p-3.5 rounded-xl bg-[#050811] border border-white/5 flex items-center justify-between text-xs font-mono text-slate-400'>
               <span className='flex items-center gap-1.5 text-slate-300'>
                 <ShieldCheck className='w-4 h-4 text-emerald-400' />
-                EXECUTION TARGET SANDBOX
+                {t('architecture.sandbox_label', 'EXECUTION TARGET SANDBOX')}
               </span>
-              <span>Windows 10/11 Win32 • Android 10+ ADB • Chromium</span>
+              <span>{t('architecture.sandbox_targets', 'Windows 10/11 Win32 • Android 10+ ADB • Chromium')}</span>
             </div>
 
           </div>
@@ -186,7 +167,7 @@ export function Architecture() {
               <div className='flex items-center justify-between border-b border-white/5 pb-4'>
                 <div className='flex items-center gap-2'>
                   <Activity className='w-4 h-4 text-[#00F2FF]' />
-                  <span className='text-xs font-mono text-[#00F2FF]'>TELEMETRY INSPECTOR</span>
+                  <span className='text-xs font-mono text-[#00F2FF]'>{t('architecture.inspector_tag', 'TELEMETRY INSPECTOR')}</span>
                 </div>
                 <span className='text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-slate-400'>
                   {nodes[selectedNode]?.tag || 'SUB-AGENT'}
@@ -204,7 +185,7 @@ export function Architecture() {
 
               <div className='p-4 rounded-xl bg-[#050811] border border-white/5 space-y-2'>
                 <span className='text-[11px] font-mono text-cyan-300 block font-semibold'>
-                  UNDERLYING STACK & PROTOCOLS:
+                  {t('architecture.stack_label', 'UNDERLYING STACK & PROTOCOLS:')}
                 </span>
                 <p className='text-xs font-mono text-slate-400 leading-relaxed'>
                   {nodes[selectedNode]?.tech || 'Direct OS API Integration'}
@@ -213,15 +194,15 @@ export function Architecture() {
 
               <div className='space-y-2 text-xs font-mono text-slate-400'>
                 <div className='flex items-center justify-between p-2 rounded bg-white/[0.02]'>
-                  <span>IPC Latency:</span>
+                  <span>{t('architecture.ipc_latency', 'IPC Latency:')}</span>
                   <span className='text-emerald-400'>&lt; 1.8ms (Local Socket)</span>
                 </div>
                 <div className='flex items-center justify-between p-2 rounded bg-white/[0.02]'>
-                  <span>Data Redaction:</span>
+                  <span>{t('architecture.data_redaction', 'Data Redaction:')}</span>
                   <span className='text-cyan-300'>Active (Credentials Redacted)</span>
                 </div>
                 <div className='flex items-center justify-between p-2 rounded bg-white/[0.02]'>
-                  <span>Fallback Routine:</span>
+                  <span>{t('architecture.fallback_routine', 'Fallback Routine:')}</span>
                   <span className='text-slate-300'>Graceful Recovery Handler</span>
                 </div>
               </div>
@@ -235,3 +216,4 @@ export function Architecture() {
     </section>
   );
 }
+export default Architecture;

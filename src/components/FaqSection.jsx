@@ -1,13 +1,48 @@
 import React, { useState } from "react";
+import { useLanguage } from "../context/LanguageContext";
 import { FAQ_DATA } from "../data/faqData";
 import { ChevronDown, MessageCircleQuestion } from "lucide-react";
 
 export function FaqSection() {
-  const [openFaqId, setOpenFaqId] = useState(FAQ_DATA[0].id);
+  const { t } = useLanguage();
+  const [openFaqId, setOpenFaqId] = useState("adb-pairing");
 
   const toggleFaq = (id) => {
     setOpenFaqId(openFaqId === id ? null : id);
   };
+
+  const faqs = [
+    {
+      id: "adb-pairing",
+      question: t("faq.q_adb", FAQ_DATA[0].question),
+      answer: t("faq.a_adb", FAQ_DATA[0].answer)
+    },
+    {
+      id: "api-key",
+      question: t("faq.q_api", FAQ_DATA[1].question),
+      answer: t("faq.a_api", FAQ_DATA[1].answer)
+    },
+    {
+      id: "safe-files",
+      question: t("faq.q_safe", FAQ_DATA[2].question),
+      answer: t("faq.a_safe", FAQ_DATA[2].answer)
+    },
+    {
+      id: "adblocker",
+      question: t("faq.q_adblock", FAQ_DATA[3].question),
+      answer: t("faq.a_adblock", FAQ_DATA[3].answer)
+    },
+    {
+      id: "ceo-agent",
+      question: t("faq.q_ceo", FAQ_DATA[4].question),
+      answer: t("faq.a_ceo", FAQ_DATA[4].answer)
+    },
+    {
+      id: "vision-privacy",
+      question: t("faq.q_vision", FAQ_DATA[5].question),
+      answer: t("faq.a_vision", FAQ_DATA[5].answer)
+    }
+  ];
 
   return (
     <section id="faq" className="py-24 relative overflow-hidden bg-[#070b16] border-t border-white/5">
@@ -17,24 +52,21 @@ export function FaqSection() {
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/30 text-violet-300 text-xs font-mono">
             <MessageCircleQuestion className="w-3.5 h-3.5 text-violet-400" />
-            <span>KNOWLEDGE BASE & GUIDELINES</span>
+            <span>{t("faq.tag", "KNOWLEDGE BASE & GUIDELINES")}</span>
           </div>
 
           <h2 className="font-display text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
-            Frequently Asked{" "}
-            <span className="bg-gradient-to-r from-[#00F2FF] to-violet-400 bg-clip-text text-transparent">
-              Questions
-            </span>
+            {t("faq.title", "Frequently Asked Questions")}
           </h2>
 
           <p className="text-slate-400 text-base sm:text-lg">
-            Everything you need to know about setting up Supervex AI, managing your Gemini API keys, pairing your Android phone, and safeguarding your files.
+            {t("faq.subtitle", "Everything you need to know about setting up Supervex AI, managing your Gemini API keys, pairing your Android phone, and safeguarding your files.")}
           </p>
         </div>
 
         {/* Accordion List */}
         <div className="space-y-3.5 max-w-3xl mx-auto">
-          {FAQ_DATA.map((faq) => {
+          {faqs.map((faq) => {
             const isOpen = openFaqId === faq.id;
 
             return (
@@ -78,3 +110,4 @@ export function FaqSection() {
     </section>
   );
 }
+export default FaqSection;

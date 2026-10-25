@@ -1,4 +1,5 @@
 import React from "react";
+import { useLanguage } from "../context/LanguageContext";
 import { 
   ShieldCheck, 
   Lock, 
@@ -9,34 +10,36 @@ import {
 } from "lucide-react";
 
 export function SecurityPrivacy() {
+  const { t } = useLanguage();
+
   const securityPillars = [
     {
       icon: HardDrive,
-      title: "100% Local Database Storage",
+      title: t("security.p1_title", "100% Local Database Storage"),
       color: "text-[#00F2FF]",
       border: "border-cyan-500/30",
-      description: "All transactional file history, task queues, and user configurations are stored locally inside %APPDATA%\\SupervexAI on your machine in encrypted SQLite databases. Zero cloud sync required."
+      description: t("security.p1_desc", "All transactional file history, task queues, and user configurations are stored locally inside %APPDATA%\\SupervexAI on your machine in encrypted SQLite databases. Zero cloud sync required.")
     },
     {
       icon: EyeOff,
-      title: "Zero Telemetry Leaks",
+      title: t("security.p2_title", "Zero Telemetry Leaks"),
       color: "text-emerald-400",
       border: "border-emerald-500/30",
-      description: "Supervex AI contains no tracking cookies, analytics SDKs, or cloud telemetry beacons. Your prompts, voice audio, and files remain strictly your own property."
+      description: t("security.p2_desc", "Supervex AI contains no tracking cookies, analytics SDKs, or cloud telemetry beacons. Your prompts, voice audio, and files remain strictly your own property.")
     },
     {
       icon: Lock,
-      title: "Safe Execution Sandbox",
+      title: t("security.p3_title", "Safe Execution Sandbox"),
       color: "text-violet-400",
       border: "border-violet-500/30",
-      description: "Critical operating system paths (C:\\Windows, System32, Program Files) are hard-coded as immutable roots. Sub-agents are prevented by software guardrails from modifying protected system structures."
+      description: t("security.p3_desc", "Critical operating system paths (C:\\Windows, System32, Program Files) are hard-coded as immutable roots. Sub-agents are prevented by software guardrails from modifying protected system structures.")
     },
     {
       icon: KeyRound,
-      title: "Ephemeral Vision in RAM",
+      title: t("security.p4_title", "Ephemeral Vision in RAM"),
       color: "text-amber-400",
       border: "border-amber-500/30",
-      description: "Display frames captured via see_screen and webcam images from see_camera exist exclusively in volatile memory (RAM) while processing your query and are scrubbed instantly."
+      description: t("security.p4_desc", "Display frames captured via see_screen and webcam images from see_camera exist exclusively in volatile memory (RAM) while processing your query and are scrubbed instantly.")
     }
   ];
 
@@ -51,18 +54,15 @@ export function SecurityPrivacy() {
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00F2FF]/10 border border-[#00F2FF]/30 text-[#00F2FF] text-xs font-mono">
             <ShieldCheck className="w-3.5 h-3.5" />
-            <span>SOVEREIGN DATA INTEGRITY GUARANTEE</span>
+            <span>{t("security.tag", "SOVEREIGN DATA INTEGRITY GUARANTEE")}</span>
           </div>
 
           <h2 className="font-display text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
-            Your Desktop, Your Data.{" "}
-            <span className="bg-gradient-to-r from-emerald-400 via-teal-300 to-[#00F2FF] bg-clip-text text-transparent">
-              Zero Compromises.
-            </span>
+            {t("security.title", "Your Desktop, Your Data. Zero Compromises.")}
           </h2>
 
           <p className="text-slate-400 text-base sm:text-lg">
-            Unlike cloud-tethered assistants that siphon your desktop activity to corporate servers, Supervex AI is architected from the ground up for strict local privacy.
+            {t("security.subtitle", "Unlike cloud-tethered assistants that siphon your desktop activity to corporate servers, Supervex AI is architected from the ground up for strict local privacy.")}
           </p>
         </div>
 
@@ -93,9 +93,9 @@ export function SecurityPrivacy() {
                 <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] font-mono text-slate-500">
                   <span className="flex items-center gap-1.5 text-slate-400">
                     <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-                    HARDENED COMPLIANCE
+                    {t("security.badge_compliance", "HARDENED COMPLIANCE")}
                   </span>
-                  <span>AES-256 ENCRYPTED</span>
+                  <span>{t("security.badge_encryption", "AES-256 ENCRYPTED")}</span>
                 </div>
               </div>
             );
@@ -106,3 +106,4 @@ export function SecurityPrivacy() {
     </section>
   );
 }
+export default SecurityPrivacy;
