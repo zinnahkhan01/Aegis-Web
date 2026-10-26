@@ -13,7 +13,7 @@
     "comingSoon": "近日公開"
   },
   "hero": {
-    "announcement": "自律型マルチモーダル・デスクトップ・インテリジェンス・システム",
+    "announcement": "あなたのデスクトップは2097年を待っていた。私たちはそれを今日実現した。",
     "titleMain": "声ひとつでPC、ブラウザ、スマートフォンを",
     "titleGradient": "完全に自律制御。",
     "subtitle": "Supervex AIは思考と実行の境界を無くします。自然な会話やテキスト指示でWindows PCを自在に操作し、広告なしでブラウジングし、ワイヤレスADBでAndroidスマートフォンを自律制御します。",
@@ -29,7 +29,8 @@
     "statAgentsVal": "9つのエージェント",
     "statAgents": "自律型CEOエンジン",
     "statAdbVal": "ワイヤレスADB",
-    "statAdb": "PC-スマホ連携ブリッジ"
+    "statAdb": "PC-スマホ連携ブリッジ",
+    "tagline2097": "あなたのデスクトップは2097年を待っていた。私たちはそれを今日実現した。"
   },
   "video": {
     "title": "SUPERVEX AI :: リアルタイムショーケース",

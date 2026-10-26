@@ -13,7 +13,7 @@
     "comingSoon": "출시 예정"
   },
   "hero": {
-    "announcement": "자율 멀티모달 데스크톱 인텔리전스 시스템",
+    "announcement": "당신의 데스크톱은 2097년을 살기 위해 기다려왔습니다. 우리가 오늘 그것을 실현했습니다.",
     "titleMain": "음성 하나로 PC, 브라우저 및 스마트폰을",
     "titleGradient": "자율적으로 제어하세요.",
     "subtitle": "Supervex AI는 생각과 실행 사이의 장벽을 허뭅니다. 자연스러운 대화나 텍스트로 Windows PC를 제어하고, 광고 없는 웹 서핑을 즐기며, 무선 ADB로 Android 스마트폰을 자유롭게 명령하세요.",
@@ -29,7 +29,8 @@
     "statAgentsVal": "9개 에이전트",
     "statAgents": "자율 CEO 오케스트레이션",
     "statAdbVal": "무선 ADB",
-    "statAdb": "PC-스마트폰 무선 브리지"
+    "statAdb": "PC-스마트폰 무선 브리지",
+    "tagline2097": "당신의 데스크톱은 2097년을 살기 위해 기다려왔습니다. 우리가 오늘 그것을 실현했습니다."
   },
   "video": {
     "title": "SUPERVEX AI :: 런타임 쇼케이스",

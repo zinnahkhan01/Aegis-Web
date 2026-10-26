@@ -13,7 +13,7 @@
     "comingSoon": "Paparating Na"
   },
   "hero": {
-    "announcement": "Ang Awtonomong Multi-Modal na Sistema ng Katalinuhan sa Desktop",
+    "announcement": "Ang iyong desktop ay naghihintay na mabuhay sa 2097. Dinala namin ito ngayon.",
     "titleMain": "Kontrolin ang Iyong PC, Browser at Telepono Gamit ang",
     "titleGradient": "Awtonomong Boses.",
     "subtitle": "Pinagdurugtong ng Supervex AI ang isip at gawa. Magsalita nang natural o mag-type ng utos upang pamahalaan ang iyong Windows PC, mag-browse nang walang ad, at utusan ang iyong Android phone sa pamamagitan ng wireless ADB.",
@@ -29,7 +29,8 @@
     "statAgentsVal": "9 na Ahente",
     "statAgents": "Awtonomong CEO Engine",
     "statAdbVal": "Wireless ADB",
-    "statAdb": "PC-papuntang-Telepono Bridge"
+    "statAdb": "PC-papuntang-Telepono Bridge",
+    "tagline2097": "Ang iyong desktop ay naghihintay na mabuhay sa 2097. Dinala namin ito ngayon."
   },
   "video": {
     "title": "SUPERVEX AI :: LIVE NA PAGTATANGHAL",

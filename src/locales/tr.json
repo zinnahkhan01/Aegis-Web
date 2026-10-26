@@ -13,7 +13,7 @@
     "comingSoon": "Yakında"
   },
   "hero": {
-    "announcement": "Otonom Çok Modlu Masaüstü Zeka Sistemi",
+    "announcement": "Masaüstünüz 2097'de yaşamayı bekliyordu. Onu bugüne getirdik.",
     "titleMain": "Tüm Bilgisayarınızı, Tarayıcınızı ve Telefonunuzu",
     "titleGradient": "Otonom Sesle Yönetin.",
     "subtitle": "Supervex AI düşünce ile eylem arasındaki boşluğu kapatır. Windows bilgisayarınızı yönetmek, reklamsız gezinmek ve Android telefonunuzu kablosuz ADB ile kontrol etmek için doğal konuşun veya yazın.",
@@ -29,7 +29,8 @@
     "statAgentsVal": "9 Ajan",
     "statAgents": "Otonom CEO Motoru",
     "statAdbVal": "Kablosuz ADB",
-    "statAdb": "PC-Telefon Köprüsü"
+    "statAdb": "PC-Telefon Köprüsü",
+    "tagline2097": "Masaüstünüz 2097'de yaşamayı bekliyordu. Onu bugüne getirdik."
   },
   "video": {
     "title": "SUPERVEX AI :: CANLI VİTRİN",

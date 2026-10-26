@@ -13,7 +13,7 @@
     "comingSoon": "Segera Hadir"
   },
   "hero": {
-    "announcement": "Sistem Kecerdasan Desktop Multi-Modal Otonom",
+    "announcement": "Desktop Anda telah menunggu untuk hidup di tahun 2097. Kami mewujudkannya hari ini.",
     "titleMain": "Kendalikan Seluruh PC, Browser & Ponsel Anda Dengan",
     "titleGradient": "Suara Otonom.",
     "subtitle": "Supervex AI menjembatani pikiran dan tindakan. Bicara secara alami atau ketik instruksi untuk mengontrol PC Windows, menjelajah tanpa iklan, dan perintah ponsel Android melalui wireless ADB.",
@@ -29,7 +29,8 @@
     "statAgentsVal": "9 Agen",
     "statAgents": "Mesin CEO Otonom",
     "statAdbVal": "Wireless ADB",
-    "statAdb": "Jembatan PC ke Ponsel"
+    "statAdb": "Jembatan PC ke Ponsel",
+    "tagline2097": "Desktop Anda telah menunggu untuk hidup di tahun 2097. Kami mewujudkannya hari ini."
   },
   "video": {
     "title": "SUPERVEX AI :: PAMERAN REAL-TIME",

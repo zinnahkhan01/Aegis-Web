@@ -13,7 +13,7 @@
     "comingSoon": "Bientôt Disponible"
   },
   "hero": {
-    "announcement": "Le Système d'Intelligence de Bureau Multimodal Autonome",
+    "announcement": "Votre bureau attendait de vivre en 2097. Nous l'avons réalisé aujourd'hui.",
     "titleMain": "Contrôlez Votre PC, Navigateur et Téléphone avec",
     "titleGradient": "Votre Voix Autonome.",
     "subtitle": "Supervex AI comble le fossé entre la pensée et l'action. Parlez naturellement ou tapez des commandes pour contrôler votre PC Windows, naviguer sans publicité et diriger votre smartphone Android via ADB sans fil.",
@@ -29,7 +29,8 @@
     "statAgentsVal": "9 Agents",
     "statAgents": "Moteur CEO Autonome",
     "statAdbVal": "ADB Sans Fil",
-    "statAdb": "Passerelle PC vers Android"
+    "statAdb": "Passerelle PC vers Android",
+    "tagline2097": "Votre bureau attendait de vivre en 2097. Nous l'avons réalisé aujourd'hui."
   },
   "video": {
     "title": "SUPERVEX AI :: DÉMONSTRATION EN DIRECT",

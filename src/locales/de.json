@@ -13,7 +13,7 @@
     "comingSoon": "Demnächst"
   },
   "hero": {
-    "announcement": "Das autonome multimodale Desktop-Intelligenzsystem",
+    "announcement": "Dein Desktop hat darauf gewartet, im Jahr 2097 zu leben. Wir haben es heute wahr gemacht.",
     "titleMain": "Steuern Sie Ihren gesamten PC, Browser und Smartphone mit",
     "titleGradient": "Autonomer Stimme.",
     "subtitle": "Supervex AI schließt die Lücke zwischen Gedanke und Ausführung. Sprechen Sie natürlich oder tippen Sie Anweisungen ein, um Ihren Windows-PC zu steuern, werbefrei zu surfen und Ihr Android-Gerät per Funk-ADB zu bedienen.",
@@ -29,7 +29,8 @@
     "statAgentsVal": "9 Agenten",
     "statAgents": "Autonome CEO-Engine",
     "statAdbVal": "Drahtloses ADB",
-    "statAdb": "PC-zu-Smartphone Brücke"
+    "statAdb": "PC-zu-Smartphone Brücke",
+    "tagline2097": "Dein Desktop hat darauf gewartet, im Jahr 2097 zu leben. Wir haben es heute wahr gemacht."
   },
   "video": {
     "title": "SUPERVEX AI :: RUNTIME SHOWCASE",

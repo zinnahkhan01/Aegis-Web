@@ -13,7 +13,7 @@
     "comingSoon": "Próximamente"
   },
   "hero": {
-    "announcement": "El Sistema de Inteligencia de Escritorio Multimodal Autónomo",
+    "announcement": "Tu escritorio ha estado esperando vivir en 2097. Lo trajimos al presente.",
     "titleMain": "Controla Todo tu PC, Navegador y Teléfono con",
     "titleGradient": "Voz Autónoma.",
     "subtitle": "Supervex AI une el pensamiento y la ejecución. Habla de forma natural o escribe instrucciones para controlar tu PC con Windows, navegar sin anuncios y mandar en tu teléfono Android vía ADB inalámbrico.",
@@ -29,7 +29,8 @@
     "statAgentsVal": "9 Agentes",
     "statAgents": "Motor CEO Autónomo",
     "statAdbVal": "ADB Inalámbrico",
-    "statAdb": "Puente PC a Android"
+    "statAdb": "Puente PC a Android",
+    "tagline2097": "Tu escritorio ha estado esperando vivir en 2097. Lo trajimos al presente."
   },
   "video": {
     "title": "SUPERVEX AI :: DEMOSTRACIÓN EN TIEMPO REAL",

@@ -35,21 +35,21 @@ export function Hero({ onOpenDownload, onOpenReleaseNotes, onOpenAdbGuide, onOpe
         {/* ============================================================ */}
         <div className="text-center max-w-4xl mx-auto space-y-6">
           
-          {/* Top Announcement Badge */}
+          {/* Top Announcement Badge: 2097 Vision Banner */}
           <div className="flex justify-center">
             <button
               type="button"
               onClick={onOpenReleaseNotes}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-[#00F2FF]/10 via-[#7C3AED]/15 to-[#00F2FF]/10 border border-[#00F2FF]/30 backdrop-blur-md shadow-glow-cyan/20 hover:border-[#00F2FF] transition-all cursor-pointer"
+              className="group inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-gradient-to-r from-[#00F2FF]/15 via-[#7C3AED]/20 to-[#00F2FF]/15 border border-[#00F2FF]/40 backdrop-blur-xl shadow-neon-glow hover:border-[#00F2FF] hover:scale-[1.02] transition-all duration-300 cursor-pointer"
             >
-              <span className="flex h-2 w-2 relative">
+              <span className="flex h-2.5 w-2.5 relative">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00F2FF] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00F2FF]"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#00F2FF]"></span>
               </span>
-              <span className="text-xs font-mono font-medium tracking-wide text-cyan-200">
-                {t("hero.announcement", "The Autonomous Multi-Modal Desktop Intelligence System")}
+              <span className="text-xs sm:text-sm font-mono font-bold tracking-wide text-cyan-200 group-hover:text-white transition-colors">
+                {t("hero.announcement", "YOUR DESKTOP HAS BEEN WAITING TO LIVE IN 2097. WE BROUGHT IT TO TODAY.")}
               </span>
-              <ChevronRight className="w-3.5 h-3.5 text-[#00F2FF]" />
+              <ChevronRight className="w-4 h-4 text-[#00F2FF] group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
 

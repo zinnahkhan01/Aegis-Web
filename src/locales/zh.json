@@ -13,7 +13,7 @@
     "comingSoon": "即将推出"
   },
   "hero": {
-    "announcement": "自主多模态桌面智能操作系统",
+    "announcement": "你的桌面一直在等待生存在2097年。我们今天将其带到现实。",
     "titleMain": "仅凭自发言语，掌控您的整个",
     "titleGradient": "电脑、浏览器与手机。",
     "subtitle": "Supervex AI 消除思维与操作之间的隔阂。用自然的语音或文字指令操控您的 Windows 电脑，享受隐身无广告网页浏览，并通过无线 ADB 彻底接管您的安卓手机。",
@@ -29,7 +29,8 @@
     "statAgentsVal": "9 大智能体",
     "statAgents": "自主 CEO 调度引擎",
     "statAdbVal": "无线 ADB",
-    "statAdb": "电脑-手机无线桥接"
+    "statAdb": "电脑-手机无线桥接",
+    "tagline2097": "你的桌面一直在等待生存在2097年。我们今天将其带到现实。"
   },
   "video": {
     "title": "SUPERVEX AI :: 实时运行演示",

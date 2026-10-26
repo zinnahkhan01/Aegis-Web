@@ -13,7 +13,7 @@
     "comingSoon": "Akan Datang"
   },
   "hero": {
-    "announcement": "Sistem Kepintaran Desktop Multi-Modal Autonomus",
+    "announcement": "Desktop anda telah menunggu untuk hidup pada tahun 2097. Kami membawanya hari ini.",
     "titleMain": "Kawal Keseluruhan PC, Pelayar & Telefon Anda Dengan",
     "titleGradient": "Suara Autonomus.",
     "subtitle": "Supervex AI merapatkan jurang antara pemikiran dan pelaksanaan. Bercakap secara semula jadi atau taip arahan untuk mengawal PC Windows anda, menyemak imbas bebas iklan, dan kawal telefon Android anda melalui ADB tanpa wayar.",
@@ -29,7 +29,8 @@
     "statAgentsVal": "9 Ejen",
     "statAgents": "Enjin CEO Autonomus",
     "statAdbVal": "ADB Tanpa Wayar",
-    "statAdb": "Jambatan PC-ke-Android"
+    "statAdb": "Jambatan PC-ke-Android",
+    "tagline2097": "Desktop anda telah menunggu untuk hidup pada tahun 2097. Kami membawanya hari ini."
   },
   "video": {
     "title": "SUPERVEX AI :: PAMERAN RUNTIME",

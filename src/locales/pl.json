@@ -13,7 +13,7 @@
     "comingSoon": "Wkrótce"
   },
   "hero": {
-    "announcement": "Autonomiczny Multimodalny System Inteligencji Desktopowej",
+    "announcement": "Twój komputer czekał na życie w 2097 roku. Przynieśliśmy to dzisiaj.",
     "titleMain": "Steruj Całym Swoim PC, Przeglądarką i Telefonem za Pomocą",
     "titleGradient": "Autonomicznego Głosu.",
     "subtitle": "Supervex AI łączy myśl z działaniem. Mów naturalnie lub wpisuj polecenia, aby sterować komputerem z Windows, przeglądać sieć bez reklam i zarządzać telefonem z Androidem przez bezprzewodowe ADB.",
@@ -29,7 +29,8 @@
     "statAgentsVal": "9 Agentów",
     "statAgents": "Autonomiczny Silnik CEO",
     "statAdbVal": "Bezprzewodowy ADB",
-    "statAdb": "Most PC do Telefonu"
+    "statAdb": "Most PC do Telefonu",
+    "tagline2097": "Twój komputer czekał na życie w 2097 roku. Przynieśliśmy to dzisiaj."
   },
   "video": {
     "title": "SUPERVEX AI :: POKAZ NA ŻYWO",

@@ -13,7 +13,7 @@
     "comingSoon": "Sắp Ra Mắt"
   },
   "hero": {
-    "announcement": "Hệ thống Trí tuệ Máy tính Đa phương thức Tự hành",
+    "announcement": "Máy tính của bạn đã chờ đợi để sống trong năm 2097. Chúng tôi mang nó đến hôm nay.",
     "titleMain": "Điều khiển Toàn bộ PC, Trình duyệt & Điện thoại bằng",
     "titleGradient": "Giọng nói Tự hành.",
     "subtitle": "Supervex AI xóa bỏ khoảng cách giữa suy nghĩ và hành động. Nói tự nhiên hoặc nhập lệnh để điều khiển PC Windows, duyệt web không quảng cáo và chỉ huy điện thoại Android qua ADB không dây.",
@@ -29,7 +29,8 @@
     "statAgentsVal": "9 Đặc vụ",
     "statAgents": "Động cơ CEO Tự hành",
     "statAdbVal": "ADB Không dây",
-    "statAdb": "Cầu nối PC tới Điện thoại"
+    "statAdb": "Cầu nối PC tới Điện thoại",
+    "tagline2097": "Máy tính của bạn đã chờ đợi để sống trong năm 2097. Chúng tôi mang nó đến hôm nay."
   },
   "video": {
     "title": "SUPERVEX AI :: TRÌNH DIỄN THỰC TẾ",
