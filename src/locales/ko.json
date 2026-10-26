@@ -9,7 +9,8 @@
     "version": "v1.0.1 온라인",
     "tagline": "자율 데스크톱 인텔리전스",
     "downloadBtn": "다운로드 허브",
-    "systemHealth": "시스템 상태: 100% 정상"
+    "systemHealth": "시스템 상태: 100% 정상",
+    "comingSoon": "출시 예정"
   },
   "hero": {
     "announcement": "자율 멀티모달 데스크톱 인텔리전스 시스템",

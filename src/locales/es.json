@@ -9,7 +9,8 @@
     "version": "v1.0.1 EN LÍNEA",
     "tagline": "INTELIGENCIA DE ESCRITORIO AUTÓNOMA",
     "downloadBtn": "Descargas",
-    "systemHealth": "ESTADO DEL SISTEMA: 100% NOMINAL"
+    "systemHealth": "ESTADO DEL SISTEMA: 100% NOMINAL",
+    "comingSoon": "Próximamente"
   },
   "hero": {
     "announcement": "El Sistema de Inteligencia de Escritorio Multimodal Autónomo",

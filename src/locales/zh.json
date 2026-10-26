@@ -9,7 +9,8 @@
     "version": "v1.0.1 在线",
     "tagline": "自主桌面智能系统",
     "downloadBtn": "下载中心",
-    "systemHealth": "系统健康: 100% 正常"
+    "systemHealth": "系统健康: 100% 正常",
+    "comingSoon": "即将推出"
   },
   "hero": {
     "announcement": "自主多模态桌面智能操作系统",

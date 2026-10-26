@@ -3,6 +3,7 @@ import { LanguageProvider } from "./context/LanguageContext";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { FeatureGrid } from "./components/FeatureGrid";
+import { ComingSoonFeatures } from "./components/ComingSoonFeatures";
 import { Architecture } from "./components/Architecture";
 import { CommandSimulator } from "./components/CommandSimulator";
 import { DownloadHub } from "./components/DownloadHub";
@@ -37,6 +38,11 @@ export function AppContent() {
 
         {/* 9 Feature Showcase Bento Grid */}
         <FeatureGrid />
+
+        {/* Autonomous Creator Suite & Enterprise Roadmap */}
+        <ComingSoonFeatures
+          onOpenWaitlist={() => setActiveModal("waitlist")}
+        />
 
         {/* CEO Agent Architecture & Telemetry */}
         <Architecture />

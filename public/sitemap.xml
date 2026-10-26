@@ -32,6 +32,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://supervexai.com/" />
   </url>
 
+  <!-- Autonomous Creator Suite & Enterprise Roadmap (Coming Soon) -->
+  <url>
+    <loc>https://supervexai.com/#coming-soon</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.90</priority>
+  </url>
+
   <!-- Core System Capabilities (9 Agents Matrix) -->
   <url>
     <loc>https://supervexai.com/#features</loc>

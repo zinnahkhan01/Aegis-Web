@@ -9,7 +9,8 @@
     "version": "v1.0.1 ONLINE",
     "tagline": "AUTONOMOUS DESKTOP INTELLIGENCE",
     "downloadBtn": "Download Hub",
-    "systemHealth": "SYSTEM HEALTH: 100% NOMINAL"
+    "systemHealth": "SYSTEM HEALTH: 100% NOMINAL",
+    "comingSoon": "Coming Soon"
   },
   "hero": {
     "announcement": "The Autonomous Multi-Modal Desktop Intelligence System",

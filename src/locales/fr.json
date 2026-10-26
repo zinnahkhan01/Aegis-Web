@@ -9,7 +9,8 @@
     "version": "v1.0.1 EN LIGNE",
     "tagline": "INTELLIGENCE DE BUREAU AUTONOME",
     "downloadBtn": "Téléchargements",
-    "systemHealth": "ÉTAT DU SYSTÈME : 100% NOMINAL"
+    "systemHealth": "ÉTAT DU SYSTÈME : 100% NOMINAL",
+    "comingSoon": "Bientôt Disponible"
   },
   "hero": {
     "announcement": "Le Système d'Intelligence de Bureau Multimodal Autonome",

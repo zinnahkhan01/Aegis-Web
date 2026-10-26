@@ -9,7 +9,8 @@
     "version": "v1.0.1 オンライン",
     "tagline": "自律型デスクトップ知能",
     "downloadBtn": "ダウンロード",
-    "systemHealth": "システム正常: 100%"
+    "systemHealth": "システム正常: 100%",
+    "comingSoon": "近日公開"
   },
   "hero": {
     "announcement": "自律型マルチモーダル・デスクトップ・インテリジェンス・システム",

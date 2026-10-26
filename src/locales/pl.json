@@ -9,7 +9,8 @@
     "version": "v1.0.1 ONLINE",
     "tagline": "AUTONOMICZNA INTELIGENCJA DESKTOP",
     "downloadBtn": "Pobierz",
-    "systemHealth": "STAN SYSTEMU: 100% NOMINALNY"
+    "systemHealth": "STAN SYSTEMU: 100% NOMINALNY",
+    "comingSoon": "Wkrótce"
   },
   "hero": {
     "announcement": "Autonomiczny Multimodalny System Inteligencji Desktopowej",

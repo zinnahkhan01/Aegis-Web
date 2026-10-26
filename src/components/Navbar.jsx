@@ -18,6 +18,7 @@ export function Navbar({ onOpenDownload }) {
 
   const navLinks = [
     { label: t("nav.features", "Features"), href: "#features" },
+    { label: t("nav.comingSoon", "Coming Soon"), href: "#coming-soon" },
     { label: t("nav.architecture", "Architecture"), href: "#architecture" },
     { label: t("nav.simulator", "Simulator"), href: "#simulator" },
     { label: t("nav.downloads", "Download Hub"), href: "#downloads" },
