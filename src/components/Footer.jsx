@@ -46,10 +46,10 @@ export function Footer({ onOpenPrivacy, onOpenTerms }) {
                 <Mail className="w-3.5 h-3.5 text-[#00F2FF]" />
                 <span>Official Support:</span>
                 <a 
-                  href="mailto:support@supervexai.com" 
+                  href="mailto:supervexai@gmail.com" 
                   className="text-white hover:text-[#00F2FF] underline decoration-[#00F2FF]/30 transition-colors"
                 >
-                  support@supervexai.com
+                  supervexai@gmail.com
                 </a>
               </div>
 
@@ -193,10 +193,10 @@ export function Footer({ onOpenPrivacy, onOpenTerms }) {
             </button>
             <span className="text-slate-700">•</span>
             <a 
-              href="mailto:support@supervexai.com" 
+              href="mailto:supervexai@gmail.com" 
               className="text-slate-400 hover:text-[#00F2FF] transition-colors"
             >
-              support@supervexai.com
+              supervexai@gmail.com
             </a>
           </div>
         </div>

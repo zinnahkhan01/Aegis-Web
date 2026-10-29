@@ -29,8 +29,19 @@ export function DownloadHub({ onOpenReleaseNotes, onOpenQrCode, onOpenAdbGuide, 
   };
 
   const handleDownload = (filename) => {
+    const isApk = filename.endsWith(".apk");
     const isWindowsExe = filename.endsWith(".exe");
     const isLocal = typeof window !== "undefined" && (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1");
+
+    if (isApk) {
+      const link = document.createElement("a");
+      link.href = DOWNLOADS_DATA.android.apkUrl || `/downloads/${filename}`;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      return;
+    }
 
     if (isLocal) {
       const link = document.createElement("a");
@@ -173,7 +184,7 @@ export function DownloadHub({ onOpenReleaseNotes, onOpenQrCode, onOpenAdbGuide, 
                 {t("downloads.android_title", "Android Companion")}
               </h3>
               <span className="text-xs font-mono text-slate-400 block mb-4">
-                {t("downloads.android_specs", "Android 10.0+ (APK) • ~28 MB")}
+                {t("downloads.android_specs", "Android 10.0+ (APK) • 12.7 MB")}
               </span>
 
               <p className="text-xs text-slate-300 mb-6 leading-relaxed">
@@ -184,7 +195,7 @@ export function DownloadHub({ onOpenReleaseNotes, onOpenQrCode, onOpenAdbGuide, 
             <div className="space-y-2.5 pt-4 border-t border-white/5">
               <div className="grid grid-cols-2 gap-2">
                 <button
-                  onClick={() => handleDownload("Supervex-Companion-v1.0.0-Beta.apk")}
+                  onClick={() => handleDownload("Supervex-Companion-v1.0.1-Beta.apk")}
                   className="w-full px-3 py-2.5 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/40 text-emerald-300 font-bold text-xs font-mono transition-all flex items-center justify-center gap-1.5 cursor-pointer"
                 >
                   <Download className="w-3.5 h-3.5" />

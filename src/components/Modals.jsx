@@ -156,34 +156,21 @@ export function Modals({
                 Scan to Download Android Companion
               </h3>
               <span className="text-xs font-mono text-emerald-400">
-                v1.4.2 APK • 28.4 MB • Zero Configuration
+                v1.0.1 Beta APK • 12.7 MB • Zero Configuration
               </span>
             </div>
 
-            {/* Generated SVG QR Code Pattern */}
+            {/* Live QR Code pointing directly to APK Download */}
             <div className="w-48 h-48 mx-auto p-3 bg-white rounded-2xl shadow-glow-emerald flex items-center justify-center">
-              <svg className="w-full h-full" viewBox="0 0 100 100">
-                <rect width="100" height="100" fill="#ffffff" />
-                <rect x="10" y="10" width="30" height="30" fill="#000000" />
-                <rect x="15" y="15" width="20" height="20" fill="#ffffff" />
-                <rect x="20" y="20" width="10" height="10" fill="#000000" />
-
-                <rect x="60" y="10" width="30" height="30" fill="#000000" />
-                <rect x="65" y="15" width="20" height="20" fill="#ffffff" />
-                <rect x="70" y="20" width="10" height="10" fill="#000000" />
-
-                <rect x="10" y="60" width="30" height="30" fill="#000000" />
-                <rect x="15" y="65" width="20" height="20" fill="#ffffff" />
-                <rect x="20" y="70" width="10" height="10" fill="#000000" />
-
-                <rect x="45" y="15" width="8" height="8" fill="#000000" />
-                <rect x="45" y="30" width="8" height="12" fill="#000000" />
-                <rect x="50" y="45" width="15" height="8" fill="#000000" />
-                <rect x="70" y="45" width="10" height="10" fill="#000000" />
-                <rect x="45" y="65" width="12" height="12" fill="#000000" />
-                <rect x="65" y="65" width="25" height="8" fill="#000000" />
-                <rect x="80" y="75" width="10" height="15" fill="#000000" />
-              </svg>
+              <img
+                src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(
+                  typeof window !== "undefined"
+                    ? `${window.location.origin}/downloads/Supervex-Companion-v1.0.1-Beta.apk`
+                    : "https://github.com/zinnahkhan01/Aegis-Web/raw/main/public/downloads/Supervex-Companion-v1.0.1-Beta.apk"
+                )}`}
+                alt="Scan to Download Supervex Android Companion APK"
+                className="w-full h-full object-contain"
+              />
             </div>
 
             <p className="text-xs text-slate-400 max-w-sm mx-auto">
@@ -194,9 +181,11 @@ export function Modals({
               <button
                 onClick={() => {
                   const el = document.createElement("a");
-                  el.href = "#";
-                  el.download = "Supervex-Companion-v1.4.2.apk";
+                  el.href = DOWNLOADS_DATA.android.apkUrl || "/downloads/Supervex-Companion-v1.0.1-Beta.apk";
+                  el.download = "Supervex-Companion-v1.0.1-Beta.apk";
+                  document.body.appendChild(el);
                   el.click();
+                  document.body.removeChild(el);
                 }}
                 className="flex-1 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs font-mono transition-colors flex items-center justify-center gap-2 cursor-pointer"
               >
@@ -398,7 +387,7 @@ export function Modals({
                   <span className="text-emerald-400">4.</span> Developer & Inquiries
                 </h4>
                 <p className="text-slate-400">
-                  For questions or audit inquiries regarding data sovereignty, contact: <a href="mailto:support@supervexai.com" className="text-[#00F2FF] hover:underline font-mono">support@supervexai.com</a>. Project owned and developed by <strong>MD ZINNAH KHAN</strong>.
+                  For questions or audit inquiries regarding data sovereignty, contact: <a href="mailto:supervexai@gmail.com" className="text-[#00F2FF] hover:underline font-mono">supervexai@gmail.com</a>. Project owned and developed by <strong>MD ZINNAH KHAN</strong>.
                 </p>
               </div>
             </div>
@@ -462,7 +451,7 @@ export function Modals({
                   <span className="text-[#00F2FF]">4.</span> Official Support
                 </h4>
                 <p className="text-slate-400">
-                  For bug reports, enterprise inquiries, or feature suggestions, reach out to our team at <a href="mailto:contact@supervexai.com" className="text-[#00F2FF] hover:underline font-mono">contact@supervexai.com</a> or <a href="mailto:support@supervexai.com" className="text-[#00F2FF] hover:underline font-mono">support@supervexai.com</a>.
+                  For bug reports, enterprise inquiries, or feature suggestions, reach out to our team at <a href="mailto:supervexai@gmail.com" className="text-[#00F2FF] hover:underline font-mono">supervexai@gmail.com</a> or <a href="mailto:supervexai@gmail.com" className="text-[#00F2FF] hover:underline font-mono">supervexai@gmail.com</a>.
                 </p>
               </div>
             </div>

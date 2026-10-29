@@ -1,16 +1,15 @@
 # Dependencies
 node_modules
 
-# Large binaries (downloads are served from GitHub Releases)
-public/downloads
-public/downloads/*
+# Large desktop binaries (desktop .exe and .zip are served from GitHub Releases; Android .apk is served directly)
+public/downloads/*.exe
+public/downloads/*.zip
+public/downloads/*.blockmap
 public/*.exe
 public/*.zip
 public/*.blockmap
 
 # Large video files
-# public/demo.mp4 included
-# public/*source.mp4 included
 *source.mp4
 
 # Dev & Git

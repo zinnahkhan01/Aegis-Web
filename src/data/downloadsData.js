@@ -14,23 +14,25 @@ export const DOWNLOADS_DATA = {
       "Native Gemini Live duplex voice with VAD",
       "Playwright stealth automation & ad-blocker",
       "Transactional file undo & Recycle Bin protection",
-      "Wireless ADB bridge for Android companion"
+      "Wireless ADB & WebSocket bridge for Android companion"
     ]
   },
   android: {
     title: "Android Mobile Companion",
-    version: "v1.0.0 Beta (Planned)",
-    packageName: "ai.supervex.companion",
-    size: "28.4 MB",
+    version: "v1.0.1 Beta",
+    packageName: "com.zinnah.aegis_client",
+    size: "12.7 MB",
+    sha256: "0f1ca21f3052c3c703728a74bdb7da4c4d8dfd7bed833291a6860bd2da9f7af3",
     osSupport: "Android 10.0+ (API Level 29+)",
-    apkUrl: "#download-android-apk",
-    releaseDate: "In Development",
+    apkUrl: "/downloads/Supervex-Companion-v1.0.1-Beta.apk",
+    githubApkUrl: "https://github.com/zinnahkhan01/Aegis-Web/raw/main/public/downloads/Supervex-Companion-v1.0.1-Beta.apk",
+    releaseDate: "October 2026",
     features: [
-      "Zero-configuration Wireless ADB daemon",
-      "Accessibility Service for UI tap & swipe gestures",
+      "Direct WebSocket & Cloudflare Tunnel remote control",
+      "Accessibility Service for UI tap, swipe & scroll gestures",
       "Secure keyguard PIN unlock receiver",
-      "WhatsApp & SMS background bridge",
-      "Low battery drain background listener"
+      "WhatsApp, SMS & app launcher background bridge",
+      "Low battery drain background service"
     ]
   },
   ios: {
@@ -65,16 +67,15 @@ export const DOWNLOADS_DATA = {
   },
   releaseNotes: [
     {
-      version: "v1.0.0 Beta",
+      version: "v1.0.1 Beta",
       date: "October 2026",
-      tag: "Public Beta Release",
+      tag: "Official Multi-Platform Release",
       items: [
-        "Gemini Live Native Duplex Audio: Zero-lag voice streaming with automatic speech interruption handling.",
+        "Android Mobile Companion APK (v1.0.1 Beta): Direct WebSocket & Cloudflare Tunnel mobile remote control with Accessibility gesture service.",
+        "Gemini Live Native Duplex Audio: Zero-lag voice streaming with automatic speech interruption handling and personalized '<Name> Sir' addressing.",
+        "Microsoft Word Full Ribbon Automation: Complete Home, Insert, Design, Layout, References, Review, and View tab control in Bengali & English.",
         "Stealth Playwright Engine: Complete YouTube video ad-blocking and native playback controls without third-party extensions.",
-        "Wireless ADB Pairing: One-click local Wi-Fi pairing for Android Companion with remote PIN unlock.",
-        "Transactional File Undo Buffer: Added persistent SQLite journal for all file deletions, moves, and renames with instant single-click undo.",
-        "Command Center Redesign: Modern glassmorphism UI with real-time AI core telemetry, CPU/Memory gauges, and live agent status badges.",
-        "System Path Hardening: Enhanced Safe Execution preventing modification of protected Windows directories."
+        "Transactional File Undo Buffer: Persistent SQLite journal for all file deletions, moves, and renames with instant single-click undo."
       ]
     },
     {
