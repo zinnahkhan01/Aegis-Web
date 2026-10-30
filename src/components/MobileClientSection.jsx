@@ -424,3 +424,4 @@ export function MobileClientSection({ onOpenAdbGuide, onOpenQrCode }) {
 }
 
 export default MobileClientSection;
+
