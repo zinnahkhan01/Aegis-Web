@@ -20,6 +20,7 @@ export function Navbar({ onOpenDownload }) {
     { label: t("nav.features", "Features"), href: "#features" },
     { label: t("nav.comingSoon", "Coming Soon"), href: "#coming-soon" },
     { label: t("nav.architecture", "Architecture"), href: "#architecture" },
+    { label: t("nav.mobileApp", "Mobile App"), href: "#mobile-app" },
     { label: t("nav.simulator", "Simulator"), href: "#simulator" },
     { label: t("nav.downloads", "Download Hub"), href: "#downloads" },
     { label: t("nav.security", "Security"), href: "#security" },
@@ -63,7 +64,7 @@ export function Navbar({ onOpenDownload }) {
                 </span>
                 <span className="hidden sm:inline-flex items-center gap-1 text-[10px] font-mono font-medium px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                  {t("nav.version", "v1.0.1 ONLINE")}
+                  {t("nav.version", "v1.0.4 ONLINE")}
                 </span>
               </div>
               <span className="text-[10px] text-slate-400 font-mono tracking-tight hidden sm:block">
@@ -123,7 +124,7 @@ export function Navbar({ onOpenDownload }) {
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
               {t("nav.systemHealth", "SYSTEM HEALTH: 100% NOMINAL")}
             </span>
-            <span className="text-xs text-slate-400 font-mono">v1.0.1</span>
+            <span className="text-xs text-slate-400 font-mono">v1.0.4</span>
           </div>
 
           {navLinks.map((link) => (

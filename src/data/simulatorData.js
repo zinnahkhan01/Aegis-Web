@@ -13,7 +13,7 @@ export const SIMULATOR_COMMANDS = [
       { step: 1, title: "Voice & Intent Analysis", detail: "VAD captured voice command. CEO Agent recognized intent: OS_APP_LAUNCH & TEXT_INPUT.", status: "done" },
       { step: 2, title: "CEO Agent Delegation", detail: "Routing execution payload to DesktopAgent (native process manager).", status: "done" },
       { step: 3, title: "Process Spawn & Hook", detail: "Spawned process 'notepad.exe' (PID: 14280) with window title 'Untitled - Notepad'.", status: "done" },
-      { step: 4, title: "Keystroke Injection", detail: "Injected text: '# Project Supervex Architecture Notes\\n- CEO Agent v1.0.0 Beta\\n- Playwright Stealth Active'.", status: "done" },
+      { step: 4, title: "Keystroke Injection", detail: "Injected text: '# Project Supervex Architecture Notes\\n- CEO Agent v1.0.4 Beta\\n- Playwright Stealth Active'.", status: "done" },
       { step: 5, title: "Completion Telemetry", detail: "Window state: FOCUSED. Memory overhead: 14.2 MB. Dispatched spoken confirmation.", status: "done" }
     ],
     logs: [

@@ -112,9 +112,9 @@ export function DownloadHub({ onOpenReleaseNotes, onOpenQrCode, onOpenAdbGuide, 
               </p>
 
               {/* Action Buttons */}
-              <div className="flex flex-wrap items-center gap-3 mb-6">
+              <div className="flex flex-wrap items-center gap-3 mb-5">
                 <button
-                  onClick={() => handleDownload("Supervex-AI-Setup-v1.0.0-Beta-x64.exe")}
+                  onClick={() => handleDownload("Supervex-AI-Setup-v1.0.4-x64.exe")}
                   className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#00F2FF] via-cyan-400 to-[#00F2FF] hover:to-cyan-300 text-slate-950 font-bold text-sm tracking-wide shadow-glow-cyan hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2 cursor-pointer"
                 >
                   <Download className="w-4 h-4 text-slate-950" />
@@ -122,7 +122,7 @@ export function DownloadHub({ onOpenReleaseNotes, onOpenQrCode, onOpenAdbGuide, 
                 </button>
 
                 <button
-                  onClick={() => handleDownload("Supervex-AI-Portable-v1.0.0-Beta-x64.zip")}
+                  onClick={() => handleDownload("Supervex-AI-Portable-v1.0.4-x64.zip")}
                   className="px-5 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-slate-200 text-sm font-semibold transition-all flex items-center gap-2 cursor-pointer"
                 >
                   <Download className="w-4 h-4 text-slate-400" />
@@ -131,11 +131,35 @@ export function DownloadHub({ onOpenReleaseNotes, onOpenQrCode, onOpenAdbGuide, 
 
                 <button
                   onClick={onOpenReleaseNotes}
-                  className="px-4 py-3 rounded-xl bg-transparent hover:bg-white/5 text-slate-400 hover:text-white text-xs font-mono transition-colors flex items-center gap-1.5 cursor-pointer ml-auto"
+                  className="px-4 py-3 rounded-xl bg-[#00F2FF]/10 hover:bg-[#00F2FF]/20 border border-[#00F2FF]/30 text-[#00F2FF] text-xs font-mono font-bold transition-colors flex items-center gap-1.5 cursor-pointer ml-auto"
                 >
                   <FileText className="w-3.5 h-3.5 text-[#00F2FF]" />
-                  <span>{t("downloads.btn_release_notes", "Release Notes")}</span>
+                  <span>{t("downloads.btn_release_notes", "v1.0.4 Release Notes")}</span>
                 </button>
+              </div>
+
+              {/* v1.0.4 Release Highlights Inline Box */}
+              <div className="mb-5 p-3.5 rounded-xl bg-[#050811]/90 border border-[#00F2FF]/20 space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-mono font-bold text-[#00F2FF] flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span>WHAT&apos;S NEW IN SUPERVEX AI {DOWNLOADS_DATA.windows.version}</span>
+                  </span>
+                  <button
+                    onClick={onOpenReleaseNotes}
+                    className="text-[11px] font-mono text-emerald-400 hover:underline cursor-pointer"
+                  >
+                    Full Changelog →
+                  </button>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-xs text-slate-300">
+                  {DOWNLOADS_DATA.windows.features.slice(0, 4).map((feat, i) => (
+                    <div key={i} className="flex items-start gap-1.5">
+                      <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
+                      <span className="truncate" title={feat}>{feat}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
@@ -195,7 +219,7 @@ export function DownloadHub({ onOpenReleaseNotes, onOpenQrCode, onOpenAdbGuide, 
             <div className="space-y-2.5 pt-4 border-t border-white/5">
               <div className="grid grid-cols-2 gap-2">
                 <button
-                  onClick={() => handleDownload("Supervex-Companion-v1.0.1-Beta.apk")}
+                  onClick={() => handleDownload("Supervex-Companion-v1.0.4.apk")}
                   className="w-full px-3 py-2.5 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/40 text-emerald-300 font-bold text-xs font-mono transition-all flex items-center justify-center gap-1.5 cursor-pointer"
                 >
                   <Download className="w-3.5 h-3.5" />

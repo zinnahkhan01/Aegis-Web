@@ -156,7 +156,7 @@ export function Modals({
                 Scan to Download Android Companion
               </h3>
               <span className="text-xs font-mono text-emerald-400">
-                v1.0.1 Beta APK • 12.7 MB • Zero Configuration
+                v1.0.4 Official APK • 12.7 MB • Zero Configuration
               </span>
             </div>
 
@@ -165,8 +165,8 @@ export function Modals({
               <img
                 src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(
                   typeof window !== "undefined"
-                    ? `${window.location.origin}/downloads/Supervex-Companion-v1.0.1-Beta.apk`
-                    : "https://github.com/zinnahkhan01/Aegis-Web/raw/main/public/downloads/Supervex-Companion-v1.0.1-Beta.apk"
+                    ? `${window.location.origin}/downloads/Supervex-Companion-v1.0.4.apk`
+                    : "https://github.com/zinnahkhan01/Aegis-Web/releases/download/v1.0.4/Supervex-Companion-v1.0.4.apk"
                 )}`}
                 alt="Scan to Download Supervex Android Companion APK"
                 className="w-full h-full object-contain"
@@ -181,8 +181,8 @@ export function Modals({
               <button
                 onClick={() => {
                   const el = document.createElement("a");
-                  el.href = DOWNLOADS_DATA.android.apkUrl || "/downloads/Supervex-Companion-v1.0.1-Beta.apk";
-                  el.download = "Supervex-Companion-v1.0.1-Beta.apk";
+                  el.href = DOWNLOADS_DATA.android.apkUrl || "/downloads/Supervex-Companion-v1.0.4.apk";
+                  el.download = "Supervex-Companion-v1.0.4.apk";
                   document.body.appendChild(el);
                   el.click();
                   document.body.removeChild(el);
@@ -413,7 +413,7 @@ export function Modals({
                   Terms of Service & Licensing
                 </h3>
                 <span className="text-xs font-mono text-slate-400">
-                  Supervex AI Sovereign Desktop Client • v1.0.0 Beta
+                  Supervex AI Sovereign Desktop Client • v1.0.4 Official
                 </span>
               </div>
             </div>

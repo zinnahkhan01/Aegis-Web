@@ -90,7 +90,7 @@ export function Hero({ onOpenDownload, onOpenReleaseNotes, onOpenAdbGuide, onOpe
               <Download className="w-4 h-4 text-slate-950 transition-transform group-hover:-translate-y-0.5" />
               <div className="text-left">
                 <span className="block leading-none">{t("hero.downloadWindows", "Download for Windows (.exe)")}</span>
-                <span className="text-[10px] font-mono opacity-80 leading-none">{t("hero.downloadWindowsSub", "v1.0.1 • 64-bit Official Release")}</span>
+                <span className="text-[10px] font-mono opacity-80 leading-none">{t("hero.downloadWindowsSub", "v1.0.4 • 64-bit Official Release")}</span>
               </div>
             </a>
 
@@ -103,7 +103,7 @@ export function Hero({ onOpenDownload, onOpenReleaseNotes, onOpenAdbGuide, onOpe
               <Smartphone className="w-4 h-4 text-emerald-400" />
               <div className="text-left">
                 <span className="block leading-none">{t("hero.downloadAndroid", "Get Android Companion (.apk)")}</span>
-                <span className="text-[10px] font-mono text-slate-400 leading-none">{t("hero.downloadAndroidSub", "Wireless ADB Bridge • v1.4.2")}</span>
+                <span className="text-[10px] font-mono text-slate-400 leading-none">{t("hero.downloadAndroidSub", "Wireless ADB Bridge • v1.0.4")}</span>
               </div>
             </a>
 

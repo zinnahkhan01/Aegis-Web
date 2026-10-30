@@ -1,10 +1,11 @@
-﻿import React, { useState } from "react";
+import React, { useState } from "react";
 import { LanguageProvider } from "./context/LanguageContext";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { FeatureGrid } from "./components/FeatureGrid";
 import { ComingSoonFeatures } from "./components/ComingSoonFeatures";
 import { Architecture } from "./components/Architecture";
+import { MobileClientSection } from "./components/MobileClientSection";
 import { CommandSimulator } from "./components/CommandSimulator";
 import { DownloadHub } from "./components/DownloadHub";
 import { SecurityPrivacy } from "./components/SecurityPrivacy";
@@ -46,6 +47,12 @@ export function AppContent() {
 
         {/* CEO Agent Architecture & Telemetry */}
         <Architecture />
+
+        {/* Dedicated Android Mobile Aegis Client Companion Section */}
+        <MobileClientSection
+          onOpenAdbGuide={() => setActiveModal("adbGuide")}
+          onOpenQrCode={() => setActiveModal("qrCode")}
+        />
 
         {/* Interactive Try-A-Command Simulator */}
         <CommandSimulator />

@@ -7,7 +7,7 @@ export const FAQ_DATA = [
   {
     id: "api-key",
     question: "Do I need my own Google Gemini API key to run Supervex?",
-    answer: "No! During the v1.0.0 Free Public Beta, Supervex covers the Gemini Live API usage for testers (under our managed beta quota). You can simply sign in with your email without needing a credit card or your own API key. For power users who prefer using their own dedicated Google Gemini API key (BYOK), you can still enter your personal key inside Settings at any time with local encrypted storage."
+    answer: "No! During the v1.0.4 Free Public Beta, Supervex covers the Gemini Live API usage for testers (under our managed beta quota). You can simply sign in with your email without needing a credit card or your own API key. For power users who prefer using their own dedicated Google Gemini API key (BYOK), you can still enter your personal key inside Settings at any time with local encrypted storage."
   },
   {
     id: "safe-files",

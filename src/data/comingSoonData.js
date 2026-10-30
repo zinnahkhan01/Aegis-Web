@@ -196,7 +196,7 @@ export const ROADMAP_MILESTONES = [
     phase: "Phase 1 - CURRENT LIVE",
     title: "Autonomous Operating System Core",
     bnTitle: "অটোনোমাস অপারেটিং সিস্টেম কোর (বর্তমান লাইভ)",
-    date: "v1.0.1 LIVE",
+    date: "v1.0.4 LIVE",
     status: "completed",
     items: [
       "Gemini Live Sub-120ms Duplex Voice Engine",

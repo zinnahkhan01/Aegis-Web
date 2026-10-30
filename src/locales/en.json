@@ -6,11 +6,12 @@
     "downloads": "Download Hub",
     "security": "Security",
     "faq": "FAQ",
-    "version": "v1.0.1 ONLINE",
+    "version": "v1.0.4 ONLINE",
     "tagline": "AUTONOMOUS DESKTOP INTELLIGENCE",
     "downloadBtn": "Download Hub",
     "systemHealth": "SYSTEM HEALTH: 100% NOMINAL",
-    "comingSoon": "Coming Soon"
+    "comingSoon": "Coming Soon",
+    "mobileApp": "Mobile App"
   },
   "hero": {
     "announcement": "YOUR DESKTOP HAS BEEN WAITING TO LIVE IN 2097. WE BROUGHT IT TO TODAY.",
@@ -18,9 +19,9 @@
     "titleGradient": "Autonomous Voice.",
     "subtitle": "Supervex AI bridges the gap between thought and execution. Speak naturally or type instructions to control your Windows PC, browse ad-free with stealth Playwright automation, and command your Android phone via wireless ADB.",
     "downloadWindows": "Download for Windows (.exe)",
-    "downloadWindowsSub": "v1.0.1 • 64-bit Official Release",
+    "downloadWindowsSub": "v1.0.4 • 64-bit Official Release",
     "downloadAndroid": "Get Android Companion (.apk)",
-    "downloadAndroidSub": "Wireless ADB Bridge • v1.4.2",
+    "downloadAndroidSub": "Wireless ADB Bridge • v1.0.4",
     "iosCompanion": "iOS Companion / Waitlist",
     "statLatencyVal": "< 120ms",
     "statLatency": "Gemini Live Voice Latency",
@@ -234,7 +235,7 @@
     "win_specs": "64-bit Native (x64) • Windows 10 & 11",
     "btn_installer": "Download Installer (.exe)",
     "btn_portable": "Download Portable (.zip)",
-    "btn_release_notes": "Release Notes",
+    "btn_release_notes": "v1.0.4 Release Notes",
     "sha_label": "SHA-256:",
     "copy_hash": "Copy Hash",
     "copied_hash": "Copied!",
@@ -266,7 +267,7 @@
     "q_adb": "How does Supervex AI connect to and control my Android phone?",
     "a_adb": "Supervex AI communicates with your Android phone using standard Android Debug Bridge (ADB) over your local Wi-Fi network or a direct USB cable. By installing the lightweight Supervex Companion APK and enabling Wireless Debugging in Android Developer Options, the PC CEO Agent can securely wake the screen, submit your unlock PIN, launch apps, simulate taps/swipes, and send SMS messages without rooting your phone.",
     "q_api": "Do I need my own Google Gemini API key to run Supervex?",
-    "a_api": "No! During the v1.0.0 Free Public Beta, Supervex covers the Gemini Live API usage for testers (under our managed beta quota). You can simply sign in with your email without needing a credit card or your own API key. For power users who prefer using their own dedicated Google Gemini API key (BYOK), you can still enter your personal key inside Settings at any time with local encrypted storage.",
+    "a_api": "No! During the v1.0.4 Free Public Beta, Supervex covers the Gemini Live API usage for testers (under our managed beta quota). You can simply sign in with your email without needing a credit card or your own API key. For power users who prefer using their own dedicated Google Gemini API key (BYOK), you can still enter your personal key inside Settings at any time with local encrypted storage.",
     "q_safe": "Can Supervex accidentally delete important system files?",
     "a_safe": "No. Supervex AI incorporates a multi-layer Safe Execution Guardrail. All critical operating system directories (e.g., C:\\Windows, Program Files, System32, and project root files) are marked as IMMUTABLE. Furthermore, all non-system deletions are soft-deletions routed to the Windows Recycle Bin with a transactional sqlite undo journal, allowing you to simply say 'Undo last delete' to instantly restore your files.",
     "q_adblock": "How does the YouTube ad-blocker work without browser extensions?",
@@ -290,5 +291,10 @@
     "keep": "Keep",
     "change": "Change Language",
     "selectLang": "Select Your Language"
+  },
+  "mobileApp": {
+    "badge": "AEGIS CLIENT • OFFICIAL ANDROID COMPANION APP",
+    "title": "Control Your Entire PC & Phone Wirelessly From Your Pocket",
+    "subtitle": "Install the native Android Aegis Client APK. Seamlessly bridges your smartphone with Supervex Desktop AI via wireless ADB and WebSocket tunnels — enabling hands-free WhatsApp messaging, automated screen gestures, and remote PC command execution with zero root requirements."
   }
 }
