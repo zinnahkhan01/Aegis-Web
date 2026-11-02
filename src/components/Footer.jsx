@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { 
   Shield, 
@@ -58,11 +58,11 @@ export function Footer({ onOpenPrivacy, onOpenTerms }) {
                 <span className="text-[11px] font-mono text-slate-400 block mb-2 font-semibold">Official Channels:</span>
                 <div className="flex items-center gap-2">
                   <a
-                    href="https://github.com/zinnahkhan01/Supervex-AI"
+                    href="https://github.com/zinnahkhan01/SupervexAI"
                     target="_blank"
                     rel="me noreferrer"
                     className="w-8 h-8 rounded-lg bg-white/5 hover:bg-[#00F2FF]/20 border border-white/10 hover:border-[#00F2FF]/40 text-slate-300 hover:text-[#00F2FF] flex items-center justify-center transition-all cursor-pointer"
-                    title="GitHub: zinnahkhan01/Supervex-AI"
+                    title="GitHub: zinnahkhan01/SupervexAI"
                     aria-label="GitHub"
                   >
                     <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -71,11 +71,11 @@ export function Footer({ onOpenPrivacy, onOpenTerms }) {
                   </a>
 
                   <a
-                    href="https://www.linkedin.com/company/supervexai"
+                    href="https://www.linkedin.com/in/mdzinnahkhan/"
                     target="_blank"
                     rel="me noreferrer"
                     className="w-8 h-8 rounded-lg bg-white/5 hover:bg-[#0077b5]/20 border border-white/10 hover:border-[#0077b5]/40 text-slate-300 hover:text-[#0077b5] flex items-center justify-center transition-all cursor-pointer"
-                    title="LinkedIn: Supervex AI"
+                    title="LinkedIn: MD Zinnah Khan"
                     aria-label="LinkedIn"
                   >
                     <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -84,7 +84,7 @@ export function Footer({ onOpenPrivacy, onOpenTerms }) {
                   </a>
 
                   <a
-                    href="https://www.facebook.com/supervexai"
+                    href="https://www.facebook.com/share/1cHf8GcoJR/"
                     target="_blank"
                     rel="me noreferrer"
                     className="w-8 h-8 rounded-lg bg-white/5 hover:bg-[#1877f2]/20 border border-white/10 hover:border-[#1877f2]/40 text-slate-300 hover:text-[#1877f2] flex items-center justify-center transition-all cursor-pointer"
