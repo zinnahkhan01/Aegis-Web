@@ -14,7 +14,7 @@ export const MS_OFFICE_SUITE = [
     color: "#2B579A",
     accent: "#00F2FF",
     icon: "FileText",
-    featuresCount: "35+ Voice & Chat Actions",
+    featuresCount: "45+ Voice & Chat Actions",
     description: "ডকুমেন্ট তৈরি থেকে শুরু করে পাসওয়ার্ড এনক্রিপশন, টেবিলের নির্দিষ্ট কলামে লেখা, প্রফেশনাল সিভি তৈরি এবং ফাইল ইন্সপেকশন—সবকিছু নিয়ন্ত্রণ করুন সরাসরি বাংলা বা ইংরেজি ভয়েস ও টেক্সট কমান্ডে।"
   },
   {
@@ -149,8 +149,100 @@ export const MS_WORD_STEPS = [
     ]
   },
   {
-    stepId: "step-2",
+    stepId: "step-1-2",
     stepNumber: "Step 02",
+    menuName: "File Menu ➔ 1.2 New",
+    title: "নতুন ডকুমেন্ট ও টেমপ্লেট লাইব্রেরি (Blank & Template Engine)",
+    titleEn: "Blank Document, Built-in Template Library & Profile Auto-Hydration",
+    badge: "100% Tested & Live",
+    badgeColor: "emerald",
+    summary: "সম্পূর্ণ নতুন ব্ল্যাঙ্ক ডকুমেন্ট তৈরি, ৫টি ভিন্ন ক্যাটাগরির (Personal, Business, Academic, Resume, Letter) প্রফেশনাল টেমপ্লেট লোড করা এবং প্রোফাইল ডাটা স্বয়ংক্রিয়ভাবে বসানোর পূর্ণাঙ্গ ব্যবস্থা।",
+    commands: [
+      {
+        id: "cmd-new-1",
+        featureName: "নতুন ব্ল্যাঙ্ক ডকুমেন্ট (Blank Document)",
+        featureNameEn: "Create Fresh Blank Word Document",
+        description: "মাইক্রোসফট ওয়ার্ডে একটি সম্পূর্ণ পরিষ্কার ও নতুন সাদা পৃষ্ঠা তৈরি করে এবং স্ক্রিনের সামনে ফোকাস নিয়ে আসে।",
+        voicePrompt: "একটি নতুন ব্ল্যাঙ্ক ডকুমেন্ট তৈরি করো",
+        chatPrompt: "Create a new blank document in Word",
+        aiAction: "WordCOMWorkerThread app.Documents.Add() এক্সিকিউট করে উইন্ডো ফোকাস প্রদান করে।",
+        category: "Blank Document"
+      },
+      {
+        id: "cmd-new-2",
+        featureName: "ব্যক্তিগত টেমপ্লেট (Personal Templates)",
+        featureNameEn: "Personal Planner & Biography Template",
+        description: "ব্যক্তিগত দৈনিক পরিকল্পনা, লক্ষ্য নির্ধারণ ও লাইফ অর্গানাইজার অথবা ব্যক্তিগত বায়োডাটা টেমপ্লেট তৈরি করে।",
+        voicePrompt: "একটি পার্সোনাল প্ল্যানার টেমপ্লেট দিয়ে নতুন ফাইল খোলো",
+        chatPrompt: "Create a new document from personal planner template",
+        aiAction: "Personal_Planner.docx টেমপ্লেট লোড করে ব্যবহারকারীর নাম ও আজকের তারিখ স্বয়ংক্রিয়ভাবে প্রতিস্থাপন করে।",
+        category: "Personal Templates"
+      },
+      {
+        id: "cmd-new-3",
+        featureName: "ব্যবসায়িক টেমপ্লেট (Business Templates)",
+        featureNameEn: "Business Proposal, Meeting Minutes & Executive Report",
+        description: "কর্পোরেট ক্লায়েন্ট প্রপোজাল, মিটিং কার্যবিবরণী (Minutes) এবং ত্রৈমাসিক এক্সিকিউটিভ রিপোর্ট টেমপ্লেট তৈরি করে।",
+        voicePrompt: "একটি বিজনেস প্রপোজাল টেমপ্লেট দিয়ে নতুন ফাইল খোলো",
+        chatPrompt: "Open a new business proposal template in Word",
+        aiAction: "Business_Proposal.docx টেমপ্লেট লোড করে কোম্পানি, সাবজেক্ট ও প্রজেক্ট কাঠামো প্রস্তুত করে।",
+        category: "Business Templates"
+      },
+      {
+        id: "cmd-new-4",
+        featureName: "একাডেমিক টেমপ্লেট (Academic Templates)",
+        featureNameEn: "Academic Research Paper & Scientific Lab Report",
+        description: "বিশ্ববিদ্যালয় বা প্রাতিষ্ঠানিক রিসার্চ পেপার (IEEE/APA ফরম্যাট কাঠামো) এবং বৈজ্ঞানিক ল্যাব এক্সপেরিমেন্ট রিপোর্ট টেমপ্লেট তৈরি করে।",
+        voicePrompt: "একটি একাডেমিক রিসার্চ পেপার টেমপ্লেট খোলো",
+        chatPrompt: "Create a document using academic research paper template",
+        aiAction: "Academic_Research_Paper.docx থেকে অ্যাবস্ট্রাক্ট, মেথডলজি ও রেফারেন্স ফরম্যাট লোড করে।",
+        category: "Academic Templates"
+      },
+      {
+        id: "cmd-new-5",
+        featureName: "সিভি ও রেজুমে টেমপ্লেট (Resume / CV Templates)",
+        featureNameEn: "Modern Executive CV & Technical Resume",
+        description: "আধুনিক চাকরির বাজারের উপযোগী এক্সিকিউটিভ সিভি অথবা সফটওয়্যার/ইঞ্জিনিয়ারিং টেকনিক্যাল রেজুমে টেমপ্লেট ওপেন করে।",
+        voicePrompt: "রেজুমে টেমপ্লেট থেকে একটি নতুন ফাইল ওপেন করো",
+        chatPrompt: "Create a new resume document from Modern CV template",
+        aiAction: "Modern_CV.docx টেমপ্লেট লোড করে ব্যবহারকারীর সংরক্ষিত প্রোফাইল ডাটা (ইমেইল, ফোন, ভূমিকা) অটোফিল করে।",
+        category: "Resume Templates"
+      },
+      {
+        id: "cmd-new-6",
+        featureName: "চিঠি ও আবেদনপত্র টেমপ্লেট (Letter Templates)",
+        featureNameEn: "Formal Leave Letter & Job Application Cover Letter",
+        description: "অফিসিয়াল ছুটির আবেদনপত্র কিংবা চাকরির কভার লেটারের নির্ভুল প্রাতিষ্ঠানিক কাঠামোর টেমপ্লেট তৈরি করে।",
+        voicePrompt: "একটি ফরমাল লেটার টেমপ্লেট দিয়ে নতুন ডকুমেন্ট খোলো",
+        chatPrompt: "Open a formal leave letter template in Word",
+        aiAction: "Formal_Leave_Letter.docx ওপেন করে স্বয়ংক্রিয়ভাবে ফরমাল প্রাপক ও সমাপনী কাঠামো প্রস্তুত করে।",
+        category: "Letter Templates"
+      },
+      {
+        id: "cmd-new-7",
+        featureName: "টেমপ্লেট হিসেবে সংরক্ষণ (Save as Template)",
+        featureNameEn: "Save Current Document as Custom Reusable Template",
+        description: "বর্তমানে ওপেন থাকা বা ডিজাইন করা যেকোনো ডকুমেন্টকে কাস্টম টেমপ্লেট ফোল্ডারে সেভ করে রাখে যাতে পরবর্তীতে বারবার ব্যবহার করা যায়।",
+        voicePrompt: "বর্তমান ফাইলটি টেমপ্লেট হিসেবে সেভ করো",
+        chatPrompt: "Save current document as template",
+        aiAction: "WordEngine ফাইলটিকে ব্যবহারকারীর কাস্টম টেমপ্লেট লাইব্রেরিতে .docx/.dotx হিসেবে রেজিস্টার করে।",
+        category: "Template Management"
+      },
+      {
+        id: "cmd-new-8",
+        featureName: "উপলব্ধ টেমপ্লেটের তালিকা (List All Templates)",
+        featureNameEn: "List All Templates with Category Filter",
+        description: "সিস্টেমে বিল্ট-ইন এবং ব্যবহারকারীর নিজস্ব তৈরিকৃত সমস্ত টেমপ্লেট ক্যাটাগরি অনুযায়ী সাজিয়ে প্রদর্শন করে।",
+        voicePrompt: "কি কি টেমপ্লেট আছে দেখাও",
+        chatPrompt: "List all available Word templates in system",
+        aiAction: "Personal, Business, Academic, Resume, Letter ফোল্ডার স্ক্যান করে ফাইলের আকারসহ সম্পূর্ণ তালিকা রিটার্ন করে।",
+        category: "Template Management"
+      }
+    ]
+  },
+  {
+    stepId: "step-2",
+    stepNumber: "Step 03",
     menuName: "Table Menu ➔ Precise Cell & Column Control",
     title: "স্মার্ট টেবিল ও নির্দিষ্ট কলামে লেখা (Table Column Precision)",
     titleEn: "Smart Table Generation & Multi-Column Precision Writing",
@@ -202,7 +294,7 @@ export const MS_WORD_STEPS = [
   },
   {
     stepId: "step-3",
-    stepNumber: "Step 03",
+    stepNumber: "Step 04",
     menuName: "Auto Assembly ➔ Full Document Generation",
     title: "সম্পূর্ণ সিভি, রিপোর্ট ও দরখাস্ত তৈরি (Full Document Assembly)",
     titleEn: "End-to-End Professional CV, Business Reports & Formal Letters",
@@ -244,7 +336,7 @@ export const MS_WORD_STEPS = [
   },
   {
     stepId: "step-4",
-    stepNumber: "Step 04",
+    stepNumber: "Step 05",
     menuName: "Design & Layout ➔ Themes, Colors & Page Setup",
     title: "ডিজাইন থিম, মার্জিন ও লেআউট (Design, Margin & Layout)",
     titleEn: "Executive Typography, Themes, Borders & Page Setup",
@@ -286,7 +378,7 @@ export const MS_WORD_STEPS = [
   },
   {
     stepId: "step-5",
-    stepNumber: "Step 05",
+    stepNumber: "Step 06",
     menuName: "Interaction Modes ➔ Voice vs Text Guide",
     title: "ভয়েস ও চ্যাট ব্যবহারের পূর্ণাঙ্গ নিয়মাবলী (How to Use Guide)",
     titleEn: "Complete Duplex Voice & Interactive Chat Operating Guide",
