@@ -14,7 +14,7 @@ export const MS_OFFICE_SUITE = [
     color: "#2B579A",
     accent: "#00F2FF",
     icon: "FileText",
-    featuresCount: "45+ Voice & Chat Actions",
+    featuresCount: "55+ Voice & Chat Actions",
     description: "ডকুমেন্ট তৈরি থেকে শুরু করে পাসওয়ার্ড এনক্রিপশন, টেবিলের নির্দিষ্ট কলামে লেখা, প্রফেশনাল সিভি তৈরি এবং ফাইল ইন্সপেকশন—সবকিছু নিয়ন্ত্রণ করুন সরাসরি বাংলা বা ইংরেজি ভয়েস ও টেক্সট কমান্ডে।"
   },
   {
@@ -241,8 +241,100 @@ export const MS_WORD_STEPS = [
     ]
   },
   {
-    stepId: "step-2",
+    stepId: "step-1-3",
     stepNumber: "Step 03",
+    menuName: "File Menu ➔ 1.3 Open",
+    title: "ফাইল ও ডকুমেন্ট ওপেনিং সিস্টেম (Open & Recovery Engine)",
+    titleEn: "Local Files, Recent History, Cloud Drives & Unsaved Recovery",
+    badge: "100% Tested & Live",
+    badgeColor: "emerald",
+    summary: "পিসির যেকোনো ডিরেক্টরি থেকে ফাইল ওপেন, সাম্প্রতিক ডকুমেন্টের ইতিহাস দেখা ও ইনডেক্স অনুযায়ী খোলা, ফাইল ব্রাউজ করা, OneDrive, SharePoint ও দাপ্তরিক ক্লাউড থেকে ফাইল লোড এবং অসংরক্ষিত (AutoRecover) ড্রাফট পুনরুদ্ধারের পূর্ণাঙ্গ গাইড।",
+    commands: [
+      {
+        id: "cmd-open-1",
+        featureName: "লোকাল ফাইল ওপেন (Open Local File)",
+        featureNameEn: "Open Local File with Smart Fallback Search",
+        description: "যেকোনো নির্দিষ্ট ফাইলের নাম বা লোকেশন উল্লেখ করলে সিস্টেম স্বয়ংক্রিয়ভাবে ডেস্কটপ, ডকুমেন্টস বা ডাউনলোড ফোল্ডার খুঁজে ফাইলটি ওপেন করে উইন্ডো সামনে আনে।",
+        voicePrompt: "ডেস্কটপ থেকে my_doc.docx ফাইলটি খোলো",
+        chatPrompt: "Open local file report.docx in Word",
+        aiAction: "WordEngine multi-folder candidate search চালিয়ে doc = app.Documents.Open(resolved_path) কার্যকর করে।",
+        category: "Local File"
+      },
+      {
+        id: "cmd-open-2",
+        featureName: "সাম্প্রতিক ফাইলের তালিকা (Recent Documents)",
+        featureNameEn: "List Recent Documents History",
+        description: "মাইক্রোসফট ওয়ার্ডে ইতিপূর্বে ওপেন করা সাম্প্রতিক সমস্ত ফাইলের টাইমস্ট্যাম্প ও লোকেশনসহ সম্পূর্ণ তালিকা প্রদর্শন করে।",
+        voicePrompt: "রিসেন্ট ফাইলগুলো দেখাও",
+        chatPrompt: "Show recent Word documents history",
+        aiAction: "app.RecentFiles স্ক্যান করে ইনডেক্সসহ সাম্প্রতিক ফাইলের তালিকা রিটার্ন করে।",
+        category: "Recent Documents"
+      },
+      {
+        id: "cmd-open-3",
+        featureName: "ইনডেক্স ধরে রিসেন্ট ফাইল ওপেন (Open Recent by Index)",
+        featureNameEn: "Open Specific Recent Document by Order",
+        description: "রিসেন্ট লিস্টের ১ নম্বর, ২ নম্বর বা ৩ নম্বর যেকোনো ফাইল তাৎক্ষণিক মুখের কথায় ওপেন করে দেয়।",
+        voicePrompt: "১ নম্বর রিসেন্ট ফাইলটি খোলো",
+        chatPrompt: "Open 1st recent document from history",
+        aiAction: "app.RecentFiles(index).Open() এক্সিকিউট করে নির্দিষ্ট সাম্প্রতিক ফাইল স্ক্রিনে হাজির করে।",
+        category: "Recent Documents"
+      },
+      {
+        id: "cmd-open-4",
+        featureName: "ফাইল ব্রাউজ করা (Browse Files)",
+        featureNameEn: "Browse Word Documents with Size & Date",
+        description: "ডেস্কটপ বা নির্দিষ্ট ফোল্ডারে থাকা সমস্ত ওয়ার্ড ফাইল সাইজ ও পরিবর্তনের সময়সহ ব্রাউজ করে দেখায় কিংবা ওয়ার্ডের অফিশিয়াল ব্রাউজার ডায়ালগ চালু করে।",
+        voicePrompt: "ডেস্কটপের ফাইল ব্রাউজ করো",
+        chatPrompt: "Browse Word documents on Desktop",
+        aiAction: "ডকুমেন্টস স্ক্যান করে মেটাডেটা প্রদান করে অথবা app.Dialogs(80).Show() ডায়ালগ উইন্ডো ওপেন করে।",
+        category: "Browse Files"
+      },
+      {
+        id: "cmd-open-5",
+        featureName: "ওয়ানড্রাইভ থেকে ওপেন (Open from OneDrive)",
+        featureNameEn: "Open Synced Document from OneDrive",
+        description: "পিসির ক্লাউড সিঙ্কড OneDrive ডিরেক্টরি স্বয়ংক্রিয়ভাবে শনাক্ত করে সেখান থেকে যেকোনো প্রজেক্ট বা ফাইল ওপেন করে।",
+        voicePrompt: "OneDrive থেকে মিটিং নোটস ফাইলটি খোলো",
+        chatPrompt: "Open synced documents from OneDrive",
+        aiAction: "OneDrive রুটে রিকার্সিভ সার্চ চালিয়ে ম্যাচিং ফাইলটি ওয়ার্ডে ওপেন করে।",
+        category: "Cloud Open"
+      },
+      {
+        id: "cmd-open-6",
+        featureName: "শেয়ারপয়েন্ট থেকে ওপেন (Open from SharePoint)",
+        featureNameEn: "Open from SharePoint Sync or Cloud URL",
+        description: "অফিসিয়াল টিম বা কোম্পানির শেয়ারপয়েন্ট সিঙ্ক ফোল্ডার থেকে ফাইল লোড করে অথবা সরাসরি শেয়ারপয়েন্ট ওয়েব ইউআরএল দিয়ে ডকুমেন্ট খোলে।",
+        voicePrompt: "শেয়ারপয়েন্ট থেকে ডকুমেন্ট ওপেন করো",
+        chatPrompt: "Open cloud document from SharePoint URL",
+        aiAction: "SharePoint HTTPS লিংক বা কর্পোরেট ডিরেক্টরি থেকে স্বয়ংক্রিয়ভাবে ফাইল লোড করে।",
+        category: "Cloud Open"
+      },
+      {
+        id: "cmd-open-7",
+        featureName: "এই পিসি থেকে ওপেন (Open from This PC)",
+        featureNameEn: "Search & Open across This PC Libraries",
+        description: "ডেস্কটপ, ডকুমেন্টস, ডাউনলোড সহ পিসির সমস্ত লোকাল ড্রাইভে কি-ওয়ার্ড বা ফাইলের নাম মিলিয়ে স্বয়ংক্রিয়ভাবে খুঁজে বের করে ওপেন করে।",
+        voicePrompt: "এই পিসি থেকে my_cv.docx ফাইলটি খোলো",
+        chatPrompt: "Find and open file from This PC libraries",
+        aiAction: "লাইব্রেরি ও ড্রাইভ রুট স্ক্যান করে ফাইলের নাম ম্যাচ করে তাৎক্ষণিক ওপেন করে।",
+        category: "This PC"
+      },
+      {
+        id: "cmd-open-8",
+        featureName: "অসংরক্ষিত ফাইল উদ্ধার (Recover Unsaved Documents)",
+        featureNameEn: "Recover Unsaved Drafts from AutoRecover",
+        description: "হঠাৎ ওয়ার্ড ক্র্যাশ করলে কিংবা সেভ না করে বন্ধ হয়ে গেলে মাইক্রোসফট ওয়ার্ডের AutoRecover ফোল্ডার ও এআই স্ন্যাপশট স্ক্যান করে ফাইল অক্ষত অবস্থায় পুনরুদ্ধার করে।",
+        voicePrompt: "অসংরক্ষিত ফাইল রিকভার করো",
+        chatPrompt: "Recover unsaved documents from AutoRecover",
+        aiAction: "wdAutoRecoverPath (%APPDATA%\\Microsoft\\Word) ও এআই স্ন্যাপশট ব্যাকআপ থেকে লেটেস্ট ড্রাফট ফিরিয়ে আনে।",
+        category: "Unsaved Recovery"
+      }
+    ]
+  },
+  {
+    stepId: "step-2",
+    stepNumber: "Step 04",
     menuName: "Table Menu ➔ Precise Cell & Column Control",
     title: "স্মার্ট টেবিল ও নির্দিষ্ট কলামে লেখা (Table Column Precision)",
     titleEn: "Smart Table Generation & Multi-Column Precision Writing",
@@ -294,7 +386,7 @@ export const MS_WORD_STEPS = [
   },
   {
     stepId: "step-3",
-    stepNumber: "Step 04",
+    stepNumber: "Step 05",
     menuName: "Auto Assembly ➔ Full Document Generation",
     title: "সম্পূর্ণ সিভি, রিপোর্ট ও দরখাস্ত তৈরি (Full Document Assembly)",
     titleEn: "End-to-End Professional CV, Business Reports & Formal Letters",
@@ -336,7 +428,7 @@ export const MS_WORD_STEPS = [
   },
   {
     stepId: "step-4",
-    stepNumber: "Step 05",
+    stepNumber: "Step 06",
     menuName: "Design & Layout ➔ Themes, Colors & Page Setup",
     title: "ডিজাইন থিম, মার্জিন ও লেআউট (Design, Margin & Layout)",
     titleEn: "Executive Typography, Themes, Borders & Page Setup",
@@ -378,7 +470,7 @@ export const MS_WORD_STEPS = [
   },
   {
     stepId: "step-5",
-    stepNumber: "Step 06",
+    stepNumber: "Step 07",
     menuName: "Interaction Modes ➔ Voice vs Text Guide",
     title: "ভয়েস ও চ্যাট ব্যবহারের পূর্ণাঙ্গ নিয়মাবলী (How to Use Guide)",
     titleEn: "Complete Duplex Voice & Interactive Chat Operating Guide",
