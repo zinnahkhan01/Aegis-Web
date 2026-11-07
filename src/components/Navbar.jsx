@@ -1,9 +1,9 @@
-﻿import React, { useState, useEffect } from "react";
-import { Shield, Download, Menu, X, ChevronRight } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import { Shield, Download, Menu, X, ChevronRight, FileText } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
-export function Navbar({ onOpenDownload }) {
+export function Navbar({ onOpenDownload, onOpenMsOffice, onGoHome, activePage = "home" }) {
   const { t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -17,6 +17,7 @@ export function Navbar({ onOpenDownload }) {
   }, []);
 
   const navLinks = [
+    { label: "MS Office", href: "#ms-office", isSpecial: true },
     { label: t("nav.features", "Features"), href: "#features" },
     { label: t("nav.comingSoon", "Coming Soon"), href: "#coming-soon" },
     { label: t("nav.architecture", "Architecture"), href: "#architecture" },
@@ -30,6 +31,22 @@ export function Navbar({ onOpenDownload }) {
   const handleLinkClick = (e, href) => {
     e.preventDefault();
     setMobileMenuOpen(false);
+    if (href === "#ms-office") {
+      if (onOpenMsOffice) {
+        onOpenMsOffice();
+      } else {
+        window.location.hash = "#ms-office";
+      }
+      return;
+    }
+    if (activePage !== "home" && onGoHome) {
+      onGoHome();
+      setTimeout(() => {
+        const el = document.querySelector(href);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+      return;
+    }
     if (href === "#downloads" && onOpenDownload) {
       onOpenDownload();
       return;
@@ -50,7 +67,15 @@ export function Navbar({ onOpenDownload }) {
         <div className="flex items-center justify-between gap-4">
           
           {/* Logo & Status Badge */}
-          <a href="#" className="flex items-center gap-3 group shrink-0">
+          <a 
+            href="#" 
+            onClick={(e) => { 
+              e.preventDefault(); 
+              if (onGoHome) onGoHome(); 
+              else window.location.hash = ""; 
+            }} 
+            className="flex items-center gap-3 group shrink-0 cursor-pointer"
+          >
             <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-[#00F2FF]/20 via-[#7C3AED]/20 to-transparent border border-[#00F2FF]/40 shadow-glow-cyan/50 group-hover:border-[#00F2FF] transition-all duration-300">
               <img src="/icon.png" alt="Supervex AI" className="w-7 h-7 object-cover rounded-lg transition-transform duration-300 group-hover:scale-110" />
               <div className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-400 rounded-full animate-ping" />
@@ -80,7 +105,11 @@ export function Navbar({ onOpenDownload }) {
                 key={link.label}
                 href={link.href}
                 onClick={(e) => handleLinkClick(e, link.href)}
-                className="px-3.5 py-1.5 text-xs font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200"
+                className={`px-3.5 py-1.5 text-xs font-medium rounded-full transition-all duration-200 ${
+                  link.isSpecial && activePage === "ms-office"
+                    ? "bg-[#00F2FF]/20 text-[#00F2FF] font-bold border border-[#00F2FF]/40 shadow-glow-cyan/30"
+                    : "text-slate-300 hover:text-white hover:bg-white/5"
+                }`}
               >
                 {link.label}
               </a>
@@ -89,6 +118,22 @@ export function Navbar({ onOpenDownload }) {
 
           {/* Header Action Buttons (Language Switcher + GitHub + Download) */}
           <div className="hidden sm:flex items-center gap-2.5">
+            {/* MS Office Direct Nav Button */}
+            <button
+              onClick={() => {
+                if (onOpenMsOffice) onOpenMsOffice();
+                else window.location.hash = "#ms-office";
+              }}
+              className={`hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border text-xs font-mono font-medium transition-all cursor-pointer ${
+                activePage === "ms-office"
+                  ? "bg-[#00F2FF]/20 border-[#00F2FF] text-[#00F2FF] shadow-glow-cyan/40"
+                  : "bg-white/5 hover:bg-white/10 border-white/10 text-slate-300 hover:text-white"
+              }`}
+            >
+              <FileText className="w-3.5 h-3.5 text-[#00F2FF]" />
+              <span>MS Office গাইড</span>
+            </button>
+
             {/* 23-Language Selector Dropdown */}
             <LanguageSwitcher />
             <a
