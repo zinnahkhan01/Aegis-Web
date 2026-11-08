@@ -14,7 +14,7 @@ export const MS_OFFICE_SUITE = [
     color: "#2B579A",
     accent: "#00F2FF",
     icon: "FileText",
-    featuresCount: "145+ Voice & Chat Actions",
+    featuresCount: "170+ Voice & Chat Actions",
     description: "ডকুমেন্ট তৈরি থেকে শুরু করে পাসওয়ার্ড এনক্রিপশন, টেবিলের নির্দিষ্ট কলামে লেখা, প্রফেশনাল সিভি তৈরি এবং ফাইল ইন্সপেকশন—সবকিছু নিয়ন্ত্রণ করুন সরাসরি বাংলা বা ইংরেজি ভয়েস ও টেক্সট কমান্ডে।"
   },
   {
@@ -1223,6 +1223,248 @@ export const MS_WORD_STEPS = [
         chatPrompt: "Clear all items from clipboard memory",
         aiAction: "win32clipboard.EmptyClipboard() এবং ইন-মেমোরি হিস্ট্রি ফ্লাশ করে মেমোরি নিরাপদ ও পরিষ্কার করে।",
         category: "Clear Clipboard"
+      }
+    ]
+  },
+  {
+    stepId: "step-2-2",
+    stepNumber: "Step 16",
+    menuName: "Home Menu ➔ 2.2 Font",
+    title: "হোম মেনু ➔ ২.২ ফন্ট ও টাইপোগ্রাফি (Home Menu ➔ 2.2 Font)",
+    titleEn: "Complete 23-Feature Font Styling, Case Conversion, Color, Effects & OpenType Typography",
+    badge: "Home Ribbon",
+    badgeColor: "blue",
+    summary: "ফন্ট ফ্যামিলি, ফন্ট সাইজ বৃদ্ধি/হ্রাস, বোল্ড, ইটালিক, আন্ডারলাইন, ডাবল আন্ডারলাইন, স্ট্রাইকথ্রু, সাবস্ক্রিপ্ট, সুপারস্ক্রিপ্ট, ৫ ধরনের চেঞ্জ কেস, হাইলাইট ও ফন্ট কালার, ক্লিয়ার ফরম্যাটিং, টেক্সট ইফেক্ট, ওপেনটাইপ টাইপোগ্রাফি এবং ক্যারেক্টার স্পেসিংয়ের ২৩টি ফিচারের শতভাগ স্বয়ংক্রিয় নিয়ন্ত্রণ।",
+    commands: [
+      {
+        id: "cmd-font-1",
+        featureName: "ফন্ট ফ্যামিলি পরিবর্তন (Font Family)",
+        featureNameEn: "Set Font Typeface (English & Bengali Fonts)",
+        description: "নির্বাচিত লেখা বা ডকুমেন্টের ফন্ট ফ্যামিলি পরিবর্তন করে যেকোনো ফন্ট (যেমন: Times New Roman, Arial, Calibri, SolaimanLipi, SutonnyMJ, Nikosh) সেট করে।",
+        voicePrompt: "ফন্ট ফ্যামিলি Times New Roman করো",
+        chatPrompt: "Change font family to Times New Roman",
+        aiAction: "Range.Font.Name, NameAscii, NameBi এবং NameOther প্রোপার্টিতে কাঙ্ক্ষিত ফন্ট সেট করে।",
+        category: "Font Family"
+      },
+      {
+        id: "cmd-font-2",
+        featureName: "ফন্ট সাইজ নির্ধারণ (Font Size)",
+        featureNameEn: "Set Exact Font Size in Points",
+        description: "লেখার আকার নির্দিষ্ট পয়েন্টে (যেমন: ১০, ১২, ১৪, ১৬, ১৮, ২৪ বা ৩৬ pt) নির্ধারণ করে।",
+        voicePrompt: "ফন্ট সাইজ ১৬ করো",
+        chatPrompt: "Set font size to 16 pt",
+        aiAction: "Range.Font.Size এবং Font.SizeBi প্রোপার্টিতে পয়েন্ট সাইজ সেট করে।",
+        category: "Font Size"
+      },
+      {
+        id: "cmd-font-3",
+        featureName: "ফন্ট সাইজ বৃদ্ধি (Increase Font Size)",
+        featureNameEn: "Grow Font Size Step-by-Step (A^)",
+        description: "ওয়ার্ড রিবনের Grow Font বাটনের মতো নির্বাচিত লেখার আকার এক ধাপ বা নির্দিষ্ট পয়েন্টে বড় করে।",
+        voicePrompt: "ফন্ট সাইজ বাড়াও",
+        chatPrompt: "Increase font size of the selected text",
+        aiAction: "Range.Font.Grow() মেথড কল করে স্ট্যান্ডার্ড স্কেলে ফন্ট সাইজ বৃদ্ধি করে।",
+        category: "Increase Size"
+      },
+      {
+        id: "cmd-font-4",
+        featureName: "ফন্ট সাইজ হ্রাস (Decrease Font Size)",
+        featureNameEn: "Shrink Font Size Step-by-Step (Av)",
+        description: "ওয়ার্ড রিবনের Shrink Font বাটনের মতো নির্বাচিত লেখার আকার এক ধাপ বা নির্দিষ্ট পয়েন্টে ছোট করে।",
+        voicePrompt: "ফন্ট সাইজ কমাও",
+        chatPrompt: "Decrease font size of the selected text",
+        aiAction: "Range.Font.Shrink() মেথড কল করে স্ট্যান্ডার্ড স্কেলে ফন্ট সাইজ হ্রাস করে।",
+        category: "Decrease Size"
+      },
+      {
+        id: "cmd-font-5",
+        featureName: "বোল্ড ফরম্যাটিং (Bold)",
+        featureNameEn: "Apply or Toggle Bold Text",
+        description: "নির্বাচিত টেক্সট বা প্যারাগ্রাফকে বোল্ড (মোটা অক্ষর) করে অথবা বোল্ড বন্ধ করে।",
+        voicePrompt: "লেখাটি বোল্ড করো",
+        chatPrompt: "Make the selected text bold",
+        aiAction: "Range.Font.Bold = -1 এবং Font.BoldBi = -1 প্রোপার্টি সক্রিয় করে।",
+        category: "Bold"
+      },
+      {
+        id: "cmd-font-6",
+        featureName: "ইটালিক ফরম্যাটিং (Italic)",
+        featureNameEn: "Apply or Toggle Italic Text",
+        description: "নির্বাচিত টেক্সটকে ইটালিক (বাঁকা অক্ষর) করে অথবা ইটালিক ফরম্যাট তুলে দেয়।",
+        voicePrompt: "লেখাটি ইটালিক করো",
+        chatPrompt: "Make the selected text italic",
+        aiAction: "Range.Font.Italic = -1 এবং Font.ItalicBi = -1 প্রোপার্টি সক্রিয় করে।",
+        category: "Italic"
+      },
+      {
+        id: "cmd-font-7",
+        featureName: "আন্ডারলাইন (Underline)",
+        featureNameEn: "Single, Dotted, Dashed, Wavy or Thick Underline",
+        description: "লেখার নিচে সিঙ্গেল, ডটেড, ড্যাশড, ওয়েভি বা মোটা আন্ডারলাইন দাগ যুক্ত করে।",
+        voicePrompt: "লেখায় আন্ডারলাইন দাও",
+        chatPrompt: "Underline the selected text",
+        aiAction: "Range.Font.Underline = wdUnderlineSingle (1) অথবা কাঙ্ক্ষিত আন্ডারলাইন স্টাইল সেট করে।",
+        category: "Underline"
+      },
+      {
+        id: "cmd-font-8",
+        featureName: "ডাবল আন্ডারলাইন (Double Underline)",
+        featureNameEn: "Apply Double Line Underline",
+        description: "গুরুত্বপূর্ণ শিরোনাম বা মোট হিসাবের নিচে জোড়া দাগ (Double Underline) প্রয়োগ করে।",
+        voicePrompt: "ডাবল আন্ডারলাইন করো",
+        chatPrompt: "Apply double underline to the selected text",
+        aiAction: "Range.Font.Underline = wdUnderlineDouble (3) প্রোপার্টি সরাসরি প্রয়োগ করে।",
+        category: "Double Underline"
+      },
+      {
+        id: "cmd-font-9",
+        featureName: "স্ট্রাইকথ্রু (Strikethrough)",
+        featureNameEn: "Single or Double Strikethrough Line",
+        description: "লেখার মাঝ বরাবর কাটা দাগ (Single বা Double Strikethrough) টেনে দেয়।",
+        voicePrompt: "লেখায় স্ট্রাইকথ্রু দাও",
+        chatPrompt: "Apply strikethrough to the selected text",
+        aiAction: "Range.Font.StrikeThrough = -1 (অথবা DoubleStrikeThrough = -1) সেট করে।",
+        category: "Strikethrough"
+      },
+      {
+        id: "cmd-font-10",
+        featureName: "সাবস্ক্রিপ্ট (Subscript — H₂O)",
+        featureNameEn: "Format Text as Subscript Baseline",
+        description: "রাসায়নিক সংকেত বা নিচের ভিত্তি সূচক লেখার জন্য টেক্সটকে বেসলাইনের নিচে ছোট আকারে (Subscript) বসায়।",
+        voicePrompt: "সাবস্ক্রিপ্ট করো",
+        chatPrompt: "Format selected text as subscript",
+        aiAction: "Range.Font.Subscript = -1 সেট করে এবং Superscript স্বয়ংক্রিয়ভাবে বন্ধ করে।",
+        category: "Subscript"
+      },
+      {
+        id: "cmd-font-11",
+        featureName: "সুপারস্ক্রিপ্ট (Superscript — x²)",
+        featureNameEn: "Format Text as Superscript Exponent",
+        description: "গাণিতিক ঘাত বা ক্রমিক সূচক (যেমন x², 1st) লেখার জন্য টেক্সটকে লাইনের উপরে ছোট আকারে (Superscript) বসায়।",
+        voicePrompt: "সুপারস্ক্রিপ্ট করো",
+        chatPrompt: "Format selected text as superscript",
+        aiAction: "Range.Font.Superscript = -1 সেট করে এবং Subscript স্বয়ংক্রিয়ভাবে বন্ধ করে।",
+        category: "Superscript"
+      },
+      {
+        id: "cmd-font-12",
+        featureName: "চেঞ্জ কেস মেনু (Change Case)",
+        featureNameEn: "Unified Case Transformation Engine",
+        description: "যেকোনো নির্বাচিত ইংরেজি লেখার কেস (Sentence, lower, UPPER, Capitalize Each Word, Toggle) তাৎক্ষণিক পরিবর্তন করে।",
+        voicePrompt: "চেঞ্জ কেস করে আপারকেস করো",
+        chatPrompt: "Change case of selected text",
+        aiAction: "Range.Case এবং ডিটারমিনিস্টিক কেস কনভার্টারের মাধ্যমে অক্ষরের রূপান্তর সম্পন্ন করে।",
+        category: "Change Case"
+      },
+      {
+        id: "cmd-font-13",
+        featureName: "সেন্টেন্স কেস (Sentence Case)",
+        featureNameEn: "Capitalize First Letter of Each Sentence",
+        description: "প্রতিটি বাক্যের প্রথম অক্ষর বড় হাতের এবং বাকি সব অক্ষর ছোট হাতের অক্ষরে রূপান্তর করে।",
+        voicePrompt: "সেন্টেন্স কেস করো",
+        chatPrompt: "Convert text to Sentence case",
+        aiAction: "Range.Case = wdTitleSentence (4) এবং রেজেক্স ভেরিফিকেশনের মাধ্যমে বাক্যের প্রথম অক্ষর বড় করে।",
+        category: "Sentence Case"
+      },
+      {
+        id: "cmd-font-14",
+        featureName: "লোয়ারকেস / ছোট হাতের অক্ষর (lowercase)",
+        featureNameEn: "Convert All Letters to lowercase",
+        description: "নির্বাচিত লেখার সব ইংরেজি অক্ষরকে ছোট হাতের অক্ষরে (lowercase) রূপান্তর করে।",
+        voicePrompt: "সব ছোট হাতের অক্ষর করো",
+        chatPrompt: "Convert selected text to lowercase",
+        aiAction: "Range.Case = wdLowerCase (0) প্রয়োগ করে সম্পূর্ণ টেক্সট ছোট হাতের অক্ষরে রূপান্তর করে।",
+        category: "lowercase"
+      },
+      {
+        id: "cmd-font-15",
+        featureName: "আপারকেস / বড় হাতের অক্ষর (UPPERCASE)",
+        featureNameEn: "Convert All Letters to UPPERCASE",
+        description: "নির্বাচিত লেখার সব ইংরেজি অক্ষরকে বড় হাতের অক্ষরে (UPPERCASE / ALL CAPS) রূপান্তর করে।",
+        voicePrompt: "সব বড় হাতের অক্ষর করো",
+        chatPrompt: "Convert selected text to UPPERCASE",
+        aiAction: "Range.Case = wdUpperCase (1) প্রয়োগ করে সম্পূর্ণ টেক্সট বড় হাতের অক্ষরে রূপান্তর করে।",
+        category: "UPPERCASE"
+      },
+      {
+        id: "cmd-font-16",
+        featureName: "ক্যাপিটালাইজ ইচ ওয়ার্ড (Capitalize Each Word)",
+        featureNameEn: "Title Case — Capitalize First Letter of Every Word",
+        description: "প্রতিটি শব্দের প্রথম অক্ষর বড় হাতের এবং বাকি অক্ষর ছোট হাতের (Title Case) করে।",
+        voicePrompt: "ক্যাপিটালাইজ ইচ ওয়ার্ড করো",
+        chatPrompt: "Capitalize each word in selected text",
+        aiAction: "Range.Case = wdTitleWord (2) প্রয়োগ করে প্রতিটি শব্দের প্রথম অক্ষর ক্যাপিটাল করে।",
+        category: "Capitalize Each Word"
+      },
+      {
+        id: "cmd-font-17",
+        featureName: "টগল কেস (tOGGLE cASE)",
+        featureNameEn: "Invert Uppercase and Lowercase Letters",
+        description: "বড় হাতের অক্ষরগুলোকে ছোট হাতের এবং ছোট হাতের অক্ষরগুলোকে বড় হাতের অক্ষরে উল্টে দেয়।",
+        voicePrompt: "টগল কেস করো",
+        chatPrompt: "Toggle case of the selected text",
+        aiAction: "Range.Case = wdToggleCase (5) এবং swapcase() মেথডের মাধ্যমে প্রতিটি অক্ষরের কেস রিভার্স করে।",
+        category: "Toggle Case"
+      },
+      {
+        id: "cmd-font-18",
+        featureName: "টেক্সট হাইলাইট কালার (Text Highlight Color)",
+        featureNameEn: "Apply Marker Highlight Background Color",
+        description: "লেখার পেছনে হলুদ, উজ্জ্বল সবুজ, আসমানী, গোলাপি, নীল বা লাল হাইলাইটার কালার দেয় অথবা হাইলাইট মুছে ফেলে।",
+        voicePrompt: "হলুদ হাইলাইট কালার দাও",
+        chatPrompt: "Highlight selected text in yellow",
+        aiAction: "Range.HighlightColorIndex = wdYellow (7) বা নির্দিষ্ট WdColorIndex মান প্রয়োগ করে।",
+        category: "Highlight Color"
+      },
+      {
+        id: "cmd-font-19",
+        featureName: "ফন্ট কালার / লেখার রঙ (Font Color)",
+        featureNameEn: "Set Text Color by Name, RGB or Hex",
+        description: "লেখার ফন্টের রঙ পরিবর্তন করে লাল, নীল, সবুজ, সোনালী, বেগুনি, কালো বা যেকোনো Hex কোডে রূপান্তর করে।",
+        voicePrompt: "ফন্টের রঙ লাল করো",
+        chatPrompt: "Change font color to red",
+        aiAction: "২৪-বিট BGR কালার ইন্টিজার হিসাব করে Range.Font.Color প্রোপার্টিতে সরাসরি সেট করে।",
+        category: "Font Color"
+      },
+      {
+        id: "cmd-font-20",
+        featureName: "ক্লিয়ার ফরম্যাটিং (Clear Formatting)",
+        featureNameEn: "Strip All Formatting and Reset to Normal",
+        description: "নির্বাচিত লেখার সকল বোল্ড, ইটালিক, আন্ডারলাইন, রঙ, হাইলাইট ও ইফেক্ট মুছে ডিফল্ট প্লেইন লেখায় ফিরিয়ে আনে।",
+        voicePrompt: "সব ফরম্যাট মুছে ফেলো",
+        chatPrompt: "Clear all formatting from selected text",
+        aiAction: "Range.Font.Reset(), HighlightColorIndex = 0 এবং ডিফল্ট ফন্ট প্রোপার্টি রিসেট করে।",
+        category: "Clear Formatting"
+      },
+      {
+        id: "cmd-font-21",
+        featureName: "টেক্সট ইফেক্টস (Text Effects)",
+        featureNameEn: "Shadow, Outline, Emboss, Engrave, Glow & Reflection",
+        description: "লেখায় দৃষ্টিনন্দন শ্যাডো (ছায়া), আউটলাইন, এমবস, এনগ্রেভ, গ্লো, রিফ্লেকশন বা স্মল ক্যাপস ইফেক্ট প্রয়োগ করে।",
+        voicePrompt: "লেখায় শ্যাডো টেক্সট ইফেক্ট দাও",
+        chatPrompt: "Apply shadow text effect to selected text",
+        aiAction: "Font.Shadow, Font.Outline, Font.Emboss, Font.Engrave, Font.Glow ও Reflection প্রোপার্টি নিয়ন্ত্রণ করে।",
+        category: "Text Effects"
+      },
+      {
+        id: "cmd-font-22",
+        featureName: "টাইপোগ্রাফি সেটিংস (Typography Settings)",
+        featureNameEn: "OpenType Ligatures, Number Spacing, Number Forms & Stylistic Sets",
+        description: "ওপেনটাইপ ফন্টের লিগেচার (Standard/Contextual/All), নাম্বার স্পেসিং (Proportional/Tabular), নাম্বার ফর্ম এবং স্টাইলিস্টিক সেট (১-২০) কনফিগার করে।",
+        voicePrompt: "টাইপোগ্রাফি সেটিংস থেকে সব লিগেচার এবং ট্যাবুলার নাম্বার স্পেসিং চালু করো",
+        chatPrompt: "Enable all OpenType ligatures and tabular number spacing",
+        aiAction: "Font.Ligatures, Font.NumberSpacing, Font.NumberForm এবং Font.StylisticSet প্রোপার্টি সেট করে।",
+        category: "Typography"
+      },
+      {
+        id: "cmd-font-23",
+        featureName: "ক্যারেক্টার স্পেসিং (Character Spacing)",
+        featureNameEn: "Expanded/Condensed Letter Spacing, Scaling %, Position & Kerning",
+        description: "অক্ষরের মধ্যকার দূরত্ব বাড়ানো (Expanded) বা কমানো (Condensed), হরাইজন্টাল স্কেলিং শতাংশ, পজিশন (Raised/Lowered) এবং কার্নিং নিয়ন্ত্রণ করে।",
+        voicePrompt: "ক্যারেক্টার স্পেসিং ২ পয়েন্ট বাড়াও",
+        chatPrompt: "Set character spacing to expanded by 2 pt",
+        aiAction: "Font.Spacing, Font.Scaling, Font.Position এবং Font.Kerning প্রোপার্টিতে নির্ভুল মান প্রয়োগ করে।",
+        category: "Character Spacing"
       }
     ]
   }
