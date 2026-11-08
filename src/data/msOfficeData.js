@@ -14,7 +14,7 @@ export const MS_OFFICE_SUITE = [
     color: "#2B579A",
     accent: "#00F2FF",
     icon: "FileText",
-    featuresCount: "225+ Voice & Chat Actions",
+    featuresCount: "230+ Voice & Chat Actions",
     description: "ডকুমেন্ট তৈরি থেকে শুরু করে পাসওয়ার্ড এনক্রিপশন, টেবিলের নির্দিষ্ট কলামে লেখা, প্রফেশনাল সিভি তৈরি এবং ফাইল ইন্সপেকশন—সবকিছু নিয়ন্ত্রণ করুন সরাসরি বাংলা বা ইংরেজি ভয়েস ও টেক্সট কমান্ডে।"
   },
   {
@@ -2010,6 +2010,78 @@ export const MS_WORD_STEPS = [
         chatPrompt: "Select text with similar formatting",
         aiAction: "রেফারেন্স প্যারাগ্রাফের Style ও Font সিগনেচার বিশ্লেষণ করে সমজাতীয় সকল প্যারাগ্রাফ চিহ্নিত ও সিলেক্ট করে।",
         category: "Selection"
+      }
+    ]
+  },
+  {
+    stepId: "step-2-6",
+    stepNumber: "Step 20",
+    menuName: "Home Menu ➔ 2.6 Editor",
+    title: "মাইক্রোসফট এডিটর, বানান ও ব্যাকরণ সংশোধন, রিফাইনমেন্ট, এডিটর স্কোর ও সিমিলারিটি চেক (৬টি অপারেশন)",
+    titleEn: "Complete Microsoft Editor Suite: Spelling, Grammar, Writing Suggestions, Refinements, Score & Similarity Check",
+    subtitle: "Spelling, Grammar, Writing Suggestions, Refinements (Clarity, Conciseness, Formality, Vocabulary), Editor Score (0–100%) এবং Similarity Check (Originality & Duplicate Analysis)।",
+    badge: "AI Editor & Proofing",
+    icon: "Sparkles",
+    commands: [
+      {
+        id: "cmd-edr-1",
+        featureName: "বানান যাচাই ও সংশোধন (Spelling)",
+        featureNameEn: "Check & Auto-Fix Spelling Errors Across Document",
+        description: "ডকুমেন্টের সকল বানান ভুল (SpellingErrors) চিহ্নিত করে, সঠিক শব্দের সাজেশন দেখায় এবং কমান্ড দিলে স্বয়ংক্রিয়ভাবে বানান সংশোধন করে।",
+        voicePrompt: "বানান চেক করো / বানান ঠিক করো",
+        chatPrompt: "Check spelling and auto-fix errors in the document",
+        aiAction: "doc.SpellingErrors ও GetSpellingSuggestions() এর মাধ্যমে বানান যাচাই ও স্বয়ংক্রিয় সংশোধন করে।",
+        category: "Proofing"
+      },
+      {
+        id: "cmd-edr-2",
+        featureName: "ব্যাকরণ যাচাই ও সংশোধন (Grammar)",
+        featureNameEn: "Check & Auto-Fix Grammatical Issues",
+        description: "ডকুমেন্টের ব্যাকরণগত ত্রুটি (GrammaticalErrors), পুনরাবৃত্ত শব্দ, অতিরিক্ত স্পেস ও বাক্য গঠন যাচাই করে এবং স্বয়ংক্রিয়ভাবে সংশোধন করে।",
+        voicePrompt: "গ্রামার চেক করো / ব্যাকরণ ঠিক করো",
+        chatPrompt: "Check grammar and fix grammatical issues",
+        aiAction: "doc.GrammaticalErrors ও ব্যাকরণ রুল ইঞ্জিনের মাধ্যমে ত্রুটি শনাক্ত ও সংশোধন করে।",
+        category: "Proofing"
+      },
+      {
+        id: "cmd-edr-3",
+        featureName: "রাইটিং সাজেশনস (Writing Suggestions)",
+        featureNameEn: "Comprehensive Writing Suggestions & Editor Pane",
+        description: "বানান, ব্যাকরণ, স্পষ্টতা ও সংক্ষিপ্ততার সমন্বিত রাইটিং সাজেশন প্রদান করে এবং প্রয়োজনে এক কমান্ডে সব সাজেশন ডকুমেন্টে প্রয়োগ করে।",
+        voicePrompt: "রাইটিং সাজেশন দেখাও",
+        chatPrompt: "Show writing suggestions for the document",
+        aiAction: "Spelling, Grammar ও Refinements একত্রিত করে সম্পূর্ণ রাইটিং সাজেশন তালিকা ও অ্যাকশন তৈরি করে।",
+        category: "Suggestions"
+      },
+      {
+        id: "cmd-edr-4",
+        featureName: "এডিটর রিফাইনমেন্টস (Refinements)",
+        featureNameEn: "Clarity, Conciseness, Formality, Vocabulary & Punctuation Refinements",
+        description: "লেখাকে আরও পেশাদার ও সংক্ষিপ্ত করতে Clarity (স্পষ্টতা), Conciseness (বাহুল্য বর্জন), Formality (আনুষ্ঠানিক রূপ) ও Vocabulary পরিমার্জন করে।",
+        voicePrompt: "রিফাইনমেন্ট চেক করো / রিফাইনমেন্ট প্রয়োগ করো",
+        chatPrompt: "Analyze and apply Editor refinements for clarity and conciseness",
+        aiAction: "Wordy phrases, informal contractions ও দীর্ঘ বাক্য বিশ্লেষণ করে এক্সিকিউটিভ মানদণ্ডে পরিমার্জন করে।",
+        category: "Refinements"
+      },
+      {
+        id: "cmd-edr-5",
+        featureName: "এডিটর স্কোর (Editor Score)",
+        featureNameEn: "Calculate 0–100% Microsoft Editor Quality Score",
+        description: "ডকুমেন্টের বানান, ব্যাকরণ, রিফাইনমেন্ট এবং Readability Statistics মূল্যায়ন করে ০% থেকে ১০০% পর্যন্ত এডিটর স্কোর ও গ্রেড প্রদান করে।",
+        voicePrompt: "এডিটর স্কোর দেখাও",
+        chatPrompt: "Calculate Microsoft Editor score for the document",
+        aiAction: "Spelling, Grammar, Refinements ও ReadabilityStatistics বিশ্লেষণ করে 0–100% স্কোর গণনা করে।",
+        category: "Score & Originality"
+      },
+      {
+        id: "cmd-edr-6",
+        featureName: "সিমিলারিটি চেক (Similarity Check)",
+        featureNameEn: "Originality Percentage, Duplicate Detection & Citation Check",
+        description: "ডকুমেন্টের মৌলিকত্ব (Originality %) যাচাই, ডুপ্লিকেট বাক্য শনাক্তকরণ, রেফারেন্স টেক্সটের সাথে মিল (Similarity %) এবং উদ্ধৃতি (Citations) পরীক্ষা করে।",
+        voicePrompt: "সিমিলারিটি চেক করো",
+        chatPrompt: "Run similarity and originality check on the document",
+        aiAction: "3-gram Shingle Similarity ও ডুপ্লিকেট বাক্য স্ক্যান করে Originality % ও Similarity % রিপোর্ট তৈরি করে।",
+        category: "Score & Originality"
       }
     ]
   }
