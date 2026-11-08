@@ -14,7 +14,7 @@ export const MS_OFFICE_SUITE = [
     color: "#2B579A",
     accent: "#00F2FF",
     icon: "FileText",
-    featuresCount: "190+ Voice & Chat Actions",
+    featuresCount: "215+ Voice & Chat Actions",
     description: "ডকুমেন্ট তৈরি থেকে শুরু করে পাসওয়ার্ড এনক্রিপশন, টেবিলের নির্দিষ্ট কলামে লেখা, প্রফেশনাল সিভি তৈরি এবং ফাইল ইন্সপেকশন—সবকিছু নিয়ন্ত্রণ করুন সরাসরি বাংলা বা ইংরেজি ভয়েস ও টেক্সট কমান্ডে।"
   },
   {
@@ -1676,6 +1676,248 @@ export const MS_WORD_STEPS = [
         chatPrompt: "Enable Widow/Orphan Control for the document",
         aiAction: "ParagraphFormat.WidowControl = -1 প্রোপার্টি সক্রিয় করে।",
         category: "Pagination"
+      }
+    ]
+  },
+  {
+    stepId: "step-2-4",
+    stepNumber: "Step 18",
+    menuName: "Home Menu ➔ 2.4 Styles",
+    title: "প্রফেশনাল ডকুমেন্ট স্টাইল গ্যালারি ও কাস্টম স্টাইল ম্যানেজমেন্ট (২৩টি অপারেশন)",
+    titleEn: "Complete Word Styles Gallery, Heading 1–9, Quotes, Emphasis & Custom Style Engine",
+    subtitle: "Normal, No Spacing, Title, Subtitle, Heading 1 থেকে Heading 9, Quote, Intense Quote, Subtle Emphasis, Emphasis, Strong, Book Title এবং নতুন স্টাইল তৈরি, মডিফাই ও ম্যানেজমেন্ট।",
+    badge: "Styles Gallery Engine",
+    icon: "Palette",
+    commands: [
+      {
+        id: "cmd-style-1",
+        featureName: "নরমাল স্টাইল (Normal)",
+        featureNameEn: "Apply Built-in Normal Body Style",
+        description: "নির্বাচিত প্যারাগ্রাফ বা টেক্সটে ওয়ার্ডের ডিফল্ট Normal বডি টেক্সট স্টাইল প্রয়োগ করে।",
+        voicePrompt: "নরমাল স্টাইল দাও",
+        chatPrompt: "Apply Normal style to the paragraph",
+        aiAction: "target_range.Style = wdStyleNormal (-1) প্রয়োগ করে ডিফল্ট বডি টেক্সট স্টাইল সেট করে।",
+        category: "Core Styles"
+      },
+      {
+        id: "cmd-style-2",
+        featureName: "নো স্পেসিং স্টাইল (No Spacing)",
+        featureNameEn: "Apply No Spacing Compact Style",
+        description: "প্যারাগ্রাফের মধ্যকার অতিরিক্ত স্পেসিং দূর করে কম্প্যাক্ট No Spacing স্টাইল (SpaceBefore=0, SpaceAfter=0, Single Line) প্রয়োগ করে।",
+        voicePrompt: "নো স্পেসিং স্টাইল দাও",
+        chatPrompt: "Apply No Spacing style to the paragraph",
+        aiAction: "No Spacing স্টাইল এবং SpaceBefore=0, SpaceAfter=0 ও LineSpacingRule=0 নিশ্চিত করে।",
+        category: "Core Styles"
+      },
+      {
+        id: "cmd-style-3",
+        featureName: "টাইটেল স্টাইল (Title)",
+        featureNameEn: "Apply Document Title Style",
+        description: "ডকুমেন্টের প্রধান শিরোনামকে আকর্ষণীয় বড় টাইপোগ্রাফির Title স্টাইলে রূপান্তর করে।",
+        voicePrompt: "টাইটেল স্টাইল দাও",
+        chatPrompt: "Apply Title style to the heading",
+        aiAction: "target_range.Style = wdStyleTitle (-63) প্রয়োগ করে।",
+        category: "Core Styles"
+      },
+      {
+        id: "cmd-style-4",
+        featureName: "সাবটাইটেল স্টাইল (Subtitle)",
+        featureNameEn: "Apply Document Subtitle Style",
+        description: "প্রধান শিরোনামের নিচে উপশিরোনাম বা সাবটাইটেল স্টাইল (Subtitle) প্রয়োগ করে।",
+        voicePrompt: "সাবটাইটেল স্টাইল দাও",
+        chatPrompt: "Apply Subtitle style to the text",
+        aiAction: "target_range.Style = wdStyleSubtitle (-75) প্রয়োগ করে।",
+        category: "Core Styles"
+      },
+      {
+        id: "cmd-style-5",
+        featureName: "হেডিং ১ স্টাইল (Heading 1)",
+        featureNameEn: "Apply Top-Level Heading 1 Style",
+        description: "অধ্যায় বা প্রধান সেকশনের জন্য প্রথম স্তরের শিরোনাম স্টাইল (Heading 1) প্রয়োগ করে।",
+        voicePrompt: "হেডিং ১ স্টাইল দাও",
+        chatPrompt: "Apply Heading 1 style",
+        aiAction: "target_range.Style = wdStyleHeading1 (-2) প্রয়োগ করে।",
+        category: "Headings 1–9"
+      },
+      {
+        id: "cmd-style-6",
+        featureName: "হেডিং ২ স্টাইল (Heading 2)",
+        featureNameEn: "Apply Second-Level Heading 2 Style",
+        description: "সাব-সেকশনের জন্য দ্বিতীয় স্তরের শিরোনাম স্টাইল (Heading 2) প্রয়োগ করে।",
+        voicePrompt: "হেডিং ২ স্টাইল দাও",
+        chatPrompt: "Apply Heading 2 style",
+        aiAction: "target_range.Style = wdStyleHeading2 (-3) প্রয়োগ করে।",
+        category: "Headings 1–9"
+      },
+      {
+        id: "cmd-style-7",
+        featureName: "হেডিং ৩ স্টাইল (Heading 3)",
+        featureNameEn: "Apply Third-Level Heading 3 Style",
+        description: "তৃতীয় স্তরের উপ-শিরোনাম স্টাইল (Heading 3) প্রয়োগ করে।",
+        voicePrompt: "হেডিং ৩ স্টাইল দাও",
+        chatPrompt: "Apply Heading 3 style",
+        aiAction: "target_range.Style = wdStyleHeading3 (-4) প্রয়োগ করে।",
+        category: "Headings 1–9"
+      },
+      {
+        id: "cmd-style-8",
+        featureName: "হেডিং ৪ স্টাইল (Heading 4)",
+        featureNameEn: "Apply Fourth-Level Heading 4 Style",
+        description: "চতুর্থ স্তরের শিরোনাম স্টাইল (Heading 4) প্রয়োগ করে।",
+        voicePrompt: "হেডিং ৪ স্টাইল দাও",
+        chatPrompt: "Apply Heading 4 style",
+        aiAction: "target_range.Style = wdStyleHeading4 (-5) প্রয়োগ করে।",
+        category: "Headings 1–9"
+      },
+      {
+        id: "cmd-style-9",
+        featureName: "হেডিং ৫ স্টাইল (Heading 5)",
+        featureNameEn: "Apply Fifth-Level Heading 5 Style",
+        description: "পঞ্চম স্তরের শিরোনাম স্টাইল (Heading 5) প্রয়োগ করে।",
+        voicePrompt: "হেডিং ৫ স্টাইল দাও",
+        chatPrompt: "Apply Heading 5 style",
+        aiAction: "target_range.Style = wdStyleHeading5 (-6) প্রয়োগ করে।",
+        category: "Headings 1–9"
+      },
+      {
+        id: "cmd-style-10",
+        featureName: "হেডিং ৬ স্টাইল (Heading 6)",
+        featureNameEn: "Apply Sixth-Level Heading 6 Style",
+        description: "ষষ্ঠ স্তরের শিরোনাম স্টাইল (Heading 6) প্রয়োগ করে।",
+        voicePrompt: "হেডিং ৬ স্টাইল দাও",
+        chatPrompt: "Apply Heading 6 style",
+        aiAction: "target_range.Style = wdStyleHeading6 (-7) প্রয়োগ করে।",
+        category: "Headings 1–9"
+      },
+      {
+        id: "cmd-style-11",
+        featureName: "হেডিং ৭ স্টাইল (Heading 7)",
+        featureNameEn: "Apply Seventh-Level Heading 7 Style",
+        description: "সপ্তম স্তরের শিরোনাম স্টাইল (Heading 7) প্রয়োগ করে।",
+        voicePrompt: "হেডিং ৭ স্টাইল দাও",
+        chatPrompt: "Apply Heading 7 style",
+        aiAction: "target_range.Style = wdStyleHeading7 (-8) প্রয়োগ করে।",
+        category: "Headings 1–9"
+      },
+      {
+        id: "cmd-style-12",
+        featureName: "হেডিং ৮ স্টাইল (Heading 8)",
+        featureNameEn: "Apply Eighth-Level Heading 8 Style",
+        description: "অষ্টম স্তরের শিরোনাম স্টাইল (Heading 8) প্রয়োগ করে।",
+        voicePrompt: "হেডিং ৮ স্টাইল দাও",
+        chatPrompt: "Apply Heading 8 style",
+        aiAction: "target_range.Style = wdStyleHeading8 (-9) প্রয়োগ করে।",
+        category: "Headings 1–9"
+      },
+      {
+        id: "cmd-style-13",
+        featureName: "হেডিং ৯ স্টাইল (Heading 9)",
+        featureNameEn: "Apply Ninth-Level Heading 9 Style",
+        description: "নবম স্তরের গভীরতম শিরোনাম স্টাইল (Heading 9) প্রয়োগ করে।",
+        voicePrompt: "হেডিং ৯ স্টাইল দাও",
+        chatPrompt: "Apply Heading 9 style",
+        aiAction: "target_range.Style = wdStyleHeading9 (-10) প্রয়োগ করে।",
+        category: "Headings 1–9"
+      },
+      {
+        id: "cmd-style-14",
+        featureName: "কোট স্টাইল (Quote)",
+        featureNameEn: "Apply Block Quote Style",
+        description: "উদ্ধৃতি বা উক্তিকে আলাদাভাবে ফুটিয়ে তুলতে ইটালিক ও ইনডেন্টেড Quote স্টাইল প্রয়োগ করে।",
+        voicePrompt: "কোট স্টাইল দাও",
+        chatPrompt: "Apply Quote style to the paragraph",
+        aiAction: "target_range.Style = wdStyleQuote (-181) প্রয়োগ করে।",
+        category: "Quotes & Emphasis"
+      },
+      {
+        id: "cmd-style-15",
+        featureName: "ইনটেনস কোট স্টাইল (Intense Quote)",
+        featureNameEn: "Apply Highlighted Intense Quote Style",
+        description: "গুরুত্বপূর্ণ উদ্ধৃতিকে বর্ডার ও অ্যাকসেন্ট কালারসহ Intense Quote স্টাইলে সাজায়।",
+        voicePrompt: "ইনটেনস কোট স্টাইল দাও",
+        chatPrompt: "Apply Intense Quote style",
+        aiAction: "target_range.Style = wdStyleIntenseQuote (-182) প্রয়োগ করে।",
+        category: "Quotes & Emphasis"
+      },
+      {
+        id: "cmd-style-16",
+        featureName: "সাবটল এমফাসিস (Subtle Emphasis)",
+        featureNameEn: "Apply Subtle Emphasis Style",
+        description: "টেক্সটে হালকা ও মার্জিত ইটালিক জোর প্রদানের জন্য Subtle Emphasis স্টাইল প্রয়োগ করে।",
+        voicePrompt: "সাবটল এমফাসিস স্টাইল দাও",
+        chatPrompt: "Apply Subtle Emphasis style",
+        aiAction: "target_range.Style = wdStyleSubtleEmphasis (-261) প্রয়োগ করে।",
+        category: "Quotes & Emphasis"
+      },
+      {
+        id: "cmd-style-17",
+        featureName: "এমফাসিস স্টাইল (Emphasis)",
+        featureNameEn: "Apply Italic Emphasis Style",
+        description: "শব্দ বা বাক্যাংশে বিশেষ গুরুত্ব দিতে Emphasis স্টাইল প্রয়োগ করে।",
+        voicePrompt: "এমফাসিস স্টাইল দাও",
+        chatPrompt: "Apply Emphasis style to the text",
+        aiAction: "target_range.Style = wdStyleEmphasis (-89) প্রয়োগ করে।",
+        category: "Quotes & Emphasis"
+      },
+      {
+        id: "cmd-style-18",
+        featureName: "স্ট্রং স্টাইল (Strong)",
+        featureNameEn: "Apply Bold Strong Style",
+        description: "গুরুত্বপূর্ণ টেক্সটকে গাঢ় ও স্পষ্ট করতে Strong স্টাইল প্রয়োগ করে।",
+        voicePrompt: "স্ট্রং স্টাইল দাও",
+        chatPrompt: "Apply Strong style to the text",
+        aiAction: "target_range.Style = wdStyleStrong (-88) প্রয়োগ করে।",
+        category: "Quotes & Emphasis"
+      },
+      {
+        id: "cmd-style-19",
+        featureName: "বুক টাইটেল স্টাইল (Book Title)",
+        featureNameEn: "Apply Book Title Character Style",
+        description: "বই, জার্নাল বা প্রকাশনার নামের জন্য স্মল-ক্যাপস ও ইটালিক Book Title স্টাইল প্রয়োগ করে।",
+        voicePrompt: "বুক টাইটেল স্টাইল দাও",
+        chatPrompt: "Apply Book Title style",
+        aiAction: "target_range.Style = wdStyleBookTitle (-265) প্রয়োগ করে।",
+        category: "Quotes & Emphasis"
+      },
+      {
+        id: "cmd-style-20",
+        featureName: "নতুন কাস্টম স্টাইল তৈরি (Create New Style)",
+        featureNameEn: "Create a New Custom Paragraph or Character Style",
+        description: "পছন্দের নাম, ফন্ট, সাইজ, কালার, বোল্ড/ইটালিক ও স্পেসিং দিয়ে সম্পূর্ণ নতুন কাস্টম স্টাইল তৈরি করে এবং সাথে সাথে টেক্সটে প্রয়োগ করে।",
+        voicePrompt: "SupervexStyle নামে নতুন স্টাইল তৈরি করো",
+        chatPrompt: "Create new style named SupervexStyle with font size 14 and bold",
+        aiAction: "doc.Styles.Add(Name, Type) কল করে ফন্ট ও প্যারাগ্রাফ প্রোপার্টি সেট করে নতুন স্টাইল তৈরি করে।",
+        category: "Style Management"
+      },
+      {
+        id: "cmd-style-21",
+        featureName: "স্টাইল মডিফাই করা (Modify Style)",
+        featureNameEn: "Modify Existing Built-in or Custom Style Properties",
+        description: "যেমন Heading 1 বা যেকোনো কাস্টম স্টাইলের ফন্ট, সাইজ, কালার, অ্যালাইনমেন্ট বা স্পেসিং পরিবর্তন করে পুরো ডকুমেন্টে একসাথে আপডেট করে।",
+        voicePrompt: "Heading 1 স্টাইল মডিফাই করে সাইজ ১৮ ও বোল্ড করো",
+        chatPrompt: "Modify style Heading 1 with font size 18 and blue color",
+        aiAction: "doc.Styles(style_name).Font ও ParagraphFormat প্রোপার্টি সরাসরি আপডেট করে।",
+        category: "Style Management"
+      },
+      {
+        id: "cmd-style-22",
+        featureName: "স্টাইল ম্যানেজমেন্ট (Manage Styles)",
+        featureNameEn: "List, Inspect, Rename or Delete Styles in Document",
+        description: "ডকুমেন্টে ব্যবহৃত সকল স্টাইলের তালিকা দেখা (List), নির্দিষ্ট স্টাইলের প্রোপার্টি পরীক্ষা (Inspect), নাম পরিবর্তন (Rename) বা কাস্টম স্টাইল মুছে ফেলা (Delete) সম্পন্ন করে।",
+        voicePrompt: "ম্যানেজ স্টাইলস দেখাও",
+        chatPrompt: "Manage styles and list active document styles",
+        aiAction: "doc.Styles কালেকশন স্ক্যান করে InUse ও কাস্টম স্টাইলগুলোর তালিকা, প্রোপার্টি, রিনেম ও ডিলিট নিয়ন্ত্রণ করে।",
+        category: "Style Management"
+      },
+      {
+        id: "cmd-style-23",
+        featureName: "যেকোনো স্টাইল প্রয়োগ (Apply Styles)",
+        featureNameEn: "Apply Any Built-in or Custom Style by Name",
+        description: "ওয়ার্ডের যেকোনো বিল্ট-ইন স্টাইল বা আপনার তৈরি কাস্টম স্টাইল নাম উল্লেখ করে সরাসরি প্যারাগ্রাফে প্রয়োগ করে।",
+        voicePrompt: "SupervexStyle স্টাইল অ্যাপ্লাই করো",
+        chatPrompt: "Apply style SupervexStyle to the current paragraph",
+        aiAction: "apply_style(style_name) এর মাধ্যমে যেকোনো বিল্ট-ইন বা কাস্টম স্টাইল প্যারাগ্রাফে প্রয়োগ করে।",
+        category: "Style Management"
       }
     ]
   }
