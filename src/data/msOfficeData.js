@@ -14,7 +14,7 @@ export const MS_OFFICE_SUITE = [
     color: "#2B579A",
     accent: "#00F2FF",
     icon: "FileText",
-    featuresCount: "120+ Voice & Chat Actions",
+    featuresCount: "135+ Voice & Chat Actions",
     description: "ডকুমেন্ট তৈরি থেকে শুরু করে পাসওয়ার্ড এনক্রিপশন, টেবিলের নির্দিষ্ট কলামে লেখা, প্রফেশনাল সিভি তৈরি এবং ফাইল ইন্সপেকশন—সবকিছু নিয়ন্ত্রণ করুন সরাসরি বাংলা বা ইংরেজি ভয়েস ও টেক্সট কমান্ডে।"
   },
   {
@@ -773,8 +773,130 @@ export const MS_WORD_STEPS = [
     ]
   },
   {
-    stepId: "step-2",
+    stepId: "step-1-9",
     stepNumber: "Step 09",
+    menuName: "File Menu ➔ 1.9 Options",
+    title: "ওয়ার্ড অপশন ও কনফিগারেশন ইঞ্জিন (Word Options & Settings Engine)",
+    titleEn: "General, Display, Proofing, Save, Language, Accessibility, Advanced, Ribbon, QAT, Add-ins, Trust Center",
+    badge: "100% Tested & Live",
+    badgeColor: "emerald",
+    summary: "ওয়ার্ডের সকল প্রধান অপশন ক্যাটাগরি—সাধারণ সেটিংস, ডিসপ্লে ফরম্যাটিং মার্কস, বানান ও ব্যাকরণ যাচাই, অটো-সেভ ইন্টারভাল, ভাষা সেটিংস, এক্সেসিবিলিটি চেকার, অ্যাডভান্সড এডিটিং, রিবন, কুইক এক্সেস টুলবার, অ্যাড-ইন এবং ট্রাস্ট সেন্টার সিকিউরিটির পূর্ণাঙ্গ নির্দেশিকা।",
+    commands: [
+      {
+        id: "cmd-options-1",
+        featureName: "সাধারণ অপশন ও লাইভ প্রিভিউ (General Options)",
+        featureNameEn: "Live Preview, User Information & General Settings",
+        description: "ওয়ার্ডে ফরম্যাটিংয়ের লাইভ প্রিভিউ (Live Preview) চালু বা বন্ধ করা, পরিমাপ একক এবং ব্যবহারকারীর নাম ও ইনিশিয়াল নির্ধারণ।",
+        voicePrompt: "লাইভ প্রিভিউ অপশন চালু করো",
+        chatPrompt: "Enable Live Preview in Word general options",
+        aiAction: "Application.Options.EnableLivePreview প্রোপার্টি তাৎক্ষণিক পরিবর্তন করে সাধারণ সেটিংস কনফিগার করে।",
+        category: "General"
+      },
+      {
+        id: "cmd-options-2",
+        featureName: "ডিসপ্লে ও ফরম্যাটিং মার্কস (Display Options)",
+        featureNameEn: "Formatting Marks (Spaces, Paragraphs, Tabs) & Background Printing",
+        description: "ডকুমেন্টে গোপন ফরম্যাটিং চিহ্ন—প্যারাগ্রাফ মার্ক, স্পেস, ট্যাব প্রদর্শন এবং ডকুমেন্টের ব্যাকগ্রাউন্ড কালার প্রিন্ট অপশন কনফিগারেশন।",
+        voicePrompt: "প্যারাগ্রাফ ও স্পেস মার্ক দেখাও",
+        chatPrompt: "Show formatting marks in Word display options",
+        aiAction: "ActiveWindow.View.ShowAll এবং Options.PrintBackgrounds প্রোপার্টি নিয়ন্ত্রণ করে ভিউ আপডেট করে।",
+        category: "Display"
+      },
+      {
+        id: "cmd-options-3",
+        featureName: "বানান ও ব্যাকরণ প্রুফিং (Proofing Options)",
+        featureNameEn: "Check Spelling & Grammar As You Type, Ignore Uppercase",
+        description: "টাইপ করার সাথে সাথে বানান ও ব্যাকরণ ভুল চিহ্নিতকরণ (লাল ও নীল দাগ) চালু বা বন্ধ এবং ক্যাপিটাল লেটারের শব্দ যাচাই সেটিংস।",
+        voicePrompt: "টাইপ করার সময় বানান যাচাই বন্ধ করো",
+        chatPrompt: "Disable check spelling as you type in Word proofing options",
+        aiAction: "Options.CheckSpellingAsYouType এবং CheckGrammarAsYouType প্রোপার্টি লাইভ আপডেট করে।",
+        category: "Proofing"
+      },
+      {
+        id: "cmd-options-4",
+        featureName: "অটো-সেভ ও রিকভারি ইন্টারভাল (Save Options)",
+        featureNameEn: "AutoRecover Save Interval, Background Save & File Locations",
+        description: "বিদ্যুৎ চলে যাওয়া বা ক্র্যাশ হওয়া থেকে বাঁচাতে অটো-রিকভার সেভ ইন্টারভাল (মিনিট), ব্যাকগ্রাউন্ড সেভ এবং ডিফল্ট ফাইল লোকেশন নির্ধারণ।",
+        voicePrompt: "ওয়ার্ডের অটো-রিকভার সেভ ইন্টারভাল ৫ মিনিট করো",
+        chatPrompt: "Set AutoRecover save interval to 5 minutes",
+        aiAction: "Application.Options.SaveInterval প্রোপার্টিতে নিরাপদ মিনিট ভ্যালু সেট করে এবং অটো-রিকভার পাথ রিপোর্ট করে।",
+        category: "Save"
+      },
+      {
+        id: "cmd-options-5",
+        featureName: "ভাষা ও এডিটিং সেটিংস (Language Options)",
+        featureNameEn: "Office Authoring, Editing & Display Language Settings",
+        description: "ওয়ার্ডের মূল এডিটিং ভাষা, ইউজার ইন্টারফেস (UI) ভাষা, হেল্প ভাষা এবং উইন্ডোজে ইনস্টল থাকা ভাষা প্যাকের তালিকা যাচাই।",
+        voicePrompt: "ওয়ার্ডের ভাষা সেটিংস ও ইনস্টল করা ভাষাগুলো দেখাও",
+        chatPrompt: "Show Word display and editing language options",
+        aiAction: "Office Common LanguageResources রেজিস্ট্রি সাবকি এবং Application.CheckLanguage স্ট্যাটাস বিশ্লেষণ করে।",
+        category: "Language"
+      },
+      {
+        id: "cmd-options-6",
+        featureName: "এক্সেসিবিলিটি চেকার (Accessibility Checker)",
+        featureNameEn: "Run Accessibility Checker & Inspect Alternative Text (Alt Text)",
+        description: "প্রতিবন্ধী বা বিশেষ চাহিদাসম্পন্ন পাঠকদের পড়ার সুবিধার্থে ডকুমেন্টের ছবিতে অল্টারনেটিভ টেক্সট (Alt Text) ও টেবিল হেডার স্বয়ংক্রিয়ভাবে যাচাই এবং ওয়ার্ডের এক্সেসিবিলিটি প্যানেল চালু করা।",
+        voicePrompt: "এক্সেসিবিলিটি চেকার চালু করো",
+        chatPrompt: "Run accessibility checker on this document",
+        aiAction: "ডকুমেন্টের শেপ ও টেবিলে Alt Text ও হেডার স্ক্যান করে রিপোর্ট দেয় এবং নেটিভ Accessibility Checker টাস্ক প্যানেল চালু করে।",
+        category: "Accessibility"
+      },
+      {
+        id: "cmd-options-7",
+        featureName: "উন্নত এডিটিং ও ওভারটাইপ (Advanced Options)",
+        featureNameEn: "Typing Replaces Selection, Overtype Mode & Smart Cut/Paste",
+        description: "টাইপিং সিলেকশন প্রতিস্থাপন, ওভারটাইপ মোড (Overtype mode), ড্র্যাগ অ্যান্ড ড্রপ টেক্সট এডিটিং এবং স্মার্ট কাট ও পেস্ট ফরম্যাটিং নিয়ন্ত্রণ।",
+        voicePrompt: "ওভারটাইপ মোড সেটিংস এবং এডভান্সড অপশন দেখাও",
+        chatPrompt: "Enable overtype mode in Word advanced options",
+        aiAction: "Application.Options-এর ReplaceSelection, Overtype, AllowDragAndDrop ও SmartCutPaste স্টেট পরিবর্তন করে।",
+        category: "Advanced"
+      },
+      {
+        id: "cmd-options-8",
+        featureName: "রিবন কাস্টমাইজেশন (Customize Ribbon)",
+        featureNameEn: "CommandBars Inspection & Ribbon Tab Visibility",
+        description: "ওয়ার্ডের ২২০+ কমান্ডবার, স্ট্যান্ডার্ড রিবন ট্যাব (Home, Insert, Layout, Review) এবং কাস্টম অ্যাকশন স্ট্যাটাস বিশ্লেষণ।",
+        voicePrompt: "ওয়ার্ডের রিবন সেটিংস ও কমান্ডবার অপশন দেখাও",
+        chatPrompt: "Show customize ribbon command bars and tab options",
+        aiAction: "Application.CommandBars কালেকশন স্ক্যান করে সক্রিয় কমান্ডবার ও মেজর রিবন ট্যাবের স্টেট প্রস্তুত করে।",
+        category: "Customize Ribbon"
+      },
+      {
+        id: "cmd-options-9",
+        featureName: "কুইক এক্সেস টুলবার (Quick Access Toolbar)",
+        featureNameEn: "QAT Standard Tools, Shortcuts & Visibility",
+        description: "ওয়ার্ডের কুইক এক্সেস টুলবারের দ্রুত সংরক্ষণ, আনডু/রিডু, প্রিন্ট প্রিভিউ ইত্যাদি স্ট্যান্ডার্ড শর্টকাট টুল এবং সক্রিয় কমান্ড যাচাই।",
+        voicePrompt: "কুইক এক্সেস টুলবার অপশন ও টুল তালিকা দেখাও",
+        chatPrompt: "Show Quick Access Toolbar (QAT) tools and options",
+        aiAction: "Standard কমান্ডবারের সক্রিয় কন্ট্রোল ও শর্টকাট বাটনগুলো শনাক্ত করে তালিকা প্রদান করে।",
+        category: "Quick Access Toolbar"
+      },
+      {
+        id: "cmd-options-10",
+        featureName: "অ্যাড-ইন ও প্লাগইন তালিকা (Add-ins)",
+        featureNameEn: "COM Add-ins, Word Templates & Active Plugins",
+        description: "ওয়ার্ডে সংযুক্ত সমস্ত সক্রিয় ও নিষ্ক্রিয় COM Add-ins এবং স্টার্টআপ টেমপ্লেট অ্যাড-ইনসমূহের তালিকা ও কানেকশন স্ট্যাটাস প্রদর্শন।",
+        voicePrompt: "ওয়ার্ডে যুক্ত করা অ্যাড-ইনগুলো এবং COM add-ins দেখাও",
+        chatPrompt: "Show active Word add-ins and COM plugins",
+        aiAction: "Application.COMAddIns এবং Application.AddIns কালেকশন থেকে অ্যাড-ইনের নাম, পাথ এবং কানেকশন যাচাই করে।",
+        category: "Add-ins"
+      },
+      {
+        id: "cmd-options-11",
+        featureName: "ট্রাস্ট সেন্টার ও ম্যাক্রো সিকিউরিটি (Trust Center)",
+        featureNameEn: "Automation Security Levels, Trusted Locations & Macro Protection",
+        description: "ডকুমেন্টের ম্যাক্রো নিরাপত্তা লেভেল (Low, Medium/ByUI, High Disable) নির্ধারণ, ট্রাস্টেড ফাইল লোকেশন এবং সিকিউরিটি পলিসি যাচাই।",
+        voicePrompt: "ওয়ার্ডের ট্রাস্ট সেন্টার ও ম্যাক্রো সিকিউরিটি সেটিংস দেখাও",
+        chatPrompt: "Show Trust Center macro security level and trusted locations",
+        aiAction: "Application.AutomationSecurity প্রোপার্টি এবং Word Security রেজিস্ট্রি স্ক্যান করে সিকিউরিটি ও ট্রাস্টেড লোকেশন রিপোর্ট করে।",
+        category: "Trust Center"
+      }
+    ]
+  },
+  {
+    stepId: "step-2",
+    stepNumber: "Step 10",
     menuName: "Table Menu ➔ Precise Cell & Column Control",
     title: "স্মার্ট টেবিল ও নির্দিষ্ট কলামে লেখা (Table Column Precision)",
     titleEn: "Smart Table Generation & Multi-Column Precision Writing",
@@ -826,7 +948,7 @@ export const MS_WORD_STEPS = [
   },
   {
     stepId: "step-3",
-    stepNumber: "Step 10",
+    stepNumber: "Step 11",
     menuName: "Auto Assembly ➔ Full Document Generation",
     title: "সম্পূর্ণ সিভি, রিপোর্ট ও দরখাস্ত তৈরি (Full Document Assembly)",
     titleEn: "End-to-End Professional CV, Business Reports & Formal Letters",
@@ -868,7 +990,7 @@ export const MS_WORD_STEPS = [
   },
   {
     stepId: "step-4",
-    stepNumber: "Step 11",
+    stepNumber: "Step 12",
     menuName: "Design & Layout ➔ Themes, Colors & Page Setup",
     title: "ডিজাইন থিম, মার্জিন ও লেআউট (Design, Margin & Layout)",
     titleEn: "Executive Typography, Themes, Borders & Page Setup",
@@ -910,7 +1032,7 @@ export const MS_WORD_STEPS = [
   },
   {
     stepId: "step-5",
-    stepNumber: "Step 12",
+    stepNumber: "Step 13",
     menuName: "Interaction Modes ➔ Voice vs Text Guide",
     title: "ভয়েস ও চ্যাট ব্যবহারের পূর্ণাঙ্গ নিয়মাবলী (How to Use Guide)",
     titleEn: "Complete Duplex Voice & Interactive Chat Operating Guide",
