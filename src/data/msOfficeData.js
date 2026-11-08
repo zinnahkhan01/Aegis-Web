@@ -14,7 +14,7 @@ export const MS_OFFICE_SUITE = [
     color: "#2B579A",
     accent: "#00F2FF",
     icon: "FileText",
-    featuresCount: "170+ Voice & Chat Actions",
+    featuresCount: "190+ Voice & Chat Actions",
     description: "ডকুমেন্ট তৈরি থেকে শুরু করে পাসওয়ার্ড এনক্রিপশন, টেবিলের নির্দিষ্ট কলামে লেখা, প্রফেশনাল সিভি তৈরি এবং ফাইল ইন্সপেকশন—সবকিছু নিয়ন্ত্রণ করুন সরাসরি বাংলা বা ইংরেজি ভয়েস ও টেক্সট কমান্ডে।"
   },
   {
@@ -1465,6 +1465,217 @@ export const MS_WORD_STEPS = [
         chatPrompt: "Set character spacing to expanded by 2 pt",
         aiAction: "Font.Spacing, Font.Scaling, Font.Position এবং Font.Kerning প্রোপার্টিতে নির্ভুল মান প্রয়োগ করে।",
         category: "Character Spacing"
+      }
+    ]
+  },
+  {
+    stepId: "step-2-3",
+    stepNumber: "Step 17",
+    menuName: "Home Menu ➔ 2.3 Paragraph",
+    title: "প্যারাগ্রাফ, বুলেট ও নাম্বারিং, অ্যালাইনমেন্ট, স্পেসিং, বর্ডার ও সর্টিং (Paragraph Menu)",
+    titleEn: "Home ➔ Paragraph: Bullets, Numbering, Multilevel List, Indents, Alignment, Line & Paragraph Spacing, Shading, Borders, Sort & Pagination",
+    badge: "20 Paragraph Actions Live",
+    summary: "মাইক্রোসফট ওয়ার্ডের হোম মেনুর প্যারাগ্রাফ (Paragraph) গ্রুপের সকল ২০টি অপারেশন—বুলেট ও নাম্বারিং লিস্ট, মাল্টিলেভেল লিস্ট, ইনডেন্ট কমানো ও বাড়ানো, বামে/মাঝখানে/ডানে/জাস্টিফাই অ্যালাইনমেন্ট, লাইন ও প্যারাগ্রাফ স্পেসিং, ব্যাকগ্রাউন্ড শেডিং, প্যারাগ্রাফ বর্ডার, বর্ণানুক্রমে সর্টিং (A to Z / Z to A), ফরম্যাটিং চিহ্ন (¶) টগল এবং পেজ ব্রেক কন্ট্রোল (Keep with Next, Keep Lines Together, Page Break Before, Widow/Orphan Control)—সরাসরি ভয়েস ও টেক্সট কমান্ডে নিয়ন্ত্রণ করুন।",
+    commands: [
+      {
+        id: "cmd-para-1",
+        featureName: "বুলেট লিস্ট (Bullets)",
+        featureNameEn: "Apply or Remove Bulleted List",
+        description: "নির্বাচিত প্যারাগ্রাফ বা আইটেমগুলোতে সুন্দর বুলেট পয়েন্ট তালিকা (• Bulleted List) প্রয়োগ করে অথবা বুলেট তুলে দেয়।",
+        voicePrompt: "প্যারাগ্রাফে বুলেট লিস্ট দাও",
+        chatPrompt: "Apply bullets to the selected paragraphs",
+        aiAction: "Range.ListFormat.ApplyBulletDefault() মেথড কল করে প্যারাগ্রাফে বুলেট ফরম্যাট সেট করে।",
+        category: "Lists"
+      },
+      {
+        id: "cmd-para-2",
+        featureName: "নাম্বারিং লিস্ট (Numbering)",
+        featureNameEn: "Apply or Remove Numbered List (1., 2., 3.)",
+        description: "নির্বাচিত প্যারাগ্রাফ বা লাইনগুলোকে ক্রমিক নম্বরযুক্ত তালিকায় (1., 2., 3.) রূপান্তর করে।",
+        voicePrompt: "নাম্বারিং লিস্ট করো",
+        chatPrompt: "Apply numbered list to the paragraphs",
+        aiAction: "Range.ListFormat.ApplyNumberDefault() এর মাধ্যমে স্বয়ংক্রিয় ক্রমিক নাম্বারিং চালু করে।",
+        category: "Lists"
+      },
+      {
+        id: "cmd-para-3",
+        featureName: "মাল্টিলেভেল লিস্ট (Multilevel List)",
+        featureNameEn: "Apply Hierarchical Outline Multilevel List (Levels 1-9)",
+        description: "বহুস্তর বিশিষ্ট আউটলাইন নাম্বারিং তালিকা (1, 1.1, 1.1.1) তৈরি করে এবং নির্দিষ্ট লেভেল (১-৯) সেট করে।",
+        voicePrompt: "মাল্টিলেভেল লিস্ট করো লেভেল ২ সহ",
+        chatPrompt: "Apply multilevel list at level 2",
+        aiAction: "ListFormat.ApplyOutlineNumberDefault() এবং ListLevelNumber প্রোপার্টি কনফিগার করে।",
+        category: "Lists"
+      },
+      {
+        id: "cmd-para-4",
+        featureName: "ইনডেন্ট কমানো (Decrease Indent)",
+        featureNameEn: "Decrease Left Paragraph Indentation",
+        description: "প্যারাগ্রাফের বাম পাশের মার্জিন ইনডেন্ট এক ধাপ (৩৬ পয়েন্ট বা ০.৫ ইঞ্চি) বামে সরিয়ে কমায়।",
+        voicePrompt: "প্যারাগ্রাফের ইনডেন্ট কমাও",
+        chatPrompt: "Decrease paragraph indent",
+        aiAction: "ParagraphFormat.LeftIndent প্রোপার্টির মান নির্ধারিত পয়েন্ট অনুযায়ী কমিয়ে বামে আনে।",
+        category: "Indentation"
+      },
+      {
+        id: "cmd-para-5",
+        featureName: "ইনডেন্ট বাড়ানো (Increase Indent)",
+        featureNameEn: "Increase Left Paragraph Indentation",
+        description: "প্যারাগ্রাফের বাম পাশের ইনডেন্ট এক ধাপ (৩৬ পয়েন্ট বা ০.৫ ইঞ্চি) ডানে সরিয়ে বাড়ায়।",
+        voicePrompt: "প্যারাগ্রাফের ইনডেন্ট বাড়াও",
+        chatPrompt: "Increase paragraph indent",
+        aiAction: "ParagraphFormat.LeftIndent প্রোপার্টির মান বাড়িয়ে প্যারাগ্রাফ ভেতরের দিকে সরায়।",
+        category: "Indentation"
+      },
+      {
+        id: "cmd-para-6",
+        featureName: "বাম পাশে অ্যালাইন (Align Left)",
+        featureNameEn: "Align Paragraph Text to the Left",
+        description: "প্যারাগ্রাফের লেখা বাম মার্জিনের সাথে সমান্তরালভাবে অ্যালাইন (Left Align) করে।",
+        voicePrompt: "বাম পাশে অ্যালাইন করো",
+        chatPrompt: "Align paragraph to the left",
+        aiAction: "ParagraphFormat.Alignment = 0 (wdAlignParagraphLeft) প্রোপার্টি সেট করে।",
+        category: "Alignment"
+      },
+      {
+        id: "cmd-para-7",
+        featureName: "মাঝখানে অ্যালাইন / সেন্টার (Center)",
+        featureNameEn: "Center Align Paragraph Text",
+        description: "শিরোনাম বা প্যারাগ্রাফের লেখা পৃষ্ঠার ঠিক মাঝখানে (Center Align) স্থাপন করে।",
+        voicePrompt: "সেন্টার অ্যালাইন করো",
+        chatPrompt: "Center align the paragraph",
+        aiAction: "ParagraphFormat.Alignment = 1 (wdAlignParagraphCenter) প্রোপার্টি সেট করে।",
+        category: "Alignment"
+      },
+      {
+        id: "cmd-para-8",
+        featureName: "ডান পাশে অ্যালাইন (Align Right)",
+        featureNameEn: "Align Paragraph Text to the Right",
+        description: "তারিখ, স্বাক্ষর বা প্যারাগ্রাফের লেখা ডান মার্জিনের সাথে সমান্তরালভাবে (Right Align) সাজায়।",
+        voicePrompt: "ডান পাশে অ্যালাইন করো",
+        chatPrompt: "Align paragraph to the right",
+        aiAction: "ParagraphFormat.Alignment = 2 (wdAlignParagraphRight) প্রোপার্টি সেট করে।",
+        category: "Alignment"
+      },
+      {
+        id: "cmd-para-9",
+        featureName: "জাস্টিফাই অ্যালাইনমেন্ট (Justify)",
+        featureNameEn: "Justify Paragraph Text Evenly on Both Sides",
+        description: "প্যারাগ্রাফের বাম এবং ডান উভয় পাশ সমান ও পরিপাটি করে সাজায় (প্রফেশনাল রিপোর্ট ও বইয়ের জন্য আদর্শ)।",
+        voicePrompt: "প্যারাগ্রাফ জাস্টিফাই করো",
+        chatPrompt: "Justify paragraph alignment",
+        aiAction: "ParagraphFormat.Alignment = 3 (wdAlignParagraphJustify) প্রোপার্টি সেট করে।",
+        category: "Alignment"
+      },
+      {
+        id: "cmd-para-10",
+        featureName: "লাইন স্পেসিং (Line Spacing)",
+        featureNameEn: "Set Line Spacing (1.0, 1.15, 1.5, 2.0, 2.5, 3.0)",
+        description: "প্যারাগ্রাফের লাইনগুলোর মধ্যকার উল্লম্ব দূরত্ব (Single, 1.15, 1.5, Double বা যেকোনো মান) নির্ধারণ করে।",
+        voicePrompt: "লাইন স্পেসিং 1.5 করো",
+        chatPrompt: "Set line spacing to 1.5",
+        aiAction: "ParagraphFormat.LineSpacingRule এবং LineSpacing প্রোপার্টি পয়েন্ট মানে কনফিগার করে।",
+        category: "Spacing"
+      },
+      {
+        id: "cmd-para-11",
+        featureName: "প্যারাগ্রাফ স্পেসিং (Paragraph Spacing)",
+        featureNameEn: "Set Space Before and Space After Paragraph (pt)",
+        description: "প্যারাগ্রাফের আগে (Space Before) এবং পরে (Space After) কত পয়েন্ট ফাঁকা জায়গা থাকবে তা নির্ধারণ বা অপসারণ করে।",
+        voicePrompt: "প্যারাগ্রাফ স্পেসিং before 6 এবং after 12 করো",
+        chatPrompt: "Set paragraph spacing before 6 pt and after 12 pt",
+        aiAction: "ParagraphFormat.SpaceBefore এবং ParagraphFormat.SpaceAfter প্রোপার্টি সরাসরি আপডেট করে।",
+        category: "Spacing"
+      },
+      {
+        id: "cmd-para-12",
+        featureName: "প্যারাগ্রাফ শেডিং (Shading)",
+        featureNameEn: "Apply Background Shading Color to Paragraph",
+        description: "নির্বাচিত প্যারাগ্রাফের সম্পূর্ণ ব্যাকগ্রাউন্ডে হালকা নীল, ধূসর, হলুদ, সবুজ বা যেকোনো কাস্টম শেডিং রঙ দেয়।",
+        voicePrompt: "প্যারাগ্রাফ শেডিং light blue করো",
+        chatPrompt: "Apply light blue shading to the paragraph",
+        aiAction: "ParagraphFormat.Shading.BackgroundPatternColor প্রোপার্টিতে BGR কালার কোড সেট করে।",
+        category: "Shading & Borders"
+      },
+      {
+        id: "cmd-para-13",
+        featureName: "প্যারাগ্রাফ বর্ডার (Borders)",
+        featureNameEn: "Apply Outside, Bottom, Top, Left, Right or No Borders",
+        description: "প্যারাগ্রাফের চারপাশে বক্স বর্ডার (Outside Borders), শুধু নিচে (Bottom Border), উপরে বা ডানে/বামে বর্ডার যোগ বা অপসারণ করে।",
+        voicePrompt: "প্যারাগ্রাফে আউটসাইড বর্ডার দাও",
+        chatPrompt: "Add outside border to the paragraph",
+        aiAction: "ParagraphFormat.Borders(-1..-4).LineStyle ও Enable প্রোপার্টি নিয়ন্ত্রণ করে।",
+        category: "Shading & Borders"
+      },
+      {
+        id: "cmd-para-14",
+        featureName: "প্যারাগ্রাফ সর্ট (Sort A to Z / Z to A)",
+        featureNameEn: "Sort Paragraphs Alphabetically or Numerically (Ascending / Descending)",
+        description: "ডকুমেন্ট বা নির্বাচিত অংশের প্যারাগ্রাফগুলো বর্ণানুক্রমে A থেকে Z (Ascending) অথবা Z থেকে A (Descending) ক্রমে সাজায়।",
+        voicePrompt: "প্যারাগ্রাফ A থেকে Z সর্ট করো",
+        chatPrompt: "Sort paragraphs A to Z ascending",
+        aiAction: "Range.Sort() এবং ডিটারমিনিস্টিক আলফানিউমেরিক সর্টিং ইঞ্জিনের মাধ্যমে প্যারাগ্রাফগুলো ক্রমানুসারে সাজায়।",
+        category: "Sort & Marks"
+      },
+      {
+        id: "cmd-para-15",
+        featureName: "শো/হাইড ফরম্যাটিং মার্কস (Show/Hide ¶)",
+        featureNameEn: "Toggle Paragraph & Formatting Marks (¶)",
+        description: "ডকুমেন্টের লুকানো প্যারাগ্রাফ চিহ্ন (¶), স্পেস ডট ও ট্যাব চিহ্নগুলো এক কমান্ডে দেখায় (Show) অথবা লুকিয়ে ফেলে (Hide)।",
+        voicePrompt: "শো হাইড ফরম্যাটিং মার্ক চালু করো",
+        chatPrompt: "Toggle Show/Hide paragraph formatting marks",
+        aiAction: "ActiveWindow.ActivePane.View.ShowAll প্রোপার্টি টগল করে ফরম্যাটিং চিহ্ন নিয়ন্ত্রণ করে।",
+        category: "Sort & Marks"
+      },
+      {
+        id: "cmd-para-16",
+        featureName: "প্যারাগ্রাফ সেটিংস (Paragraph Settings)",
+        featureNameEn: "Configure Complete Paragraph Dialog (Special Indent, Spacing & Alignment)",
+        description: "একসাথে প্যারাগ্রাফের অ্যালাইনমেন্ট, বাম/ডান ইনডেন্ট, First Line বা Hanging Indent এবং লাইন ও প্যারাগ্রাফ স্পেসিং কনফিগার করে।",
+        voicePrompt: "প্যারাগ্রাফ সেটিংস থেকে ফার্স্ট লাইন ইনডেন্ট ও জাস্টিফাই চালু করো",
+        chatPrompt: "Configure paragraph settings with first line indent and 1.15 line spacing",
+        aiAction: "ParagraphFormat এর সকল ইনডেন্টেশন, ফার্স্ট লাইন/হ্যাঙ্গিং ইনডেন্ট ও স্পেসিং প্রোপার্টি একত্রে সেট করে।",
+        category: "Paragraph Dialog"
+      },
+      {
+        id: "cmd-para-17",
+        featureName: "কিপ উইথ নেক্সট (Keep with Next)",
+        featureNameEn: "Prevent Page Break Between Current and Next Paragraph",
+        description: "শিরোনাম বা বর্তমান প্যারাগ্রাফ যেন পরবর্তী প্যারাগ্রাফ থেকে বিচ্ছিন্ন হয়ে আগের পৃষ্ঠায় একা থেকে না যায় তা নিশ্চিত করে।",
+        voicePrompt: "Keep with Next চালু করো",
+        chatPrompt: "Enable Keep with Next for the paragraph",
+        aiAction: "ParagraphFormat.KeepWithNext = -1 প্রোপার্টি সক্রিয় করে।",
+        category: "Pagination"
+      },
+      {
+        id: "cmd-para-18",
+        featureName: "কিপ লাইনস টুগেদার (Keep Lines Together)",
+        featureNameEn: "Prevent Page Break Inside a Paragraph",
+        description: "একটি প্যারাগ্রাফের লাইনগুলো যেন দুই পৃষ্ঠায় ভেঙে না গিয়ে একই পৃষ্ঠায় একত্রে থাকে তা নিশ্চিত করে।",
+        voicePrompt: "Keep Lines Together চালু করো",
+        chatPrompt: "Enable Keep Lines Together on selected paragraph",
+        aiAction: "ParagraphFormat.KeepTogether = -1 প্রোপার্টি সক্রিয় করে।",
+        category: "Pagination"
+      },
+      {
+        id: "cmd-para-19",
+        featureName: "পেজ ব্রেক বিফোর (Page Break Before)",
+        featureNameEn: "Force Paragraph to Start on a New Page",
+        description: "নির্বাচিত প্যারাগ্রাফ বা অধ্যায়ের শিরোনাম সর্বদা নতুন পৃষ্ঠার শুরুতে স্থাপন করে।",
+        voicePrompt: "Page Break Before চালু করো",
+        chatPrompt: "Enable Page Break Before on the current paragraph",
+        aiAction: "ParagraphFormat.PageBreakBefore = -1 প্রোপার্টি সেট করে।",
+        category: "Pagination"
+      },
+      {
+        id: "cmd-para-20",
+        featureName: "উইডো/অরফান কন্ট্রোল (Widow/Orphan Control)",
+        featureNameEn: "Prevent Single Isolated First or Last Paragraph Line on a Page",
+        description: "প্যারাগ্রাফের প্রথম বা শেষ একটিমাত্র লাইন যেন পৃষ্ঠার শেষে বা নতুন পৃষ্ঠার শুরুতে একা বিচ্ছিন্ন হয়ে না থাকে তা রোধ করে।",
+        voicePrompt: "উইডো অরফান কন্ট্রোল চালু করো",
+        chatPrompt: "Enable Widow/Orphan Control for the document",
+        aiAction: "ParagraphFormat.WidowControl = -1 প্রোপার্টি সক্রিয় করে।",
+        category: "Pagination"
       }
     ]
   }
