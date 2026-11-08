@@ -2610,5 +2610,117 @@ export const MS_WORD_STEPS = [
         category: "Unified Management"
       }
     ]
+  },
+  {
+    stepId: "step-3-2-tb",
+    stepNumber: "Step 29",
+    menuName: "Insert Menu ➔ 3.2 Tables",
+    title: "ইনসার্ট মেনু: টেবিল আর্কিটেকচার (৯টি প্রফেশনাল অপারেশন)",
+    titleEn: "Insert Menu: Tables (Insert Table, Draw Table, Convert Text, Excel Spreadsheet, Quick Tables, Rows & Columns)",
+    subtitle: "ডকুমেন্টে গ্রিড টেবিল তৈরি, পেন্সিল দিয়ে ড্র টেবিল, টেক্সট থেকে টেবিল রূপান্তর, লাইভ এক্সেল স্প্রেডশিট সংযোজন, কুইক টেবিল টেমপ্লেট এবং সারি ও কলাম যোগ/মুছে ফেলার পূর্ণ নিয়ন্ত্রণ।",
+    badge: "Tables Architecture",
+    icon: "Table",
+    commands: [
+      {
+        id: "cmd-tb-1",
+        featureName: "ইনসার্ট টেবিল (Insert Table)",
+        featureNameEn: "Standard Table Grid with Custom Headers & Auto-Fit",
+        description: "নির্দিষ্ট সংখ্যক সারি ও কলাম বিশিষ্ট টেবিল তৈরি করে কাস্টম হেডার, ডাটা ও গ্রিড স্টাইল প্রয়োগ।",
+        voicePrompt: "ডকুমেন্টে একটি ৩ বাই ৩ টেবিল তৈরি করো / নতুন টেবিল ইনসার্ট করো",
+        chatPrompt: "Insert 3x3 table with headers ['ID', 'Name', 'Department'] and custom data",
+        aiAction: "Word COM doc.Tables.Add কল করে স্বয়ংক্রিয় উইন্ডো অটোফিট ও হেডার ফরম্যাটিং সহ টেবিল তৈরি করে।",
+        category: "Insert Table"
+      },
+      {
+        id: "cmd-tb-2",
+        featureName: "ড্র টেবিল (Draw Table)",
+        featureNameEn: "Pencil Draw Table with Custom Border Width, Style & Dimensions",
+        description: "পেন্সিল দিয়ে টেবিল আঁকার মতো কাস্টম বর্ডার প্রস্থ, লাইন স্টাইল, ডাইমেনশন ও ব্যাকগ্রাউন্ড শেডিং সহ টেবিল নির্মাণ।",
+        voicePrompt: "পেন্সিল দিয়ে টেবিল ড্র করো / কাস্টম বর্ডারসহ টেবিল আঁকো",
+        chatPrompt: "Draw custom table 2x2 with 2.25pt single border and dark blue theme color",
+        aiAction: "Borders.Enable এবং LineWidth/LineStyle কনফিগার করে ড্র টেবিল লেআউট প্রস্তুত করে।",
+        category: "Draw Table"
+      },
+      {
+        id: "cmd-tb-3",
+        featureName: "টেক্সট থেকে টেবিল রূপান্তর (Convert Text to Table)",
+        featureNameEn: "Convert Delimited Text (Commas, Tabs, Paragraphs) into Table",
+        description: "কমা, ট্যাব, সেমিকোলন বা প্যারাগ্রাফ দ্বারা বিভক্ত কাঁচা টেক্সটকে সুসংগঠিত টেবিলে রূপান্তর।",
+        voicePrompt: "কমা দিয়ে আলাদা করা টেক্সট থেকে টেবিল বানাও / টেক্সট টু টেবিল কনভার্ট করো",
+        chatPrompt: "Convert comma-delimited text into structured table with auto column detection",
+        aiAction: "Word COM Range.ConvertToTable মেথড ব্যবহার করে টেক্সটকে টেবিলে রূপান্তর করে।",
+        category: "Convert Text"
+      },
+      {
+        id: "cmd-tb-4",
+        featureName: "এক্সেল স্প্রেডশিট সংযোজন (Excel Spreadsheet)",
+        featureNameEn: "Live Embedded Excel Worksheet OLE Object with Formula Engine",
+        description: "ওয়ার্ড ডকুমেন্টের ভেতরেই এক্সেল স্প্রেডশিট OLE অবজেক্ট এমবেড করে ফর্মুলা ও গ্রিড গণনা সক্রিয়করণ।",
+        voicePrompt: "ডকুমেন্টে একটি এক্সেল স্প্রেডশিট যোগ করো / লাইভ এক্সেল শীট দাও",
+        chatPrompt: "Insert live embedded Excel Spreadsheet with financial formula grid",
+        aiAction: "doc.InlineShapes.AddOLEObject(ClassType='Excel.Sheet') দিয়ে এক্সেল ওয়ার্কশিট এমবেড করে।",
+        category: "Excel Spreadsheet"
+      },
+      {
+        id: "cmd-tb-5",
+        featureName: "কুইক টেবিল টেমপ্লেট (Quick Tables)",
+        featureNameEn: "Pre-formatted Quick Tables (Calendar, Tabular List, Matrix, Comparative)",
+        description: "আকর্ষণীয় ডিজাইনের রেডিমেড ক্যালেন্ডার, টাস্ক লিস্ট, স্ট্র্যাটেজিক ম্যাট্রিক্স বা তুলনামূলক টেবিল টেমপ্লেট ইনসার্ট।",
+        voicePrompt: "একটি ক্যালেন্ডার কুইক টেবিল দাও / রেডিমেড টেবিল টেমপ্লেট বসাও",
+        chatPrompt: "Insert Quick Table with 'calendar' template and project schedule title",
+        aiAction: "প্রি-বিল্ট আধুনিক সিএসএস/কালার শেডিং যুক্ত ক্যালেন্ডার বা ম্যাট্রিক্স টেমপ্লেট ইনসার্ট করে।",
+        category: "Quick Tables"
+      },
+      {
+        id: "cmd-tb-6",
+        featureName: "নতুন সারি যোগ (Insert Rows Above / Below)",
+        featureNameEn: "Insert Table Rows Above or Below Target Index with Cell Data",
+        description: "চলমান টেবিলের নির্দিষ্ট সারির উপরে বা নিচে এক বা একাধিক নতুন সারি যোগ ও মান সন্নিবেশ।",
+        voicePrompt: "টেবিলে একটি নতুন রো যোগ করো / নিচে নতুন সারি দাও",
+        chatPrompt: "Insert table row below row 1 with values ['103', 'Zinnah', 'Architecture']",
+        aiAction: "tbl.Rows.Add(BeforeRow) দিয়ে সঠিক পজিশনে রো যোগ করে বাংলা ফন্টসহ ডাটা পূরণ করে।",
+        category: "Rows Management"
+      },
+      {
+        id: "cmd-tb-7",
+        featureName: "নতুন কলাম যোগ (Insert Columns Left / Right)",
+        featureNameEn: "Insert Table Columns Left or Right with Header & Cell Values",
+        description: "চলমান টেবিলের বামে বা ডানে নতুন কলাম যোগ করে কলাম শিরোনাম ও ডেটা ভরাট।",
+        voicePrompt: "টেবিলে একটি নতুন কলাম যোগ করো / ডানে কলাম যুক্ত করো",
+        chatPrompt: "Insert table column to the right with header 'Status' and values",
+        aiAction: "tbl.Columns.Add(BeforeColumn) দিয়ে নির্ভুল পজিশনে কলাম ইনসার্ট করে শিরোনাম সেট করে।",
+        category: "Columns Management"
+      },
+      {
+        id: "cmd-tb-8",
+        featureName: "সারি মুছে ফেলা (Delete Rows)",
+        featureNameEn: "Delete Specific Row Index or Last Row from Table",
+        description: "টেবিল থেকে নির্দিষ্ট সারির ইনডেক্স বা সর্বশেষ সারি নিরাপদে মুছে ফেলা।",
+        voicePrompt: "টেবিল থেকে শেষ রো মুছে ফেলো / নির্দিষ্ট সারি ডিলিট করো",
+        chatPrompt: "Delete last row from table 1 while maintaining table integrity",
+        aiAction: "tbl.Rows(row_index).Delete() কল করে সারি অপসারণ করে অবশিষ্ট সারির সংখ্যা রিপোর্ট করে।",
+        category: "Rows Management"
+      },
+      {
+        id: "cmd-tb-9",
+        featureName: "কলাম মুছে ফেলা (Delete Columns)",
+        featureNameEn: "Delete Specific Column Index or Last Column from Table",
+        description: "টেবিল থেকে নির্দিষ্ট কলামের ইনডেক্স বা সর্বশেষ কলাম নিরাপদে মুছে ফেলা।",
+        voicePrompt: "টেবিল থেকে শেষ কলাম ডিলিট করো / কলাম মুছে ফেলো",
+        chatPrompt: "Delete last column from table 1 while preserving data columns",
+        aiAction: "tbl.Columns(col_index).Delete() কল করে কলাম অপসারণ করে অবশিষ্ট কলামের হিসাব দেয়।",
+        category: "Columns Management"
+      },
+      {
+        id: "cmd-tb-10",
+        featureName: "টেবিল ইউনিফাইড রাউটার (Manage Insert Tables)",
+        featureNameEn: "Unified Central Router for All Table Creation & Management",
+        description: "একক কমান্ডের মাধ্যমে সমস্ত টেবিল তৈরি, ড্র, টেক্সট রূপান্তর, এক্সেল শিট, কুইক টেবিল ও রো/কলাম সম্পাদনা পরিচালনা।",
+        voicePrompt: "টেবিল অপারেশন পরিচালনা করো / টেবিল ম্যানেজ করো",
+        chatPrompt: "Manage insert tables with quick_tables action and tabular_list template",
+        aiAction: "manage_insert_tables রাউটার ব্যবহার করে ডায়নামিকালি টেবিলের সকল অ্যাকশন হ্যান্ডল করে।",
+        category: "Unified Management"
+      }
+    ]
   }
 ];
