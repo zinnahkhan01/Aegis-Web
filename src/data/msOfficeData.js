@@ -1071,5 +1071,47 @@ export const MS_WORD_STEPS = [
         category: "Reliability"
       }
     ]
+  },
+  {
+    stepId: "step-6",
+    stepNumber: "Step 14",
+    menuName: "Smart Context ➔ Same-Page Continuation",
+    title: "স্মার্ট কনটেক্সট ও একই পেজে অবিচ্ছিন্ন ধারাবাহিক কাজ (Same-Page Flow Engine)",
+    titleEn: "Active Document State Inspection & Seamless In-Place Continuation",
+    badge: "Context Intelligence",
+    badgeColor: "emerald",
+    summary: "সুপারভেক্স এআই নির্দেশ দেওয়ার সাথে সাথে আগে দেখে কাজটা কোথায় আছে, কী বলা হয়েছে তা গভীরভাবে বুঝে একই সক্রিয় ডকুমেন্টে ধারাবাহিক নিখুঁত কাজ সম্পন্ন করে; অযথা নতুন পেজ খোলে না।",
+    commands: [
+      {
+        id: "cmd-6-1",
+        featureName: "সচল ডকুমেন্ট ও কনটেন্ট অবস্থান পরিদর্শন (Active Document Inspection)",
+        featureNameEn: "Inspect Active Document & Content Hierarchy",
+        description: "ওয়ার্ডে কোনো কাজ দেওয়ার সাথে সাথে এআই COM ইন্টারফেসে সচল ডকুমেন্টের নাম, কনটেন্ট, প্যারাগ্রাফ ও টেবিল সংখ্যা নিখুঁতভাবে পর্যবেক্ষণ করে অবস্থান নিশ্চিত করে।",
+        voicePrompt: "'আমার খোলা ডকুমেন্টের অবস্থান দেখে নাও'",
+        chatPrompt: "Inspect active document state and verify existing content structure",
+        aiAction: "WordCOMWorkerThread-এর মাধ্যমে app.ActiveDocument এবং doc.Content বিশ্লেষণ করে কার্সরের সঠিক এন্ট্রি পয়েন্ট নির্ধারণ করে।",
+        category: "Context Inspection"
+      },
+      {
+        id: "cmd-6-2",
+        featureName: "একই ডকুমেন্টে ধারাবাহিক কাজ (Same-Page In-Place Continuation)",
+        featureNameEn: "Sequential Same-Document Flow",
+        description: "একটি কাজের পর একই ডকুমেন্টে অন্য কাজ (যেমন হেডিংয়ের পর টেবিল, টেবিলের পর প্যারাগ্রাফ) বললে কোনো নতুন ফাইল না খুলে বর্তমান পেজেই নিচে নিচে কাজ করে।",
+        voicePrompt: "'এর নিচে একটি ৩ রো ও ৩ কলামের টেবিল বানাও এবং তার নিচে অনুচ্ছেদ লেখো'",
+        chatPrompt: "Insert a 3x3 table below current heading and append paragraph on the same active page",
+        aiAction: "target_policy='active' বজায় রেখে doc.Content.InsertParagraphAfter() নিশ্চিত করে একই পেজে সুশৃঙ্খলভাবে কনটেন্ট যুক্ত করে।",
+        category: "Seamless Continuation"
+      },
+      {
+        id: "cmd-6-3",
+        featureName: "নতুন ডকুমেন্ট খোলার বুদ্ধিমান নীতি (Explicit vs Implicit Targeting)",
+        featureNameEn: "Intelligent Explicit New Document Resolution",
+        description: "বানাও বা তৈরি করো বললেই নতুন উইন্ডো খোলে না; কেবল ব্যবহারকারী স্পষ্টভাবে 'নতুন ফাইল/ডকুমেন্ট' বললে তখনই কেবল নতুন ব্ল্যাঙ্ক ডকুমেন্ট ওপেন করা হয়।",
+        voicePrompt: "'একটি সম্পূর্ণ নতুন ব্ল্যাঙ্ক ডকুমেন্ট তৈরি করো'",
+        chatPrompt: "Create an explicit new blank document",
+        aiAction: "is_explicit_new_doc ফিল্টারের মাধ্যমে গ্র্যানুলার এলিমেন্ট ('নতুন রো', 'নতুন টেবিল') কে বাদ দিয়ে কেবল আসল ফাইল ক্রিয়েশন নির্দেশ শনাক্ত করে।",
+        category: "Targeting Policy"
+      }
+    ]
   }
 ];
