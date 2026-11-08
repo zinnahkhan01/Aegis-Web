@@ -2198,5 +2198,97 @@ export const MS_WORD_STEPS = [
         category: "Image Insertion"
       }
     ]
+  },
+  {
+    stepId: "step-3-3-shp",
+    stepNumber: "Step 23",
+    menuName: "Insert Menu ➔ 3.3 Illustrations ➔ Shapes",
+    title: "ইনসার্ট মেনু: শেপ ও ভেক্টর আকার সন্নিবেশ (৮টি ক্যাটাগরি)",
+    titleEn: "Insert Illustrations: Shapes (Lines, Rectangles, Basic Shapes, Block Arrows, Equation Shapes, Flowchart, Callouts, Stars & Banners)",
+    subtitle: "ডকুমেন্টে লাইন, আয়তক্ষেত্র, বৃত্ত ও ত্রিভুজ সহ বেসিক শেপ, ব্লক অ্যারো, সমীকরণ চিহ্ন, ফ্লোচার্ট উপাদান, ডায়ালগ কলআউট এবং স্টার ও ব্যানার সন্নিবেশ, কাস্টম কালার ও টেক্সট ফরম্যাটিং।",
+    badge: "Illustrations & Shapes",
+    icon: "Shapes",
+    commands: [
+      {
+        id: "cmd-shp-1",
+        featureName: "লাইন ও কানেক্টর (Lines)",
+        featureNameEn: "Straight Line, Arrow, Double Arrow, Elbow & Curved Connectors",
+        description: "ডকুমেন্টে সোজা লাইন, একমুখী তীর, দ্বিমুখী তীর, এলবো কানেক্টর ও কার্ভড কানেক্টর নির্দিষ্ট দৈর্ঘ্য, রং ও পুরুত্ব সহ সন্নিবেশ করে।",
+        voicePrompt: "একটি নীল রঙের তীর চিহ্ন লাইন যোগ করো / কানেক্টর দাও",
+        chatPrompt: "Insert a blue arrow line with length 3 inches",
+        aiAction: "doc.Shapes.AddLine() ও AddConnector() দিয়ে নিখুঁত কোঅর্ডিনেট, অ্যারোহেড ও কালার সহ লাইন আঁকে।",
+        category: "Lines"
+      },
+      {
+        id: "cmd-shp-2",
+        featureName: "আয়তক্ষেত্র ও কোণা রূপান্তর (Rectangles)",
+        featureNameEn: "Standard Rectangle, Rounded Rectangle & Snipped Corners",
+        description: "স্ট্যান্ডার্ড আয়তক্ষেত্র, রাউন্ডেড আয়তক্ষেত্র, সিঙ্গেল স্নপ কর্নার ও ডায়াগোনাল স্নপ কর্নার শেপ তৈরি এবং ভেতরের টেক্সট ও ফিল কালার নির্ধারণ।",
+        voicePrompt: "ডকুমেন্টে 'সুপারভেক্স এআই' লেখা সহ একটি আয়তক্ষেত্র যোগ করো",
+        chatPrompt: "Insert a rounded rectangle with text 'Supervex AI' and blue fill",
+        aiAction: "msoShapeRectangle বা msoShapeRoundedRectangle দিয়ে শেপ যুক্ত করে টেক্সট ও ফরম্যাটিং প্রয়োগ করে।",
+        category: "Rectangles"
+      },
+      {
+        id: "cmd-shp-3",
+        featureName: "বেসিক শেপ (Basic Shapes)",
+        featureNameEn: "Oval, Circle, Triangle, Diamond, Heart, Smiley Face, Sun & Cloud",
+        description: "বৃত্ত/ওভাল, ত্রিভুজ, সমকোণী ত্রিভুজ, হীরা (ডায়মন্ড), সামান্তরিক, ট্রাপিজিয়াম, ষড়ভুজ, অষ্টভুজ, হার্ট, স্মাইলি, সূর্য ও মেঘ শেপ সংযোজন।",
+        voicePrompt: "ডকুমেন্টে একটি লাল রঙের হার্ট শেপ বসাও / একটি বৃত্ত আঁকো",
+        chatPrompt: "Insert an oval basic shape with width 2.0 and height 2.0 inches",
+        aiAction: "msoShapeOval, msoShapeHeart, msoShapeDiamond ইত্যাদি ধ্রুবক ব্যবহার করে বেসিক শেপ তৈরি ও স্টাইল করে।",
+        category: "Basic Shapes"
+      },
+      {
+        id: "cmd-shp-4",
+        featureName: "ব্লক অ্যারো (Block Arrows)",
+        featureNameEn: "Right, Left, Up, Down, Left-Right, Quad, Circular & Chevron Arrows",
+        description: "ডান, বাম, উপর, নিচ, দ্বিমুখী, চারমুখী, বাঁকা, ইউ-টার্ন, বৃত্তাকার তীর এবং শেভরন ব্লক অ্যারো ডকুমেন্টে যুক্ত করে।",
+        voicePrompt: "ডকুমেন্টে একটি ডান তীর ব্লক অ্যারো যোগ করো",
+        chatPrompt: "Insert a right block arrow with emerald green fill",
+        aiAction: "msoShapeRightArrow, msoShapeLeftRightArrow ইত্যাদি ব্লক অ্যারো তৈরি করে ডাইমেনশন ও কালার সেট করে।",
+        category: "Block Arrows"
+      },
+      {
+        id: "cmd-shp-5",
+        featureName: "সমীকরণ চিহ্ন শেপ (Equation Shapes)",
+        featureNameEn: "Math Plus, Minus, Multiply, Divide, Equal & Not Equal Shapes",
+        description: "গণিত ও সমীকরণের জন্য যোগ (+), বিয়োগ (-), গুণ (×), ভাগ (÷), সমান (=) এবং অসমান (≠) চিহ্ন শেপ তৈরি।",
+        voicePrompt: "ডকুমেন্টে একটি যোগ চিহ্ন সমীকরণ শেপ যোগ করো",
+        chatPrompt: "Insert a math plus equation shape with yellow fill",
+        aiAction: "msoShapeMathPlus, msoShapeMathMultiply ইত্যাদি ম্যাথ শেপ কোড ব্যবহার করে সমীকরণ চিহ্ন সন্নিবেশ করে।",
+        category: "Equation Shapes"
+      },
+      {
+        id: "cmd-shp-6",
+        featureName: "ফ্লোচার্ট উপাদান (Flowchart)",
+        featureNameEn: "Flowchart Process, Decision, Data, Terminator & Document Elements",
+        description: "প্রসেস বক্স (আয়তাকার), ডিসিশন বক্স (হীরা), ইনপুট/আউটপুট ডাটা (সামান্তরিক), টার্মিনেটর (স্টার্ট/স্টপ) ও ডকুমেন্ট সিম্বল যোগ করে।",
+        voicePrompt: "ডকুমেন্টে 'ডাটা প্রসেসিং' লেখা সহ একটি ফ্লোচার্ট প্রসেস শেপ যোগ করো",
+        chatPrompt: "Insert a flowchart process box with text 'Data Processing'",
+        aiAction: "msoShapeFlowchartProcess, msoShapeFlowchartDecision ইত্যাদি উপাদান তৈরি করে ডাটা ফ্লো ডায়াগ্রাম তৈরি করে।",
+        category: "Flowchart"
+      },
+      {
+        id: "cmd-shp-7",
+        featureName: "কলআউট ও স্পীচ বাবল (Callouts)",
+        featureNameEn: "Rectangular, Rounded, Oval & Cloud Speech/Dialogue Callouts",
+        description: "ডায়ালগ ও ব্যাখ্যার জন্য আয়তাকার, রাউন্ডেড, ওভাল এবং মেঘের মতো ক্লাউড স্পীচ বাবল কলআউট তৈরি করে ভেতরে বার্তা সন্নিবেশ করে।",
+        voicePrompt: "ডকুমেন্টে 'জরুরি বার্তা' লেখা সহ একটি ক্লাউড কলআউট যোগ করো",
+        chatPrompt: "Insert a cloud callout with text 'Important Message'",
+        aiAction: "msoShapeCloudCallout বা msoShapeRectangularCallout তৈরি করে স্বয়ংক্রিয় পয়েন্টার ও টেক্সট ফ্রেম যুক্ত করে।",
+        category: "Callouts"
+      },
+      {
+        id: "cmd-shp-8",
+        featureName: "স্টার ও ব্যানার (Stars and Banners)",
+        featureNameEn: "4/5/8/16/24/32 Point Stars, Explosion, Ribbons & Scrolls",
+        description: "৪ থেকে ৩২ কোণা বিশিষ্ট তারা, বিস্ফোরণ (Explosion), আপ/ডাউন রিবন এবং হরাইজন্টাল/ভার্টিক্যাল স্ক্রোল ব্যানার ডকুমেন্টে বসায়।",
+        voicePrompt: "ডকুমেন্টে একটি ৫ কোণা তারা যোগ করো / গোল্ডেন রিবন দাও",
+        chatPrompt: "Insert a 5-point star with orange fill and 2.5 inches width",
+        aiAction: "msoShape5pointStar, msoShapeUpRibbon ইত্যাদি কোড ব্যবহার করে আকর্ষণীয় স্টার ও ব্যানার তৈরি করে।",
+        category: "Stars & Banners"
+      }
+    ]
   }
 ];
