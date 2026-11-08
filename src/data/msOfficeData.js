@@ -14,7 +14,7 @@ export const MS_OFFICE_SUITE = [
     color: "#2B579A",
     accent: "#00F2FF",
     icon: "FileText",
-    featuresCount: "55+ Voice & Chat Actions",
+    featuresCount: "60+ Voice & Chat Actions",
     description: "ডকুমেন্ট তৈরি থেকে শুরু করে পাসওয়ার্ড এনক্রিপশন, টেবিলের নির্দিষ্ট কলামে লেখা, প্রফেশনাল সিভি তৈরি এবং ফাইল ইন্সপেকশন—সবকিছু নিয়ন্ত্রণ করুন সরাসরি বাংলা বা ইংরেজি ভয়েস ও টেক্সট কমান্ডে।"
   },
   {
@@ -333,8 +333,70 @@ export const MS_WORD_STEPS = [
     ]
   },
   {
-    stepId: "step-2",
+    stepId: "step-1-4",
     stepNumber: "Step 04",
+    menuName: "File Menu ➔ 1.4 Save",
+    title: "ডকুমেন্ট সংরক্ষণ ও ক্লাউড সিঙ্ক (Save & Cloud Sync Engine)",
+    titleEn: "In-Place Save, Save As, Duplicate Copy & Cloud Synchronization",
+    badge: "100% Tested & Live",
+    badgeColor: "emerald",
+    summary: "বর্তমান ডকুমেন্টে ইন-প্লেস সেভ, নতুন নাম ও ফরম্যাটে সেভ অ্যাজ, মূল ফাইল অক্ষত রেখে আলাদা ডুপ্লিকেট কপি সেভ এবং OneDrive ও ক্লাউড ড্রাইভে স্বয়ংক্রিয় সিঙ্কের পূর্ণাঙ্গ নির্দেশিকা।",
+    commands: [
+      {
+        id: "cmd-save-1",
+        featureName: "ডকুমেন্ট সংরক্ষণ (Save Document)",
+        featureNameEn: "Normal In-Place Document Save",
+        description: "পূর্বে সংরক্ষিত ফাইলে ইন-প্লেস সেভ করে কিংবা নতুন ব্ল্যাঙ্ক ফাইলের ক্ষেত্রে নিরাপদ ডেস্কটপ পাথে অটো-সেভ করে যাতে কোনো ডায়েলগ পপ-আপে কাজ আটকে না যায়।",
+        voicePrompt: "ডকুমেন্টটি সেভ করো",
+        chatPrompt: "Save active document in Word",
+        aiAction: "doc.Save() কল করে ফাইল সাইজ ও পাথসহ আপডেট রিটার্ন করে।",
+        category: "Save"
+      },
+      {
+        id: "cmd-save-2",
+        featureName: "নতুন নামে সেভ অ্যাজ (Save As)",
+        featureNameEn: "Save Document with New Name & Format",
+        description: "বর্তমান ডকুমেন্টটিকে অন্য একটি নাম, নতুন ফোল্ডার বা নতুন ফরম্যাটে (.docx, .pdf, .txt, .rtf) সেভ করে এবং ওয়ার্ডের ফোকাস নতুন ফাইলে পরিবর্তন করে।",
+        voicePrompt: "ফাইলটি my_project.docx নামে সেভ অ্যাজ করো",
+        chatPrompt: "Save document as 'my_project.docx'",
+        aiAction: "doc.SaveAs2(FileName=dest_path) ব্যবহার করে ফরম্যাট কনভার্সন ও ফাইল স্যুইচ সম্পন্ন করে।",
+        category: "Save As"
+      },
+      {
+        id: "cmd-save-3",
+        featureName: "ডুপ্লিকেট কপি সেভ (Save a Copy)",
+        featureNameEn: "Save a Duplicate Copy Without Context Switch",
+        description: "ওয়ার্ডে খোলা মূল ডকুমেন্ট অক্ষত ও সচল রেখেই ব্যাকগ্রাউন্ডে একটি নির্ভুল ডুপ্লিকেট ব্যাকআপ কপি (_copy.docx) সেভ করে রাখে।",
+        voicePrompt: "ডকুমেন্টের একটি কপি সেভ করো",
+        chatPrompt: "Save a duplicate copy of this document",
+        aiAction: "shutil.copy2 এবং ফাইল-লক প্রিজার্ভেশন ব্যবহার করে মূল ডকুমেন্ট ফোকাস অক্ষত রেখে কপি তৈরি করে।",
+        category: "Save a Copy"
+      },
+      {
+        id: "cmd-save-4",
+        featureName: "ক্লাউড ড্রাইভে সংরক্ষণ (Save to Cloud)",
+        featureNameEn: "Save to Active Cloud Storage Vault",
+        description: "পিসির সক্রিয় ক্লাউড সিঙ্ক ড্রাইভে ফাইলটি নিরাপদে সংরক্ষণ করে যাতে যেকোনো ডিভাইস থেকে তাৎক্ষণিক অ্যাক্সেস পাওয়া যায়।",
+        voicePrompt: "ক্লাউডে সেভ করো",
+        chatPrompt: "Save active document to cloud vault",
+        aiAction: "Supervex Cloud Vault ও ক্লাউড ডিরেক্টরি পাথ শনাক্ত করে স্বয়ংক্রিয় ক্লাউড ব্যাকআপ নিশ্চিত করে।",
+        category: "Cloud Save"
+      },
+      {
+        id: "cmd-save-5",
+        featureName: "ওয়ানড্রাইভে সংরক্ষণ (Save to OneDrive)",
+        featureNameEn: "Save to Microsoft OneDrive with Live Sync",
+        description: "মাইক্রোসফট OneDrive রুট ডিরেক্টরি শনাক্ত করে সরাসরি OneDrive ক্লাউড ফোল্ডারে ফাইল সেভ করে, যা তাৎক্ষণিক উইন্ডোজ সিঙ্ক ক্লাউডে আপলোড করে।",
+        voicePrompt: "OneDrive এ সেভ করো",
+        chatPrompt: "Save document to OneDrive with auto-sync",
+        aiAction: "OneDrive ডিরেক্টরিতে SaveAs বা Copy সম্পাদন করে ক্লাউড মেটাডেটা রিটার্ন করে।",
+        category: "OneDrive Save"
+      }
+    ]
+  },
+  {
+    stepId: "step-2",
+    stepNumber: "Step 05",
     menuName: "Table Menu ➔ Precise Cell & Column Control",
     title: "স্মার্ট টেবিল ও নির্দিষ্ট কলামে লেখা (Table Column Precision)",
     titleEn: "Smart Table Generation & Multi-Column Precision Writing",
@@ -386,7 +448,7 @@ export const MS_WORD_STEPS = [
   },
   {
     stepId: "step-3",
-    stepNumber: "Step 05",
+    stepNumber: "Step 06",
     menuName: "Auto Assembly ➔ Full Document Generation",
     title: "সম্পূর্ণ সিভি, রিপোর্ট ও দরখাস্ত তৈরি (Full Document Assembly)",
     titleEn: "End-to-End Professional CV, Business Reports & Formal Letters",
@@ -428,7 +490,7 @@ export const MS_WORD_STEPS = [
   },
   {
     stepId: "step-4",
-    stepNumber: "Step 06",
+    stepNumber: "Step 07",
     menuName: "Design & Layout ➔ Themes, Colors & Page Setup",
     title: "ডিজাইন থিম, মার্জিন ও লেআউট (Design, Margin & Layout)",
     titleEn: "Executive Typography, Themes, Borders & Page Setup",
@@ -470,7 +532,7 @@ export const MS_WORD_STEPS = [
   },
   {
     stepId: "step-5",
-    stepNumber: "Step 07",
+    stepNumber: "Step 08",
     menuName: "Interaction Modes ➔ Voice vs Text Guide",
     title: "ভয়েস ও চ্যাট ব্যবহারের পূর্ণাঙ্গ নিয়মাবলী (How to Use Guide)",
     titleEn: "Complete Duplex Voice & Interactive Chat Operating Guide",
