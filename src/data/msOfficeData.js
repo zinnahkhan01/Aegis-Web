@@ -2558,5 +2558,57 @@ export const MS_WORD_STEPS = [
         category: "Combo Chart"
       }
     ]
+  },
+  {
+    stepId: "step-3-3-sc",
+    stepNumber: "Step 28",
+    menuName: "Insert Menu ➔ 3.3 Illustrations ➔ Screenshot",
+    title: "ইনসার্ট মেনু: স্ক্রিনশট ও স্ক্রিন ক্লিপিং (উইন্ডো ও কাস্টম রিজিয়ন ক্যাপচার)",
+    titleEn: "Insert Illustrations: Screenshot (Available Windows & Screen Clipping)",
+    subtitle: "ডেস্কটপের চলমান উইন্ডো তালিকা থেকে নির্দিষ্ট উইন্ডোর স্ন্যাপশট অথবা কাস্টম আয়তাকার স্ক্রিন ক্লিপিং সরাসরি ওয়ার্ড ডকুমেন্টে ইনলাইন পিকচার হিসেবে সংযোজন।",
+    badge: "Screenshot & Clipping",
+    icon: "Monitor",
+    commands: [
+      {
+        id: "cmd-sc-1",
+        featureName: "চলমান উইন্ডোর তালিকা (Available Windows List)",
+        featureNameEn: "Enumerate Desktop Open Application Windows",
+        description: "ডেস্কটপে চলমান দৃশ্যমান অ্যাপ্লিকেশন উইন্ডোগুলোর তালিকা (টাইটেল, HWND ও সাইজ) পর্যবেক্ষণ।",
+        voicePrompt: "ডেস্কটপে কোন কোন উইন্ডো খোলা আছে দেখাও / উন্মুক্ত উইন্ডোর তালিকা দাও",
+        chatPrompt: "List available desktop windows for screenshot capture",
+        aiAction: "Windows Desktop Session-এ EnumWindows কল করে সক্রিয় অ্যাপ্লিকেশন উইন্ডোর তালিকা তৈরি করে।",
+        category: "Available Windows"
+      },
+      {
+        id: "cmd-sc-2",
+        featureName: "উন্মুক্ত উইন্ডোর স্ক্রিনশট (Available Windows Screenshot)",
+        featureNameEn: "Capture and Insert Window Screenshot as InlineShape",
+        description: "চলমান অ্যাপ্লিকেশন উইন্ডোর নিখুঁত স্ন্যাপশট গ্রহণ করে ওয়ার্ড ডকুমেন্টে নির্দিষ্ট প্রস্থ ও এলাইনমেন্টে সন্নিবেশ।",
+        voicePrompt: "উন্মুক্ত উইন্ডোর স্ক্রিনশট ডকুমেন্টে যোগ করো / সক্রিয় উইন্ডো ক্যাপচার করো",
+        chatPrompt: "Capture available window screenshot and insert into document with 5.5 inches width",
+        aiAction: "উইন্ডোর বাউন্ডিং বক্স ক্যাপচার করে Word InlineShapes.AddPicture দিয়ে ডকুমেন্টে যুক্ত করে।",
+        category: "Available Windows"
+      },
+      {
+        id: "cmd-sc-3",
+        featureName: "স্ক্রিন ক্লিপিং (Screen Clipping / Custom Region)",
+        featureNameEn: "Capture Custom Rectangular Screen Region or Full Screen",
+        description: "পর্দার যেকোনো নির্দিষ্ট আয়তাকার অংশ বা সম্পূর্ণ স্ক্রিনের ক্লিপিং কেটে ওয়ার্ড ডকুমেন্টে ইনসার্ট।",
+        voicePrompt: "স্ক্রিন ক্লিপিং ডকুমেন্টে যুক্ত করো / নির্দিষ্ট এলাকার স্ক্রিনশট নাও",
+        chatPrompt: "Insert screen clipping with bounding box [100, 100, 600, 450] aligned center",
+        aiAction: "কাস্টম কোঅর্ডিনেট থেকে PIL/GDI দিয়ে স্ক্রিন এরিয়া ক্রপ করে Word ডকুমেন্টে সন্নিবেশ করে।",
+        category: "Screen Clipping"
+      },
+      {
+        id: "cmd-sc-4",
+        featureName: "স্ক্রিনশট ইউনিফাইড রাউটার (Manage Illustrations Screenshot)",
+        featureNameEn: "Unified Router for Screenshot and Clipping Workflow",
+        description: "একক সমন্বিত রাউটার দিয়ে উইন্ডো স্ন্যাপশট, স্ক্রিন ক্লিপিং ও উইন্ডো তালিকা ম্যানেজমেন্ট।",
+        voicePrompt: "স্ক্রিনশট অপারেশন পরিচালনা করো / স্ক্রিন ক্লিপিং ম্যানেজ করো",
+        chatPrompt: "Manage illustrations screenshot with screen clipping action and 4.5 inches width",
+        aiAction: "manage_illustrations_screenshot রাউটার দিয়ে সমস্ত স্ক্রিনশট মেথড স্বয়ংক্রিয় পরিচালনা করে।",
+        category: "Unified Management"
+      }
+    ]
   }
 ];
