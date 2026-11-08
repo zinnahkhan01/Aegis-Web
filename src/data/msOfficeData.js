@@ -14,7 +14,7 @@ export const MS_OFFICE_SUITE = [
     color: "#2B579A",
     accent: "#00F2FF",
     icon: "FileText",
-    featuresCount: "75+ Voice & Chat Actions",
+    featuresCount: "90+ Voice & Chat Actions",
     description: "ডকুমেন্ট তৈরি থেকে শুরু করে পাসওয়ার্ড এনক্রিপশন, টেবিলের নির্দিষ্ট কলামে লেখা, প্রফেশনাল সিভি তৈরি এবং ফাইল ইন্সপেকশন—সবকিছু নিয়ন্ত্রণ করুন সরাসরি বাংলা বা ইংরেজি ভয়েস ও টেক্সট কমান্ডে।"
   },
   {
@@ -557,8 +557,80 @@ export const MS_WORD_STEPS = [
     ]
   },
   {
-    stepId: "step-2",
+    stepId: "step-1-6",
     stepNumber: "Step 06",
+    menuName: "File Menu ➔ 1.6 Share",
+    title: "ডকুমেন্ট শেয়ারিং ও কোলাবোরেশন (Share & Co-Authoring Engine)",
+    titleEn: "Share Document, Copy Link, Invite People, Manage Access, Email & OneDrive",
+    badge: "100% Tested & Live",
+    badgeColor: "emerald",
+    summary: "ডকুমেন্টের শেয়ারেবল লিংক ক্লিপবোর্ডে কপি করা, এডিট বা ভিউ পারমিশন সহ ইমেইলে সহকর্মীদের ইনভাইট করা, অ্যাক্সেস লিস্ট দেখা বা বাতিল করা এবং সরাসরি আউটলুক বা OneDrive এর মাধ্যমে শেয়ারের পূর্ণাঙ্গ নির্দেশিকা।",
+    commands: [
+      {
+        id: "cmd-share-1",
+        featureName: "ডকুমেন্ট শেয়ার (Share Document)",
+        featureNameEn: "Master Document Share Coordinator",
+        description: "ডকুমেন্টের বর্তমান স্থিতি ও ক্লাউড সিঙ্ক যাচাই করে স্বয়ংক্রিয়ভাবে শেয়ারিং লিংক প্রস্তুত করে এবং ক্লিপবোর্ডে কপি করে।",
+        voicePrompt: "ডকুমেন্টটি শেয়ার করো",
+        chatPrompt: "Share active document",
+        aiAction: "share_document() কল করে স্বয়ংক্রিয় ক্লাউড সিঙ্ক ও শেয়ার লিংক প্রদান করে।",
+        category: "Share"
+      },
+      {
+        id: "cmd-share-2",
+        featureName: "শেয়ার লিংক কপি (Copy Share Link)",
+        featureNameEn: "Copy Cloud / Local Document Link to Clipboard",
+        description: "ডকুমেন্টের নিরাপদ ক্লাউড URL অথবা লোকাল URI লিংক উইন্ডোজ ক্লিপবোর্ডে তাৎক্ষণিক কপি করে যাতে যেকোনো জায়গায় পেস্ট করা যায়।",
+        voicePrompt: "ডকুমেন্টের লিংক কপি করো",
+        chatPrompt: "Copy share link to document",
+        aiAction: "PowerShell Set-Clipboard দিয়ে সরাসরি সিস্টেমে লিংক কপি করে এবং লিংক পাথ রিটার্ন করে।",
+        category: "Copy Link"
+      },
+      {
+        id: "cmd-share-3",
+        featureName: "সহকর্মী আমন্ত্রণ (Invite People)",
+        featureNameEn: "Invite Collaborators with Edit or View Access",
+        description: "ইমেইল এড্রেস দিয়ে সহকর্মীদের এডিটর বা ভিউয়ার হিসেবে ডকুমেন্টে যুক্ত করে এবং স্বয়ংক্রিয় আমন্ত্রণ ইমেইল ড্রাফট করে।",
+        voicePrompt: "rahim@example.com কে এডিটর হিসেবে ইনভাইট করো",
+        chatPrompt: "Invite 'rahim@example.com' with edit access to this document",
+        aiAction: "মেটাডেটা স্টোরে এক্সেস এন্ট্রি সেভ করে এবং Outlook COM দিয়ে সরাসরি আমন্ত্রণ ড্রাফট ওপেন করে।",
+        category: "Invite People"
+      },
+      {
+        id: "cmd-share-4",
+        featureName: "অ্যাক্সেস ব্যবস্থাপনা ও রিমুভ (Manage Access)",
+        featureNameEn: "List, Update Role & Revoke Collaborator Access",
+        description: "ডকুমেন্টে কার কার এক্সেস রয়েছে তার তালিকা দেখা, পারমিশন পরিবর্তন করা বা নির্দিষ্ট কারো এক্সেস তাৎক্ষণিক বাতিল (Revoke) করা।",
+        voicePrompt: "কার কার অ্যাক্সেস আছে দেখাও",
+        chatPrompt: "Manage access list and show collaborators",
+        aiAction: "ডকুমেন্টের অ্যাক্সেস কন্ট্রোল স্টোর থেকে সক্রিয় সহকর্মীদের তালিকা ও তাদের রোল প্রদর্শন করে।",
+        category: "Manage Access"
+      },
+      {
+        id: "cmd-share-5",
+        featureName: "ইমেইলের মাধ্যমে শেয়ার (Share via Email)",
+        featureNameEn: "Send as DOCX, Exported PDF or Cloud Link via Email",
+        description: "মাইক্রোসফট আউটলুক বা ডিফল্ট ইমেইল অ্যাপের মাধ্যমে বর্তমান ফাইলটি সরাসরি .docx, স্বয়ংক্রিয় .pdf কিংবা লিংক হিসেবে ইমেইল করে।",
+        voicePrompt: "ডকুমেন্টটি পিডিএফ হিসেবে ইমেইল করো zinnah@example.com এ",
+        chatPrompt: "Email this document as PDF to 'zinnah@example.com'",
+        aiAction: "ডকুমেন্টকে তাৎক্ষণিক পিডিএফে কনভার্ট করে Outlook MailItem-এ এটাচমেন্ট হিসেবে যুক্ত করে উইন্ডো প্রদর্শন করে।",
+        category: "Email Share"
+      },
+      {
+        id: "cmd-share-6",
+        featureName: "ওয়ানড্রাইভে শেয়ার ও লাইভ লিংক (Share to OneDrive)",
+        featureNameEn: "Sync to OneDrive and Generate Real-Time Co-Authoring Link",
+        description: "ডকুমেন্টটি সরাসরি ব্যবহারকারীর OneDrive ফোল্ডারে সেভ করে, রিয়েল-টাইম কো-অথরিং সিঙ্ক কার্যকর করে এবং ওয়েব লিংক কপি করে।",
+        voicePrompt: "OneDrive এ শেয়ার করে লিংক কপি করো",
+        chatPrompt: "Share document to OneDrive and copy live sync link",
+        aiAction: "OneDrive ড্রাইভে ফাইল সিঙ্ক করে ক্লাউড শেয়ার লিংক ক্লিপবোর্ডে কপি করে।",
+        category: "OneDrive Share"
+      }
+    ]
+  },
+  {
+    stepId: "step-2",
+    stepNumber: "Step 07",
     menuName: "Table Menu ➔ Precise Cell & Column Control",
     title: "স্মার্ট টেবিল ও নির্দিষ্ট কলামে লেখা (Table Column Precision)",
     titleEn: "Smart Table Generation & Multi-Column Precision Writing",
@@ -610,7 +682,7 @@ export const MS_WORD_STEPS = [
   },
   {
     stepId: "step-3",
-    stepNumber: "Step 07",
+    stepNumber: "Step 08",
     menuName: "Auto Assembly ➔ Full Document Generation",
     title: "সম্পূর্ণ সিভি, রিপোর্ট ও দরখাস্ত তৈরি (Full Document Assembly)",
     titleEn: "End-to-End Professional CV, Business Reports & Formal Letters",
@@ -652,7 +724,7 @@ export const MS_WORD_STEPS = [
   },
   {
     stepId: "step-4",
-    stepNumber: "Step 08",
+    stepNumber: "Step 09",
     menuName: "Design & Layout ➔ Themes, Colors & Page Setup",
     title: "ডিজাইন থিম, মার্জিন ও লেআউট (Design, Margin & Layout)",
     titleEn: "Executive Typography, Themes, Borders & Page Setup",
@@ -694,7 +766,7 @@ export const MS_WORD_STEPS = [
   },
   {
     stepId: "step-5",
-    stepNumber: "Step 09",
+    stepNumber: "Step 10",
     menuName: "Interaction Modes ➔ Voice vs Text Guide",
     title: "ভয়েস ও চ্যাট ব্যবহারের পূর্ণাঙ্গ নিয়মাবলী (How to Use Guide)",
     titleEn: "Complete Duplex Voice & Interactive Chat Operating Guide",
