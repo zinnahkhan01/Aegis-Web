@@ -2084,5 +2084,119 @@ export const MS_WORD_STEPS = [
         category: "Score & Originality"
       }
     ]
+  },
+  {
+    stepId: "step-3-1",
+    stepNumber: "Step 21",
+    menuName: "Insert Menu ➔ 3.1 Pages",
+    title: "ইনসার্ট মেনু: কভার পেজ, ব্ল্যাঙ্ক পেজ ও পেজ ব্রেক (৩টি অপারেশন)",
+    titleEn: "Insert Menu Pages: Cover Page, Blank Page & Page Break",
+    subtitle: "ডকুমেন্টের শুরুতে প্রফেশনাল এক্সিকিউটিভ কভার পেজ যুক্ত করা, যেকোনো অবস্থানে খালি বা নতুন পৃষ্ঠা যোগ করা এবং পেজ ব্রেক সন্নিবেশ করা।",
+    badge: "Insert Pages Suite",
+    icon: "FilePlus",
+    commands: [
+      {
+        id: "cmd-pg-1",
+        featureName: "কভার পেজ যুক্তকরণ (Cover Page)",
+        featureNameEn: "Insert Executive Designed Cover Page",
+        description: "ডকুমেন্টের শুরুতে একটি আকর্ষণীয় এক্সিকিউটিভ কভার পেজ যুক্ত করে, যার মধ্যে টাইটেল, সাবটাইটেল, লেখকের নাম ও তারিখ বিন্যস্ত থাকে।",
+        voicePrompt: "একটি কভার পেজ যোগ করো / প্রফেশনাল কভার পেজ দাও",
+        chatPrompt: "Insert an executive cover page titled 'Annual Strategic Report 2026'",
+        aiAction: "ডকুমেন্টের শুরুতে সেকশন ব্রেক সহ টাইটেল, সাবটাইটেল, মেটাডেটা ও স্টাইলিং সহ এক্সিকিউটিভ কভার পেজ তৈরি করে।",
+        category: "Cover Page"
+      },
+      {
+        id: "cmd-pg-2",
+        featureName: "ব্ল্যাঙ্ক পেজ বা খালি পৃষ্ঠা (Blank Page)",
+        featureNameEn: "Insert Blank Page at Cursor or Document End",
+        description: "বর্তমান কার্সর পয়েন্টে অথবা ডকুমেন্টের শেষে সম্পূর্ণ খালি একটি নতুন পৃষ্ঠা সন্নিবেশ করে পরবর্তী কাজের ক্ষেত্র তৈরি করে।",
+        voicePrompt: "একটি ব্ল্যাঙ্ক পেজ যোগ করো / খালি পেজ দাও",
+        chatPrompt: "Insert a blank page at the end of the document",
+        aiAction: "নির্দিষ্ট রেঞ্জে বা ডকুমেন্টের শেষে পেজ ব্রেক প্রয়োগ করে সম্পূর্ণ নতুন ব্ল্যাঙ্ক পেজ তৈরি করে।",
+        category: "Blank Page"
+      },
+      {
+        id: "cmd-pg-3",
+        featureName: "পেজ ব্রেক (Page Break)",
+        featureNameEn: "Insert Standard Page Break (wdPageBreak)",
+        description: "বর্তমান লাইনের শেষে পেজ ব্রেক (Ctrl+Enter) প্রয়োগ করে পরবর্তী টেক্সটকে সরাসরি নতুন পৃষ্ঠায় নিয়ে যায়।",
+        voicePrompt: "পেজ ব্রেক দাও / নতুন পৃষ্ঠায় যাও",
+        chatPrompt: "Insert a page break at current position",
+        aiAction: "doc.Selection বা Range এ wdPageBreak (Word COM ধ্রুবক ৭) সন্নিবেশ করে পরবর্তী পৃষ্ঠায় টেক্সট ফ্লো নিয়ে যায়।",
+        category: "Page Break"
+      }
+    ]
+  },
+  {
+    stepId: "step-3-3-pic",
+    stepNumber: "Step 22",
+    menuName: "Insert Menu ➔ 3.3 Illustrations ➔ Pictures",
+    title: "ইনসার্ট মেনু: ছবি ও চিত্রশালা (৬টি অপারেশন)",
+    titleEn: "Insert Illustrations: Pictures (This Device, Stock, Online, Insert, Replace, From File)",
+    subtitle: "ডিভাইস থেকে ছবি, ক্যাটাগরি ভিত্তিক রয়্যালটি-ফ্রি স্টক ইমেজ, অনলাইন বা ওয়েব ছবি সার্চ, ডাইমেনশন ও ক্যাপশন সহ ছবি সংযোজন, বিদ্যমান ছবি প্রতিস্থাপন এবং নির্দিষ্ট ফাইল পাথ থেকে ছবি যুক্তকরণ।",
+    badge: "Illustrations & Pictures",
+    icon: "Image",
+    commands: [
+      {
+        id: "cmd-pic-1",
+        featureName: "এই ডিভাইস থেকে ছবি (This Device)",
+        featureNameEn: "Insert Picture from This Device",
+        description: "কম্পিউটার বা লোকাল ড্রাইভ থেকে পছন্দের ছবি বা স্ক্রিনশট ডকুমেন্টে স্বয়ংক্রিয়ভাবে সন্নিবেশ করে।",
+        voicePrompt: "এই ডিভাইস থেকে একটি ছবি যোগ করো",
+        chatPrompt: "Insert a picture from this device into the active document",
+        aiAction: "লোকাল ড্রাইভ বা লাইব্রেরি থেকে ইমেজ পাথ শনাক্ত করে ইনলাইন পিকচার হিসেবে যুক্ত করে।",
+        category: "Local Device"
+      },
+      {
+        id: "cmd-pic-2",
+        featureName: "স্টক ইমেজ লাইব্রেরি (Stock Images)",
+        featureNameEn: "Curated High-Res Royalty-Free Stock Images",
+        description: "বিজনেস, প্রযুক্তি, নেতৃত্ব, প্রকৃতি, ফাইন্যান্স, স্বাস্থ্যসেবা ও অ্যাবস্ট্রাক্ট ক্যাটাগরির রয়্যালটি-ফ্রি হাই-রেজোলিউশন স্টক ছবি ডকুমেন্টে বসায়।",
+        voicePrompt: "একটি বিজনেস স্টক ইমেজ যোগ করো / টেকনোলজি স্টক ছবি দাও",
+        chatPrompt: "Insert a stock image of technology category into the document",
+        aiAction: "সাতটি প্রিমিয়াম ক্যাটাগরি থেকে কিউরেটেড হাই-রেজোলিউশন স্টক ইমেজ নির্বাচন ও স্কেলিং সহ ইনসার্ট করে।",
+        category: "Stock Images"
+      },
+      {
+        id: "cmd-pic-3",
+        featureName: "অনলাইন ছবি অনুসন্ধান (Online Pictures)",
+        featureNameEn: "Search & Fetch Pictures Online",
+        description: "অনলাইন ওয়েব বা সার্চ ইঞ্জিন থেকে নির্দিষ্ট বিষয়ের ওপর ছবি খুঁজে সরাসরি ডকুমেন্টে যুক্ত করে।",
+        voicePrompt: "অনলাইন থেকে সাইবার সিকিউরিটির ছবি যোগ করো",
+        chatPrompt: "Search online and insert a picture of 'artificial intelligence'",
+        aiAction: "অনলাইন কুয়েরি বা ইমেজ ইউআরএল ডাউনলোড ও লোকাল ক্যাশ করে সরাসরি ডকুমেন্টের নির্দিষ্ট রেঞ্জে যুক্ত করে।",
+        category: "Online Pictures"
+      },
+      {
+        id: "cmd-pic-4",
+        featureName: "নির্দিষ্ট ফাইল থেকে ছবি (Picture from File)",
+        featureNameEn: "Insert Picture from Absolute File Path",
+        description: "কম্পিউটারের যেকোনো নির্দিষ্ট ফোল্ডারের ফাইল পাথ নির্দেশ করে নির্ভুলভাবে ছবি ইনসার্ট করে।",
+        voicePrompt: "ফাইল পাথ থেকে ছবি যোগ করো",
+        chatPrompt: "Insert picture from file 'C:\\path\\to\\image.png'",
+        aiAction: "প্রদত্ত পরম ফাইল পাথ (Absolute Path) যাচাই করে ডকুমেন্টের নির্দিষ্ট স্থানে ছবি যুক্ত করে।",
+        category: "Picture File"
+      },
+      {
+        id: "cmd-pic-5",
+        featureName: "ছবি প্রতিস্থাপন (Replace Image)",
+        featureNameEn: "Replace Existing Picture Preserving Dimensions & Position",
+        description: "ডকুমেন্টে পূর্বে যুক্ত করা কোনো ছবির অবস্থান, আকার (উইথ ও হাইট) এবং ফরম্যাটিং বজায় রেখে নতুন ছবি দিয়ে প্রতিস্থাপন করে।",
+        voicePrompt: "১ নম্বর ছবিটি পরিবর্তন করো / নতুন ছবি দিয়ে বদলাও",
+        chatPrompt: "Replace image 1 in the document preserving original dimensions",
+        aiAction: "InlineShapes কালেকশনের নির্দিষ্ট ইনডেক্সের আকার ও পজিশন মেমোরিতে রেখে নতুন ইমেজ দিয়ে নিখুঁতভাবে প্রতিস্থাপন করে।",
+        category: "Image Editing"
+      },
+      {
+        id: "cmd-pic-6",
+        featureName: "ছবি সন্নিবেশ ও সাইজিং (Insert Image)",
+        featureNameEn: "Standard Image Insertion with Width, Alignment & Caption",
+        description: "নির্দিষ্ট প্রস্থ (ইঞ্চি), অনুপাত (Aspect Ratio), অ্যালাইনমেন্ট (Left, Center, Right) এবং ক্যাপশন সহ স্ট্যান্ডার্ড ছবি যোগ করে।",
+        voicePrompt: "ডকুমেন্টে ৪ ইঞ্চি চওড়া ছবি ইনসার্ট করো",
+        chatPrompt: "Insert an image with width 4 inches, center aligned and caption",
+        aiAction: "doc.InlineShapes.AddPicture() দিয়ে ছবি বসিয়ে রেশিও লক ও কাঙ্ক্ষিত পরিমাপে ফরম্যাট করে।",
+        category: "Image Insertion"
+      }
+    ]
   }
 ];
