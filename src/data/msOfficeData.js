@@ -14,7 +14,7 @@ export const MS_OFFICE_SUITE = [
     color: "#2B579A",
     accent: "#00F2FF",
     icon: "FileText",
-    featuresCount: "215+ Voice & Chat Actions",
+    featuresCount: "225+ Voice & Chat Actions",
     description: "ডকুমেন্ট তৈরি থেকে শুরু করে পাসওয়ার্ড এনক্রিপশন, টেবিলের নির্দিষ্ট কলামে লেখা, প্রফেশনাল সিভি তৈরি এবং ফাইল ইন্সপেকশন—সবকিছু নিয়ন্ত্রণ করুন সরাসরি বাংলা বা ইংরেজি ভয়েস ও টেক্সট কমান্ডে।"
   },
   {
@@ -1918,6 +1918,98 @@ export const MS_WORD_STEPS = [
         chatPrompt: "Apply style SupervexStyle to the current paragraph",
         aiAction: "apply_style(style_name) এর মাধ্যমে যেকোনো বিল্ট-ইন বা কাস্টম স্টাইল প্যারাগ্রাফে প্রয়োগ করে।",
         category: "Style Management"
+      }
+    ]
+  },
+  {
+    stepId: "step-2-5",
+    stepNumber: "Step 19",
+    menuName: "Home Menu ➔ 2.5 Editing",
+    title: "স্মার্ট ফাইন্ড, অ্যাডভান্সড সার্চ, রিপ্লেস, গো টু ও সিলেকশন ইঞ্জিন (৮টি অপারেশন)",
+    titleEn: "Complete Word Editing Suite: Find, Advanced Find, Replace, Replace All, Go To & Smart Selection",
+    subtitle: "Find, Advanced Find (Match Case, Whole Word, Wildcards), একক Replace, Replace All, Go To (Page, Section, Line, Heading, Table, Bookmark), Select All, Select Objects এবং Select Text with Similar Formatting।",
+    badge: "Editing & Navigation Engine",
+    icon: "Search",
+    commands: [
+      {
+        id: "cmd-edit-1",
+        featureName: "ফাইন্ড টেক্সট (Find)",
+        featureNameEn: "Find Text & Count Occurrences Across Document",
+        description: "ডকুমেন্টের ভেতরে নির্দিষ্ট কোনো শব্দ বা বাক্য খুঁজে বের করে, মোট কতবার আছে তা গণনা করে এবং প্রথম বা নির্দিষ্ট ম্যাচটি সিলেক্ট করে দেখায়।",
+        voicePrompt: "Supervex শব্দটি খুঁজো",
+        chatPrompt: "Find text Supervex in the document",
+        aiAction: "Range.Find.Execute লুপের মাধ্যমে শব্দটি খুঁজে মোট সংখ্যা গণনা করে এবং কার্সরে সিলেক্ট করে।",
+        category: "Find & Search"
+      },
+      {
+        id: "cmd-edit-2",
+        featureName: "অ্যাডভান্সড ফাইন্ড (Advanced Find)",
+        featureNameEn: "Advanced Search with Match Case, Whole Word, Wildcards & Format Filters",
+        description: "Match Case (বড়/ছোট হাতের অক্ষর ভেদে), Find Whole Words Only, Use Wildcards (*, ?), Sounds Like এবং ফন্ট/স্টাইল ফিল্টারসহ অ্যাডভান্সড সার্চ সম্পন্ন করে।",
+        voicePrompt: "অ্যাডভান্সড ফাইন্ড দিয়ে হুবহু কেস ও পুরো শব্দ Supervex খুঁজো",
+        chatPrompt: "Advanced find Supervex with match case and whole word",
+        aiAction: "Find.MatchCase, MatchWholeWord, MatchWildcards, MatchSoundsLike ও Format প্রোপার্টি সক্রিয় করে সার্চ করে।",
+        category: "Find & Search"
+      },
+      {
+        id: "cmd-edit-3",
+        featureName: "সিঙ্গেল রিপ্লেস (Replace)",
+        featureNameEn: "Replace Single / Next Occurrence of Text",
+        description: "ডকুমেন্টের সব জায়গায় পরিবর্তন না করে শুধুমাত্র প্রথম বা নির্দিষ্ট একটি স্থানের শব্দ নতুন শব্দ দিয়ে প্রতিস্থাপন (Replace One) করে।",
+        voicePrompt: "AlphaToken কে BetaToken দিয়ে রিপ্লেস করো",
+        chatPrompt: "Replace AlphaToken with BetaToken",
+        aiAction: "নির্দিষ্ট অকারেন্সটি খুঁজে শুধুমাত্র সেই স্থানটি নতুন টেক্সট দিয়ে প্রতিস্থাপন করে সিলেক্ট করে।",
+        category: "Find & Replace"
+      },
+      {
+        id: "cmd-edit-4",
+        featureName: "রিপ্লেস অল (Replace All)",
+        featureNameEn: "Replace All Occurrences Across Document & Tables",
+        description: "ডকুমেন্টের মূল অংশ, হেডার/ফুটার এবং সকল টেবিলের সেলে থাকা কোনো শব্দের সবগুলো উপস্থিতি এক কমান্ডে নতুন শব্দ দিয়ে প্রতিস্থাপন করে।",
+        voicePrompt: "সব জায়গায় AlphaToken কে OmegaToken দিয়ে সব রিপ্লেস করো",
+        chatPrompt: "Replace all AlphaToken with OmegaToken",
+        aiAction: "বডি টেক্সট ও সকল টেবিল সেলে থাকা প্রতিটি ম্যাচ খুঁজে একসাথে প্রতিস্থাপন করে মোট সংখ্যা জানায়।",
+        category: "Find & Replace"
+      },
+      {
+        id: "cmd-edit-5",
+        featureName: "গো টু নেভিগেশন (Go To)",
+        featureNameEn: "Navigate Directly to Page, Section, Line, Paragraph, Heading, Table or Bookmark",
+        description: "ডকুমেন্টের নির্দিষ্ট পৃষ্ঠা (Page), সেকশন (Section), লাইন (Line), প্যারাগ্রাফ (Paragraph), হেডিং (Heading), টেবিল (Table) বা বুকমার্কে (Bookmark) সরাসরি কার্সর নিয়ে যায়।",
+        voicePrompt: "২ নম্বর প্যারাগ্রাফে যাও / ১ নম্বর পৃষ্ঠায় যাও",
+        chatPrompt: "Go to page 2 / Go to heading 1 / Go to paragraph 3",
+        aiAction: "Selection.GoTo(What, Which, Count) এবং ডিরেক্ট রেঞ্জ নেভিগেশনের মাধ্যমে কার্সর নির্ধারিত স্থানে স্থাপন করে।",
+        category: "Navigation"
+      },
+      {
+        id: "cmd-edit-6",
+        featureName: "সিলেক্ট অল (Select All)",
+        featureNameEn: "Select Entire Document Content",
+        description: "ডকুমেন্টের শুরু থেকে শেষ পর্যন্ত সম্পূর্ণ টেক্সট, প্যারাগ্রাফ ও টেবিল একসাথে সিলেক্ট করে এবং মোট শব্দ ও প্যারাগ্রাফ সংখ্যা জানায়।",
+        voicePrompt: "সব সিলেক্ট করো",
+        chatPrompt: "Select all content in the document",
+        aiAction: "doc.Content.Select() / Selection.WholeStory() কল করে সম্পূর্ণ ডকুমেন্ট সিলেক্ট করে।",
+        category: "Selection"
+      },
+      {
+        id: "cmd-edit-7",
+        featureName: "সিলেক্ট অবজেক্টস (Select Objects)",
+        featureNameEn: "Select Drawing Shapes, Inline Images or Tables",
+        description: "ডকুমেন্টে থাকা ড্রয়িং শেপ (Shapes), ছবি (InlineShapes) অথবা টেবিল অবজেক্টগুলো স্বয়ংক্রিয়ভাবে সিলেক্ট করে।",
+        voicePrompt: "অবজেক্ট সিলেক্ট করো",
+        chatPrompt: "Select all objects and shapes in the document",
+        aiAction: "doc.Shapes.SelectAll(), InlineShapes বা Tables কালেকশন স্ক্যান করে অবজেক্টগুলো সিলেক্ট করে।",
+        category: "Selection"
+      },
+      {
+        id: "cmd-edit-8",
+        featureName: "একই ফরম্যাটিংয়ের লেখা সিলেক্ট (Select Text with Similar Formatting)",
+        featureNameEn: "Select All Text Matching Current Font & Style Formatting",
+        description: "বর্তমান কার্সর বা নির্বাচিত লেখার স্টাইল, ফন্ট, সাইজ, বোল্ড/ইটালিক ও কালারের সাথে মিল থাকা ডকুমেন্টের অন্যান্য সকল প্যারাগ্রাফ খুঁজে বের করে সিলেক্ট করে।",
+        voicePrompt: "একই ফরম্যাটিংয়ের লেখা সিলেক্ট করো",
+        chatPrompt: "Select text with similar formatting",
+        aiAction: "রেফারেন্স প্যারাগ্রাফের Style ও Font সিগনেচার বিশ্লেষণ করে সমজাতীয় সকল প্যারাগ্রাফ চিহ্নিত ও সিলেক্ট করে।",
+        category: "Selection"
       }
     ]
   }
