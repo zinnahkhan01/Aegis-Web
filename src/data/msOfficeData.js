@@ -2354,5 +2354,209 @@ export const MS_WORD_STEPS = [
         category: "3D Model from File"
       }
     ]
+  },
+  {
+    stepId: "step-3-3-sa",
+    stepNumber: "Step 26",
+    menuName: "Insert Menu ➔ 3.3 Illustrations ➔ SmartArt",
+    title: "ইনসার্ট মেনু: স্মার্টআর্ট ডায়াগ্রাম ও ভিজ্যুয়াল গ্রাফিক্স (৮টি ক্যাটাগরি)",
+    titleEn: "Insert Illustrations: SmartArt (List, Process, Cycle, Hierarchy, Relationship, Matrix, Pyramid, Picture SmartArt)",
+    subtitle: "ডকুমেন্টে লিস্ট, প্রসেস ওয়ার্কফ্লো, বৃত্তাকার সাইকেল, হায়ারার্কি অর্গানাইজেশন চার্ট, রিলেশনশিপ, ম্যাট্রিক্স গ্রিড, পিরামিড ও ছবি যুক্ত স্মার্টআর্ট ডায়াগ্রাম স্বয়ংক্রিয় নোড, কালার থিম ও স্টাইল সহ সন্নিবেশ।",
+    badge: "SmartArt Graphics",
+    icon: "Layers",
+    commands: [
+      {
+        id: "cmd-sa-1",
+        featureName: "লিস্ট স্মার্টআর্ট (List SmartArt)",
+        featureNameEn: "Basic Block List, Vertical Bullet List & Horizontal Lists",
+        description: "তথ্য বা বুলেট পয়েন্টগুলোকে আকর্ষণীয় ব্লক, হেক্সাগন বা সাজানো লিস্ট ডায়াগ্রাম আকারে উপস্থাপন করে।",
+        voicePrompt: "ডকুমেন্টে ৩টি ধাপের একটি লিস্ট স্মার্টআর্ট যোগ করো",
+        chatPrompt: "Insert List SmartArt with layout 'Basic Block List' and items ['Alpha', 'Beta', 'Gamma']",
+        aiAction: "Word COM-এর InlineShapes.AddSmartArt API দিয়ে লিস্ট ক্যাটাগরির স্মার্টআর্ট তৈরি ও টেক্সট সেট করে।",
+        category: "List"
+      },
+      {
+        id: "cmd-sa-2",
+        featureName: "প্রসেস স্মার্টআর্ট (Process SmartArt)",
+        featureNameEn: "Sequential Workflows, Timelines, Step-Up & Chevron Process",
+        description: "পর্যায়ক্রমিক ধাপ, প্রজেক্ট ওয়ার্কফ্লো বা টাইমলাইন ডায়াগ্রাম তৈরি করে স্টেপ-বাই-স্টেপ প্রসেস চিত্রায়িত করে।",
+        voicePrompt: "ডকুমেন্টে একটি প্রসেস স্মার্টআর্ট বসাও / ওয়ার্কফ্লো ডায়াগ্রাম দাও",
+        chatPrompt: "Insert Process SmartArt with steps ['Planning', 'Design', 'Development', 'Launch']",
+        aiAction: "Basic Process বা Chevron লেআউটে স্মার্টআর্ট নোড অ্যাডজাস্ট করে ধারাবাহিক প্রসেস সাজায়।",
+        category: "Process"
+      },
+      {
+        id: "cmd-sa-3",
+        featureName: "সাইকেল স্মার্টআর্ট (Cycle SmartArt)",
+        featureNameEn: "Circular, Continuous, Block & Multidirectional Cycles",
+        description: "চক্রাকার বা পুনরাবৃত্তিমূলক প্রক্রিয়া (যেমন PDCA সাইকেল, লাইফসাইকেল) বৃত্তাকার ডায়াগ্রামে উপস্থাপন করে।",
+        voicePrompt: "ডকুমেন্টে একটি সাইকেল স্মার্টআর্ট যোগ করো / চক্রাকার ডায়াগ্রাম দাও",
+        chatPrompt: "Insert Cycle SmartArt with layout 'Basic Cycle' and 4 steps",
+        aiAction: "Basic Cycle বা Text Cycle লেআউটে চক্রাকার স্মার্টআর্ট সন্নিবেশ করে কালার স্কিম প্রয়োগ করে।",
+        category: "Cycle"
+      },
+      {
+        id: "cmd-sa-4",
+        featureName: "হায়ারার্কি ও অর্গানাইজেশন চার্ট (Hierarchy SmartArt)",
+        featureNameEn: "Organization Chart, Tree Hierarchy, Table Hierarchy & Architecture",
+        description: "কোম্পানি বা প্রজেক্টের দলগত কাঠামো, অর্গানাইজেশন চার্ট এবং ট্রি হায়ারার্কি ডায়াগ্রাম তৈরি করে।",
+        voicePrompt: "ডকুমেন্টে একটি অর্গানাইজেশন চার্ট স্মার্টআর্ট যোগ করো",
+        chatPrompt: "Insert Hierarchy SmartArt with layout 'Organization Chart' and leader nodes",
+        aiAction: "Organization Chart লেআউট লোড করে এক্সিকিউটিভ ও টিম মেম্বারদের পদের বিন্যাস তৈরি করে।",
+        category: "Hierarchy"
+      },
+      {
+        id: "cmd-sa-5",
+        featureName: "রিলেশনশিপ ও ভেন ডায়াগ্রাম (Relationship SmartArt)",
+        featureNameEn: "Target List, Venn Diagram, Funnel, Gear & Balance Layouts",
+        description: "উপাদানসমূহের পারস্পরিক সম্পর্ক, ওভারল্যাপ (Venn), টার্গেট ও ফানেল ডায়াগ্রাম তৈরি করে।",
+        voicePrompt: "ডকুমেন্টে একটি টার্গেট বা ভেন ডায়াগ্রাম স্মার্টআর্ট যোগ করো",
+        chatPrompt: "Insert Relationship SmartArt with layout 'Target List' and 3 elements",
+        aiAction: "Target List বা Venn ডায়াগ্রাম তৈরি করে নোডগুলোর ভেতরের টেক্সট ও রং সাজায়।",
+        category: "Relationship"
+      },
+      {
+        id: "cmd-sa-6",
+        featureName: "ম্যাট্রিক্স ও সোয়াট গ্রিড (Matrix SmartArt)",
+        featureNameEn: "Basic Matrix, Titled Matrix, Grid Matrix & SWOT Quadrants",
+        description: "৪টি চতুর্ভুজ বা কোয়াড্রেন্টে বিভক্ত ম্যাট্রিক্স ডায়াগ্রাম তৈরি করে (যেমন SWOT অ্যানালাইসিস বা প্রায়োরিটি গ্রিড)।",
+        voicePrompt: "ডকুমেন্টে একটি সোয়াট (SWOT) ম্যাট্রিক্স স্মার্টআর্ট যোগ করো",
+        chatPrompt: "Insert Matrix SmartArt with layout 'Basic Matrix' for SWOT analysis",
+        aiAction: "৪টি কোয়াড্রেন্ট সহ Basic Matrix তৈরি করে শক্তি, দুর্বলতা, সুযোগ ও হুমকি বিন্যস্ত করে।",
+        category: "Matrix"
+      },
+      {
+        id: "cmd-sa-7",
+        featureName: "পিরামিড কাঠামো (Pyramid SmartArt)",
+        featureNameEn: "Basic Pyramid, Inverted Pyramid & Segmented Pyramid",
+        description: "আনুপাতিক বা স্তরীভূত তথ্যের জন্য বেসিক পিরামিড, ইনভার্টেড পিরামিড বা সেগমেন্টেড পিরামিড তৈরি করে।",
+        voicePrompt: "ডকুমেন্টে একটি ৩ স্তরের পিরামিড স্মার্টআর্ট যোগ করো",
+        chatPrompt: "Insert Pyramid SmartArt with layout 'Basic Pyramid' and 3 tier levels",
+        aiAction: "Basic Pyramid লেআউটে টপ ও বটম লেভেলের টেক্সট ও লেআউট স্কেল সাজায়।",
+        category: "Pyramid"
+      },
+      {
+        id: "cmd-sa-8",
+        featureName: "পিকচার স্মার্টআর্ট (Picture SmartArt)",
+        featureNameEn: "Picture Accent List, Alternating Picture Blocks & Photo Callouts",
+        description: "প্রতিটি নোডে ছবি বা ফটোর সাথে ক্যাপশন ও টেক্সট যুক্ত করে আকর্ষণীয় টিম শোকেস বা প্রোডাক্ট শোকেস তৈরি করে।",
+        voicePrompt: "ডকুমেন্টে ছবি সহ একটি পিকচার স্মার্টআর্ট যোগ করো",
+        chatPrompt: "Insert Picture SmartArt with layout 'Picture Accent List' and member names",
+        aiAction: "ছবি প্লেসহোল্ডার সহ পিকচার স্মার্টআর্ট সন্নিবেশ করে ইউজার পিকচার ও টেক্সট যুক্ত করে।",
+        category: "Picture SmartArt"
+      }
+    ]
+  },
+  {
+    stepId: "step-3-3-ch",
+    stepNumber: "Step 27",
+    menuName: "Insert Menu ➔ 3.3 Illustrations ➔ Charts",
+    title: "ইনসার্ট মেনু: বিশ্লেষণমূলক চার্ট ও গ্রাফ (১০টি চার্ট টাইপ)",
+    titleEn: "Insert Illustrations: Charts (Column, Bar, Line, Pie, Area, Scatter, Stock, Surface, Radar, Combo Chart)",
+    subtitle: "ডকুমেন্টে কলাম, বার, লাইন, পাই, এরিয়া, স্ক্যাটার, স্টক, ৩ডি সারফেস, রাডার ও কম্বো চার্ট সহ কাস্টম ক্যাটাগরি, ডাটা সিরিজ ও স্বয়ংক্রিয় ব্যাকগ্রাউন্ড এক্সেল ইন্টিগ্রেশন।",
+    badge: "Charts & Visuals",
+    icon: "Table",
+    commands: [
+      {
+        id: "cmd-ch-1",
+        featureName: "কলাম চার্ট (Column Chart)",
+        featureNameEn: "Clustered Column, Stacked Column & 100% Stacked Column",
+        description: "উল্লম্ব স্তম্ভ আকারে ডাটা ক্যাটাগরি তুলনা করার জন্য ক্লাস্টার্ড কলাম, স্ট্যাকড কলাম বা ৩ডি কলাম চার্ট তৈরি।",
+        voicePrompt: "ডকুমেন্টে 'ত্রৈমাসিক বিক্রয়' শিরোনামে একটি কলাম চার্ট তৈরি করো",
+        chatPrompt: "Insert Column Chart titled 'Quarterly Sales' with categories ['Q1', 'Q2', 'Q3', 'Q4'] and values [150, 280, 320, 410]",
+        aiAction: "Word COM AddChart2(51) দিয়ে কলাম চার্ট তৈরি করে ব্যাকগ্রাউন্ড ওয়ার্কবুকে ডাটা সেট করে।",
+        category: "Column Chart"
+      },
+      {
+        id: "cmd-ch-2",
+        featureName: "বার চার্ট (Bar Chart)",
+        featureNameEn: "Clustered Bar, Stacked Bar & 100% Stacked Horizontal Bars",
+        description: "অনুভূমিক বার আকারে একাধিক ক্যাটাগরির মান ও রেঞ্জ তুলনামূলক বিশ্লেষণ করার চার্ট।",
+        voicePrompt: "ডকুমেন্টে একটি বার চার্ট তৈরি করো / অনুভূমিক বার দাও",
+        chatPrompt: "Insert Bar Chart titled 'Regional Comparison' with categories ['North', 'South', 'East', 'West']",
+        aiAction: "xlBarClustered (57) টাইপে বার চার্ট সন্নিবেশ করে সঠিক স্কেলিং ও সিরিজ মান ইনপুট করে।",
+        category: "Bar Chart"
+      },
+      {
+        id: "cmd-ch-3",
+        featureName: "লাইন চার্ট (Line Chart)",
+        featureNameEn: "Standard Line, Line with Markers & Stacked Trend Lines",
+        description: "সময়ের সাথে সাথে ট্রেন্ড, ধারাবাহিক বৃদ্ধি বা ওঠানামা প্রদর্শনের জন্য রেখাচিত্র বা লাইন চার্ট তৈরি।",
+        voicePrompt: "ডকুমেন্টে একটি মাসিক ট্রেন্ড লাইন চার্ট যোগ করো",
+        chatPrompt: "Insert Line Chart titled 'Performance Trend' with categories ['Jan', 'Feb', 'Mar', 'Apr']",
+        aiAction: "xlLine (4) টাইপে লাইন চার্ট সন্নিবেশ করে ট্রেন্ড মার্কার ও টাইটেল সেট করে।",
+        category: "Line Chart"
+      },
+      {
+        id: "cmd-ch-4",
+        featureName: "পাই চার্ট ও ডোনাট (Pie Chart)",
+        featureNameEn: "2D/3D Pie, Exploded Pie & Doughnut Proportional Charts",
+        description: "শতকরা হার বা আনুপাতিক শেয়ার দেখানোর জন্য বৃত্তাকার পাই চার্ট, এক্সপ্লোডেড পাই বা ডোনাট চার্ট তৈরি।",
+        voicePrompt: "ডকুমেন্টে 'বাজেট বণ্টন' শিরোনামে একটি পাই চার্ট তৈরি করো",
+        chatPrompt: "Insert Pie Chart titled 'Budget Allocation' with categories ['R&D', 'Marketing', 'Ops'] and values [40, 35, 25]",
+        aiAction: "xlPie (5) বা xlDoughnut দিয়ে পাই চার্ট রেন্ডার করে শতাংশের স্লাইস প্রদর্শন করে।",
+        category: "Pie Chart"
+      },
+      {
+        id: "cmd-ch-5",
+        featureName: "এরিয়া চার্ট (Area Chart)",
+        featureNameEn: "Standard Area, Stacked Area & 100% Stacked Area Charts",
+        description: "লাইনের নিচের অংশ ভরাট করে সময়ের সাথে পরিমাণের সমষ্টি ও পরিবর্তন প্রদর্শনের জন্য এরিয়া চার্ট তৈরি।",
+        voicePrompt: "ডকুমেন্টে একটি ইউজার গ্রোথ এরিয়া চার্ট যোগ করো",
+        chatPrompt: "Insert Area Chart titled 'User Growth Area' with categories ['2021', '2022', '2023', '2024']",
+        aiAction: "xlArea (1) ধ্রুবক ব্যবহার করে মসৃণ ক্ষেত্রফল ভরাট চার্ট তৈরি করে।",
+        category: "Area Chart"
+      },
+      {
+        id: "cmd-ch-6",
+        featureName: "স্ক্যাটার চার্ট (Scatter / XY Chart)",
+        featureNameEn: "XY Scatter with Points, Smooth Lines & Straight Markers",
+        description: "দুটি সংখ্যার ভেরিয়েবলের মধ্যে সম্পর্ক বা ক্লাস্টার নির্দেশ করার জন্য এক্স-ওয়াই (XY) স্ক্যাটার চার্ট।",
+        voicePrompt: "ডকুমেন্টে একটি স্ক্যাটার চার্ট তৈরি করো / বিন্দু চার্ট দাও",
+        chatPrompt: "Insert Scatter Chart titled 'Latency vs Load' with XY data points",
+        aiAction: "xlXYScatter (-4169) কোডে স্ক্যাটার প্লট তৈরি করে কোঅর্ডিনেট ডাটা ম্যাপ করে।",
+        category: "Scatter Chart"
+      },
+      {
+        id: "cmd-ch-7",
+        featureName: "স্টক চার্ট (Stock Chart)",
+        featureNameEn: "High-Low-Close (HLC), Open-High-Low-Close (OHLC) & Volume Charts",
+        description: "শেয়ার বাজার বা ফাইন্যান্সিয়াল ট্রেডিং ডাটার জন্য হাই, লো, ওপেন ও ক্লোজ প্রাইস চার্ট।",
+        voicePrompt: "ডকুমেন্টে একটি স্টক চার্ট যোগ করো / শেয়ার বাজার গ্রাফ দাও",
+        chatPrompt: "Insert Stock Chart titled 'Daily Stock Performance' with High, Low, Close values",
+        aiAction: "xlStockHLC (88) বা xlStockOHLC (89) তৈরি করে ৩টি কলামের ট্রেডিং রেঞ্জ লোড করে।",
+        category: "Stock Chart"
+      },
+      {
+        id: "cmd-ch-8",
+        featureName: "সারফেস চার্ট (Surface Chart)",
+        featureNameEn: "3D Surface, Wireframe Surface & Contour Top-View Charts",
+        description: "টপোগ্রাফিক ম্যাপ বা ত্রিমাত্রিক সারফেস ডাটার জন্য ৩ডি সারফেস চার্ট তৈরি।",
+        voicePrompt: "ডকুমেন্টে একটি ৩ডি সারফেস চার্ট তৈরি করো / ভূ-প্রকৃতি গ্রাফ দাও",
+        chatPrompt: "Insert Surface Chart titled 'Topographic Terrain' with 3D wireframe mesh",
+        aiAction: "xlSurface (83) ব্যবহার করে ত্রিমাত্রিক ভূ-সংস্থান বা ম্যাট্রিক্স পৃষ্ঠতল তৈরি করে।",
+        category: "Surface Chart"
+      },
+      {
+        id: "cmd-ch-9",
+        featureName: "রাডার চার্ট (Radar Chart)",
+        featureNameEn: "Standard Radar, Filled Radar & Radar with Markers (Spider Chart)",
+        description: "মাল্টি-ভেরিয়েবল পারফরম্যান্স বা দক্ষতা ম্যাট্রিক্স দেখানোর জন্য মাকড়শার জালের মতো রাডার চার্ট তৈরি।",
+        voicePrompt: "ডকুমেন্টে একটি রাডার চার্ট তৈরি করো / স্পাইডার চার্ট দাও",
+        chatPrompt: "Insert Radar Chart titled 'Competency Matrix' with skills ['Speed', 'Accuracy', 'Reliability']",
+        aiAction: "xlRadar (-4151) বা xlRadarFilled দিয়ে বহুমাত্রিক অক্ষবিশিষ্ট রাডার চার্ট তৈরি করে।",
+        category: "Radar Chart"
+      },
+      {
+        id: "cmd-ch-10",
+        featureName: "কম্বো চার্ট (Combo Chart)",
+        featureNameEn: "Dual-Axis Combination Chart (Clustered Column + Line Trend Overlay)",
+        description: "একই চার্টে কলাম ও লাইন মিলিয়ে একাধিক মেট্রিক (যেমন ভলিউম ও গ্রোথ রেট) একসাথে প্রদর্শনের জন্য কম্বো চার্ট।",
+        voicePrompt: "ডকুমেন্টে একটি কম্বো চার্ট যোগ করো (কলাম এবং লাইন মিলিয়ে)",
+        chatPrompt: "Insert Combo Chart titled 'Revenue vs Growth' with column volume and line percentage",
+        aiAction: "কলাম ক্লাস্টার্ড চার্ট তৈরি করে দ্বিতীয় সিরিজটিকে xlLine (4) টাইপে রূপান্তর করে নিখুঁত কম্বো চার্ট বানায়।",
+        category: "Combo Chart"
+      }
+    ]
   }
 ];
