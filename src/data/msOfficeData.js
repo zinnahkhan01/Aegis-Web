@@ -14,7 +14,7 @@ export const MS_OFFICE_SUITE = [
     color: "#2B579A",
     accent: "#00F2FF",
     icon: "FileText",
-    featuresCount: "105+ Voice & Chat Actions",
+    featuresCount: "120+ Voice & Chat Actions",
     description: "ডকুমেন্ট তৈরি থেকে শুরু করে পাসওয়ার্ড এনক্রিপশন, টেবিলের নির্দিষ্ট কলামে লেখা, প্রফেশনাল সিভি তৈরি এবং ফাইল ইন্সপেকশন—সবকিছু নিয়ন্ত্রণ করুন সরাসরি বাংলা বা ইংরেজি ভয়েস ও টেক্সট কমান্ডে।"
   },
   {
@@ -691,8 +691,90 @@ export const MS_WORD_STEPS = [
     ]
   },
   {
-    stepId: "step-2",
+    stepId: "step-1-8",
     stepNumber: "Step 08",
+    menuName: "File Menu ➔ 1.8 Account",
+    title: "অ্যাকাউন্ট, ইউজার প্রোফাইল ও থিম সেটিংস (Account, Theme & License Engine)",
+    titleEn: "Microsoft Account, User Profile, Office Theme, Connected Services & License",
+    badge: "100% Tested & Live",
+    badgeColor: "emerald",
+    summary: "মাইক্রোসফট একাউন্ট তথ্য ও আইডি দেখা, ওয়ার্ডের ইউজার নাম ও ইনিশিয়াল আপডেট, ডার্ক মোড / ব্ল্যাক / কালারফুল থিম পরিবর্তন, সংযুক্ত ক্লাউড ড্রাইভ যাচাই এবং সফটওয়্যার লাইসেন্স ও আপডেট ম্যানেজমেন্টের স্বয়ংক্রিয় নির্দেশিকা।",
+    commands: [
+      {
+        id: "cmd-account-1",
+        featureName: "মাইক্রোসফট একাউন্ট তথ্য (Microsoft Account)",
+        featureNameEn: "Signed-In Identity, UPN & Account GUID",
+        description: "মাইক্রোসফট ওয়ার্ডে সাইন-ইন থাকা লাইভ আইডি, ইমেইল (UPN) এবং ওয়ান-অথ একাউন্ট আইডি স্বয়ংক্রিয়ভাবে প্রদর্শন করে।",
+        voicePrompt: "আমার মাইক্রোসফট একাউন্ট দেখাও",
+        chatPrompt: "Show my Microsoft account info",
+        aiAction: "উইন্ডোজ রেজিস্ট্রি থেকে OneAuth আইডি ও সার্ভিসেস ক্যাশ স্ক্যান করে সক্রিয় একাউন্ট তথ্য রিটার্ন করে।",
+        category: "Microsoft Account"
+      },
+      {
+        id: "cmd-account-2",
+        featureName: "ইউজার প্রোফাইল পরিবর্তন (User Profile & Initials)",
+        featureNameEn: "Word User Profile (UserName, Initials & Address)",
+        description: "ডকুমেন্টের কমেন্ট ও ট্র্যাকিংয়ে ব্যবহৃত ওয়ার্ডের ব্যবহারকারীর নাম ও ইনিশিয়াল তাৎক্ষণিক পরিবর্তন বা যাচাই করে।",
+        voicePrompt: "ইউজার নাম Zinnah Khan এবং ইনিশিয়াল ZK দাও",
+        chatPrompt: "Set Word user name to 'Zinnah Khan' and initials to 'ZK'",
+        aiAction: "Application.UserName ও Application.UserInitials প্রোপার্টি লাইভ আপডেট করে কনফার্মেশন দেয়।",
+        category: "User Profile"
+      },
+      {
+        id: "cmd-account-3",
+        featureName: "অফিস থিম ও ডার্ক মোড (Office Theme)",
+        featureNameEn: "Switch Office Theme: Colorful, Dark Gray, Black, White, System",
+        description: "চোখের আরামের জন্য কালো (Dark Mode), গাঢ় ধূসর (Dark Gray), রঙিন (Colorful), সাদা (White) অথবা সিস্টেম অনুযায়ী থিম পরিবর্তন।",
+        voicePrompt: "অফিস থিম ডার্ক মোডে পরিবর্তন করো",
+        chatPrompt: "Change Office theme to Black / Dark Mode",
+        aiAction: "Office Common রেজিস্ট্রি কি-তে UI Theme (DWORD 0/3/4/5/6) কনফিগার করে সম্পূর্ণ অফিস স্যুটের থিম পরিবর্তন করে।",
+        category: "Office Theme"
+      },
+      {
+        id: "cmd-account-4",
+        featureName: "সংযুক্ত ক্লাউড সার্ভিস (Connected Services)",
+        featureNameEn: "Enumerate Connected OneDrive & Cloud Storage Services",
+        description: "অফিসের সাথে সংযুক্ত পার্সোনাল ও বিজনেস OneDrive, SharePoint কিংবা ক্লাউড স্টোরেজের সক্রিয় তালিকা ও লিংক প্রদর্শন।",
+        voicePrompt: "কানেক্টেড সার্ভিসগুলো দেখাও",
+        chatPrompt: "Show connected cloud services and accounts",
+        aiAction: "ServicesManagerCache থেকে সংযুক্ত ড্রাইভের নাম, একাউন্ট ও URL স্ক্যান করে তালিকাভুক্ত করে।",
+        category: "Connected Services"
+      },
+      {
+        id: "cmd-account-5",
+        featureName: "প্রোডাক্ট তথ্য ও লাইসেন্স (Product Information)",
+        featureNameEn: "Office Edition, Version, Build, Architecture & License Status",
+        description: "মাইক্রোসফট অফিস/৩৬৫ এর সংস্করণ (যেমন: Microsoft 365 Family), ৬৪-বিট আর্কিটেকচার, চ্যানেল এবং লাইসেন্স সক্রিয়তা যাচাই।",
+        voicePrompt: "ওয়ার্ডের প্রোডাক্ট ইনফরমেশন ও লাইসেন্স দেখাও",
+        chatPrompt: "Show Office product information, version and license status",
+        aiAction: "ClickToRun Configuration ও Word COM ইঞ্জিন থেকে বিল্ড নম্বর, প্রোডাক্ট কোড ও সক্রিয় সাবস্ক্রিপশন স্ট্যাটাস প্রদান করে।",
+        category: "Product Info"
+      },
+      {
+        id: "cmd-account-6",
+        featureName: "অফিস আপডেট ও রিলিজ নোট (Update Office)",
+        featureNameEn: "Trigger ClickToRun Update Wizard or View Release History",
+        description: "ব্যাকগ্রাউন্ডে অফিস আপডেট চেক ও ডাউনলোড উইজার্ড চালু করা অথবা কারেন্ট চ্যানেলের রিলিজ নোট ব্রাউজারে দেখা।",
+        voicePrompt: "অফিস আপডেট চেক করো",
+        chatPrompt: "Check for Microsoft Office updates",
+        aiAction: "OfficeC2RClient.exe /update user এক্সিকিউট করে অথবা অফিশিয়াল আপডেট পোর্টাল ওপেন করে।",
+        category: "Update Office"
+      },
+      {
+        id: "cmd-account-7",
+        featureName: "একাউন্ট ও সাবস্ক্রিপশন ম্যানেজমেন্ট (Manage Account)",
+        featureNameEn: "Launch Official Microsoft Account & Subscription Management Portal",
+        description: "পেমেন্ট, ডিভাইস, পাসওয়ার্ড ও সাবস্ক্রিপশন পরিচালনার জন্য সরাসরি অফিশিয়াল মাইক্রোসফট একাউন্ট পোর্টাল ওপেন করে।",
+        voicePrompt: "আমার মাইক্রোসফট একাউন্ট ম্যানেজ করো",
+        chatPrompt: "Manage my Microsoft account and subscription",
+        aiAction: "ডিফল্ট ব্রাউজারে account.microsoft.com অথবা portal.office.com সিকিউর পোর্টাল চালু করে।",
+        category: "Manage Account"
+      }
+    ]
+  },
+  {
+    stepId: "step-2",
+    stepNumber: "Step 09",
     menuName: "Table Menu ➔ Precise Cell & Column Control",
     title: "স্মার্ট টেবিল ও নির্দিষ্ট কলামে লেখা (Table Column Precision)",
     titleEn: "Smart Table Generation & Multi-Column Precision Writing",
@@ -744,7 +826,7 @@ export const MS_WORD_STEPS = [
   },
   {
     stepId: "step-3",
-    stepNumber: "Step 09",
+    stepNumber: "Step 10",
     menuName: "Auto Assembly ➔ Full Document Generation",
     title: "সম্পূর্ণ সিভি, রিপোর্ট ও দরখাস্ত তৈরি (Full Document Assembly)",
     titleEn: "End-to-End Professional CV, Business Reports & Formal Letters",
@@ -786,7 +868,7 @@ export const MS_WORD_STEPS = [
   },
   {
     stepId: "step-4",
-    stepNumber: "Step 10",
+    stepNumber: "Step 11",
     menuName: "Design & Layout ➔ Themes, Colors & Page Setup",
     title: "ডিজাইন থিম, মার্জিন ও লেআউট (Design, Margin & Layout)",
     titleEn: "Executive Typography, Themes, Borders & Page Setup",
@@ -828,7 +910,7 @@ export const MS_WORD_STEPS = [
   },
   {
     stepId: "step-5",
-    stepNumber: "Step 11",
+    stepNumber: "Step 12",
     menuName: "Interaction Modes ➔ Voice vs Text Guide",
     title: "ভয়েস ও চ্যাট ব্যবহারের পূর্ণাঙ্গ নিয়মাবলী (How to Use Guide)",
     titleEn: "Complete Duplex Voice & Interactive Chat Operating Guide",
