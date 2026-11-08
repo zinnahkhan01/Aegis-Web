@@ -14,7 +14,7 @@ export const MS_OFFICE_SUITE = [
     color: "#2B579A",
     accent: "#00F2FF",
     icon: "FileText",
-    featuresCount: "135+ Voice & Chat Actions",
+    featuresCount: "145+ Voice & Chat Actions",
     description: "ডকুমেন্ট তৈরি থেকে শুরু করে পাসওয়ার্ড এনক্রিপশন, টেবিলের নির্দিষ্ট কলামে লেখা, প্রফেশনাল সিভি তৈরি এবং ফাইল ইন্সপেকশন—সবকিছু নিয়ন্ত্রণ করুন সরাসরি বাংলা বা ইংরেজি ভয়েস ও টেক্সট কমান্ডে।"
   },
   {
@@ -1111,6 +1111,118 @@ export const MS_WORD_STEPS = [
         chatPrompt: "Create an explicit new blank document",
         aiAction: "is_explicit_new_doc ফিল্টারের মাধ্যমে গ্র্যানুলার এলিমেন্ট ('নতুন রো', 'নতুন টেবিল') কে বাদ দিয়ে কেবল আসল ফাইল ক্রিয়েশন নির্দেশ শনাক্ত করে।",
         category: "Targeting Policy"
+      }
+    ]
+  },
+  {
+    stepId: "step-2-1",
+    stepNumber: "Step 15",
+    menuName: "Home Menu ➔ 2.1 Clipboard",
+    title: "হোম মেনু ➔ ২.১ ক্লিপবোর্ড (Home Menu ➔ 2.1 Clipboard)",
+    titleEn: "Complete Word Clipboard Management & Format Painter",
+    badge: "Home Ribbon",
+    badgeColor: "blue",
+    summary: "মাইক্রোসফট ওয়ার্ডের সবচেয়ে বেশি ব্যবহৃত মেনু হোম রিবনের ক্লিপবোর্ড গ্রুপ—পেস্ট, পেস্ট স্পেশাল, কিপ টেক্সট অনলি, ফরম্যাট ম্যাচিং, কাট, কপি, ফরম্যাট পেইন্টার, ক্লিপবোর্ড হিস্ট্রি ও অফিস প্যানেল নিয়ন্ত্রণের পূর্ণাঙ্গ এআই সমাধান।",
+    commands: [
+      {
+        id: "cmd-clip-1",
+        featureName: "পেস্ট (Paste)",
+        featureNameEn: "Standard Clipboard Paste at Cursor",
+        description: "ক্লিপবোর্ডে থাকা যেকোনো লেখা, টেবিল বা অবজেক্ট সক্রিয় ডকুমেন্টে কার্সরের বর্তমান অবস্থানে পেস্ট করে।",
+        voicePrompt: "ক্লিপবোর্ডের লেখা এখানে পেস্ট করো",
+        chatPrompt: "Paste clipboard content at current position",
+        aiAction: "Selection.Paste() এক্সিকিউট করে এবং সদ্য পেস্ট করা কনটেন্ট অ্যাক্টিভ ডকুমেন্টে যুক্ত করে।",
+        category: "Paste"
+      },
+      {
+        id: "cmd-clip-2",
+        featureName: "পেস্ট স্পেশাল (Paste Special)",
+        featureNameEn: "Paste Special with Explicit Data Types",
+        description: "নির্দিষ্ট ফরম্যাট যেমন Unformatted Text, RTF, HTML, বা Bitmap হিসেবে ডাটা পেস্ট করে।",
+        voicePrompt: "পেস্ট স্পেশাল করো আনফরম্যাটেড টেক্সট হিসেবে",
+        chatPrompt: "Paste special as unformatted text",
+        aiAction: "Selection.PasteSpecial(DataType=wdPasteText/wdPasteRTF/wdPasteHTML) কল করে নির্দিষ্ট ডাটা ফরম্যাটে রূপান্তর করে পেস্ট করে।",
+        category: "Paste Special"
+      },
+      {
+        id: "cmd-clip-3",
+        featureName: "শুধুমাত্র টেক্সট পেস্ট (Paste as Text / Keep Text Only)",
+        featureNameEn: "Keep Text Only Unformatted Paste",
+        description: "উৎস ফাইলের কোনো স্টাইল, কালার বা ফন্ট ছাড়াই শুধুমাত্র প্লেইন টেক্সট হিসেবে ক্লিপবোর্ড ডাটা পেস্ট করে।",
+        voicePrompt: "শুধুমাত্র টেক্সট হিসেবে পেস্ট করো",
+        chatPrompt: "Paste as plain text keeping text only",
+        aiAction: "উৎস ফরম্যাটিং সম্পূর্ণ স্ট্রিপ করে Selection.PasteSpecial(DataType=2) অথবা TypeText() প্রয়োগ করে।",
+        category: "Paste as Text"
+      },
+      {
+        id: "cmd-clip-4",
+        featureName: "ফরম্যাট পেস্ট (Paste Formatting / Match Destination)",
+        featureNameEn: "Paste Formatting & Match Destination Style",
+        description: "ডকুমেন্টের বর্তমান প্যারাগ্রাফ ও ফন্ট স্টাইলের সাথে ম্যাচ করিয়ে বা ফরম্যাট পেইন্টারের স্টাইল কার্সরে পেস্ট করে।",
+        voicePrompt: "ডকুমেন্টের ফরম্যাটের সাথে মিলিয়ে পেস্ট করো",
+        chatPrompt: "Paste formatting and match destination style",
+        aiAction: "Selection.PasteFormat() বা wdFormatSurroundingFormatting রুলস কার্যকর করে স্টাইল অক্ষুণ্ণ রাখে।",
+        category: "Paste Formatting"
+      },
+      {
+        id: "cmd-clip-5",
+        featureName: "কাট (Cut Selection)",
+        featureNameEn: "Cut Selected Text or Paragraph to Clipboard",
+        description: "নির্বাচিত টেক্সট, টেবিল বা প্যারাগ্রাফ মুছে ফেলে সিস্টেম ক্লিপবোর্ডে সংরক্ষণ করে।",
+        voicePrompt: "সিলেক্ট করা অংশটি কাট করো",
+        chatPrompt: "Cut selected text to clipboard",
+        aiAction: "Selection.Cut() এক্সিকিউট করে কার্সরের সিলেক্টেড রেঞ্জ ক্লিপবোর্ডে কপি করে এবং ডকুমেন্ট থেকে রিমুভ করে।",
+        category: "Cut"
+      },
+      {
+        id: "cmd-clip-6",
+        featureName: "কপি (Copy Selection)",
+        featureNameEn: "Copy Selected Content to Clipboard",
+        description: "সিলেক্টেড টেক্সট বা উপাদান ডকুমেন্ট থেকে না মুছে ক্লিপবোর্ড হিস্ট্রিতে কপি করে সংরক্ষণ করে।",
+        voicePrompt: "সিলেক্ট করা লেখাটি কপি করো",
+        chatPrompt: "Copy selected text to clipboard",
+        aiAction: "Selection.Copy() মেথড এক্সিকিউট করে এবং ইন-মেমোরি ও ওএস ক্লিপবোর্ডে টেক্সট রেকর্ড করে।",
+        category: "Copy"
+      },
+      {
+        id: "cmd-clip-7",
+        featureName: "ফরম্যাট পেইন্টার (Format Painter)",
+        featureNameEn: "Copy and Apply Formatting Styles",
+        description: "কোনো টেক্সটের ফন্ট, কালার, সাইজ ও স্টাইল কপি করে অন্য কোনো নির্বাচিত লেখার উপর হুবহু পেইন্ট/প্রয়োগ করে।",
+        voicePrompt: "এই লেখার ফরম্যাট কপি করে নিচের অংশে পেইন্ট করো",
+        chatPrompt: "Use format painter to copy format and paint on target text",
+        aiAction: "Selection.CopyFormat() দিয়ে স্টাইল ক্যাপচার করে এবং টার্গেট সিলেকশনে Selection.PasteFormat() কল করে।",
+        category: "Format Painter"
+      },
+      {
+        id: "cmd-clip-8",
+        featureName: "ক্লিপবোর্ড হিস্ট্রি (Clipboard History)",
+        featureNameEn: "Inspect Recent Cut and Copied Clipboard Items",
+        description: "সম্প্রতি কাট বা কপি করা টেক্সট ও আইটেমসমূহের তালিকা, টাইমস্ট্যাম্প ও অক্ষরের দৈর্ঘ্য প্রদর্শন করে।",
+        voicePrompt: "ক্লিপবোর্ড হিস্ট্রি দেখাও",
+        chatPrompt: "Show recent clipboard history",
+        aiAction: "সিস্টেম ও ওয়ার্ড ইঞ্জিনের _clipboard_history লগ থেকে সাম্প্রতিক আইটেমগুলোর প্রিভিউ ও সময় রিটার্ন করে।",
+        category: "Clipboard History"
+      },
+      {
+        id: "cmd-clip-9",
+        featureName: "ক্লিপবোর্ড টাস্ক প্যানেল (Office Clipboard Pane)",
+        featureNameEn: "Toggle Microsoft Word Office Clipboard Side Pane",
+        description: "মাইক্রোসফট ওয়ার্ডের পাশের অফিস ক্লিপবোর্ড টাস্ক প্যানেলটি ওপেন বা ক্লোজ করে।",
+        voicePrompt: "অফিস ক্লিপবোর্ড প্যানেল খোলো",
+        chatPrompt: "Open Office Clipboard task pane in Word",
+        aiAction: "Application.CommandBars('Office Clipboard').Visible প্রোপার্টি টগল করে রিয়েল প্যানেল প্রদর্শন বা বন্ধ করে।",
+        category: "Clipboard Pane"
+      },
+      {
+        id: "cmd-clip-10",
+        featureName: "ক্লিপবোর্ড ক্লিয়ার (Clear All Clipboard)",
+        featureNameEn: "Clear System and Office Clipboard Memory",
+        description: "উইন্ডোজ ও অফিস ক্লিপবোর্ডে সংরক্ষিত সমস্ত পূর্ববর্তী ডাটা ও হিস্ট্রি সম্পূর্ণ খালি বা মুছে দেয়।",
+        voicePrompt: "ক্লিপবোর্ডের সব ডাটা মুছে দাও",
+        chatPrompt: "Clear all items from clipboard memory",
+        aiAction: "win32clipboard.EmptyClipboard() এবং ইন-মেমোরি হিস্ট্রি ফ্লাশ করে মেমোরি নিরাপদ ও পরিষ্কার করে।",
+        category: "Clear Clipboard"
       }
     ]
   }
