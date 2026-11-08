@@ -2290,5 +2290,69 @@ export const MS_WORD_STEPS = [
         category: "Stars & Banners"
       }
     ]
+  },
+  {
+    stepId: "step-3-3-ico",
+    stepNumber: "Step 24",
+    menuName: "Insert Menu ➔ 3.3 Illustrations ➔ Icons",
+    title: "ইনসার্ট মেনু: ভেক্টর আইকন ও এসভিজি গ্রাফিক্স (Icons & SVG)",
+    titleEn: "Insert Illustrations: Icons (Insert Icons, SVG Graphics)",
+    subtitle: "ডকুমেন্টে টেকনোলজি, সিকিউরিটি, অ্যানালিটিক্স, ক্লাউড ও বিজনেস ক্যাটাগরির ভেক্টর আইকন এবং কাস্টম এসভিজি (SVG) গ্রাফিক্স নিখুঁত রেজোলিউশন ও স্কেলিং সহ সন্নিবেশ।",
+    badge: "Icons & SVG",
+    icon: "Sparkles",
+    commands: [
+      {
+        id: "cmd-ico-1",
+        featureName: "ভেক্টর আইকন সন্নিবেশ (Insert Icons)",
+        featureNameEn: "Insert Scalable Vector Icons (Tech, Security, Cloud, Analytics, User, etc.)",
+        description: "Word ডকুমেন্টে টেকনোলজি, সাইবার নিরাপত্তা, ডাটা অ্যানালিটিক্স, ক্লাউড কম্পিউটিং, ইউজার প্রোফাইল ও বিজনেস ক্যাটাগরির হাই-রেজোলিউশন ভেক্টর আইকন ইনলাইন বা ফ্লোটিং আকারে যোগ করে।",
+        voicePrompt: "ডকুমেন্টে একটি ক্লাউড আইকন যোগ করো / সিকিউরিটি আইকন দাও",
+        chatPrompt: "Insert a security vector icon with 1.5 inches size",
+        aiAction: "উচ্চমানের ভেক্টর আইকন অ্যাসেট নির্বাচন করে Word InlineShapes.AddPicture দিয়ে নেটিভ wdInlineShapeGraphic ফরম্যাটে সন্নিবেশ করে।",
+        category: "Icons"
+      },
+      {
+        id: "cmd-ico-2",
+        featureName: "এসভিজি গ্রাফিক্স (SVG Graphics)",
+        featureNameEn: "Insert Custom SVG Graphics (Raw Markup or File with Dimensions)",
+        description: "র' এক্সএমএল (XML/SVG) মার্কআপ অথবা কম্পিউটারের যেকোনো .svg ফাইল থেকে সরাসরি স্কেলেবল ভেক্টর গ্রাফিক্স নির্দিষ্ট প্রস্থ, উচ্চতা ও সেন্টার অ্যালাইনমেন্ট সহ ডকুমেন্টে সন্নিবেশ করে।",
+        voicePrompt: "ডকুমেন্টে এই এসভিজি গ্রাফিক্সটি যোগ করো / কাস্টম এসভিজি ফাইল দাও",
+        chatPrompt: "Insert custom SVG graphic with width 2.5 inches and center alignment",
+        aiAction: "SVG ফাইল বা কোড ভ্যালিডেট করে টেম্পোরারি/অ্যাসেট পাথে সংরক্ষণ করে wdInlineShapeGraphic ফরম্যাটে ডকুমেন্টে রেন্ডার করে।",
+        category: "SVG Graphics"
+      }
+    ]
+  },
+  {
+    stepId: "step-3-3-3d",
+    stepNumber: "Step 25",
+    menuName: "Insert Menu ➔ 3.3 Illustrations ➔ 3D Models",
+    title: "ইনসার্ট মেনু: ৩ডি মডেল সন্নিবেশ (3D Models)",
+    titleEn: "Insert Illustrations: 3D Models (Insert 3D Models, 3D Model from File)",
+    subtitle: "ডকুমেন্টে কিউব, পিরামিড, সিলিন্ডার ও ডায়মন্ড সহ নেটিভ ৩ডি মডেল এবং লোকাল .obj, .glb, .gltf, .3mf, .stl ফাইল থেকে সরাসরি ৩ডি অবজেক্ট সন্নিবেশ ও প্রদর্শন।",
+    badge: "3D Models",
+    icon: "Layers",
+    commands: [
+      {
+        id: "cmd-3d-1",
+        featureName: "৩ডি মডেল যোগ করা (Insert 3D Models)",
+        featureNameEn: "Insert Prebuilt 3D Geometric Models (Cube, Pyramid, Cylinder, Diamond)",
+        description: "Word ডকুমেন্টে ত্রিমাত্রিক (3D) কিউব, পিরামিড, সিলিন্ডার বা ডায়মন্ড মডেল নির্দিষ্ট প্রস্থ, উচ্চতা ও ইনলাইন লেআউটে সংযুক্ত করে।",
+        voicePrompt: "ডকুমেন্টে একটি ৩ডি সিলিন্ডার মডেল যোগ করো / ৩ডি কিউব বসাও",
+        chatPrompt: "Insert a 3D cube model with width 2.5 inches",
+        aiAction: "Word COM-এর InlineShapes.Add3DModel API ব্যবহার করে নেটিভ wdInlineShapeModel3D হিসেবে ত্রিমাত্রিক মডেল রেন্ডার করে।",
+        category: "3D Models"
+      },
+      {
+        id: "cmd-3d-2",
+        featureName: "ফাইল থেকে ৩ডি মডেল (3D Model from File)",
+        featureNameEn: "Insert 3D Model from Local File (.obj, .glb, .gltf, .3mf, .stl, .fbx)",
+        description: "কম্পিউটারের নির্দিষ্ট ডিরেক্টরি বা পাথ থেকে স্ট্যান্ডার্ড ৩ডি ফাইল ফরম্যাট যেমন .obj, .glb, .gltf, .3mf, .stl ইত্যাদি স্বয়ংক্রিয়ভাবে যাচাই করে Word ডকুমেন্টে যুক্ত করে।",
+        voicePrompt: "ফাইল থেকে ৩ডি মডেল যোগ করো 'C:/models/sample.obj'",
+        chatPrompt: "Insert 3D model from file 'C:/models/robot.glb' with height 3 inches",
+        aiAction: "ফাইলের অস্তিত্ব ও ফরম্যাট ভ্যালিডেট করে doc.InlineShapes.Add3DModel(FileName) দিয়ে সম্পূর্ণ ৩ডি অবজেক্ট ডকুমেন্টে লোড করে।",
+        category: "3D Model from File"
+      }
+    ]
   }
 ];
