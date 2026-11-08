@@ -14,7 +14,7 @@ export const MS_OFFICE_SUITE = [
     color: "#2B579A",
     accent: "#00F2FF",
     icon: "FileText",
-    featuresCount: "60+ Voice & Chat Actions",
+    featuresCount: "75+ Voice & Chat Actions",
     description: "ডকুমেন্ট তৈরি থেকে শুরু করে পাসওয়ার্ড এনক্রিপশন, টেবিলের নির্দিষ্ট কলামে লেখা, প্রফেশনাল সিভি তৈরি এবং ফাইল ইন্সপেকশন—সবকিছু নিয়ন্ত্রণ করুন সরাসরি বাংলা বা ইংরেজি ভয়েস ও টেক্সট কমান্ডে।"
   },
   {
@@ -395,8 +395,170 @@ export const MS_WORD_STEPS = [
     ]
   },
   {
-    stepId: "step-2",
+    stepId: "step-1-5",
     stepNumber: "Step 05",
+    menuName: "File Menu ➔ 1.5 Print",
+    title: "ডকুমেন্ট প্রিন্ট, প্রিন্টার নির্বাচন ও প্রিন্ট প্রিভিউ (Print Pipeline)",
+    titleEn: "Print Automation, Printer Selection, Duplex, Custom Range & Print Preview",
+    badge: "100% Tested & Live",
+    badgeColor: "emerald",
+    summary: "উইন্ডোজের ইনস্টল করা প্রিন্টার তালিকা দেখা, প্রিন্টার সুইচ করা, ফুল পেজ বা নির্দিষ্ট পেজ রেঞ্জ প্রিন্ট, ডুপ্লেক্স (উভয় পিঠ), পেজ প্রতি শিট (N-Up Zoom) এবং প্রিন্ট প্রিভিউ নিয়ন্ত্রণের পূর্ণাঙ্গ নির্দেশিকা।",
+    commands: [
+      {
+        id: "cmd-print-1",
+        featureName: "ডকুমেন্ট প্রিন্ট (Print Document)",
+        featureNameEn: "Execute Document Print",
+        description: "অ্যাক্টিভ প্রিন্টারে পুরো ডকুমেন্ট অথবা নির্দিষ্ট কপি সংখ্যা সরাসরি প্রিন্ট করে।",
+        voicePrompt: "ডকুমেন্টটি ২ কপি প্রিন্ট করো",
+        chatPrompt: "Print 2 copies of this document",
+        aiAction: "doc.PrintOut(Copies=2, Background=False) কার্যকর করে প্রিন্ট স্পুলারে পাঠায়।",
+        category: "Print"
+      },
+      {
+        id: "cmd-print-2",
+        featureName: "প্রিন্টার নির্বাচন (Select Printer)",
+        featureNameEn: "Switch Active Printer",
+        description: "পিসির যেকোনো প্রিন্টার (যেমন Microsoft Print to PDF, HP LaserJet) সক্রিয় প্রিন্টার হিসেবে নির্ধারণ করে।",
+        voicePrompt: "Microsoft Print to PDF প্রিন্টার নির্বাচন করো",
+        chatPrompt: "Select printer 'Microsoft Print to PDF'",
+        aiAction: "ActivePrinter প্রোপার্টিতে রিকুয়েস্টেড প্রিন্টার নাম সেট করে প্রিন্টার সুইচ সম্পন্ন করে।",
+        category: "Select Printer"
+      },
+      {
+        id: "cmd-print-3",
+        featureName: "প্রিন্টার তালিকা প্রদর্শন (List Printers)",
+        featureNameEn: "List All Installed Printers",
+        description: "উইন্ডোজে ইনস্টল করা সকল লোকাল, নেটওয়ার্ক এবং ভার্চুয়াল প্রিন্টারের নাম ও বর্তমান অ্যাক্টিভ প্রিন্টার প্রদর্শন করে।",
+        voicePrompt: "সব প্রিন্টারের তালিকা দেখাও",
+        chatPrompt: "Show list of all installed printers",
+        aiAction: "win32print ও COM এনামারেশন চালিয়ে প্রিন্টার তালিকা ও ডিফল্ট প্রিন্টার রিটার্ন করে।",
+        category: "Select Printer"
+      },
+      {
+        id: "cmd-print-4",
+        featureName: "সব পৃষ্ঠা প্রিন্ট (Print All Pages)",
+        featureNameEn: "Print Entire Document",
+        description: "ডকুমেন্টের ১ম পৃষ্ঠা থেকে শেষ পৃষ্ঠা পর্যন্ত সম্পূর্ণ অংশ প্রিন্ট করে।",
+        voicePrompt: "সম্পূর্ণ ডকুমেন্ট সব পৃষ্ঠা প্রিন্ট করো",
+        chatPrompt: "Print all pages of active document",
+        aiAction: "Range=wdPrintAllDocument (0) দিয়ে প্রিন্ট এক্সিকিউট করে।",
+        category: "Print Range"
+      },
+      {
+        id: "cmd-print-5",
+        featureName: "বর্তমান পৃষ্ঠা প্রিন্ট (Print Current Page)",
+        featureNameEn: "Print Currently Active Page Only",
+        description: "ওয়ার্ডে কার্সার যে পৃষ্ঠায় অবস্থান করছে শুধুমাত্র সেই নির্দিষ্ট পৃষ্ঠাটি প্রিন্ট করে।",
+        voicePrompt: "বর্তমান পৃষ্ঠাটি প্রিন্ট করো",
+        chatPrompt: "Print current page only",
+        aiAction: "Range=wdPrintCurrentPage (2) নির্ধারণ করে সরাসরি কারেন্ট পেজ প্রিন্ট করে।",
+        category: "Print Range"
+      },
+      {
+        id: "cmd-print-6",
+        featureName: "সিলেকশন প্রিন্ট (Print Selection)",
+        featureNameEn: "Print Highlighted Selection",
+        description: "ব্যবহারকারী ডকুমেন্টের যে অংশটি সিলেক্ট বা হাইলাইট করেছেন শুধুমাত্র সেই টেক্সট বা টেবিল প্রিন্ট করে।",
+        voicePrompt: "সিলেক্ট করা অংশটুকু প্রিন্ট করো",
+        chatPrompt: "Print selected text only",
+        aiAction: "Range=wdPrintSelection (1) পাঠিয়ে নির্বাচিত কন্টেন্ট প্রিন্টারে পাঠায়।",
+        category: "Print Range"
+      },
+      {
+        id: "cmd-print-7",
+        featureName: "কাস্টম পৃষ্ঠা রেঞ্জ (Custom Page Range)",
+        featureNameEn: "Print Custom Pages (e.g. 1-3, 5)",
+        description: "আপনার নির্দেশমতো নির্দিষ্ট পৃষ্ঠা বা পেজ রেঞ্জ (যেমন ১ থেকে ৩ বা ৫ নম্বর পৃষ্ঠা) প্রিন্ট করে।",
+        voicePrompt: "পৃষ্ঠা ১ থেকে ৩ প্রিন্ট করো",
+        chatPrompt: "Print custom page range 1-3",
+        aiAction: "Range=wdPrintRangeOfPages (4) এবং Pages='1-3' আর্গুমেন্ট দিয়ে প্রিন্ট সম্পন্ন করে।",
+        category: "Print Range"
+      },
+      {
+        id: "cmd-print-8",
+        featureName: "এক পিঠে প্রিন্ট (Print One-Sided)",
+        featureNameEn: "One-Sided Simplex Printing",
+        description: "কাগজের একপাশে প্রিন্ট করার জন্য ওয়ান-সাইডেড মোড কার্যকর করে।",
+        voicePrompt: "এক পাশে প্রিন্ট করো",
+        chatPrompt: "Print one-sided simplex",
+        aiAction: "ManualDuplexPrint=False কনফিগার করে স্ট্যান্ডার্ড সিমপ্লেক্স প্রিন্ট নিশ্চিত করে।",
+        category: "Duplex"
+      },
+      {
+        id: "cmd-print-9",
+        featureName: "উভয় পিঠে প্রিন্ট (Print Both Sides / Duplex)",
+        featureNameEn: "Two-Sided Duplex Printing",
+        description: "কাগজ সাশ্রয় করতে পৃষ্ঠার উভয় পিঠে প্রিন্ট করার জন্য ডুপ্লেক্স মোড চালু করে।",
+        voicePrompt: "উভয় পিঠে দুই পাশে প্রিন্ট করো",
+        chatPrompt: "Print on both sides (duplex)",
+        aiAction: "ManualDuplexPrint=True সক্রিয় করে উইন্ডোজ ডুপ্লেক্স প্রিন্টিং কার্যকর করে।",
+        category: "Duplex"
+      },
+      {
+        id: "cmd-print-10",
+        featureName: "কোলেট ও আনকোলেট (Collated / Uncollated)",
+        featureNameEn: "Collated vs Uncollated Copies",
+        description: "একাধিক কপি প্রিন্টের সময় পৃষ্ঠাগুলো সেট আকারে (১,২,৩ - ১,২,৩) সাজানো বা প্রতিটি পৃষ্ঠা আলাদা রাখা নির্ধারণ করে।",
+        voicePrompt: "কপিগুলো কোলেট করো",
+        chatPrompt: "Print with collated copies",
+        aiAction: "Collate=True / False সেট করে ডকুমেন্টের বান্ডলিং অর্ডার নিয়ন্ত্রণ করে।",
+        category: "Collation"
+      },
+      {
+        id: "cmd-print-11",
+        featureName: "পোর্ট্রেট ও ল্যান্ডস্কেপ (Orientation)",
+        featureNameEn: "Portrait & Landscape Orientation",
+        description: "প্রিন্টের কাগজের দিক লম্বালম্বি (Portrait) কিংবা আড়াআড়ি (Landscape) কনফিগার করে।",
+        voicePrompt: "ল্যান্ডস্কেপে প্রিন্ট করো",
+        chatPrompt: "Set orientation to landscape and print",
+        aiAction: "doc.PageSetup.Orientation = wdOrientLandscape (1) সেট করে সঠিক ওরিয়েন্টেশনে পাঠায়।",
+        category: "Page Setup"
+      },
+      {
+        id: "cmd-print-12",
+        featureName: "কাগজের সাইজ নির্বাচন (Paper Size)",
+        featureNameEn: "Paper Size Setup (A4, Letter, Legal)",
+        description: "প্রিন্টারের পেপার ট্রে অনুযায়ী A4, Letter, Legal, A3 বা A5 সাইজ স্বয়ংক্রিয়ভাবে নির্ধারণ করে।",
+        voicePrompt: "A4 সাইজে প্রিন্ট করো",
+        chatPrompt: "Set paper size to A4 and print",
+        aiAction: "doc.PageSetup.PaperSize = wdPaperA4 (7) কনফিগার করে প্রিন্ট স্পুল প্রস্তুত করে।",
+        category: "Paper Size"
+      },
+      {
+        id: "cmd-print-13",
+        featureName: "মার্জিন প্রি-সেট (Margins Setup)",
+        featureNameEn: "Margin Configuration (Normal, Narrow, Wide)",
+        description: "প্রিন্টের সুবিধার জন্য মার্জিন স্বাভাবিক (Normal 1\"), সংকীর্ণ (Narrow 0.5\"), মাঝারি (Moderate) বা প্রশস্ত (Wide 2\") করে।",
+        voicePrompt: "ন্যারো মার্জিনে প্রিন্ট করো",
+        chatPrompt: "Print with narrow margins",
+        aiAction: "PageSetup এর Top/Bottom/Left/Right মার্জিন স্বয়ংক্রিয়ভাবে সেট করে।",
+        category: "Margins"
+      },
+      {
+        id: "cmd-print-14",
+        featureName: "প্রতি শিটে একাধিক পেজ (Pages Per Sheet)",
+        featureNameEn: "N-Up Zoom (1, 2, 4, 6, 8, 16 Pages Per Sheet)",
+        description: "কাগজ সাশ্রয় ও নোট প্রিন্ট করার জন্য একই কাগজের পাতায় ২, ৪, ৬ বা ৮টি পৃষ্ঠা একসাথে প্রিন্ট করে।",
+        voicePrompt: "প্রতি শিটে ২ পেজ প্রিন্ট করো",
+        chatPrompt: "Print 2 pages per sheet (N-Up)",
+        aiAction: "PrintZoomColumn=2, PrintZoomRow=1 কনফিগার করে জুম আউটপুট প্রদান করে।",
+        category: "Pages Per Sheet"
+      },
+      {
+        id: "cmd-print-15",
+        featureName: "প্রিন্ট প্রিভিউ প্রদর্শন ও বন্ধ (Print Preview)",
+        featureNameEn: "Interactive Print Preview Show / Close",
+        description: "কাগজে ছাপার পূর্বে পুরো ডকুমেন্টটি কেমন দেখাবে তা বড় করে সরাসরি ওয়ার্ডে প্রদর্শন ও প্রিভিউ ক্লোজ করে।",
+        voicePrompt: "ডকুমেন্টের প্রিন্ট প্রিভিউ দেখাও",
+        chatPrompt: "Show print preview of active document",
+        aiAction: "doc.PrintPreview() ও doc.ClosePrintPreview() পরিচালনা করে এডিটিং ভিউ নিয়ন্ত্রণ করে।",
+        category: "Print Preview"
+      }
+    ]
+  },
+  {
+    stepId: "step-2",
+    stepNumber: "Step 06",
     menuName: "Table Menu ➔ Precise Cell & Column Control",
     title: "স্মার্ট টেবিল ও নির্দিষ্ট কলামে লেখা (Table Column Precision)",
     titleEn: "Smart Table Generation & Multi-Column Precision Writing",
@@ -448,7 +610,7 @@ export const MS_WORD_STEPS = [
   },
   {
     stepId: "step-3",
-    stepNumber: "Step 06",
+    stepNumber: "Step 07",
     menuName: "Auto Assembly ➔ Full Document Generation",
     title: "সম্পূর্ণ সিভি, রিপোর্ট ও দরখাস্ত তৈরি (Full Document Assembly)",
     titleEn: "End-to-End Professional CV, Business Reports & Formal Letters",
@@ -490,7 +652,7 @@ export const MS_WORD_STEPS = [
   },
   {
     stepId: "step-4",
-    stepNumber: "Step 07",
+    stepNumber: "Step 08",
     menuName: "Design & Layout ➔ Themes, Colors & Page Setup",
     title: "ডিজাইন থিম, মার্জিন ও লেআউট (Design, Margin & Layout)",
     titleEn: "Executive Typography, Themes, Borders & Page Setup",
@@ -532,7 +694,7 @@ export const MS_WORD_STEPS = [
   },
   {
     stepId: "step-5",
-    stepNumber: "Step 08",
+    stepNumber: "Step 09",
     menuName: "Interaction Modes ➔ Voice vs Text Guide",
     title: "ভয়েস ও চ্যাট ব্যবহারের পূর্ণাঙ্গ নিয়মাবলী (How to Use Guide)",
     titleEn: "Complete Duplex Voice & Interactive Chat Operating Guide",
