@@ -14,7 +14,7 @@ export const MS_OFFICE_SUITE = [
     color: "#2B579A",
     accent: "#00F2FF",
     icon: "FileText",
-    featuresCount: "90+ Voice & Chat Actions",
+    featuresCount: "105+ Voice & Chat Actions",
     description: "ডকুমেন্ট তৈরি থেকে শুরু করে পাসওয়ার্ড এনক্রিপশন, টেবিলের নির্দিষ্ট কলামে লেখা, প্রফেশনাল সিভি তৈরি এবং ফাইল ইন্সপেকশন—সবকিছু নিয়ন্ত্রণ করুন সরাসরি বাংলা বা ইংরেজি ভয়েস ও টেক্সট কমান্ডে।"
   },
   {
@@ -629,8 +629,70 @@ export const MS_WORD_STEPS = [
     ]
   },
   {
-    stepId: "step-2",
+    stepId: "step-1-7",
     stepNumber: "Step 07",
+    menuName: "File Menu ➔ 1.7 Export",
+    title: "ডকুমেন্ট এক্সপোর্ট ও প্রকাশনা (Export, Convert & Publish Engine)",
+    titleEn: "Create PDF, Create XPS, Change File Type, Export Document & Publish",
+    badge: "100% Tested & Live",
+    badgeColor: "purple",
+    summary: "ডকুমেন্টকে উচ্চ-রেজোলিউশন PDF ও XPS ফাইলে রূপান্তর, ODT, RTF, TXT, HTML ফরম্যাটে ফাইল টাইপ পরিবর্তন, মাস্টার এক্সপোর্ট এবং সম্পূর্ণ ওয়েব/রিলিজ পাবলিকেশন প্যাকেজ তৈরির স্বয়ংক্রিয় নির্দেশিকা।",
+    commands: [
+      {
+        id: "cmd-export-1",
+        featureName: "পিডিএফ তৈরি (Create PDF)",
+        featureNameEn: "Create High-Fidelity PDF Document",
+        description: "ডকুমেন্টকে প্রিন্ট কোয়ালিটি বা অন-স্ক্রিন অপটিমাইজেশন সহ স্ট্যান্ডার্ড .pdf ফাইলে রূপান্তর করে এবং প্রয়োজনে স্বয়ংক্রিয়ভাবে খুলে দেখায়।",
+        voicePrompt: "ডকুমেন্টটি পিডিএফ করো",
+        chatPrompt: "Create PDF of active document",
+        aiAction: "Word COM ExportAsFixedFormat(wdExportFormatPDF=17) দিয়ে তাৎক্ষণিক পিডিএফ তৈরি করে ফাইলের সাইজ ও পাথ রিটার্ন করে।",
+        category: "PDF Export"
+      },
+      {
+        id: "cmd-export-2",
+        featureName: "এক্সপিএস তৈরি (Create XPS)",
+        featureNameEn: "Create XML Paper Specification (.xps)",
+        description: "মাইক্রোসফটের ফিক্সড লেআউট ডকুমেন্ট স্ট্যান্ডার্ড .xps ফাইলে এক্সপোর্ট করে যাতে কোনো লেআউট পরিবর্তন ছাড়াই সংরক্ষণ করা যায়।",
+        voicePrompt: "ডকুমেন্টটি XPS ফাইলে এক্সপোর্ট করো",
+        chatPrompt: "Export active document to XPS format",
+        aiAction: "ExportAsFixedFormat(wdExportFormatXPS=18) দিয়ে ১০০% লেআউট সুরক্ষাসহ .xps ফাইল উৎপন্ন করে।",
+        category: "XPS Export"
+      },
+      {
+        id: "cmd-export-3",
+        featureName: "ফাইলের টাইপ পরিবর্তন (Change File Type)",
+        featureNameEn: "Change File Type to ODT, RTF, TXT, HTML, DOC",
+        description: "ওপেন-অফিস ও লিব্রে-অফিস স্ট্যান্ডার্ড .odt, রিচ টেক্সট .rtf, প্লেইন টেক্সট .txt, ওয়েব পেজ .html অথবা লিগ্যাসি Word 97-2003 .doc ফরম্যাটে রূপান্তর।",
+        voicePrompt: "ফাইলের টাইপ পরিবর্তন করে ODT তে সেভ করো",
+        chatPrompt: "Change file type to OpenDocument Text (.odt)",
+        aiAction: "SaveAs2 ব্যবহার করে নির্ধারিত ফরম্যাট কোডে (ODT=23, RTF=6, TXT=2, HTML=10) রূপান্তর সম্পন্ন করে।",
+        category: "Change File Type"
+      },
+      {
+        id: "cmd-export-4",
+        featureName: "মাস্টার ডকুমেন্ট এক্সপোর্ট (Export Document)",
+        featureNameEn: "Unified Document Exporter Gateway",
+        description: "নির্দিষ্ট যেকোনো ফরম্যাট (PDF, XPS, RTF, ODT, HTML) নাম ও পাথ উল্লেখ করে স্বয়ংক্রিয়ভাবে এক্সপোর্ট ও ফাইল সাইজ ভেরিফিকেশন।",
+        voicePrompt: "ডকুমেন্টটি এক্সপোর্ট করো",
+        chatPrompt: "Export document with auto optimization",
+        aiAction: "আউটপুট পাথ ও ফরম্যাট প্যারামিটার স্বয়ংক্রিয়ভাবে প্রসেস করে 4-টিয়ার ভ্যালিডেশন সম্পন্ন করে।",
+        category: "Export Gateway"
+      },
+      {
+        id: "cmd-export-5",
+        featureName: "পাবলিশ ও ওয়েব প্যাকেজ (Publish Document)",
+        featureNameEn: "Publish Ready-to-Distribute Web Package & Release Bundle",
+        description: "ডকুমেন্টকে প্রকাশনা উপযোগী করার জন্য ফিল্টার্ড HTML, এসেটস, PDF কপি এবং SHA256 চেকসাম ও মেটাডেটা সহ পাবলিকেশন ম্যানিফেস্ট তৈরি।",
+        voicePrompt: "ডকুমেন্টটি ওয়েব ও পাবলিকেশনের জন্য প্রকাশ করো",
+        chatPrompt: "Publish document as web distribution package",
+        aiAction: "একটি স্বতন্ত্র পাবলিকেশন ফোল্ডার তৈরি করে HTML, PDF এবং publish_manifest.json সমন্বিত রিলিজ বান্ডেল তৈরি করে।",
+        category: "Publish"
+      }
+    ]
+  },
+  {
+    stepId: "step-2",
+    stepNumber: "Step 08",
     menuName: "Table Menu ➔ Precise Cell & Column Control",
     title: "স্মার্ট টেবিল ও নির্দিষ্ট কলামে লেখা (Table Column Precision)",
     titleEn: "Smart Table Generation & Multi-Column Precision Writing",
@@ -682,7 +744,7 @@ export const MS_WORD_STEPS = [
   },
   {
     stepId: "step-3",
-    stepNumber: "Step 08",
+    stepNumber: "Step 09",
     menuName: "Auto Assembly ➔ Full Document Generation",
     title: "সম্পূর্ণ সিভি, রিপোর্ট ও দরখাস্ত তৈরি (Full Document Assembly)",
     titleEn: "End-to-End Professional CV, Business Reports & Formal Letters",
@@ -724,7 +786,7 @@ export const MS_WORD_STEPS = [
   },
   {
     stepId: "step-4",
-    stepNumber: "Step 09",
+    stepNumber: "Step 10",
     menuName: "Design & Layout ➔ Themes, Colors & Page Setup",
     title: "ডিজাইন থিম, মার্জিন ও লেআউট (Design, Margin & Layout)",
     titleEn: "Executive Typography, Themes, Borders & Page Setup",
@@ -766,7 +828,7 @@ export const MS_WORD_STEPS = [
   },
   {
     stepId: "step-5",
-    stepNumber: "Step 10",
+    stepNumber: "Step 11",
     menuName: "Interaction Modes ➔ Voice vs Text Guide",
     title: "ভয়েস ও চ্যাট ব্যবহারের পূর্ণাঙ্গ নিয়মাবলী (How to Use Guide)",
     titleEn: "Complete Duplex Voice & Interactive Chat Operating Guide",
