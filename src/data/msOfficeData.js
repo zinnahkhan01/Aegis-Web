@@ -2812,5 +2812,65 @@ export const MS_WORD_STEPS = [
         category: "Unified Management"
       }
     ]
+  },
+  {
+    stepNumber: "Step 32",
+    menuName: "Insert Menu ➔ 3.6 Comments",
+    title: "ইনসার্ট মেনু: মন্তব্য ব্যবস্থাপনা (3.6 Comments)",
+    titleEn: "Insert Menu: Comments (New Comment, Insert Comment, Reply, Resolve & Delete)",
+    subtitle: "ডকুমেন্টের যেকোনো টেক্সট, সিলেকশন বা কার্সার অবস্থানে নতুন মন্তব্য (New Comment / Insert Comment) যোগ করা, কমেন্ট থ্রেডে রিপ্লাই দেওয়া, রিজলভ করা ও মুছে ফেলা।",
+    badge: "Collaboration & Review",
+    commands: [
+      {
+        id: "cmd-comment-1",
+        featureName: "নতুন মন্তব্য সন্নিবেশ (New Comment / Insert Comment)",
+        featureNameEn: "Insert New Comment on Selection, Word, or Cursor Range",
+        description: "ডকুমেন্টের নির্বাচিত শব্দ, প্যারাগ্রাফ বা কার্সার অবস্থানে পর্যালোচনার জন্য নতুন মন্তব্য সন্নিবেশ করা, লেখক ও আদ্যক্ষর সেট করা।",
+        voicePrompt: "ডকুমেন্টে একটি নতুন কমেন্ট যোগ করো / এই প্যারায় মন্তব্য দাও",
+        chatPrompt: "Insert new comment on text 'budget figures': 'Please verify these figures with the accounting team'",
+        aiAction: "Word COM doc.Comments.Add(Range, Text) দিয়ে টার্গেট টেক্সটে নতুন কমেন্ট থ্রেড তৈরি করে লেখক ও টাইমস্ট্যাম্প যুক্ত করে।",
+        category: "Comments"
+      },
+      {
+        id: "cmd-comment-2",
+        featureName: "মন্তব্যের উত্তর প্রদান (Reply to Comment)",
+        featureNameEn: "Reply to Existing Comment Thread",
+        description: "বিদ্যমান যেকোনো কমেন্ট থ্রেডে সরাসরি প্রতিউত্তর (Reply) যোগ করা এবং দলীয় সহযোগিতামূলক আলোচনা বজায় রাখা।",
+        voicePrompt: "১ নম্বর কমেন্টে রিপ্লাই দাও / মন্তব্যের উত্তর লিখো",
+        chatPrompt: "Reply to comment 1: 'All figures verified and approved by the finance director'",
+        aiAction: "Modern Word comment.Replies.Add(Range, Text) API দিয়ে সংশ্লিষ্ট কমেন্ট থ্রেডে চাইল্ড রিপ্লাই যোগ করে।",
+        category: "Replies"
+      },
+      {
+        id: "cmd-comment-3",
+        featureName: "মন্তব্য সমাধান চিহ্নিতকরণ (Resolve Comment)",
+        featureNameEn: "Mark Comment as Resolved / Done",
+        description: "পর্যালোচনা সম্পন্ন হওয়া মন্তব্যসমূহকে সমাধান (Resolved/Done) হিসেবে চিহ্নিত করা অথবা প্রয়োজনে পুনরায় উন্মুক্ত করা।",
+        voicePrompt: "কমেন্টটি সমাধান হিসেবে মার্ক করো / কমেন্ট রিজলভ করো",
+        chatPrompt: "Resolve comment 1 and mark review status as done",
+        aiAction: "Word COM comment.Done = True দিয়ে কমেন্ট থ্রেড সফলভাবে সমাধান চিহ্নিত করে।",
+        category: "Resolve"
+      },
+      {
+        id: "cmd-comment-4",
+        featureName: "মন্তব্য পরিদর্শন ও মুছে ফেলা (List & Delete Comments)",
+        featureNameEn: "List All Comments & Delete Single or All Comments",
+        description: "ডকুমেন্টের সকল মন্তব্য, উত্তর ও মেটাডাটা তালিকাভুক্ত করে দেখা এবং নির্দিষ্ট বা সমস্ত মন্তব্য নিরাপদে মুছে ফেলা।",
+        voicePrompt: "সব কমেন্ট দেখাও / সব মন্তব্য মুছে ফেলো",
+        chatPrompt: "List all comments in document or delete all resolved comments",
+        aiAction: "doc.Comments মেটাডাটা রিড করে এবং DeleteRecursively() দিয়ে পুরো থ্রেডসহ মন্তব্য নিখুঁতভাবে রিমুভ করে।",
+        category: "Manage & Delete"
+      },
+      {
+        id: "cmd-comment-5",
+        featureName: "কমেন্টস ইউনিফাইড রাউটার (Manage Insert Comments)",
+        featureNameEn: "Unified Central Router for Insert Comments",
+        description: "একক কমান্ডের মাধ্যমে নতুন কমেন্ট তৈরি, রিপ্লাই, রিজলভ, লিস্ট ও ডিলিট অপারেশন স্বয়ংক্রিয়ভাবে শনাক্ত ও পরিচালনা করার কেন্দ্রীয় রাউটার।",
+        voicePrompt: "কমেন্টস অপারেশন পরিচালনা করো / কমেন্ট ম্যানেজ করো",
+        chatPrompt: "Manage insert comments with action 'insert_comment' text 'Final review required'",
+        aiAction: "manage_insert_comments কেন্দ্রীয় রাউটার দিয়ে ডায়নামিকালি সমস্ত কমেন্ট কার্যক্রম পরিচালনা করে।",
+        category: "Unified Management"
+      }
+    ]
   }
 ];
