@@ -4024,5 +4024,96 @@ export const MS_WORD_STEPS = [
         category: "Unified Management"
       }
     ]
+  },
+  {
+    stepNumber: "Step 45",
+    menuName: "6. LAYOUT MENU ➔ 6.5 Page Setup: Breaks",
+    title: "লেআউট মেনু: পেজ সেটআপ - ব্রেকস ও সেকশন বিভাজন (Page Break, Column Break, Section Breaks)",
+    titleEn: "Layout Menu: Page Setup - Breaks & Sections (Page Break, Column Break, Section Breaks)",
+    subtitle: "ডকুমেন্টের পৃষ্ঠা ও বিভাগীয় কাঠামো নিয়ন্ত্রণ—সাধারণ পেজ ব্রেক (Page Break), কলাম ব্রেক (Column Break), এবং চার ধরনের শক্তিশালী সেকশন ব্রেক: পরবর্তী পৃষ্ঠায় নতুন সেকশন (Next Page), একই পৃষ্ঠায় চলমান সেকশন (Continuous), পরবর্তী জোড় পৃষ্ঠায় সেকশন (Even Page) ও পরবর্তী বিজোড় পৃষ্ঠায় সেকশন (Odd Page), সেকশনভিত্তিক স্ট্যাটাস নিরীক্ষা এবং সেন্ট্রাল পেজ সেটআপ ব্রেক রাউটার।",
+    badge: "Breaks",
+    commands: [
+      {
+        name: "পেজ ব্রেক ইনসার্ট (Page Break)",
+        nameEn: "Insert Page Break (wdPageBreak = 7)",
+        voiceCmd: "পেজ ব্রেক দাও",
+        voiceCmdEn: "Insert page break",
+        chatPrompt: "Insert a page break at cursor position to jump to the next page",
+        aiAction: "layout_insert_break (wdPageBreak = 7) এর মাধ্যমে ডকুমেন্টে পৃষ্ঠা বিরতি যুক্ত করে পরবর্তী লেখাকে নতুন পৃষ্ঠার শীর্ষে পাঠিয়ে দেওয়া হয়।",
+        category: "Page Breaks"
+      },
+      {
+        name: "কলাম ব্রেক ইনসার্ট (Column Break)",
+        nameEn: "Insert Column Break (wdColumnBreak = 8)",
+        voiceCmd: "কলাম ব্রেক দাও",
+        voiceCmdEn: "Insert column break",
+        chatPrompt: "Insert a column break to shift subsequent text into the next column",
+        aiAction: "layout_insert_break (wdColumnBreak = 8) এর মাধ্যমে মাল্টি-কলাম ডকুমেন্টে তাৎক্ষণিকভাবে বর্তমান কলাম সমাপ্ত করে পরবর্তী কলামের শুরুতে কার্সার স্থানান্তর করা হয়।",
+        category: "Page Breaks"
+      },
+      {
+        name: "নেক্সট পেজ সেকশন ব্রেক (Next Page Section Break)",
+        nameEn: "Section Break: Next Page (wdSectionBreakNextPage = 2)",
+        voiceCmd: "নেক্সট পেজ সেকশন ব্রেক দাও",
+        voiceCmdEn: "Insert Next Page section break",
+        chatPrompt: "Insert a Next Page section break to start a new section on the next page",
+        aiAction: "layout_insert_break (wdSectionBreakNextPage = 2) দিয়ে নতুন সেকশন তৈরি করে পরবর্তী পৃষ্ঠার শুরুতে নেওয়া হয়, যা ভিন্ন হেডার/ফুটার ও পেজ সাইজ নির্ধারণের ভিত্তি তৈরি করে।",
+        category: "Section Breaks"
+      },
+      {
+        name: "কন্টিনিউয়াস সেকশন ব্রেক (Continuous Section Break)",
+        nameEn: "Section Break: Continuous (wdSectionBreakContinuous = 3)",
+        voiceCmd: "কন্টিনিউয়াস সেকশন ব্রেক করো",
+        voiceCmdEn: "Insert Continuous section break",
+        chatPrompt: "Insert a Continuous section break to start a new section on the same page",
+        aiAction: "layout_insert_break (wdSectionBreakContinuous = 3) ব্যবহার করে নতুন পৃষ্ঠা শুরু না করেই একই পৃষ্ঠার মধ্যে নতুন সেকশন চালু করা হয় (যেমন ১ কলাম থেকে ২ কলামে রূপান্তর)।",
+        category: "Section Breaks"
+      },
+      {
+        name: "ইভেন পেজ সেকশন ব্রেক (Even Page Section Break)",
+        nameEn: "Section Break: Even Page (wdSectionBreakEvenPage = 4)",
+        voiceCmd: "ইভেন পেজ সেকশন ব্রেক দাও",
+        voiceCmdEn: "Insert Even Page section break",
+        chatPrompt: "Insert an Even Page section break starting on the next even-numbered page",
+        aiAction: "layout_insert_break (wdSectionBreakEvenPage = 4) দিয়ে পরবর্তী জোড় সংখ্যাযুক্ত পৃষ্ঠা (যেমন ২, ৪, ৬) থেকে নতুন সেকশন শুরু করা হয়।",
+        category: "Section Breaks"
+      },
+      {
+        name: "অড পেজ সেকশন ব্রেক (Odd Page Section Break)",
+        nameEn: "Section Break: Odd Page (wdSectionBreakOddPage = 5)",
+        voiceCmd: "অড পেজ সেকশন ব্রেক দাও",
+        voiceCmdEn: "Insert Odd Page section break",
+        chatPrompt: "Insert an Odd Page section break starting on the next odd-numbered page",
+        aiAction: "layout_insert_break (wdSectionBreakOddPage = 5) দিয়ে পরবর্তী বিজোড় সংখ্যাযুক্ত পৃষ্ঠা (যেমন ১, ৩, ৫) থেকে নতুন অধ্যায় বা সেকশন শুরু করা হয়।",
+        category: "Section Breaks"
+      },
+      {
+        name: "নির্দিষ্ট লেখার পরে ব্রেক (Break After Specific Text)",
+        nameEn: "Insert Break Immediately After Target Text",
+        voiceCmd: "ভূমিকা লেখার পরে পেজ ব্রেক দাও",
+        voiceCmdEn: "Insert page break after target text",
+        chatPrompt: "Find target paragraph and insert page break immediately after it",
+        aiAction: "after_text প্যারামিটারের মাধ্যমে ডকুমেন্টের কাঙ্ক্ষিত অনুচ্ছেদ খুঁজে তার ঠিক শেষ প্রান্তে স্বয়ংক্রিয়ভাবে পেজ বা সেকশন ব্রেক স্থাপন করা হয়।",
+        category: "Targeted Break"
+      },
+      {
+        name: "সেকশন ও ব্রেক নিরীক্ষা (Get Breaks & Sections Status)",
+        nameEn: "Query Document Breaks, Sections Count & Start Types",
+        voiceCmd: "ডকুমেন্টে কয়টি সেকশন আছে চেক করো",
+        voiceCmdEn: "Check document sections and breaks",
+        chatPrompt: "Query total sections, pages count, and section start types",
+        aiAction: "layout_get_breaks দিয়ে মোট সেকশন সংখ্যা, পৃষ্ঠা সংখ্যা এবং প্রতিটি সেকশনের শুরুর ধরন (Next Page, Continuous, Even, Odd) বিস্তারিতভাবে জানা যায়।",
+        category: "Breaks Status"
+      },
+      {
+        name: "ব্রেক সেন্ট্রাল রাউটার (Manage Page Setup Breaks)",
+        nameEn: "Unified Page Setup Breaks Router",
+        voiceCmd: "ব্রেক স্ট্যাটাস দেখো",
+        voiceCmdEn: "Manage page setup breaks status",
+        chatPrompt: "Manage page setup breaks with sub_action 'status'",
+        aiAction: "manage_page_setup_breaks কেন্দ্রীয় রাউটারের মাধ্যমে পেজ ব্রেক, কলাম ব্রেক, ৪ ধরনের সেকশন ব্রেক এবং সেকশন অবস্থা পরিচালনা করা হয়।",
+        category: "Unified Management"
+      }
+    ]
   }
 ];
