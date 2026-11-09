@@ -3196,5 +3196,168 @@ export const MS_WORD_STEPS = [
         category: "Unified Management"
       }
     ]
+  },
+  {
+    stepNumber: "Step 36",
+    menuName: "4. DRAW MENU [zk1.1] ➔ Tools",
+    title: "ড্র মেনু: ডিজিটাল পেন, ফ্রিহ্যান্ড ড্রয়িং ও ইনক টুলস (4. Draw Menu Tools)",
+    titleEn: "Draw Menu: Digital Pens, Inking, Stylus, Shape/Math Conversion & Canvas Tools",
+    subtitle: "ডকুমেন্টে ডিজিটাল বলপয়েন্ট পেন, পেন্সিল, হাইলাইটার, ল্যাসো সিলেকশন, ইরেজার, টাচ ড্রয়িং, ইনক টু শেপ, ইনক টু ম্যাথ, ইনক রিপ্লে, ডিজিটাল রুলার ও ড্রয়িং ক্যানভাস পরিচালনা।",
+    badge: "Draw & Digital Ink",
+    commands: [
+      {
+        name: "সিলেক্ট পয়েন্টার টুল (Select Tool)",
+        nameEn: "Select & Pointer Mode",
+        voiceCmd: "পয়েন্টার মোডে যাও",
+        voiceCmdEn: "Switch to select pointer tool",
+        chatPrompt: "Switch to select tool with mode 'select'",
+        aiAction: "draw_select_tool কল করে ড্রয়িং পেন থেকে সাধারণ টেক্সট ও অবজেক্ট সিলেকশন মোডে ফিরে যায়।",
+        category: "Select"
+      },
+      {
+        name: "ল্যাসো সিলেকশন টুল (Lasso Select)",
+        nameEn: "Lasso Select Ink",
+        voiceCmd: "ল্যাসো সিলেক্ট দিয়ে হাতের ড্রয়িং ধরো",
+        voiceCmdEn: "Activate ink lasso select tool",
+        chatPrompt: "Activate lasso select tool for ink strokes",
+        aiAction: "draw_lasso_select এর মাধ্যমে ফ্রিহ্যান্ড ড্রয়িং বা হাতের লেখার স্ট্রোকগুলোকে বৃত্তাকারে ঘিরে সিলেক্ট করে।",
+        category: "Select"
+      },
+      {
+        name: "স্ট্রোক ও পয়েন্ট ইরেজার (Eraser Tool)",
+        nameEn: "Ink Eraser Tool",
+        voiceCmd: "ইরেজার টুল অন করো",
+        voiceCmdEn: "Clear all ink drawings",
+        chatPrompt: "Activate eraser tool with mode 'stroke'",
+        aiAction: "draw_eraser দিয়ে সম্পূর্ণ স্ট্রোক বা পয়েন্ট অনুযায়ী ড্রয়িং মুছে ফেলা যায় অথবা সব ড্রয়িং ক্লিয়ার করা যায়।",
+        category: "Eraser"
+      },
+      {
+        name: "ডিজিটাল বলপয়েন্ট পেন (Ballpoint Pen)",
+        nameEn: "Ballpoint Pen Tool",
+        voiceCmd: "নীল বলপয়েন্ট পেন চালু করো ২ মিমি",
+        voiceCmdEn: "Activate red pen tool thickness 0.5mm",
+        chatPrompt: "Activate pen tool with color 'blue' and thickness 1.0",
+        aiAction: "draw_pen এর মাধ্যমে ডিজিটাল বলপয়েন্ট কলম সক্রিয় করে এবং প্রয়োজনমতো ক্যানভাসে ভেক্টর স্ট্রোক আঁকে।",
+        category: "Pen"
+      },
+      {
+        name: "গ্রাফাইট পেন্সিল ড্রয়িং (Graphite Pencil)",
+        nameEn: "Digital Pencil Tool",
+        voiceCmd: "গ্রাফাইট পেন্সিল দিয়ে ড্র করো",
+        voiceCmdEn: "Activate digital pencil tool",
+        chatPrompt: "Activate pencil tool with color 'graphite' thickness 0.5",
+        aiAction: "draw_pencil কল করে নরম স্কেচিং, হালকা শেডিং ও ফাইন পয়েন্ট পেন্সিল টেক্সচার সক্রিয় করে।",
+        category: "Pencil"
+      },
+      {
+        name: "ডিজিটাল হাইলাইটার মার্কার (Highlighter Tool)",
+        nameEn: "Digital Ink Highlighter",
+        voiceCmd: "হলুদ হাইলাইটার টুল চালু করো",
+        voiceCmdEn: "Activate cyan ink highlighter tool",
+        chatPrompt: "Activate highlighter with color 'yellow' thickness 3.5",
+        aiAction: "draw_highlighter দ্বারা স্বচ্ছ মার্কার (হলুদ, সবুজ, সায়ান, গোলাপী ইত্যাদি) দিয়ে ড্রয়িং ও ডকুমেন্টে হাইলাইট করে।",
+        category: "Highlighter"
+      },
+      {
+        name: "টাচ ও স্টাইলাস ড্রয়িং (Draw with Touch)",
+        nameEn: "Draw with Touch / Stylus",
+        voiceCmd: "টাচ ড্রয়িং মোড চালু করো",
+        voiceCmdEn: "Toggle draw with touch mode",
+        chatPrompt: "Set draw with touch mode enabled true",
+        aiAction: "draw_with_touch এর মাধ্যমে আঙুল বা ডিজিটাল স্টাইলাস পেন দিয়ে স্ক্রিনে ড্রয়িং সুবিধা অন/অফ করে।",
+        category: "Touch"
+      },
+      {
+        name: "ইনক টু শেপ জ্যামিতিক রূপান্তর (Ink to Shape)",
+        nameEn: "Ink to Shape Conversion",
+        voiceCmd: "হাতের ড্রয়িং বৃত্তে রূপান্তর করো",
+        voiceCmdEn: "Convert ink to shape rectangle",
+        chatPrompt: "Convert handwritten ink into shape 'circle'",
+        aiAction: "draw_ink_to_shape ফ্রিহ্যান্ডে আঁকা অপরিচ্ছন্ন রেখাকে নিখুঁত বৃত্ত, আয়তক্ষেত্র, ত্রিভুজ বা স্টারে রূপান্তর করে।",
+        category: "Conversion"
+      },
+      {
+        name: "ইনক টু ম্যাথ সমীকরণ রূপান্তর (Ink to Math)",
+        nameEn: "Ink to Math Equation",
+        voiceCmd: "ইঙ্ক টু ম্যাথ চালু করো 'a^2 + b^2 = c^2'",
+        voiceCmdEn: "Convert handwritten math to Word equation",
+        chatPrompt: "Activate ink to math with formula 'x^2 + y^2 = 1'",
+        aiAction: "draw_ink_to_math ডিজিটাল স্টাইলাসে লেখা যেকোনো গাণিতিক সমীকরণকে ওয়ার্ডের 2D OMaths ফর্ম্যাটে রূপান্তর করে।",
+        category: "Conversion"
+      },
+      {
+        name: "ইনক রিপ্লে অ্যানিমেশন (Ink Replay)",
+        nameEn: "Ink Replay Playback",
+        voiceCmd: "ড্রয়িংয়ের ইঙ্ক রিপ্লে দেখাও",
+        voiceCmdEn: "Replay ink drawing animation",
+        chatPrompt: "Play ink replay animation with speed 'normal'",
+        aiAction: "draw_ink_replay ডকুমেন্টের ড্রয়িং ও হাতের লেখা যে ক্রমে আঁকা হয়েছিল তা পুনরায় ভিডিওর মতো প্লে করে দেখায়।",
+        category: "Replay"
+      },
+      {
+        name: "ডিজিটাল রুলার স্কেল (Digital Ruler)",
+        nameEn: "Digital On-Screen Ruler",
+        voiceCmd: "স্কেল অন করো",
+        voiceCmdEn: "Toggle digital ruler on screen",
+        chatPrompt: "Set ruler visibility true with angle 0.0",
+        aiAction: "draw_ruler এর মাধ্যমে সোজা লাইন টানা ও কোণ পরিমাপের জন্য স্ক্রিনে ডিজিটাল রুলার প্রদর্শন বা লুকানো যায়।",
+        category: "Ruler"
+      },
+      {
+        name: "ড্রয়িং ক্যানভাস ইনসার্ট (Drawing Canvas)",
+        nameEn: "Insert Drawing Canvas",
+        voiceCmd: "ডকুমেন্টে একটি নতুন ড্রয়িং ক্যানভাস তৈরি করো",
+        voiceCmdEn: "Insert drawing canvas 500x300",
+        chatPrompt: "Insert drawing canvas with width 400 height 250 border_color 'blue'",
+        aiAction: "draw_canvas কল করে ওয়ার্ডের নেটিভ ক্যানভাস ব্লক (Shapes.AddCanvas) তৈরি করে যার ভেতরে একাধিক ড্রয়িং অবজেক্ট রাখা যায়।",
+        category: "Canvas"
+      },
+      {
+        name: "পেনের রং নির্ধারণ (Pen Color)",
+        nameEn: "Set Pen Color",
+        voiceCmd: "পেনের রং রেইনবো কালার করো",
+        voiceCmdEn: "Set pen color to galaxy",
+        chatPrompt: "Set pen color to 'rainbow' for pen_type 'pen'",
+        aiAction: "set_pen_color দিয়ে স্ট্যান্ডার্ড ও স্পেশাল ডিজিটাল কালার (ব্ল্যাক, রেড, রেইনবো, গ্যালাক্সি, লাভা, গোল্ড ইত্যাদি) নির্বাচন করা যায়।",
+        category: "Palette"
+      },
+      {
+        name: "পেন স্ট্রোকের পুরুত্ব (Pen Thickness)",
+        nameEn: "Set Pen Thickness",
+        voiceCmd: "পেন সাইজ ৩.৫ মিমি করো",
+        voiceCmdEn: "Set pen thickness to 2mm",
+        chatPrompt: "Set pen thickness to 2.0 unit 'mm'",
+        aiAction: "set_pen_thickness দিয়ে কলমের রেখার সাইজ (০.২৫ মিমি থেকে ৩.৫ মিমি পর্যন্ত) পরিবর্তন করা হয়।",
+        category: "Palette"
+      },
+      {
+        name: "প্যালেটে নতুন পেন যুক্ত (Add Pen)",
+        nameEn: "Add Custom Pen to Palette",
+        voiceCmd: "প্যালেট এ একটি নতুন লাল পেন যোগ করো ২ মিমি",
+        voiceCmdEn: "Add new blue highlighter to pen toolbox",
+        chatPrompt: "Add pen to palette with type 'pen' color 'red' thickness 2.0",
+        aiAction: "add_pen এর মাধ্যমে পছন্দের রং ও পুরুত্বসহ কাস্টম পেন, পেন্সিল বা হাইলাইটার ব্যক্তিগত প্যালেটে সংরক্ষণ করা যায়।",
+        category: "Palette"
+      },
+      {
+        name: "প্যালেট থেকে পেন মুছে ফেলা (Remove Pen)",
+        nameEn: "Remove Pen from Palette",
+        voiceCmd: "প্যালেট থেকে লাল পেন রিমুভ করো",
+        voiceCmdEn: "Remove pen from favorites palette",
+        chatPrompt: "Remove pen from palette with color 'red'",
+        aiAction: "remove_pen দিয়ে ড্রয়িং টুলবক্স থেকে অপ্রয়োজনীয় পেন সহজে মুছে ফেলা যায়।",
+        category: "Palette"
+      },
+      {
+        name: "সেন্ট্রাল ড্র মেনু রাউটার (Manage Draw Tools)",
+        nameEn: "Manage Draw Tools Router",
+        voiceCmd: "ড্র মেনু থেকে পেন্সিল সিলেক্ট করো",
+        voiceCmdEn: "Manage draw tools action 'canvas' width 400",
+        chatPrompt: "Manage draw tools with draw_action 'pen' color 'blue'",
+        aiAction: "manage_draw_tools কেন্দ্রীয় রাউটার দিয়ে ডিজিটাল পেন, ক্যানভাস, রুলার, ইরেজার ও রূপান্তর টুলসমূহ ডায়নামিকালি পরিচালনা করে।",
+        category: "Unified Management"
+      }
+    ]
   }
 ];
