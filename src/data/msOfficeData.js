@@ -3669,5 +3669,96 @@ export const MS_WORD_STEPS = [
         category: "Unified Management"
       }
     ]
+  },
+  {
+    stepNumber: "Step 41",
+    menuName: "6. LAYOUT MENU ➔ 6.1 Page Setup: Margins",
+    title: "লেআউট মেনু: পেজ সেটআপ - মার্জিন (নরমাল, ন্যারো, মডারেট, ওয়াইড, মিররড, অফিস ২০০৩ ও কাস্টম মার্জিন)",
+    titleEn: "Layout Menu: Page Setup - Margins (Normal, Narrow, Moderate, Wide, Mirrored, Office 2003 & Custom Margins)",
+    subtitle: "ডকুমেন্টের পৃষ্ঠা এবং সেকশন লেআউট নিয়ন্ত্রণের জন্য আদর্শ মার্জিন প্রিসেট (নরমাল ১\", ন্যারো ০.৫\", মডারেট ০.৭৫\", ওয়াইড ২\", বুকলেট/ডুয়াল-সাইডেড প্রিন্টিংয়ের জন্য মিররড মার্জিন, অফিস ২০০৩ ডিফল্ট ১.২৫\"), ব্যবহারকারী-নির্ধারিত কাস্টম মার্জিন (ইঞ্চি, সেমি, মিমি, পয়েন্ট ইউনিট), বাইন্ডিং গাটার (বাম/উপরে) এবং সেন্ট্রাল পেজ সেটআপ মার্জিন রাউটার।",
+    badge: "Page Setup Margins",
+    commands: [
+      {
+        name: "নরমাল মার্জিন প্রিসেট (Normal Margins 1\")",
+        nameEn: "Normal Margin Preset (1-inch all sides)",
+        voiceCmd: "মার্জিন নরমাল করো",
+        voiceCmdEn: "Set margins to normal preset",
+        chatPrompt: "Set page margin preset to 'normal' for whole document",
+        aiAction: "layout_set_margin_preset দিয়ে মাইক্রোসফট ওয়ার্ডের স্ট্যান্ডার্ড নরমাল মার্জিন (Top 1\", Bottom 1\", Left 1\", Right 1\", 72pt each) ডকুমেন্টে বা নির্দিষ্ট সেকশনে প্রয়োগ করা হয়।",
+        category: "Margin Presets"
+      },
+      {
+        name: "ন্যারো মার্জিন প্রিসেট (Narrow Margins 0.5\")",
+        nameEn: "Narrow Margin Preset (0.5-inch all sides)",
+        voiceCmd: "মার্জিন ন্যারো করো",
+        voiceCmdEn: "Set margins to narrow preset",
+        chatPrompt: "Set page margin preset to 'narrow' for whole document",
+        aiAction: "layout_set_margin_preset দিয়ে পৃষ্ঠার ধারণক্ষমতা বাড়াতে চারপাশে ০.৫ ইঞ্চি (Top 0.5\", Bottom 0.5\", Left 0.5\", Right 0.5\", 36pt each) ন্যারো মার্জিন সেট করা হয়।",
+        category: "Margin Presets"
+      },
+      {
+        name: "মডারেট মার্জিন প্রিসেট (Moderate Margins)",
+        nameEn: "Moderate Margin Preset (Top/Bottom 1\", Left/Right 0.75\")",
+        voiceCmd: "মডারেট মার্জিন সেট করো",
+        voiceCmdEn: "Set margins to moderate preset",
+        chatPrompt: "Set page margin preset to 'moderate'",
+        aiAction: "layout_set_margin_preset দিয়ে উপরে ও নিচে ১ ইঞ্চি (72pt) এবং ডানে ও বামে ০.৭৫ ইঞ্চি (54pt) মডারেট মার্জিন সমন্বয় করা হয়।",
+        category: "Margin Presets"
+      },
+      {
+        name: "ওয়াইড মার্জিন প্রিসেট (Wide Margins)",
+        nameEn: "Wide Margin Preset (Top/Bottom 1\", Left/Right 2\")",
+        voiceCmd: "ওয়াইড মার্জিন দাও",
+        voiceCmdEn: "Set margins to wide preset",
+        chatPrompt: "Set page margin preset to 'wide'",
+        aiAction: "layout_set_margin_preset দিয়ে উপরে ও নিচে ১ ইঞ্চি (72pt) এবং ডানে ও বামে ২ ইঞ্চি (144pt) ওয়াইড মার্জিন প্রয়োগ করা হয়।",
+        category: "Margin Presets"
+      },
+      {
+        name: "মিররড মার্জিন প্রিসেট (Mirrored Margins for Books)",
+        nameEn: "Mirrored Margin Preset for Booklet Printing",
+        voiceCmd: "বই প্রিন্টের জন্য মিররড মার্জিন দাও",
+        voiceCmdEn: "Set mirrored margins for booklet printing",
+        chatPrompt: "Set page margin preset to 'mirrored'",
+        aiAction: "layout_set_mirrored_margins অথবা প্রিসেট দিয়ে দুই পৃষ্ঠার মুখোমুখি প্রিন্টিং বা বই বাঁধাইয়ের জন্য MirrorMargins চালু করে Inside (ভেতরে) ১.২৫\" এবং Outside (বাইরে) ১\" মার্জিন প্রয়োগ করা হয়।",
+        category: "Mirrored Margins"
+      },
+      {
+        name: "অফিস ২০০৩ ডিফল্ট মার্জিন (Office 2003 Default)",
+        nameEn: "Office 2003 Default Margins (Top/Bottom 1\", Left/Right 1.25\")",
+        voiceCmd: "অফিস ২০০৩ মার্জিন লাগাও",
+        voiceCmdEn: "Apply Office 2003 default margins",
+        chatPrompt: "Set page margin preset to 'office_2003_default'",
+        aiAction: "layout_set_margin_preset দিয়ে ক্লাসিক ওয়ার্ড ২০০৩ স্ট্যান্ডার্ড অনুযায়ী উপরে/নিচে ১\" এবং ডানে/বামে ১.২৫\" (90pt) মার্জিন সেট করা হয়।",
+        category: "Margin Presets"
+      },
+      {
+        name: "কাস্টম মার্জিন ও গাটার (Custom Margins & Binding Gutter)",
+        nameEn: "Custom Dimensions & Gutter Margins",
+        voiceCmd: "উপরে ১.৫ ইঞ্চি নিচে ১.৫ ইঞ্চি বামে ১ ইঞ্চি ডানে ১ ইঞ্চি মার্জিন দাও",
+        voiceCmdEn: "Set custom margins top 1.5in bottom 1.5in left 1in right 1in with 0.25in gutter",
+        chatPrompt: "Set custom margins with top '1.5in' bottom '1.5in' left '1in' right '1in' gutter '0.25in' gutter_position 'left'",
+        aiAction: "layout_set_custom_margins দিয়ে ব্যবহারকারীর পছন্দমতো ইঞ্চি (in), সেন্টিমিটার (cm), মিলিমিটার (mm) বা পয়েন্ট (pt) ইউনিটে শীর্ষ, পাদদেশ, বাম ও ডান মার্জিন এবং বাঁধাইয়ের গাটার মার্জিন নির্ধারণ করা হয়।",
+        category: "Custom Margins"
+      },
+      {
+        name: "মার্জিন কোয়েরি ও বর্তমান তথ্য (Get Margins Status)",
+        nameEn: "Inspect & Query Current Margins",
+        voiceCmd: "বর্তমান মার্জিন কত চেক করো",
+        voiceCmdEn: "Check current document margins and page setup",
+        chatPrompt: "Get current document margin measurements and preset status",
+        aiAction: "layout_get_margins দিয়ে সক্রিয় ওয়ার্ড ডকুমেন্টের প্রতিটি মার্জিনের সঠিক মান (ইঞ্চি, সেমি এবং পয়েন্টে), সক্রিয় প্রিসেট নাম এবং মিরর মার্জিন স্ট্যাটাস পরিদর্শন করা হয়।",
+        category: "Margin Status"
+      },
+      {
+        name: "পেজ সেটআপ মার্জিন সেন্ট্রাল রাউটার (Manage Page Setup Margins)",
+        nameEn: "Unified Page Setup Margins Router",
+        voiceCmd: "মার্জিন নরমাল রিসেট করো",
+        voiceCmdEn: "Reset page setup margins to default normal",
+        chatPrompt: "Manage page setup margins with sub_action 'reset'",
+        aiAction: "manage_page_setup_margins কেন্দ্রীয় রাউটারের মাধ্যমে প্রিসেট নির্বাচন, কাস্টম মার্জিন, মিররড মার্জিন কনফিগারেশন, বর্তমান অবস্থা পরিদর্শন অথবা সরাসরি ডিফল্ট নরমালে রিসেট করা হয়।",
+        category: "Unified Management"
+      }
+    ]
   }
 ];
