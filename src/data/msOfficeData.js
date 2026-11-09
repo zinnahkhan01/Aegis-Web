@@ -2872,5 +2872,75 @@ export const MS_WORD_STEPS = [
         category: "Unified Management"
       }
     ]
+  },
+  {
+    stepNumber: "Step 33",
+    menuName: "Insert Menu ➔ 3.7 Header & Footer",
+    title: "ইনসার্ট মেনু: হেডার, ফুটার ও পৃষ্ঠা নম্বর (3.7 Header & Footer)",
+    titleEn: "Insert Menu: Header, Footer, Page Number & Page Layouts",
+    subtitle: "ডকুমেন্টের প্রতিটি সেকশনে হেডার ও ফুটার সংযোজন, কাস্টম এলাইনমেন্ট ও টাইপোগ্রাফি, ডায়নামিক পৃষ্ঠা নম্বর (Page X of Y), প্রথম পৃষ্ঠায় আলাদা হেডার/ফুটার এবং জোড়-বিজোড় পৃষ্ঠার বিন্যাস।",
+    badge: "Document Layout",
+    commands: [
+      {
+        id: "cmd-hf-1",
+        featureName: "হেডার সন্নিবেশ ও ফরম্যাটিং (Header)",
+        featureNameEn: "Insert & Format Document Header",
+        description: "ডকুমেন্টের উপরে শিরোনাম, কোম্পানির নাম বা গোপনীয়তা বার্তা যোগ করা এবং বাম, কেন্দ্র বা ডান এলাইনমেন্ট সেট করা।",
+        voicePrompt: "ডকুমেন্টে হেডার যোগ করো / হেডারে লিখো Aegis AI Architecture",
+        chatPrompt: "Set document header text: 'Aegis AI System Architecture 2026' alignment: 'center' font_size: 10",
+        aiAction: "Word COM Section.Headers(wdHeaderFooterPrimary) API দিয়ে টেক্সট, ফন্ট ও অনুচ্ছেদ এলাইনমেন্ট সেট করে।",
+        category: "Header"
+      },
+      {
+        id: "cmd-hf-2",
+        featureName: "ফুটার সন্নিবেশ ও ফরম্যাটিং (Footer)",
+        featureNameEn: "Insert & Format Document Footer",
+        description: "ডকুমেন্টের নিচে পাদটীকা, কপিরাইট নোটিশ বা মেটাডাটা সংযোজন এবং মার্জিত ধূসর বা কাস্টম রঙে উপস্থাপন করা।",
+        voicePrompt: "ফুটারে কপিরাইট নোটিশ দাও / ফুটার সেট করো",
+        chatPrompt: "Set document footer text: 'Confidential & Proprietary - Supervex AI' alignment: 'left'",
+        aiAction: "Word COM Section.Footers(wdHeaderFooterPrimary) API দিয়ে ফুটার টেক্সট ও টাইপোগ্রাফি প্রয়োগ করে।",
+        category: "Footer"
+      },
+      {
+        id: "cmd-hf-3",
+        featureName: "ডায়নামিক পৃষ্ঠা নম্বর (Page Number)",
+        featureNameEn: "Insert Dynamic Page Numbers (Simple or Page X of Y)",
+        description: "ফুটার বা হেডারে স্বয়ংক্রিয় পৃষ্ঠা নম্বর যোগ করা, 'Page X of Y' অথবা রোমান/আরবি সংখ্যা ফরম্যাট প্রয়োগ করা।",
+        voicePrompt: "ফুটারে পৃষ্ঠা নম্বর যোগ করো / পেজ ১ অফ ৫ দাও",
+        chatPrompt: "Insert page number in footer right alignment with format 'page_x_of_y'",
+        aiAction: "Word COM PageNumbers.Add ও wdFieldPage/wdFieldNumPages ডায়নামিক ফিল্ড দিয়ে নিখুঁত পৃষ্ঠা গণনা সন্নিবেশ করে।",
+        category: "Page Number"
+      },
+      {
+        id: "cmd-hf-4",
+        featureName: "প্রথম পৃষ্ঠা আলাদা হেডার/ফুটার (Different First Page)",
+        featureNameEn: "Different First Page Header & Footer",
+        description: "কভার পেজ বা প্রচ্ছদের জন্য আলাদা হেডার/ফুটার সক্রিয় করা যাতে মূল পৃষ্ঠার হেডার প্রথম পৃষ্ঠায় প্রদর্শিত না হয়।",
+        voicePrompt: "প্রথম পৃষ্ঠায় আলাদা হেডার সেট করো / কভার পেজের হেডার বন্ধ করো",
+        chatPrompt: "Set different first page header with text 'Executive Summary' and remove page number from first page",
+        aiAction: "PageSetup.DifferentFirstPageHeaderFooter = True সেট করে wdHeaderFooterFirstPage দিয়ে কাস্টম কভার হেডার বসায়।",
+        category: "First Page Layout"
+      },
+      {
+        id: "cmd-hf-5",
+        featureName: "জোড় ও বিজোড় পৃষ্ঠা আলাদা হেডার/ফুটার (Different Odd & Even Pages)",
+        featureNameEn: "Different Odd & Even Pages Header/Footer for Book Binding",
+        description: "বই বা দ্বিমুখী প্রিন্টিংয়ের জন্য জোড় এবং বিজোড় পৃষ্ঠায় বিপরীতমুখী হেডার ও পৃষ্ঠা নম্বর (যেমন: বিজোড়ে ডানে, জোড়ে বামে) বিন্যাস করা।",
+        voicePrompt: "জোড় ও বিজোড় পৃষ্ঠায় আলাদা হেডার চালু করো / বইয়ের মতো হেডার সাজাও",
+        chatPrompt: "Set different odd & even pages with odd_header 'Aegis Core' and even_header 'Technical Manual'",
+        aiAction: "PageSetup.OddAndEvenPagesHeaderFooter = True সক্রিয় করে wdHeaderFooterEvenPages হ্যান্ডেল করে।",
+        category: "Book Binding Layout"
+      },
+      {
+        id: "cmd-hf-6",
+        featureName: "হেডার ও ফুটার ইউনিফাইড রাউটার (Manage Insert Header & Footer)",
+        featureNameEn: "Unified Central Router for Headers, Footers & Page Numbers",
+        description: "একক কমান্ডের মাধ্যমে হেডার, ফুটার, পেজ নাম্বার, ফার্স্ট পেজ ও অড-ইভেন পেজ লেআউট স্বয়ংক্রিয়ভাবে শনাক্ত ও পরিচালনা করার কেন্দ্রীয় রাউটার।",
+        voicePrompt: "হেডার ও ফুটার পরিচালনা করো / পেজ লেআউট ম্যানেজ করো",
+        chatPrompt: "Manage insert header footer with action 'page_number' position 'bottom' format 'page_x_of_y'",
+        aiAction: "manage_insert_header_footer কেন্দ্রীয় রাউটার দিয়ে ডায়নামিকালি সমস্ত হেডার-ফুটার অপারেশন সম্পাদন করে।",
+        category: "Unified Management"
+      }
+    ]
   }
 ];
