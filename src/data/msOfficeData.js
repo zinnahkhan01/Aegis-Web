@@ -3060,5 +3060,141 @@ export const MS_WORD_STEPS = [
         category: "Unified Management"
       }
     ]
+  },
+  {
+    stepNumber: "Step 35",
+    menuName: "Insert Menu ➔ 3.9 Symbols",
+    title: "ইনসার্ট মেনু: সমীকরণ, গাণিতিক প্রতীক ও বিশেষ ক্যারেক্টার (3.9 Symbols)",
+    titleEn: "Insert Menu: Equation, Math Symbols, Greek Letters & Special Characters",
+    subtitle: "ডকুমেন্টে প্রিসেট ও কাস্টম গাণিতিক সমীকরণ, গ্রিক বর্ণমালা, বৈজ্ঞানিক ও গাণিতিক প্রতীক, কারেন্সি, বিশেষ টাইপোগ্রাফি চিহ্ন এবং সিম্বল লাইব্রেরি ইনসার্ট ও পরিচালনা।",
+    badge: "Symbols & Equations",
+    commands: [
+      {
+        name: "দ্বিঘাত সমীকরণ প্রিসেট (Quadratic Equation)",
+        nameEn: "Insert Quadratic Formula",
+        voiceCmd: "ডকুমেন্টে দ্বিঘাত সমীকরণ যোগ করো",
+        voiceCmdEn: "Insert quadratic equation preset",
+        chatPrompt: "Insert equation with preset 'quadratic' and display_style 'display'",
+        aiAction: "insert_equation এর মাধ্যমে ওয়ার্ডের নেটিভ 2D OMaths ব্লকে প্রিসেট দ্বিঘাত সমীকরণ (Quadratic Formula) ইনসার্ট করে।",
+        category: "Equation"
+      },
+      {
+        name: "বৃত্তের ক্ষেত্রফল সমীকরণ (Area of Circle)",
+        nameEn: "Insert Area of Circle Equation",
+        voiceCmd: "বৃত্তের ক্ষেত্রফলের সমীকরণ ইনসার্ট করো",
+        voiceCmdEn: "Insert area of circle equation",
+        chatPrompt: "Insert equation preset 'area_of_circle'",
+        aiAction: "A = πr² সূত্র সম্বলিত নেটিভ ওয়ার্ড সমীকরণ ব্লক যুক্ত করে।",
+        category: "Equation"
+      },
+      {
+        name: "পিথাগোরাসের উপপাদ্য সমীকরণ (Pythagorean Theorem)",
+        nameEn: "Insert Pythagorean Equation",
+        voiceCmd: "পিথাগোরাস সমীকরণ যোগ করো",
+        voiceCmdEn: "Insert pythagorean equation",
+        chatPrompt: "Insert equation with preset 'pythagorean'",
+        aiAction: "a² + b² = c² সমীকরণ ওয়ার্ডের OMaths ফর্ম্যাটে রূপান্তর করে যুক্ত করে।",
+        category: "Equation"
+      },
+      {
+        name: "টেইলর ও ফুরিয়ার সিরিজ সমীকরণ (Series Expansions)",
+        nameEn: "Insert Taylor & Fourier Series",
+        voiceCmd: "ডকুমেন্টে টেইলর সিরিজ সমীকরণ বসাও",
+        voiceCmdEn: "Insert taylor series equation",
+        chatPrompt: "Insert equation with preset 'taylor_series'",
+        aiAction: "উচ্চতর গণিতের টেইলর ও ফুরিয়ার সিরিজ সমীকরণ প্রিসেট ডকুমেন্টে স্থাপন করে।",
+        category: "Equation"
+      },
+      {
+        name: "নতুন কাস্টম সমীকরণ (Insert New Equation)",
+        nameEn: "Insert Custom UnicodeMath Equation",
+        voiceCmd: "নতুন সমীকরণ লিখো: 'E = mc^2'",
+        voiceCmdEn: "Insert new equation 'x = (-b \\pm \\sqrt(b^2 - 4ac))/(2a)'",
+        chatPrompt: "Insert new equation with formula 'x^2 + y^2 = r^2' and display_style 'display'",
+        aiAction: "insert_new_equation কল করে যেকোনো কাস্টম লিনিয়ার ফর্মুলাকে OMaths.BuildUp() দ্বারা 2D ভিজ্যুয়াল সমীকরণে রূপান্তর করে।",
+        category: "New Equation"
+      },
+      {
+        name: "প্লাস-মাইনাস ও মৌলিক গাণিতিক চিহ্ন (Plus-Minus Symbol)",
+        nameEn: "Insert Plus-Minus Symbol",
+        voiceCmd: "প্লাস মাইনাস চিহ্ন বসাও",
+        voiceCmdEn: "Insert plus minus symbol 2 times",
+        chatPrompt: "Insert math symbol 'plus_minus' count 1",
+        aiAction: "insert_math_symbol দিয়ে ±, ×, ÷, ≈, ≠, ≤, ≥ ইত্যাদি গাণিতিক অপারেটর ডকুমেন্টে ইনসার্ট করে।",
+        category: "Mathematical Symbols"
+      },
+      {
+        name: "অসীম বা ইনফিনিটি প্রতীক (Infinity Symbol)",
+        nameEn: "Insert Infinity Symbol",
+        voiceCmd: "ইনফিনিটি চিহ্ন যোগ করো",
+        voiceCmdEn: "Insert infinity symbol",
+        chatPrompt: "Insert math symbol 'infinity'",
+        aiAction: "অসীম নির্দেশক ইনফিনিটি প্রতীক (∞) ইনসার্ট করে।",
+        category: "Mathematical Symbols"
+      },
+      {
+        name: "ইন্টিগ্রাল ও সামেশন ক্যালকুলাস চিহ্ন (Calculus Symbols)",
+        nameEn: "Insert Integral & Summation Symbols",
+        voiceCmd: "ইন্টিগ্রাল চিহ্ন যোগ করো",
+        voiceCmdEn: "Insert summation symbol",
+        chatPrompt: "Insert math symbol 'integral'",
+        aiAction: "ক্যালকুলাস ও পরিসংখ্যানের জন্য ∫, ∑, ∏, √, ∛, ∂, ∇ প্রতীক ইনসার্ট করে।",
+        category: "Mathematical Symbols"
+      },
+      {
+        name: "গ্রিক বর্ণমালা (Greek Letters)",
+        nameEn: "Insert Greek Letter",
+        voiceCmd: "গ্রিক অক্ষর আলফা যোগ করো",
+        voiceCmdEn: "Insert capital omega greek letter",
+        chatPrompt: "Insert greek letter 'omega' uppercase true",
+        aiAction: "insert_greek_letter দ্বারা আলফা (α), বিটা (β), পাই (π), সিগমা (σ), ক্যাপিটাল ডেল্টা (Δ), ওমেগা (Ω) ইত্যাদি ইনসার্ট করে।",
+        category: "Greek Letters"
+      },
+      {
+        name: "কপিরাইট ও ট্রেডমার্ক চিহ্ন (Copyright & Trademark)",
+        nameEn: "Insert Copyright & Trademark",
+        voiceCmd: "কপিরাইট চিহ্ন বসাও",
+        voiceCmdEn: "Insert registered trademark symbol",
+        chatPrompt: "Insert special character 'copyright'",
+        aiAction: "insert_special_character দিয়ে ©, ®, ™ ইত্যাদি আন্তর্জাতিক আইনি ও বাণিজ্যিক প্রতীক যুক্ত করে।",
+        category: "Special Characters"
+      },
+      {
+        name: "টাকা ও কারেন্সি প্রতীক (Currency Symbols)",
+        nameEn: "Insert Taka, Euro & Pound Symbols",
+        voiceCmd: "টাকা চিহ্ন ইনসার্ট করো",
+        voiceCmdEn: "Insert euro currency symbol",
+        chatPrompt: "Insert special character 'taka'",
+        aiAction: "বাংলাদেশি টাকা (৳), ইউরো (€), পাউন্ড (£), ইয়েন (¥), রুপি (₹) ইত্যাদি মুদ্রা চিহ্ন ইনসার্ট করে।",
+        category: "Special Characters"
+      },
+      {
+        name: "এম ড্যাশ ও টাইপোগ্রাফি (Em Dash & Typography)",
+        nameEn: "Insert Em Dash & Typographical Marks",
+        voiceCmd: "এম ড্যাশ চিহ্ন যোগ করো",
+        voiceCmdEn: "Insert em dash character",
+        chatPrompt: "Insert special character 'em_dash'",
+        aiAction: "প্রফেশনাল পাবলিশিং ও টাইপোগ্রাফির জন্য এম ড্যাশ (—), এন ড্যাশ (–), এলিপসিস (…), সেকশন (§), পিলক্রো (¶) যোগ করে।",
+        category: "Special Characters"
+      },
+      {
+        name: "সিম্বল লাইব্রেরি ও টিক চিহ্ন (Symbol Library & Icons)",
+        nameEn: "Insert Symbol from Library",
+        voiceCmd: "সিম্বল লাইব্রেরি থেকে টিক চিহ্ন যোগ করো",
+        voiceCmdEn: "Insert checkmark symbol from library",
+        chatPrompt: "Insert symbol from library with symbol_or_code 'checkmark'",
+        aiAction: "insert_symbol_from_library দিয়ে চেক/টিকমার্ক (✓), তীর (→, ←), স্টার (★), হার্ট (♥), ফ্র্যাকশন (½, ¼) ও হেক্স কোড (U+XXXX) ইনসার্ট করে।",
+        category: "Symbol Library"
+      },
+      {
+        name: "সেন্ট্রাল সিম্বলস রাউটার (Central Symbols Router)",
+        nameEn: "Manage Insert Symbols Router",
+        voiceCmd: "সিম্বলস মেনু থেকে নতুন সমীকরণ ইনসার্ট করো",
+        voiceCmdEn: "Manage insert symbols action 'equation' preset 'quadratic'",
+        chatPrompt: "Manage insert symbols with symbol_action 'math_symbol' symbol 'infinity'",
+        aiAction: "manage_insert_symbols কেন্দ্রীয় রাউটার দিয়ে সমীকরণ, গাণিতিক প্রতীক, গ্রিক লেটার ও বিশেষ চিহ্ন এক জায়গায় নিয়ন্ত্রণ করে।",
+        category: "Unified Management"
+      }
+    ]
   }
 ];
