@@ -2722,5 +2722,45 @@ export const MS_WORD_STEPS = [
         category: "Unified Management"
       }
     ]
+  },
+  {
+    stepNumber: "Step 30",
+    menuName: "Insert Menu ➔ 3.4 Media",
+    title: "ইনসার্ট মেনু: অনলাইন ভিডিও ও ভিডিও এমবেড (3.4 Media)",
+    titleEn: "Insert Menu: Media (Online Video & Video Embed)",
+    subtitle: "ডকুমেন্টে সরাসরি ইউটিউব, ভিমিও, ডেইলি মোশন বা মাইক্রোসফট স্ট্রিম থেকে অনলাইন ভিডিও যুক্ত করা অথবা কাস্টম HTML iframe এমবেড কোড সন্নিবেশ।",
+    badge: "Media & Video",
+    commands: [
+      {
+        id: "cmd-media-1",
+        featureName: "অনলাইন ভিডিও সন্নিবেশ (Online Video)",
+        featureNameEn: "Insert Online Video by Streaming URL (YouTube, Vimeo, Dailymotion, Stream)",
+        description: "ভিডিওর URL (যেমন: YouTube, Vimeo, Dailymotion বা SharePoint/Stream) দিয়ে সরাসরি ডকুমেন্টে রেসপনসিভ প্লেয়েবল ভিডিও অবজেক্ট যুক্ত করা।",
+        voicePrompt: "ডকুমেন্টে একটি ইউটিউব ভিডিও যোগ করো / অনলাইন ভিডিও ইনসার্ট করো",
+        chatPrompt: "Insert online video from YouTube 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' with title 'Product Overview'",
+        aiAction: "Word COM-এর InlineShapes.AddWebVideo API দিয়ে স্বয়ংক্রিয়ভাবে ভিডিও আইডি ও থার্ম্বনেইল পোস্টারসহ ডকুমেন্টে ভিডিও যোগ করে।",
+        category: "Online Video"
+      },
+      {
+        id: "cmd-media-2",
+        featureName: "ভিডিও এমবেড কোড (Video Embed)",
+        featureNameEn: "Insert Video Embed Code via Raw HTML iframe / Embed Tags",
+        description: "কাস্টম HTML <iframe> বা এমবেড কোড ব্যবহার করে যেকোনো প্ল্যাটফর্মের ভিডিও নির্ভুল ডাইমেনশন ও প্লেব্যাক কন্ট্রোলসহ ডকুমেন্টে এমবেড করা।",
+        voicePrompt: "ভিডিও এমবেড কোড ইনসার্ট করো / আইফ্রেম দিয়ে ভিডিও যুক্ত করো",
+        chatPrompt: "Insert video embed code '<iframe width=\"560\" height=\"315\" src=\"https://player.vimeo.com/video/76979871\"></iframe>'",
+        aiAction: "রॉ HTML এমবেড কোড পার্স করে সাইজ ও রেশিও স্কেল করে wdInlineShapeWebVideo হিসেবে ইনসার্ট করে।",
+        category: "Video Embed"
+      },
+      {
+        id: "cmd-media-3",
+        featureName: "মিডিয়া ইউনিফাইড রাউটার (Manage Insert Media)",
+        featureNameEn: "Unified Central Router for Online Video and Video Embed Operations",
+        description: "একক কমান্ডের মাধ্যমে অনলাইন স্ট্রিমিং ভিডিও এবং কাস্টম এমবেড কোড স্বয়ংক্রিয়ভাবে শনাক্ত ও ইনসার্ট করার কেন্দ্রীয় রাউটার।",
+        voicePrompt: "মিডিয়া ইনসার্ট করো / ভিডিও যোগ করো",
+        chatPrompt: "Manage insert media with url 'https://youtu.be/dQw4w9WgXcQ' alignment center and width 5.5 inches",
+        aiAction: "manage_insert_media রাউটার ব্যবহার করে ইনপুট টাইপ (URL বা iframe) স্বয়ংক্রিয়ভাবে শনাক্ত করে ডকুমেন্টে যুক্ত করে।",
+        category: "Unified Management"
+      }
+    ]
   }
 ];
