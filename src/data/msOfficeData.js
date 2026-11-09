@@ -4115,5 +4115,88 @@ export const MS_WORD_STEPS = [
         category: "Unified Management"
       }
     ]
+  },
+  {
+    id: "word-step-46",
+    menu: "Layout",
+    menuBn: "লেআউট মেনু",
+    section: "6.6 Page Setup: Line Numbers",
+    sectionBn: "৬.৬ পেজ সেটআপ: লাইন নম্বর (Line Numbers)",
+    description: "ডকুমেন্টের প্রতিটি লাইনের পাশে রেফারেন্স নম্বর প্রদর্শন, প্রতি পৃষ্ঠায় বা সেকশনে নতুন করে শুরু, কাস্টম ব্যবধান ও প্যারাগ্রাফ সাপ্রেশন সহ পূর্ণাঙ্গ মাইক্রোসফট ওয়ার্ড পেজ সেটআপ লাইন নাম্বারিং কন্ট্রোল।",
+    descriptionEn: "Full Microsoft Word Page Setup Line Numbering control including Continuous, Restart Each Page, Restart Each Section, Suppress for Current Paragraph, Custom Start & Step increments, and status queries.",
+    features: [
+      {
+        name: "লাইন নম্বর বন্ধ (None)",
+        nameEn: "Disable Line Numbers (LineNumbering.Active = False)",
+        voiceCmd: "লাইন নম্বর বন্ধ করো",
+        voiceCmdEn: "Turn off line numbers",
+        chatPrompt: "Turn off line numbering across the document or current section",
+        aiAction: "layout_set_line_numbers (mode='none') দিয়ে ডকুমেন্টের লাইন নম্বর সম্পূর্ণ বন্ধ করে দেয়া হয় (PageSetup.LineNumbering.Active = False)।",
+        category: "Line Numbers Modes"
+      },
+      {
+        name: "ধারাবাহিক লাইন নম্বর (Continuous)",
+        nameEn: "Continuous Line Numbering (Active = True, RestartMode = 0)",
+        voiceCmd: "ধারাবাহিক লাইন নম্বর চালু করো",
+        voiceCmdEn: "Set continuous line numbers",
+        chatPrompt: "Enable continuous line numbering throughout the document",
+        aiAction: "layout_set_line_numbers (mode='continuous') এর মাধ্যমে সম্পূর্ণ ডকুমেন্টে ১ থেকে শুরু করে একটানা ধারাবাহিকভাবে প্রতি লাইনে নম্বর বসানো হয়।",
+        category: "Line Numbers Modes"
+      },
+      {
+        name: "প্রতি পৃষ্ঠায় পুনরায় শুরু (Restart Each Page)",
+        nameEn: "Restart Line Numbering Each Page (RestartMode = 2)",
+        voiceCmd: "প্রতি পৃষ্ঠায় পুনরায় শুরু করো",
+        voiceCmdEn: "Restart line numbers each page",
+        chatPrompt: "Set line numbers to restart at 1 on every new page",
+        aiAction: "layout_set_line_numbers (mode='restart_page', RestartMode = wdRestartPage = 2) এর মাধ্যমে প্রতিটি নতুন পৃষ্ঠায় লাইন নম্বর আবার ১ থেকে শুরু হয়।",
+        category: "Line Numbers Modes"
+      },
+      {
+        name: "প্রতি সেকশনে পুনরায় শুরু (Restart Each Section)",
+        nameEn: "Restart Line Numbering Each Section (RestartMode = 1)",
+        voiceCmd: "প্রতি সেকশনে নতুন করে লাইন নম্বর শুরু করো",
+        voiceCmdEn: "Restart line numbers each section",
+        chatPrompt: "Set line numbers to restart at 1 at each section break",
+        aiAction: "layout_set_line_numbers (mode='restart_section', RestartMode = wdRestartSection = 1) দিয়ে প্রতি সেকশন ব্রেকের পর স্বয়ংক্রিয়ভাবে নতুন করে ১ থেকে লাইন গণনা শুরু হয়।",
+        category: "Line Numbers Modes"
+      },
+      {
+        name: "বর্তমান প্যারাগ্রাফে লাইন নম্বর বাদ (Suppress for Current Paragraph)",
+        nameEn: "Suppress Line Numbering for Current Paragraph",
+        voiceCmd: "বর্তমান প্যারাগ্রাফে লাইন নম্বর বাদ দাও",
+        voiceCmdEn: "Suppress line number for current paragraph",
+        chatPrompt: "Suppress line numbers for currently selected paragraph",
+        aiAction: "layout_suppress_line_number (suppress=True) এর মাধ্যমে নির্দিষ্ট প্যারাগ্রাফে বা শিরোনামে লাইন নম্বর প্রদর্শন বাতিল (NoLineNumber = True) করা হয়।",
+        category: "Paragraph Suppression"
+      },
+      {
+        name: "শুরুর নম্বর ও ব্যবধান নির্ধারণ (Starting Number & Count By Step)",
+        nameEn: "Custom Starting Number & Display Increment Step",
+        voiceCmd: "লাইন নম্বর দাও শুরু ১০ প্রতি ৫ লাইনে",
+        voiceCmdEn: "Set line numbers starting at 10 every 5 lines",
+        chatPrompt: "Configure line numbers starting at 10 and display only every 5th line",
+        aiAction: "StartingNumber ও CountBy প্যারামিটারের সাহায্যে যেকোনো প্রাথমিক সংখ্যা থেকে গণনা শুরু করা যায় এবং প্রতি কত লাইনে নম্বর দৃশ্যমান হবে (যেমন প্রতি ৫ম লাইনে) তা নিয়ন্ত্রণ করা যায়।",
+        category: "Numbering Options"
+      },
+      {
+        name: "লাইন নম্বর অবস্থা নিরীক্ষা (Get Line Numbers Status)",
+        nameEn: "Query Line Numbering Configuration & Status",
+        voiceCmd: "লাইন নম্বর চালু আছে কিনা চেক করো",
+        voiceCmdEn: "Check line numbering status",
+        chatPrompt: "Query active line numbering mode, starting number, count step, and paragraph suppression",
+        aiAction: "layout_get_line_numbers দিয়ে ডকুমেন্টে লাইন নম্বর সক্রিয় আছে কিনা, কোন মোড চালু আছে, শুরুর নম্বর, স্টেপ ব্যবধান ও কার্সরের প্যারাগ্রাফে সাপ্রেশন স্ট্যাটাস জানা যায়।",
+        category: "Status & Inspection"
+      },
+      {
+        name: "লাইন নম্বর সেন্ট্রাল রাউটার (Manage Page Setup Line Numbers)",
+        nameEn: "Unified Page Setup Line Numbers Router",
+        voiceCmd: "লাইন নম্বর স্ট্যাটাস দেখো",
+        voiceCmdEn: "Manage page setup line numbers status",
+        chatPrompt: "Manage page setup line numbers with sub_action 'status'",
+        aiAction: "manage_page_setup_line_numbers কেন্দ্রীয় রাউটারের সাহায্যে none, continuous, restart_page, restart_section, suppress, status এবং reset অপারেশন পরিচালনা করা হয়।",
+        category: "Unified Management"
+      }
+    ]
   }
 ];
