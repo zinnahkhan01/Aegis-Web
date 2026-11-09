@@ -4676,5 +4676,79 @@ export const MS_WORD_STEPS = [
         category: "Unified Management"
       }
     ]
+  },
+  {
+    id: "word-step-52",
+    menu: "References",
+    menuBn: "রেফারেন্সেস মেনু",
+    section: "7.3 Research",
+    sectionBn: "৭.৩ রিসার্চ ও স্মার্ট অনুসন্ধান (Research & Smart Lookup)",
+    description: "ডকুমেন্টের যেকোনো শব্দ বা বিষয়ের তাৎক্ষণিক তথ্য অনুসন্ধান ও একাডেমিক গবেষণার জন্য অত্যাধুনিক রিসার্চ টুলস: Smart Lookup (শব্দ বা সিলেকশনের প্রাসঙ্গিক ওয়েব ও উইকি ইনসাইটস), Researcher (একাডেমিক জার্নাল ও বিশ্বস্ত উৎসের টপিক গবেষণা), Research Task Pane নিয়ন্ত্রণ, এবং প্রাপ্ত গবেষণা ফলাফল, উদ্ধৃতি ও রেফারেন্স সরাসরি ডকুমেন্টে সন্নিবেশ।",
+    descriptionEn: "Advanced research and contextual exploration tools for Word documents: Smart Lookup (contextual web and wiki insights for selected text or cursor words), Researcher (structured academic topic research and journals where available), Research TaskPane toggle, and direct insertion of research findings, quotations, and citations.",
+    features: [
+      {
+        name: "স্মার্ট লুকআপ (Smart Lookup)",
+        nameEn: "Contextual Smart Lookup & Insights",
+        voiceCmd: "স্মার্ট লুকআপ করো",
+        voiceCmdEn: "Smart lookup selected word",
+        chatPrompt: "Smart lookup for the selected word or query='কৃত্রিম বুদ্ধিমত্তা' via native Word SmartLookup / Research Pane",
+        aiAction: "reference_smart_lookup দিয়ে সিলেক্টেড শব্দ বা বিষয়ের উপর প্রাসঙ্গিক ওয়েব তথ্য ও নলেজ ইনসাইটস অনুসন্ধান করা হয়।",
+        category: "Smart Lookup"
+      },
+      {
+        name: "রিসার্চার টুল (Researcher)",
+        nameEn: "Academic Researcher & Topic Explorer",
+        voiceCmd: "রিসার্চার চালু করো",
+        voiceCmdEn: "Open researcher for topic",
+        chatPrompt: "Explore academic topic='বায়োটেকনোলজি' using Word Researcher / Research TaskPane",
+        aiAction: "reference_researcher দিয়ে গবেষণার নির্দিষ্ট বিষয়ের উপর একাডেমিক জার্নাল, নির্ভরযোগ্য উৎস ও রেফারেন্স অনুসন্ধান করা হয়।",
+        category: "Academic Research"
+      },
+      {
+        name: "রিসার্চ প্যান খোলা (Open Research TaskPane)",
+        nameEn: "Open Native Research Task Pane",
+        voiceCmd: "রিসার্চ প্যান খোলো",
+        voiceCmdEn: "Open research task pane",
+        chatPrompt: "Open Word's native Research TaskPane (TaskPane 10) for dictionary and reference exploration",
+        aiAction: "reference_toggle_research_pane (state='open') দিয়ে ওয়ার্ডের বিল্ট-ইন রিসার্চ টাস্ক প্যানেল সরাসরি চালু করা হয় (TaskPanes(10).Visible = True)।",
+        category: "Task Pane Control"
+      },
+      {
+        name: "রিসার্চ প্যান বন্ধ করা (Close Research TaskPane)",
+        nameEn: "Close Native Research Task Pane",
+        voiceCmd: "রিসার্চ প্যান বন্ধ করো",
+        voiceCmdEn: "Close research task pane",
+        chatPrompt: "Close the active Research TaskPane in Word",
+        aiAction: "reference_toggle_research_pane (state='close') দিয়ে ওয়ার্ডের রিসার্চ টাস্ক প্যানেল বন্ধ করা হয়।",
+        category: "Task Pane Control"
+      },
+      {
+        name: "গবেষণার তথ্য ও উদ্ধৃতি সন্নিবেশ (Insert Research & Citations)",
+        nameEn: "Insert Research Findings, Quotations & Citations",
+        voiceCmd: "গবেষণার তথ্য ডকুমেন্টে যুক্ত করো",
+        voiceCmdEn: "Insert research notes and citation",
+        chatPrompt: "Insert research findings with topic='রোবটিক্স', content='গবেষণার সারসংক্ষেপ', quote='প্রধান উক্তি', and source='IEEE, 2026'",
+        aiAction: "reference_insert_research দিয়ে প্রাপ্ত গবেষণার শিরোনাম, উদ্ধৃতি, সারসংক্ষেপ ও তথ্যসূত্র ফরম্যাটসহ ডকুমেন্টে টাইপ করা হয়।",
+        category: "Document Insertion"
+      },
+      {
+        name: "রিসার্চ স্ট্যাটাস ও প্রাপ্যতা (Get Research Status)",
+        nameEn: "Check Research Capabilities & Selection Status",
+        voiceCmd: "রিসার্চের অবস্থা চেক করো",
+        voiceCmdEn: "Check research capabilities status",
+        chatPrompt: "Inspect availability of Smart Lookup, Researcher, ResearchPane visibility, and current selection",
+        aiAction: "reference_get_research_status দিয়ে ওয়ার্ডে স্মার্ট লুকআপ ও রিসার্চার সুবিধার প্রাপ্যতা এবং সিলেকশনের অবস্থা নিরীক্ষা করা হয়।",
+        category: "Status & Inspection"
+      },
+      {
+        name: "রিসার্চ সেন্ট্রাল রাউটার (Manage Reference Research)",
+        nameEn: "Unified Research Management Router",
+        voiceCmd: "রিসার্চ পরিচালনা করো",
+        voiceCmdEn: "Manage reference research",
+        chatPrompt: "Manage research via unified router with research_action: smart_lookup, researcher, open_pane, close_pane, insert_research, status",
+        aiAction: "manage_reference_research কেন্দ্রীয় রাউটারের সাহায্যে স্মার্ট লুকআপ ও রিসার্চার সম্পর্কিত সকল অপারেশন স্বয়ংক্রিয়ভাবে পরিচালনা করা হয়।",
+        category: "Unified Management"
+      }
+    ]
   }
 ];
