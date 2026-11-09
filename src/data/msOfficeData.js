@@ -3359,5 +3359,69 @@ export const MS_WORD_STEPS = [
         category: "Unified Management"
       }
     ]
+  },
+  {
+    stepNumber: "Step 37",
+    menuName: "4. DRAW MENU [zk1.1] ➔ Advanced",
+    title: "ড্র মেনু অ্যাডভান্সড: হাতের লেখা নোট, ফ্রিহ্যান্ড ড্রয়িং, ডকুমেন্ট অ্যানোটেশন ও ইনক টু টেক্সট রূপান্তর",
+    titleEn: "Draw Menu Advanced: Handwritten Notes, Freehand Curves/Signatures, Text Annotation, Handwriting Recognition & Convert Ink to Text",
+    subtitle: "ডকুমেন্টে সুন্দর মার্জিন স্টিকি নোট, ডিজিটাল স্বাক্ষর/ফ্রিহ্যান্ড স্কেচ, শব্দের চারপাশে ডিজিটাল পেন বৃত্ত/আন্ডারলাইন মার্ক, হাতের লেখা স্বয়ংক্রিয় শনাক্তকরণ ও টেক্সটে রূপান্তরের পূর্ণাঙ্গ অটোমেশন।",
+    badge: "Draw Advanced",
+    commands: [
+      {
+        name: "হাতের লেখা স্টিকি নোট (Handwritten Notes)",
+        nameEn: "Handwritten Sticky Notes",
+        voiceCmd: "একটি হলুদ হাতের লেখা স্টিকি নোট দাও: 'মিটিংয়ের সিদ্ধান্ত দ্রুত বাস্তবায়ন করুন'",
+        voiceCmdEn: "Insert handwritten note 'Review chapter 3' with yellow background",
+        chatPrompt: "Insert handwritten note text 'Urgent review required' with bg_color 'yellow' font_name 'Segoe Script'",
+        aiAction: "draw_handwritten_note দিয়ে ডকুমেন্টের মার্জিনে সুন্দর প্যাস্টেল রঙের স্টিকি নোট ও হস্তাক্ষর ফন্ট (Segoe Script, Lucida Handwriting) সন্নিবেশ করা হয়।",
+        category: "Handwritten Notes"
+      },
+      {
+        name: "ফ্রিহ্যান্ড ড্রয়িং ও ডিজিটাল স্বাক্ষর (Freehand Drawing & Signature)",
+        nameEn: "Freehand Vector Drawing & Signature",
+        voiceCmd: "ডকুমেন্টে একটি নীল ডিজিটাল স্বাক্ষর ফ্রিহ্যান্ডে আঁকো",
+        voiceCmdEn: "Draw a freehand signature with blue ink",
+        chatPrompt: "Draw freehand drawing with drawing_type 'signature' color 'blue' thickness 1.8",
+        aiAction: "draw_freehand_drawing প্রসিডিউরাল ভেক্টর পাথ (Shapes.BuildFreeform) ব্যবহার করে স্বাক্ষর, তরঙ্গ রেখা, স্পাইরাল ও তারা ডুডল আঁকে।",
+        category: "Freehand Drawing"
+      },
+      {
+        name: "ডকুমেন্ট টেক্সট অ্যানোটেশন (Annotate Document)",
+        nameEn: "Contextual Text Inking & Annotation",
+        voiceCmd: "গুরুত্বপূর্ণ 'Approved' শব্দটিতে লাল বৃত্ত দিয়ে মার্ক করো",
+        voiceCmdEn: "Annotate target text 'Approved' with red freehand circle",
+        chatPrompt: "Annotate document with annotation_type 'circle' text_target 'Approved' color 'red'",
+        aiAction: "draw_annotate_document পেজের নির্দিষ্ট শব্দ বা বাক্যের ওপর স্বয়ংক্রিয়ভাবে ডিজিটাল সার্কেল, ঢেউ খেলানো আন্ডারলাইন, মার্জিন স্টার বা অ্যারো আঁকে।",
+        category: "Annotate Document"
+      },
+      {
+        name: "হাতের লেখা শনাক্তকরণ (Handwriting Recognition)",
+        nameEn: "Handwriting OCR & Recognition",
+        voiceCmd: "হাতের লেখাটি শনাক্ত করো",
+        voiceCmdEn: "Recognize handwriting from the latest digital note",
+        chatPrompt: "Recognize handwriting with target 'latest_note'",
+        aiAction: "draw_handwriting_recognition হস্তাক্ষর নোট বা ডিজিটাল ইনক থেকে শব্দ ও অক্ষরসমূহ পড়ে হাই এক্যুরেসি কনফিডেন্স স্কোর ও ভাষা নির্দেশ করে।",
+        category: "Recognition"
+      },
+      {
+        name: "ইঙ্ক থেকে টেক্সট রূপান্তর (Convert Ink to Text)",
+        nameEn: "Convert Ink to Editable Text",
+        voiceCmd: "হাতের লেখাটি টাইপ করা টেক্সটে রূপান্তর করো",
+        voiceCmdEn: "Convert ink note to editable Word text paragraph",
+        chatPrompt: "Convert ink to text with target 'latest_note' replace_with_text True",
+        aiAction: "draw_convert_ink_to_text হাতের লেখা নোট বা ইনক স্ট্রোককে স্ট্যান্ডার্ড এডিটেবল প্যারাগ্রাফ টেক্সটে রূপান্তর করে ইনক শেপটি প্রতিস্থাপন করে।",
+        category: "Convert to Text"
+      },
+      {
+        name: "সেন্ট্রাল ড্র অ্যাডভান্সড রাউটার (Manage Draw Advanced)",
+        nameEn: "Manage Draw Advanced Unified Router",
+        voiceCmd: "ড্র অ্যাডভান্সড স্ট্যাটাস চেক করো",
+        voiceCmdEn: "Manage draw advanced action 'status'",
+        chatPrompt: "Manage draw advanced with action 'status'",
+        aiAction: "manage_draw_advanced কেন্দ্রীয় ডিসপ্যাচার দিয়ে হস্তাক্ষর নোট, ফ্রিহ্যান্ড স্কেচ, অ্যানোটেশন, রিকগনিশন ও টেক্সট রূপান্তর সামগ্রিকভাবে সমন্বয় করে।",
+        category: "Unified Management"
+      }
+    ]
   }
 ];
