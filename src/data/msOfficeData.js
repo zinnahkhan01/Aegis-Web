@@ -4198,5 +4198,88 @@ export const MS_WORD_STEPS = [
         category: "Unified Management"
       }
     ]
+  },
+  {
+    id: "word-step-47",
+    menu: "Layout",
+    menuBn: "লেআউট মেনু",
+    section: "6.7 Page Setup: Hyphenation",
+    sectionBn: "৬.৭ পেজ সেটআপ: হাইফেনেশন (Hyphenation)",
+    description: "ডকুমেন্টের লাইনের শেষে বড় শব্দ ভেঙে হাইফেন যোগ, স্বয়ংক্রিয় ও ম্যানুয়াল মোড, ক্যাপিটাল শব্দ ও ধারাবাহিক হাইফেন সীমা নির্ধারণ এবং প্যারাগ্রাফ সাপ্রেশন সহ সম্পূর্ণ ওয়ার্ড পেজ সেটআপ হাইফেনেশন কন্ট্রোল।",
+    descriptionEn: "Complete Microsoft Word Page Setup Hyphenation control including None, Automatic, Manual, Hyphenation Options (Caps control, Consecutive hyphens limit, Hyphenation zone), Paragraph Suppression, and Status Query.",
+    features: [
+      {
+        name: "হাইফেনেশন বন্ধ (None)",
+        nameEn: "Disable Automatic Hyphenation (AutoHyphenation = False)",
+        voiceCmd: "হাইফেনেশন বন্ধ করো",
+        voiceCmdEn: "Turn off hyphenation",
+        chatPrompt: "Turn off hyphenation across the document",
+        aiAction: "layout_set_hyphenation (mode='none') দিয়ে ডকুমেন্টের স্বয়ংক্রিয় হাইফেনেশন বন্ধ করা হয় (Document.AutoHyphenation = False)।",
+        category: "Hyphenation Modes"
+      },
+      {
+        name: "স্বয়ংক্রিয় হাইফেনেশন (Automatic)",
+        nameEn: "Enable Automatic Hyphenation (AutoHyphenation = True)",
+        voiceCmd: "অটোমেটিক হাইফেনেশন চালু করো",
+        voiceCmdEn: "Turn on automatic hyphenation",
+        chatPrompt: "Enable automatic hyphenation throughout the document",
+        aiAction: "layout_set_hyphenation (mode='automatic') দিয়ে ডকুমেন্টের মার্জিন ছাড়িয়ে যাওয়া দীর্ঘ শব্দগুলোতে স্বয়ংক্রিয় হাইফেনেশন সক্রিয় করা হয় (Document.AutoHyphenation = True)।",
+        category: "Hyphenation Modes"
+      },
+      {
+        name: "ম্যানুয়াল হাইফেনেশন (Manual)",
+        nameEn: "Initiate Manual Hyphenation Check (ManualHyphenation())",
+        voiceCmd: "ম্যানুয়াল হাইফেনেশন করো",
+        voiceCmdEn: "Run manual hyphenation check",
+        chatPrompt: "Initiate manual hyphenation scan in document",
+        aiAction: "layout_manual_hyphenation এর মাধ্যমে প্রতিটি দীর্ঘ শব্দের সম্ভাব্য হাইফেন পয়েন্ট যাচাই করে ম্যানুয়াল হাইফেনেশন সম্পন্ন করা হয় (Document.ManualHyphenation())।",
+        category: "Hyphenation Modes"
+      },
+      {
+        name: "বড় হাতের শব্দের হাইফেন নিয়ন্ত্রণ (Hyphenate Words in CAPS)",
+        nameEn: "Hyphenate Words in CAPITAL Letters (HyphenateCaps)",
+        voiceCmd: "বড় হাতের অক্ষরের হাইফেন বন্ধ করো",
+        voiceCmdEn: "Disable hyphenation for capitalized words",
+        chatPrompt: "Configure hyphenation options to disable hyphenating words in CAPS",
+        aiAction: "layout_hyphenation_options (hyphenate_caps=False) দিয়ে অ্যাক্রোনিম বা ক্যাপিটাল লেটারের শব্দে হাইফেনেশন বন্ধ বা চালু করা হয় (Document.HyphenateCaps)।",
+        category: "Hyphenation Options"
+      },
+      {
+        name: "ধারাবাহিক হাইফেন সীমা নির্ধারণ (Consecutive Hyphens Limit)",
+        nameEn: "Limit Consecutive Lines Ending in Hyphens",
+        voiceCmd: "ধারাবাহিক হাইফেন সীমা ২ নির্ধারণ করো",
+        voiceCmdEn: "Limit consecutive hyphens to 2",
+        chatPrompt: "Limit consecutive hyphenated lines to 2",
+        aiAction: "layout_hyphenation_options (consecutive_hyphens_limit=2) দিয়ে পর পর কয়টি লাইনের শেষে হাইফেন বসতে পারবে তা সীমাবদ্ধ করা হয় (Document.ConsecutiveHyphensLimit)।",
+        category: "Hyphenation Options"
+      },
+      {
+        name: "প্যারাগ্রাফ হাইফেনেশন বাতিল/সাপ্রেশন (Suppress for Paragraph)",
+        nameEn: "Suppress Hyphenation for Current Paragraph",
+        voiceCmd: "বর্তমান প্যারাগ্রাফে হাইফেনেশন বাদ দাও",
+        voiceCmdEn: "Suppress hyphenation for this paragraph",
+        chatPrompt: "Suppress hyphenation for selected or active paragraph",
+        aiAction: "layout_suppress_hyphenation (suppress=True) দিয়ে নির্দিষ্ট অনুচ্ছেদে হাইফেনেশন বাদ রাখা হয় (ParagraphFormat.Hyphenation = 0)।",
+        category: "Paragraph Formatting"
+      },
+      {
+        name: "হাইফেনেশন অবস্থা নিরীক্ষা (Get Hyphenation Status)",
+        nameEn: "Query Hyphenation Status & Settings",
+        voiceCmd: "হাইফেনেশন চালু আছে কিনা চেক করো",
+        voiceCmdEn: "Check hyphenation status",
+        chatPrompt: "Query active hyphenation mode, caps setting, consecutive limit, and paragraph suppression",
+        aiAction: "layout_get_hyphenation দিয়ে ডকুমেন্টে হাইফেনেশনের বর্তমান অবস্থা, বড় হাতের শব্দের অপশন এবং ধারাবাহিক হাইফেন সীমা নিরীক্ষা করা হয়।",
+        category: "Status & Inspection"
+      },
+      {
+        name: "হাইফেনেশন সেন্ট্রাল রাউটার (Manage Page Setup Hyphenation)",
+        nameEn: "Unified Page Setup Hyphenation Router",
+        voiceCmd: "হাইফেনেশন রিসেট করো",
+        voiceCmdEn: "Reset hyphenation settings",
+        chatPrompt: "Manage page setup hyphenation with sub_action 'automatic'",
+        aiAction: "manage_page_setup_hyphenation কেন্দ্রীয় রাউটারের সাহায্যে none, automatic, manual, options, suppress, status ও reset অপারেশন পরিচালনা করা হয়।",
+        category: "Unified Management"
+      }
+    ]
   }
 ];
