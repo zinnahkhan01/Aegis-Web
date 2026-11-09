@@ -3587,5 +3587,87 @@ export const MS_WORD_STEPS = [
         category: "Unified Management"
       }
     ]
+  },
+  {
+    stepNumber: "Step 40",
+    menuName: "5. DESIGN MENU ➔ 5.3 Advanced Design",
+    title: "ডিজাইন মেনু: অ্যাডভান্সড ডিজাইন, কাস্টম থিম (.thmx), ১২-কালার কাস্টম প্যালেট (.xml), কাস্টম ফন্ট পেয়ারিং এবং আলংকারিক আর্ট বর্ডার ও ব্যাকগ্রাউন্ড",
+    titleEn: "Design Menu: Advanced Design, Custom Theme (.thmx), 12-Color Theme Palette (.xml), Custom Font Pairing, Border Art, and Custom Background",
+    subtitle: "ডকুমেন্টের সম্পূর্ণ ভিজ্যুয়াল আইডেন্টিটি কাস্টমাইজ করার জন্য নিজস্ব .thmx থিম ফাইল তৈরি ও সংরক্ষণ, ১২টি স্বতন্ত্র রঙের Office DrawingML কালার প্যালেট (.xml), বাংলা ইউনিকোড ফন্ট (Kalpurush, SolaimanLipi, Nikosh) সহ হেডিং ও বডি ফন্ট স্কিম (.xml), ১-১৬৪টি আলংকারিক আর্ট বর্ডার এবং পিকচার/টেক্সচার/প্যাটার্ন পেজ ব্যাকগ্রাউন্ড অটোমেশন।",
+    badge: "Advanced Design",
+    commands: [
+      {
+        name: "কাস্টম থিম তৈরি ও সেভ (Custom Theme .thmx)",
+        nameEn: "Create & Save Custom Theme (.thmx)",
+        voiceCmd: "কাস্টম থিম তৈরি করো 'Aegis Corporate'",
+        voiceCmdEn: "Create and save custom theme 'Aegis Corporate'",
+        chatPrompt: "Create custom theme with custom_theme_name 'Aegis Corporate' base_theme 'Office' save_theme True apply_now True",
+        aiAction: "design_custom_theme দিয়ে কাস্টম ফন্ট ও কালার স্কিম সমন্বয় করে একটি পূর্ণাঙ্গ অফিস থিম (.thmx) তৈরি করা হয় এবং ব্যবহারকারীর Office Templates ফোল্ডারে স্বয়ংক্রিয়ভাবে সংরক্ষণ ও ডকুমেন্টে প্রয়োগ করা হয়।",
+        category: "Custom Theme"
+      },
+      {
+        name: "১২-কালার কাস্টম কালার প্যালেট (Custom Color Palette .xml)",
+        nameEn: "Create 12-Color Custom Palette (.xml)",
+        voiceCmd: "কাস্টম কালার প্যালেট তৈরি করো 'Cyberpunk'",
+        voiceCmdEn: "Create 12-color custom palette 'Cyberpunk'",
+        chatPrompt: "Create custom palette with custom_palette_name 'Cyberpunk' accent1 '#00FFCC' accent2 '#FF007F' save_palette True",
+        aiAction: "design_custom_palette দিয়ে Office DrawingML স্ট্যান্ডার্ডে ১২টি শেড (Dark 1/2, Light 1/2, Accent 1..6, Hyperlinks) সমন্বিত কাস্টম কালার প্যালেট তৈরি ও %APPDATA%\\Microsoft\\Templates\\Document Themes\\Theme Colors-এ .xml হিসেবে সেভ করা হয়।",
+        category: "Theme Colors"
+      },
+      {
+        name: "কাস্টম ফন্ট পেয়ারিং ও বাংলা ফন্ট স্কিম (Custom Font Pairing .xml)",
+        nameEn: "Custom Font Pairing & Bengali Font Scheme (.xml)",
+        voiceCmd: "বাংলা ফন্ট Kalpurush দিয়ে ফন্ট স্কিম বানাও",
+        voiceCmdEn: "Create custom font scheme pairing Aptos Display and Kalpurush",
+        chatPrompt: "Create custom font pairing with custom_scheme_name 'Aegis Bengali' heading_font 'Aptos Display' body_font 'Kalpurush' bengali_font 'Kalpurush' save_scheme True",
+        aiAction: "design_custom_font_pairing দিয়ে ইংরেজি হেডিং ফন্ট এবং বাংলা ইউনিকোড বডি ফন্ট (কালপুরুষ, সোলায়মানলিপি, নিকোশ) নিখুঁতভাবে সমন্বয় করে Office Theme Fonts ফোল্ডারে .xml আকারে স্থায়ীভাবে সংরক্ষণ ও ডকুমেন্টে বাস্তবায়ন করা হয়।",
+        category: "Font Pairing"
+      },
+      {
+        name: "আলংকারিক আর্ট বর্ডার (Decorative Border Art)",
+        nameEn: "Decorative Border Art (Stars, Apples, Trees, Hearts)",
+        voiceCmd: "stars আর্ট বর্ডার দাও ২০ pt",
+        voiceCmdEn: "Apply decorative 'stars' art border with width 20pt",
+        chatPrompt: "Apply border art with art_border 'stars' art_width 20 distance_from 'edge'",
+        aiAction: "design_border_art দিয়ে মাইক্রোসফট ওয়ার্ডের ১৬৪টি শৈল্পিক আর্টওয়ার্ক (তারা, আপেল, গাছ, হার্ট, বেলুন ইত্যাদি) থেকে ১-৩১ pt প্রস্থে পৃষ্ঠার প্রান্তে বা টেক্সটের চারিপাশে ফ্রেম তৈরি করা হয়।",
+        category: "Border Art"
+      },
+      {
+        name: "নির্দিষ্ট দিকে আর্ট বর্ডার (Selective Border Sides - Top & Bottom)",
+        nameEn: "Selective Border Sides (Top & Bottom Only)",
+        voiceCmd: "শুধু উপরে এবং নিচে আর্ট বর্ডার দাও",
+        voiceCmdEn: "Apply art border to top and bottom sides only",
+        chatPrompt: "Apply border art with art_border 'apples' sides ['top', 'bottom'] art_width 18",
+        aiAction: "design_border_art এর মাধ্যমে পৃষ্ঠার চারপাশের পরিবর্তে শুধু নির্বাচিত বাহুগুলোতে (যেমন শুধু উপরে-নিচে বা ডানে-বামে) ডেকোরেটিভ বর্ডার আর্ট সীমাবদ্ধ রাখা যায়।",
+        category: "Border Art"
+      },
+      {
+        name: "কাস্টম ছবি ব্যাকগ্রাউন্ড (Custom Picture Fill Background)",
+        nameEn: "Custom Picture Fill Wallpaper",
+        voiceCmd: "ছবি ব্যাকগ্রাউন্ড দাও 'wallpaper.png'",
+        voiceCmdEn: "Set custom picture background wallpaper",
+        chatPrompt: "Set custom background with background_mode 'picture' picture_path 'wallpaper.png' print_backgrounds True",
+        aiAction: "design_custom_background এর মাধ্যমে ব্যাকগ্রাউন্ডে নির্দিষ্ট ইমেজ ফাইলকে সমগ্র পৃষ্ঠার আলংকারিক ওয়ালপেপার হিসেবে ফিল করা হয় এবং ব্যাকগ্রাউন্ড প্রিন্টিং সক্রিয় করা হয়।",
+        category: "Custom Background"
+      },
+      {
+        name: "টাইল্ড টেক্সচার ও প্যাটার্ন ব্যাকগ্রাউন্ড (Tiled Texture & Pattern Fill)",
+        nameEn: "Tiled Texture & Geometric Pattern Fill",
+        voiceCmd: "প্যাটার্ন ব্যাকগ্রাউন্ড সেট করো pattern 25",
+        voiceCmdEn: "Apply geometric pattern background with custom colors",
+        chatPrompt: "Set custom background with background_mode 'pattern' pattern_id 25 color1 '#0078D7' color2 '#FFFFFF'",
+        aiAction: "design_custom_background দিয়ে ওয়ার্ডের ৫৪টি জ্যামিতিক প্যাটার্ন অথবা কাস্টম টাইল্ড টেক্সচার ফোরগ্রাউন্ড ও ব্যাকগ্রাউন্ড রঙের সমন্বয়ে ব্যাকগ্রাউন্ডে প্রয়োগ করা হয়।",
+        category: "Custom Background"
+      },
+      {
+        name: "অ্যাডভান্সড ডিজাইন সেন্ট্রাল রাউটার (Manage Advanced Design)",
+        nameEn: "Unified Advanced Design Router",
+        voiceCmd: "অ্যাডভান্সড ডিজাইন রিসেট করো",
+        voiceCmdEn: "Reset and clear all custom advanced design elements",
+        chatPrompt: "Manage advanced design with sub_action 'clear'",
+        aiAction: "manage_advanced_design কেন্দ্রীয় রাউটারের মাধ্যমে অ্যাক্টিভ কাস্টম থিম, প্যালেট, ফন্ট স্কিম, আর্ট বর্ডার ও ব্যাকগ্রাউন্ডের বর্তমান অবস্থা যাচাই বা সম্পূর্ণ রিসেট করা হয়।",
+        category: "Unified Management"
+      }
+    ]
   }
 ];
