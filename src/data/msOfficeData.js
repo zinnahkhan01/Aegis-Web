@@ -3915,5 +3915,114 @@ export const MS_WORD_STEPS = [
         category: "Unified Management"
       }
     ]
+  },
+  {
+    stepNumber: "Step 44",
+    menuName: "6. LAYOUT MENU ➔ 6.4 Page Setup: Columns",
+    title: "লেআউট মেনু: পেজ সেটআপ - কলাম বিন্যাস (One, Two, Three, Left, Right, More Columns ও Column Break)",
+    titleEn: "Layout Menu: Page Setup - Columns (One, Two, Three, Left, Right, More Columns & Column Break)",
+    subtitle: "ডকুমেন্টের টেক্সটকে একাধিক কলামে সাজানো ও প্রফেশনাল লেআউট তৈরি—একটি সাধারণ কলাম (One), সমান আকারের দুই ও তিন কলাম (Two & Three), অসম প্রস্থের বাম ও ডান কলাম (Left & Right), কাস্টম কলাম সংখ্যা ও ফাঁকা দূরত্ব (Spacing), কলামের মাঝে বিভাজক উল্লম্ব রেখা (Line Between), কলাম ব্রেক (Column Break), এবং সেকশনভিত্তিক কলাম পরিচালনা।",
+    badge: "Columns",
+    commands: [
+      {
+        name: "একক কলাম বিন্যাস (One Column)",
+        nameEn: "One Column Standard Full Page Width",
+        voiceCmd: "ডকুমেন্টকে এক কলামে সাজাও",
+        voiceCmdEn: "Set document columns to one",
+        chatPrompt: "Set page layout to one single column",
+        aiAction: "layout_set_columns দিয়ে ডকুমেন্টের সম্পূর্ণ টেক্সট মার্জিনের মধ্যে একক (1) কলামে বিস্তৃত করা হয়।",
+        category: "Standard Column"
+      },
+      {
+        name: "দুই কলাম বিন্যাস (Two Columns)",
+        nameEn: "Two Equal Columns Layout",
+        voiceCmd: "লেখাগুলোকে দুই কলামে ভাগ করো",
+        voiceCmdEn: "Set page to two columns",
+        chatPrompt: "Format document text into two equal columns",
+        aiAction: "layout_set_columns দিয়ে পৃষ্ঠার সমস্ত লেখাকে সমান প্রস্থের ২টি কলামে (EvenlySpaced = True, 0.5 ইঞ্চি স্পেসিং) বিভক্ত করা হয়।",
+        category: "Standard Column"
+      },
+      {
+        name: "তিন কলাম বিন্যাস (Three Columns)",
+        nameEn: "Three Equal Columns Layout",
+        voiceCmd: "পেজকে তিন কলামে রূপান্তর করো",
+        voiceCmdEn: "Set page to three columns",
+        chatPrompt: "Format document text into three equal columns",
+        aiAction: "layout_set_columns দিয়ে পৃষ্ঠার লেখাকে সংবাদপত্রের মতো সমান ৩টি কলামে সুন্দরভাবে বিন্যস্ত করা হয়।",
+        category: "Standard Column"
+      },
+      {
+        name: "বাম সংকীর্ণ কলাম (Left Column Preset)",
+        nameEn: "Left Column Preset (Narrow Left, Wide Right)",
+        voiceCmd: "বামে ছোট ও ডানে চওড়া কলাম করো",
+        voiceCmdEn: "Set columns to Left preset",
+        chatPrompt: "Apply Left column preset with narrow left column and wide right column",
+        aiAction: "layout_set_columns দিয়ে অসম ২ কলাম লেআউট প্রয়োগ করা হয় যেখানে বাম কলাম ১/৩ অংশ ও ডান কলাম ২/৩ অংশ জুড়ে বিস্তৃত থাকে।",
+        category: "Unequal Preset"
+      },
+      {
+        name: "ডান সংকীর্ণ কলাম (Right Column Preset)",
+        nameEn: "Right Column Preset (Wide Left, Narrow Right)",
+        voiceCmd: "ডানে ছোট ও বামে চওড়া কলাম করো",
+        voiceCmdEn: "Set columns to Right preset",
+        chatPrompt: "Apply Right column preset with wide left column and narrow right column",
+        aiAction: "layout_set_columns দিয়ে অসম ২ কলাম লেআউট প্রয়োগ করা হয় যেখানে বাম কলাম ২/৩ অংশ ও ডান কলাম ১/৩ অংশ জুড়ে থাকে।",
+        category: "Unequal Preset"
+      },
+      {
+        name: "কলামের মাঝে বিভাজক রেখা (Line Between Columns)",
+        nameEn: "Vertical Divider Rule Between Columns",
+        voiceCmd: "কলামের মাঝে লাইন দাও",
+        voiceCmdEn: "Add line between columns",
+        chatPrompt: "Set columns with vertical line between them",
+        aiAction: "LineBetween = True সক্রিয় করে কলামগুলোর মধ্যবর্তী ফাঁকা অংশে মার্জিত উল্লম্ব সেপারেটর লাইন আঁকা হয়।",
+        category: "Column Formatting"
+      },
+      {
+        name: "কাস্টম কলাম ও দূরত্ব (More Columns / Custom Spacing)",
+        nameEn: "Custom Columns Count & Spacing",
+        voiceCmd: "৪টি কলাম করো এবং স্পেসিং ০.৩ ইঞ্চি দাও",
+        voiceCmdEn: "Set 4 columns with 0.3 inch spacing",
+        chatPrompt: "Configure 4 custom columns with 0.3 inch spacing and line between",
+        aiAction: "ইচ্ছামতো ৪ বা ততোধিক কলাম সংখ্যা, ইঞ্চি/সেমি/পয়েন্টে কলামের ব্যবধান (Spacing) এবং নির্দিষ্ট প্রস্থ সুনির্দিষ্টভাবে সেট করা হয়।",
+        category: "Custom Columns"
+      },
+      {
+        name: "কলাম ব্রেক ইনসার্ট (Insert Column Break)",
+        nameEn: "Insert Column Break (wdColumnBreak = 8)",
+        voiceCmd: "কলাম ব্রেক দাও",
+        voiceCmdEn: "Insert column break",
+        chatPrompt: "Insert column break at cursor position to jump to the next column",
+        aiAction: "layout_insert_column_break (wdColumnBreak = 8) এর মাধ্যমে তাত্ক্ষণিকভাবে বর্তমান কলাম সমাপ্ত করে পরবর্তী কলামের শুরুতে কার্সার স্থানান্তর করা হয়।",
+        category: "Column Break"
+      },
+      {
+        name: "সেকশনভিত্তিক কলাম (Section & Point Forward Columns)",
+        nameEn: "Columns by Section or This Point Forward",
+        voiceCmd: "পরবর্তী পেজ থেকে ৩ কলাম করো",
+        voiceCmdEn: "Apply 3 columns from this point forward",
+        chatPrompt: "Apply 3 columns from this point forward using continuous section break",
+        aiAction: "Continuous সেকশন ব্রেক (wdSectionBreakContinuous = 3) ব্যবহার করে একই ডকুমেন্টের যেকোনো নির্দিষ্ট অনুচ্ছেদ বা পরবর্তী অংশকে আলাদা কলাম লেআউটে পরিবর্তন করা হয়।",
+        category: "Scope & Sections"
+      },
+      {
+        name: "কলাম স্ট্যাটাস নিরীক্ষা (Get Columns Status)",
+        nameEn: "Query Current Document Columns Info",
+        voiceCmd: "বর্তমান কলাম কত চেক করো",
+        voiceCmdEn: "Check current columns configuration",
+        chatPrompt: "Query column count, spacing, line between, and section details",
+        aiAction: "layout_get_columns দিয়ে প্রতিটি সেকশনের কলাম সংখ্যা, প্রিসেটের নাম, স্পেসিং, প্রস্থ ও রেখার স্ট্যাটাস বিস্তারিত রিপোর্ট আকারে পাওয়া যায়।",
+        category: "Columns Status"
+      },
+      {
+        name: "কলাম কেন্দ্রীয় রাউটার (Manage Page Setup Columns)",
+        nameEn: "Unified Page Setup Columns Router",
+        voiceCmd: "কলাম রিসেট করো",
+        voiceCmdEn: "Reset columns to default one column",
+        chatPrompt: "Manage page setup columns with sub_action 'reset'",
+        aiAction: "manage_page_setup_columns একক কমান্ডের মাধ্যমে One, Two, Three, Left, Right, কাস্টম কলাম, ব্রেক বা সম্পূর্ণ ডকুমেন্টকে পুনরায় স্বাভাবিক ১টি একক কলামে রিসেট করা হয়।",
+        category: "Unified Management"
+      }
+    ]
   }
 ];
