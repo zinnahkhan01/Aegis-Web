@@ -2762,5 +2762,55 @@ export const MS_WORD_STEPS = [
         category: "Unified Management"
       }
     ]
+  },
+  {
+    stepNumber: "Step 31",
+    menuName: "Insert Menu ➔ 3.5 Links",
+    title: "ইনসার্ট মেনু: হাইপারলিংক, বুকমার্ক ও ক্রস-রেফারেন্স (3.5 Links)",
+    titleEn: "Insert Menu: Links (Hyperlink, Bookmark & Cross-reference)",
+    subtitle: "ডকুমেন্টে ওয়েব ও ফাইল হাইপারলিংক সংযোজন, নির্দিষ্ট টেক্সট বা স্থানে নামযুক্ত বুকমার্ক তৈরি ও নেভিগেশন এবং হেডিং/পৃষ্ঠা নম্বরে ক্রস-রেফারেন্স লিঙ্ক সন্নিবেশ।",
+    badge: "Navigation & Links",
+    commands: [
+      {
+        id: "cmd-link-1",
+        featureName: "হাইপারলিংক সন্নিবেশ (Hyperlink)",
+        featureNameEn: "Insert Hyperlink to Web URL, Email, File, or Document Target",
+        description: "ডকুমেন্টে ক্লিকযোগ্য হাইপারলিংক তৈরি করা, ডিসপ্লে টেক্সট ও কাস্টম স্ক্রিনটিপ (টুলটিপ) সেট করা অথবা বিদ্যমান টেক্সটকে লিংকে রূপান্তর করা।",
+        voicePrompt: "ডকুমেন্টে একটি হাইপারলিংক যোগ করো / গুগল লিঙ্ক তৈরি করো",
+        chatPrompt: "Insert hyperlink to 'https://github.com/zinnahkhan01/Aegis-AI' with display text 'Aegis AI Repository' and tooltip",
+        aiAction: "Word COM-এর Hyperlinks.Add API দিয়ে টার্গেট রেঞ্জে হাইপারলিংক, স্ক্রিনটিপ ও ডিসপ্লে টেক্সট যুক্ত করে।",
+        category: "Hyperlinks"
+      },
+      {
+        id: "cmd-link-2",
+        featureName: "বুকমার্ক তৈরি ও ব্যবস্থাপনা (Bookmark)",
+        featureNameEn: "Insert, List, Navigate & Delete Named Bookmarks",
+        description: "ডকুমেন্টের নির্দিষ্ট অনুচ্ছেদ, শিরোনাম বা অবস্থানে নামযুক্ত বুকমার্ক তৈরি করা, বুকমার্কের তালিকা দেখা, নির্দিষ্ট বুকমার্কে জাম্প করা বা মুছে ফেলা।",
+        voicePrompt: "Section1 নামে একটি বুকমার্ক যোগ করো / বুকমার্কে যাও",
+        chatPrompt: "Insert bookmark named 'ProjectOverview' on selected text and list all document bookmarks",
+        aiAction: "doc.Bookmarks.Add ও doc.Bookmarks.Delete API দিয়ে বুকমার্ক তৈরি, তালিকাভুক্তকরণ ও জাম্প পরিচালনা করে।",
+        category: "Bookmarks"
+      },
+      {
+        id: "cmd-link-3",
+        featureName: "ক্রস-রেফারেন্স সংযোজন (Cross-reference)",
+        featureNameEn: "Insert Dynamic Cross-reference to Headings, Bookmarks & Page Numbers",
+        description: "ডকুমেন্টের ভেতরের হেডিং, বুকমার্ক, নাম্বারড আইটেম বা ফুটনোটের সাথে ডায়নামিক লিঙ্কযুক্ত ক্রস-রেফারেন্স (যেমন: 'See page 2' বা শিরোনাম টেক্সট) তৈরি।",
+        voicePrompt: "হেডিং এর জন্য ক্রস রেফারেন্স দাও / পৃষ্ঠা নম্বরের রেফারেন্স যোগ করো",
+        chatPrompt: "Insert cross-reference to bookmark 'ProjectOverview' showing page number with prefix 'See page: '",
+        aiAction: "Range.InsertCrossReference API দিয়ে নির্ভুল হেডিং/বুকমার্ক ইনডেক্সে ক্লিকযোগ্য ক্রস-রেফারেন্স লিঙ্ক তৈরি করে।",
+        category: "Cross-reference"
+      },
+      {
+        id: "cmd-link-4",
+        featureName: "লিংকস ইউনিফাইড রাউটার (Manage Insert Links)",
+        featureNameEn: "Unified Central Router for Hyperlinks, Bookmarks & Cross-references",
+        description: "একক কমান্ডের মাধ্যমে সমস্ত লিঙ্ক, বুকমার্ক এবং ক্রস-রেফারেন্সের অপারেশন স্বয়ংক্রিয়ভাবে শনাক্ত ও পরিচালনা করার কেন্দ্রীয় রাউটার।",
+        voicePrompt: "লিংক অপারেশন পরিচালনা করো / বুকমার্ক ম্যানেজ করো",
+        chatPrompt: "Manage insert links with action 'hyperlink' and address 'https://python.org'",
+        aiAction: "manage_insert_links রাউটার দিয়ে ডায়নামিকালি লিঙ্ক, বুকমার্ক ও ক্রস-রেফারেন্স এক্সিকিউট করে।",
+        category: "Unified Management"
+      }
+    ]
   }
 ];
