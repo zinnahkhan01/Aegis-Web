@@ -4382,5 +4382,106 @@ export const MS_WORD_STEPS = [
         category: "Unified Management"
       }
     ]
+  },
+  {
+    id: "word-step-49",
+    menu: "Layout",
+    menuBn: "লেআউট মেনু",
+    section: "6.9 Arrange",
+    sectionBn: "৬.৯ অ্যারেঞ্জ (Arrange)",
+    description: "ডকুমেন্টের শেপ, ছবি ও অবজেক্টের পজিশনিং (Position Presets & Coordinates), টেক্সট র‍্যাপিং (Square, Tight, Behind, In Front, Inline), জেড-অর্ডার (Bring Forward, Send Backward), সিলেকশন প্যান (Selection Pane), অ্যালাইনমেন্ট (Align Left, Center, Right, Top, Middle, Bottom), গ্রুপিং (Group, Ungroup, Regroup), রোটেশন ও ফ্লিপ (Rotate 90°, Flip Horizontal/Vertical) এবং ডিস্ট্রিবিউট অবজেক্টস (Distribute Horizontally & Vertically)।",
+    descriptionEn: "Comprehensive Microsoft Word Arrange controls for shapes, images, and drawing objects: Position (Presets & Coordinates), Wrap Text (Square, Tight, Behind, Front, Inline), Z-Order (Bring Forward, Send Backward), Selection Pane, Align Objects, Group / Ungroup / Regroup, Rotate & Flip, and Distribute Objects.",
+    features: [
+      {
+        name: "অবজেক্ট পজিশন নির্ধারণ (Position)",
+        nameEn: "Set Object Position (Presets & Coordinates)",
+        voiceCmd: "শেপটি উপরে ডানে পজিশন করো",
+        voiceCmdEn: "Position shape top right",
+        chatPrompt: "Set shape position preset to top_right or custom coordinates (left=150, top=200)",
+        aiAction: "layout_set_position (position_preset='top_right', left, top) দিয়ে অবজেক্টকে পেজের নির্দিষ্ট ৯টি প্রিসেট পজিশনে বা কাস্টম পয়েন্ট স্থানাঙ্কে সুনির্দিষ্টভাবে স্থাপন করা হয়।",
+        category: "Positioning"
+      },
+      {
+        name: "টেক্সট র‍্যাপিং শৈলী (Wrap Text)",
+        nameEn: "Configure Text Wrapping Style",
+        voiceCmd: "শেপটি লেখার পেছনে দাও",
+        voiceCmdEn: "Wrap text behind text",
+        chatPrompt: "Set object wrap text style to square, tight, behind, in_front, or inline",
+        aiAction: "layout_set_wrap_text (wrap_type='behind', wrap_side='both') দিয়ে শেপ বা ছবির সাথে লেখার মিথস্ক্রিয়া (Square, Tight, Through, Behind Text, In Front of Text, Inline) নিয়ন্ত্রণ করা হয় (Shape.WrapFormat.Type)।",
+        category: "Wrapping"
+      },
+      {
+        name: "সামনে আনা ও পেছনে পাঠানো (Bring Forward / Send Backward)",
+        nameEn: "Bring Forward & Send Backward (Z-Order)",
+        voiceCmd: "শেপটি সবার সামনে আনো",
+        voiceCmdEn: "Bring shape to front",
+        chatPrompt: "Change object Z-Order: bring_forward, bring_to_front, send_backward, send_to_back",
+        aiAction: "layout_set_z_order (z_order_action='bring_to_front') দিয়ে অবজেক্টের লেয়ার স্তর পরিবর্তন করা হয় (Shape.ZOrder: Front, Back, Forward, Backward, InFrontOfText, BehindText)।",
+        category: "Layering"
+      },
+      {
+        name: "সিলেকশন প্যান টগল (Selection Pane)",
+        nameEn: "Toggle Selection Task Pane",
+        voiceCmd: "সিলেকশন প্যান খোলো",
+        voiceCmdEn: "Open selection pane",
+        chatPrompt: "Toggle or open Word Selection Pane to view and manage all drawing objects",
+        aiAction: "layout_toggle_selection_pane দিয়ে ডকুমেন্টের সকল অবজেক্টের তালিকা সম্বলিত সিলেকশন প্যান চালু করা হয় (CommandBars.ExecuteMso('SelectionPane'))।",
+        category: "Management"
+      },
+      {
+        name: "অবজেক্ট সারিবদ্ধকরণ (Align Objects)",
+        nameEn: "Align Objects (Left, Center, Right, Top, Middle, Bottom)",
+        voiceCmd: "শেপটি পেজের মাঝে সারিবদ্ধ করো",
+        voiceCmdEn: "Align shape center relative to page",
+        chatPrompt: "Align shapes: left, center, right, top, middle, bottom relative to page or margin",
+        aiAction: "layout_align_shapes (align_type='center', relative_to_page=True) দিয়ে নির্বাচিত একাধিক শেপ বা পেজের সাপেক্ষে অবজেক্টের অ্যালাইনমেন্ট সম্পন্ন করা হয় (ShapeRange.Align)।",
+        category: "Alignment"
+      },
+      {
+        name: "গ্রুপ, আনগ্রুপ ও রিগ্রুপ (Group, Ungroup & Regroup)",
+        nameEn: "Group, Ungroup and Regroup Shapes",
+        voiceCmd: "শেপগুলো গ্রুপ করো",
+        voiceCmdEn: "Group selected shapes",
+        chatPrompt: "Group selected shapes into a single object, ungroup, or regroup previously grouped shapes",
+        aiAction: "layout_group_shapes, layout_ungroup_shapes ও layout_regroup_shapes দিয়ে একাধিক শেপকে একত্রিত করে একক গ্রুপ তৈরি বা পৃথক করা হয় (ShapeRange.Group, Shape.Ungroup, Shape.Regroup)।",
+        category: "Grouping"
+      },
+      {
+        name: "ঘোরানো ও উল্টানো (Rotate & Flip)",
+        nameEn: "Rotate Degrees, 90° Increments & Horizontal/Vertical Flip",
+        voiceCmd: "শেপটি ৪৫ ডিগ্রি রোটেট করো",
+        voiceCmdEn: "Rotate shape 45 degrees",
+        chatPrompt: "Rotate shape by degrees, rotate right 90 degrees, or flip horizontal/vertical",
+        aiAction: "layout_rotate_shape (rotation_angle=45.0, rotation_increment=90.0, flip_direction='horizontal') দিয়ে অবজেক্টের কোণ পরিবর্তন এবং আনুভূমিক বা উল্লম্ব ফ্লিপ করা হয় (Shape.Rotation, IncrementRotation, Flip)।",
+        category: "Transform"
+      },
+      {
+        name: "অবজেক্ট সমান দূরত্বে বণ্টন (Distribute Objects)",
+        nameEn: "Distribute Shapes Horizontally & Vertically",
+        voiceCmd: "শেপগুলো সমান দূরত্বে বণ্টন করো",
+        voiceCmdEn: "Distribute shapes horizontally",
+        chatPrompt: "Distribute shapes evenly horizontally or vertically relative to page or margin",
+        aiAction: "layout_distribute_shapes (distribute_orientation='horizontal', relative_to_page=True) দিয়ে শেপগুলোর মাঝে সুষম ব্যবধান তৈরি করা হয় (ShapeRange.Distribute)।",
+        category: "Distribution"
+      },
+      {
+        name: "অ্যারেঞ্জ অবস্থা নিরীক্ষা (Get Arrange Status)",
+        nameEn: "Query Object Position, Wrap, Rotation & Selection",
+        voiceCmd: "শেপের অবস্থা চেক করো",
+        voiceCmdEn: "Check shape arrange status",
+        chatPrompt: "Query active shape position coordinates, wrap format, rotation, and selection count",
+        aiAction: "layout_get_arrange_status এর মাধ্যমে ডকুমেন্টের মোট শেপ সংখ্যা, সক্রিয় শেপের অবস্থান (Left, Top), র‍্যাপ টাইপ, রোটেশন অ্যাঙ্গেল ইত্যাদি নিরীক্ষা করা হয়।",
+        category: "Status & Inspection"
+      },
+      {
+        name: "অ্যারেঞ্জ সেন্ট্রাল রাউটার (Manage Layout Arrange)",
+        nameEn: "Unified Layout Arrange Router",
+        voiceCmd: "শেপ অ্যারেঞ্জ পরিচালনা করো",
+        voiceCmdEn: "Manage layout arrange",
+        chatPrompt: "Manage layout arrange with sub_action: position, wrap_text, z_order, selection_pane, align, group, ungroup, regroup, rotate, distribute, status, reset",
+        aiAction: "manage_layout_arrange কেন্দ্রীয় রাউটারের সাহায্যে position, wrap_text, z_order, selection_pane, align, group, rotate ও distribute সংক্রান্ত সকল অপারেশন একীভূতভাবে পরিচালনা করা হয়।",
+        category: "Unified Management"
+      }
+    ]
   }
 ];
