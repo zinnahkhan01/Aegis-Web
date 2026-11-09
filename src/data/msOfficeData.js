@@ -3824,5 +3824,96 @@ export const MS_WORD_STEPS = [
         category: "Unified Management"
       }
     ]
+  },
+  {
+    stepNumber: "Step 43",
+    menuName: "6. LAYOUT MENU ➔ 6.3 Page Setup: Size",
+    title: "লেআউট মেনু: পেজ সেটআপ - পেপার সাইজ (A4, Letter, Legal, Executive, A3, A5 ও Custom)",
+    titleEn: "Layout Menu: Page Setup - Paper Size (A4, Letter, Legal, Executive, A3, A5 & Custom)",
+    subtitle: "ডকুমেন্টের কাগজের আকার (Paper Size) পরিবর্তন ও নিয়ন্ত্রণ—আন্তর্জাতিক আদর্শ A4, উত্তর আমেরিকান স্ট্যান্ডার্ড Letter ও Legal, করপোরেট Executive, বৃহৎ নকশার A3, পকেট সাইজ A5, ইঞ্চি/সেমি/মিমি/পয়েন্টে ইচ্ছামতো কাস্টম সাইজ, সেকশনভিত্তিক পেপার সাইজ এবং সেন্ট্রাল পেজ সেটআপ সাইজ রাউটার।",
+    badge: "Paper Size",
+    commands: [
+      {
+        name: "A4 পেপার সাইজ (A4 Paper Size)",
+        nameEn: "A4 Standard Paper Size (21 cm x 29.7 cm)",
+        voiceCmd: "কাগজের সাইজ A4 করো",
+        voiceCmdEn: "Set paper size to A4",
+        chatPrompt: "Set page size to A4 (21 cm x 29.7 cm)",
+        aiAction: "layout_set_paper_size দিয়ে ডকুমেন্টের পৃষ্ঠাকে আন্তর্জাতিক আদর্শ A4 সাইজে (21 cm x 29.7 cm / 8.27\" x 11.69\", wdPaperA4 = 7) নির্ধারণ করা হয়।",
+        category: "Standard Size"
+      },
+      {
+        name: "লেটার পেপার সাইজ (Letter Paper Size)",
+        nameEn: "Letter Paper Size (8.5\" x 11\")",
+        voiceCmd: "পেজ সাইজ লেটার করো",
+        voiceCmdEn: "Set paper size to Letter",
+        chatPrompt: "Set page size to Letter (8.5\" x 11\")",
+        aiAction: "layout_set_paper_size দিয়ে পৃষ্ঠাকে উত্তর আমেরিকান স্ট্যান্ডার্ড Letter সাইজে (8.5\" x 11\" / 21.59 cm x 27.94 cm, wdPaperLetter = 2) পরিবর্তন করা হয়।",
+        category: "Standard Size"
+      },
+      {
+        name: "লিগ্যাল পেপার সাইজ (Legal Paper Size)",
+        nameEn: "Legal Paper Size (8.5\" x 14\")",
+        voiceCmd: "লিগ্যাল সাইজ পেপার সেট করো",
+        voiceCmdEn: "Set paper size to Legal",
+        chatPrompt: "Set page size to Legal (8.5\" x 14\")",
+        aiAction: "layout_set_paper_size দিয়ে চুক্তিপত্র, আইনি দলিল ও দীর্ঘ নথির জন্য পৃষ্ঠাকে Legal সাইজে (8.5\" x 14\" / 21.59 cm x 35.56 cm, wdPaperLegal = 4) পরিবর্তন করা হয়।",
+        category: "Standard Size"
+      },
+      {
+        name: "এক্সিকিউটিভ পেপার সাইজ (Executive Paper Size)",
+        nameEn: "Executive Paper Size (7.25\" x 10.5\")",
+        voiceCmd: "এক্সিকিউটিভ সাইজ করো",
+        voiceCmdEn: "Set paper size to Executive",
+        chatPrompt: "Set page size to Executive (7.25\" x 10.5\")",
+        aiAction: "layout_set_paper_size দিয়ে করপোরেট প্রতিবেদন ও ব্রিফিং নথির জন্য Executive সাইজে (7.25\" x 10.5\" / 18.41 cm x 26.67 cm, wdPaperExecutive = 5) নির্ধারণ করা হয়।",
+        category: "Standard Size"
+      },
+      {
+        name: "A3 ও A5 সাইজ (A3 & A5 Paper Sizes)",
+        nameEn: "A3 (Large) & A5 (Compact) Paper Sizes",
+        voiceCmd: "পেজের আকার A3 করো",
+        voiceCmdEn: "Set paper size to A3 or A5",
+        chatPrompt: "Set page size to A3 (29.7 x 42 cm) or A5 (14.8 x 21 cm)",
+        aiAction: "layout_set_paper_size দিয়ে বড় নকশা/পোস্টারের জন্য A3 (wdPaperA3 = 6) অথবা পকেট ম্যানুয়াল/বুকলেটের জন্য A5 (wdPaperA5 = 9) সাইজ প্রয়োগ করা হয়।",
+        category: "ISO Paper Sizes"
+      },
+      {
+        name: "কাস্টম পেপার সাইজ (Custom Paper Size)",
+        nameEn: "Custom Width & Height with Multi-Unit Support",
+        voiceCmd: "কাগজের সাইজ ৮.৫ x ১৪ ইঞ্চি করো",
+        voiceCmdEn: "Set custom page width and height",
+        chatPrompt: "Set custom paper size width '8.5in' height '14in' unit 'inch'",
+        aiAction: "layout_set_paper_size দিয়ে ব্যবহারকারীর চাহিদা অনুযায়ী ইঞ্চি, সেমি, মিমি বা পয়েন্টে যেকোনো কাস্টম প্রস্থ ও উচ্চতার কাগজ (wdPaperCustom = 41) নির্ভুলভাবে সেট করা হয়।",
+        category: "Custom Dimensions"
+      },
+      {
+        name: "সেকশনভিত্তিক পেপার সাইজ (Section-Scoped Paper Size)",
+        nameEn: "Per-Section Paper Size & Next Page Break",
+        voiceCmd: "সেকশন ২ লিগ্যাল সাইজ করো",
+        voiceCmdEn: "Set paper size for specific section",
+        chatPrompt: "Set paper size to 'legal' apply_to 'this_section' section_index 2",
+        aiAction: "layout_set_paper_size দিয়ে ডকুমেন্টের নির্দিষ্ট কোনো সেকশনে অথবা বর্তমান অবস্থান থেকে পরবর্তী অংশে (this_point_forward) সেকশন ব্রেক তৈরি করে ভিন্ন সাইজের কাগজ প্রয়োগ করা হয়।",
+        category: "Section Scope"
+      },
+      {
+        name: "পেপার সাইজ কোয়েরি ও স্ট্যাটাস (Get Paper Size Status)",
+        nameEn: "Query Current Paper Size & Dimensions",
+        voiceCmd: "বর্তমান কাগজের সাইজ কত চেক করো",
+        voiceCmdEn: "Check current document paper size and dimensions",
+        chatPrompt: "Get current paper size, width, height, and section metrics",
+        aiAction: "layout_get_paper_size দিয়ে প্রতিটি সেকশনের বর্তমান কাগজের ধরন (A4/Letter/Legal/ইত্যাদি), সঠিক পরিমাপ (ইঞ্চি, সেমি ও পয়েন্টে) এবং মোট সেকশন সংখ্যা জানা যায়।",
+        category: "Size Status"
+      },
+      {
+        name: "পেপার সাইজ সেন্ট্রাল রাউটার (Manage Page Setup Size)",
+        nameEn: "Unified Page Setup Size Router",
+        voiceCmd: "কাগজের সাইজ রিসেট করো",
+        voiceCmdEn: "Reset paper size to default A4",
+        chatPrompt: "Manage page setup size with sub_action 'reset'",
+        aiAction: "manage_page_setup_size কেন্দ্রীয় রাউটারের মাধ্যমে A4, Letter, Legal, Executive, A3, A5, কাস্টম মাপ, বর্তমান তথ্য নিরীক্ষা বা সরাসরি ডিফল্ট A4 আকারে রিসেট করা হয়।",
+        category: "Unified Management"
+      }
+    ]
   }
 ];
