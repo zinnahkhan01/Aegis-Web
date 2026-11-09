@@ -3496,5 +3496,96 @@ export const MS_WORD_STEPS = [
         category: "Unified Management"
       }
     ]
+  },
+  {
+    stepNumber: "Step 39",
+    menuName: "5. DESIGN MENU ➔ 5.2 Page Background",
+    title: "ডিজাইন মেনু: পেজ ব্যাকগ্রাউন্ড, টেক্সট ও পিকচার ওয়াটারমার্ক, ব্যাকগ্রাউন্ড কালার, গ্রেডিয়েন্ট এবং পেজ বর্ডার",
+    titleEn: "Design Menu: Page Background, Text & Picture Watermark, Page Fill Color & Gradients, and Page Borders & Border Art",
+    subtitle: "ডকুমেন্টের পেজ ব্যাকগ্রাউন্ড আকর্ষণীয় ও সুরক্ষিত করার জন্য কনফিডেনশিয়াল/কাস্টম টেক্সট ওয়াটারমার্ক, লোগো/পিকচার ওয়াটারমার্ক, সলিড কালার ও টু-কালার গ্রেডিয়েন্ট ব্যাকগ্রাউন্ড এবং বক্স, শ্যাডো, ডাবল লাইন ও আর্ট পেজ বর্ডারের পূর্ণাঙ্গ অটোমেশন।",
+    badge: "Page Background",
+    commands: [
+      {
+        name: "টেক্সট ওয়াটারমার্ক (Text Watermark)",
+        nameEn: "Insert Text Watermark",
+        voiceCmd: "ওয়াটারমার্ক দাও CONFIDENTIAL",
+        voiceCmdEn: "Add 'CONFIDENTIAL' text watermark diagonal",
+        chatPrompt: "Add text watermark with watermark_text 'CONFIDENTIAL' layout 'diagonal' color '#C0C0C0' semitransparent True",
+        aiAction: "design_watermark দিয়ে ডকুমেন্টের হেডার ক্যানভাসে ডায়াগোনাল/হরাইজন্টাল সেমি-ট্রান্সপারেন্ট টেক্সট ওয়াটারমার্ক (CONFIDENTIAL, DRAFT, DO NOT COPY বা কাস্টম বাংলা টেক্সট) যুক্ত করা হয়।",
+        category: "Watermark"
+      },
+      {
+        name: "ছবি ওয়াটারমার্ক (Picture Watermark)",
+        nameEn: "Insert Picture / Logo Watermark",
+        voiceCmd: "লোগো ছবি দিয়ে ওয়াটারমার্ক করো",
+        voiceCmdEn: "Add picture watermark with washout effect",
+        chatPrompt: "Add picture watermark with picture_path 'logo.png' washout True scale 1.0",
+        aiAction: "design_watermark দিয়ে প্রাতিষ্ঠানিক লোগো বা ছবিকে সেন্ট্রাল পেজ ব্যাকগ্রাউন্ডে ওয়াশআউট (Washout) ও স্কেলিং সহ ওয়াটারমার্ক হিসেবে স্থাপন করা হয়।",
+        category: "Watermark"
+      },
+      {
+        name: "ওয়াটারমার্ক অপসারণ (Remove Watermark)",
+        nameEn: "Remove Watermark",
+        voiceCmd: "ওয়াটারমার্ক মুছে ফেলো",
+        voiceCmdEn: "Remove watermark from document",
+        chatPrompt: "Remove watermark with watermark_action 'remove'",
+        aiAction: "design_watermark ডকুমেন্টের সকল সেকশন ও হেডার থেকে বিদ্যমান সমস্ত টেক্সট ও পিকচার ওয়াটারমার্ক এক ক্লিকে সম্পূর্ণ মুছে ফেলে।",
+        category: "Watermark"
+      },
+      {
+        name: "পেজ ব্যাকগ্রাউন্ড কালার (Page Color)",
+        nameEn: "Solid Page Color & Print Backgrounds",
+        voiceCmd: "পেজ কালার নীল করো",
+        voiceCmdEn: "Set page background color to soft blue",
+        chatPrompt: "Set page color with page_color '#E6F2FF' print_backgrounds True",
+        aiAction: "design_page_color দিয়ে ডকুমেন্টের ব্যাকগ্রাউন্ড ফিল কালার (Standard/Theme Palette বা কাস্টম Hex RGB) নির্ধারণ করা হয় এবং প্রিন্টিং অপশন কনফিগার করা হয়।",
+        category: "Page Color"
+      },
+      {
+        name: "গ্রেডিয়েন্ট ফিল ইফেক্ট (Fill Effects - Gradient)",
+        nameEn: "Gradient Page Background",
+        voiceCmd: "পেজে গ্রেডিয়েন্ট ব্যাকগ্রাউন্ড দাও",
+        voiceCmdEn: "Apply two-color gradient background",
+        chatPrompt: "Apply gradient page color with gradient_type 'horizontal' color '#FFFFFF' gradient_color2 '#D9E1F2'",
+        aiAction: "design_page_color দিয়ে ডকুমেন্টের ব্যাকগ্রাউন্ডে দ্বৈত রঙের দৃষ্টিনন্দন গ্রেডিয়েন্ট (Horizontal, Vertical, Diagonal, From Corner, From Center) ফিল ইফেক্ট তৈরি করা হয়।",
+        category: "Fill Effects"
+      },
+      {
+        name: "পেজ বর্ডার ও স্টাইল (Page Borders - Box / Shadow / Line)",
+        nameEn: "Page Borders (Box, Shadow, Double, Triple)",
+        voiceCmd: "পৃষ্ঠায় বক্স বর্ডার লাগাও",
+        voiceCmdEn: "Add box page border with double line",
+        chatPrompt: "Add page border with border_setting 'box' line_style 'double' line_width 1.5 border_color '#002060'",
+        aiAction: "design_page_borders দিয়ে ডকুমেন্টের চতুর্দিকে বক্স, শ্যাডো বা ৩-ডি বর্ডার, বিভিন্ন লাইন স্টাইল (সিঙ্গেল, ডাবল, ট্রিপল, ড্যাশ, ওয়েভি) ও কাস্টম রঙের সীমানা যুক্ত করা হয়।",
+        category: "Page Borders"
+      },
+      {
+        name: "আর্ট পেজ বর্ডার (Border Art)",
+        nameEn: "Decorative Art Borders (Stars, Apples, Trees, Hearts)",
+        voiceCmd: "stars আর্ট বর্ডার দাও",
+        voiceCmdEn: "Apply decorative 'stars' art border width 20pt",
+        chatPrompt: "Apply art page border with art_border 'stars' art_width 20 apply_to 'whole_document'",
+        aiAction: "design_page_borders দিয়ে ওয়ার্ডের সমৃদ্ধ আর্টওয়ার্ক লাইব্রেরি থেকে তারা, ফুল, গাছ, আপেল, বেলুন বা হার্ট চিহ্নের আলংকারিক বর্ডার যুক্ত করা হয়।",
+        category: "Page Borders"
+      },
+      {
+        name: "বর্ডার স্কোপ ও পেজ সিলেকশন (Border Scope - First Page Only)",
+        nameEn: "Page Border Scope (First Page Only / All Except First)",
+        voiceCmd: "প্রথম পেজে বর্ডার দাও",
+        voiceCmdEn: "Apply page border to first page only",
+        chatPrompt: "Apply page border with apply_to 'first_page'",
+        aiAction: "design_page_borders এর মাধ্যমে নির্দিষ্ট পেজ স্কোপ (First page only, All except first page, This section বা Whole document) নিয়ন্ত্রণ করা হয়।",
+        category: "Border Scope"
+      },
+      {
+        name: "সেন্ট্রাল ব্যাকগ্রাউন্ড রাউটার (Manage Page Background)",
+        nameEn: "Unified Page Background Router",
+        voiceCmd: "ব্যাকগ্রাউন্ড রিসেট করো",
+        voiceCmdEn: "Reset and clear all page background elements",
+        chatPrompt: "Manage page background with sub_action 'clear'",
+        aiAction: "manage_page_background কেন্দ্রীয় রাউটার দিয়ে ওয়াটারমার্ক, পেজ কালার ও পেজ বর্ডার স্ট্যাটাস চেক করা অথবা একযোগে সব উপাদান রিসেট ও মুছে ফেলা হয়।",
+        category: "Unified Management"
+      }
+    ]
   }
 ];
