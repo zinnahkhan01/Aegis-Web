@@ -4575,5 +4575,106 @@ export const MS_WORD_STEPS = [
         category: "Unified Management"
       }
     ]
+  },
+  {
+    id: "word-step-51",
+    menu: "References",
+    menuBn: "রেফারেন্সেস মেনু",
+    section: "7.2 Footnotes",
+    sectionBn: "৭.২ ফুটনোটস ও এন্ডনোটস (Footnotes & Endnotes)",
+    description: "গবেষণাপত্র, থিসিস, একাডেমিক বই এবং পেশাদার নথির তথ্যসূত্র ও টীকা ব্যবস্থাপনার জন্য সম্পূর্ণ ফুটনোট ও এন্ডনোট অটোমেশন: Insert Footnote, Insert Endnote, Next Footnote, Previous Footnote, Show Notes, Footnote Settings (অবস্থান, নম্বর স্টাইল, কন্টিনিউয়াস/রিস্টার্ট), এবং Footnote-Endnote রূপান্তর ও সোয়াপ।",
+    descriptionEn: "Complete Footnotes and Endnotes automation for Academic, Research, Thesis, and Professional Documents: Insert Footnote, Insert Endnote, Next Footnote, Previous Footnote, Show Notes, Footnote Settings (Location, Number Format, Starting Number, Restart rules), and Footnote-Endnote Conversion & Swap.",
+    features: [
+      {
+        name: "ফুটনোট যুক্তকরণ (Insert Footnote)",
+        nameEn: "Insert Footnote at Cursor or Target Text",
+        voiceCmd: "একটি ফুটনোট যুক্ত করো",
+        voiceCmdEn: "Insert footnote",
+        chatPrompt: "Insert footnote with text='গবেষণা তথ্যসূত্র ও ব্যাখ্যা' and optional custom_mark='*'",
+        aiAction: "reference_insert_footnote দিয়ে বর্তমান কার্সরে বা নির্দিষ্ট শব্দে স্বয়ংক্রিয় রেফারেন্স মার্কসহ পৃষ্ঠার নিচে পাদটীকা যুক্ত করা হয় (doc.Footnotes.Add)।",
+        category: "Insert Notes"
+      },
+      {
+        name: "এন্ডনোট যুক্তকরণ (Insert Endnote)",
+        nameEn: "Insert Endnote at Cursor or Target Text",
+        voiceCmd: "একটি এন্ডনোট যুক্ত করো",
+        voiceCmdEn: "Insert endnote",
+        chatPrompt: "Insert endnote with text='ডকুমেন্টের শেষ তথ্যপঞ্জি' and optional custom_mark",
+        aiAction: "reference_insert_endnote দিয়ে ডকুমেন্টের শেষে বা সেকশনের শেষে বিস্তৃত রেফারেন্স নোট বা প্রান্তটীকা সন্নিবেশ করা হয় (doc.Endnotes.Add)।",
+        category: "Insert Notes"
+      },
+      {
+        name: "পরবর্তী ফুটনোট নেভিগেশন (Next Footnote)",
+        nameEn: "Navigate to Next Footnote or Endnote",
+        voiceCmd: "পরবর্তী ফুটনোটে যাও",
+        voiceCmdEn: "Go to next footnote",
+        chatPrompt: "Move document selection to the next footnote reference mark",
+        aiAction: "reference_next_footnote (note_type='footnote') দিয়ে ডকুমেন্টের ধারাবাহিক ক্রমে পরবর্তী পাদটীকায় কার্সর ফোকাস করা হয়।",
+        category: "Navigation"
+      },
+      {
+        name: "পূর্ববর্তী ফুটনোট নেভিগেশন (Previous Footnote)",
+        nameEn: "Navigate to Previous Footnote or Endnote",
+        voiceCmd: "পূর্ববর্তী ফুটনোটে যাও",
+        voiceCmdEn: "Go to previous footnote",
+        chatPrompt: "Move document selection to the previous footnote reference mark",
+        aiAction: "reference_previous_footnote (note_type='footnote') দিয়ে পূর্ববর্তী পাদটীকা রেফারেন্সে ফিরে যাওয়া হয়।",
+        category: "Navigation"
+      },
+      {
+        name: "নোট প্রদর্শন ও ফোকাস (Show Notes)",
+        nameEn: "Show Footnote / Endnote Text Area",
+        voiceCmd: "ফুটনোট দেখাও",
+        voiceCmdEn: "Show notes pane",
+        chatPrompt: "Show notes text area in footnote pane or focus reference mark in document body",
+        aiAction: "reference_show_notes (target='note_pane') দিয়ে ডকুমেন্টের ফুটনোট টেক্সট স্টোরিতে সরাসরি ফোকাস করা হয় (fn.Range.Select())।",
+        category: "View & Inspection"
+      },
+      {
+        name: "ফুটনোট অবস্থান নির্ধারণ (Footnote Location)",
+        nameEn: "Configure Note Location (Bottom of Page / Beneath Text)",
+        voiceCmd: "ফুটনোটের অবস্থান পৃষ্ঠার নিচে করো",
+        voiceCmdEn: "Set footnote location to bottom of page",
+        chatPrompt: "Configure footnote location to bottom_of_page or beneath_text, and endnotes to end_of_document or end_of_section",
+        aiAction: "reference_configure_footnote_settings (location='bottom_of_page') দিয়ে ফুটনোটের স্থান পৃষ্ঠার নিচে বা লেখার নিচে নির্ধারণ করা হয়।",
+        category: "Settings & Setup"
+      },
+      {
+        name: "নম্বর ফরম্যাট ও ক্রম (Number Format & Numbering Rule)",
+        nameEn: "Configure Number Style, Starting Number & Restart Rules",
+        voiceCmd: "ফুটনোট রোমান সংখ্যায় করো এবং প্রতি পেজে নতুন করো",
+        voiceCmdEn: "Set footnote numbering to lowercase roman and restart each page",
+        chatPrompt: "Configure number_style='roman_lower', starting_number=1, numbering_rule='restart_page'",
+        aiAction: "reference_configure_footnote_settings দিয়ে আরবি, রোমান, বর্ণ বা প্রতীক শৈলী এবং ধারাবাহিক বা প্রতি পৃষ্ঠায় নতুন নম্বরিং সেট করা হয়।",
+        category: "Settings & Setup"
+      },
+      {
+        name: "নোট রূপান্তর ও সোয়াপ (Convert & Swap Notes)",
+        nameEn: "Convert Footnotes to Endnotes or Swap Both",
+        voiceCmd: "ফুটনোটকে এন্ডনোটে রূপান্তর করো",
+        voiceCmdEn: "Convert footnotes to endnotes",
+        chatPrompt: "Convert all footnotes to endnotes, or swap footnotes and endnotes across document",
+        aiAction: "reference_configure_footnote_settings (convert_all='footnotes_to_endnotes'|'swap') দিয়ে সকল ফুটনোটকে এক ক্লিকে এন্ডনোটে রূপান্তর বা অদলবদল করা হয় (doc.Footnotes.Convert())।",
+        category: "Conversion"
+      },
+      {
+        name: "ফুটনোট স্ট্যাটাস পর্যবেক্ষণ (Get Footnotes Status)",
+        nameEn: "Inspect Footnotes & Endnotes Count and Previews",
+        voiceCmd: "ফুটনোটের অবস্থা চেক করো",
+        voiceCmdEn: "Check footnotes status",
+        chatPrompt: "Query total footnote and endnote count, locations, number styles, and note previews",
+        aiAction: "reference_get_footnotes_status এর মাধ্যমে ডকুমেন্টের সকল ফুটনোট ও এন্ডনোটের সংখ্যা, রেফারেন্স মার্ক ও লেখার প্রিভিউ বিস্তারিত পাওয়া যায়।",
+        category: "Status & Inspection"
+      },
+      {
+        name: "ফুটনোট সেন্ট্রাল রাউটার (Manage Reference Footnotes)",
+        nameEn: "Unified Footnotes & Endnotes Central Router",
+        voiceCmd: "ফুটনোট পরিচালনা করো",
+        voiceCmdEn: "Manage reference footnotes",
+        chatPrompt: "Manage footnotes and endnotes via unified router with footnote_action: insert_footnote, insert_endnote, next, previous, show_notes, configure_settings, status",
+        aiAction: "manage_reference_footnotes কেন্দ্রীয় রাউটারের মাধ্যমে ফুটনোট ও এন্ডনোটের সকল অপারেশন সমন্বিত ও স্বয়ংক্রিয়ভাবে নিয়ন্ত্রণ করা হয়।",
+        category: "Unified Management"
+      }
+    ]
   }
 ];
