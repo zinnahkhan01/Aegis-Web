@@ -4281,5 +4281,106 @@ export const MS_WORD_STEPS = [
         category: "Unified Management"
       }
     ]
+  },
+  {
+    id: "word-step-48",
+    menu: "Layout",
+    menuBn: "লেআউট মেনু",
+    section: "6.8 Paragraph",
+    sectionBn: "৬.৮ প্যারাগ্রাফ (Paragraph)",
+    description: "ডকুমেন্টের প্যারাগ্রাফের বাম ও ডান ইন্ডেন্ট, ফার্স্ট লাইন ও হ্যাংগিং ইন্ডেন্ট, পূর্বে ও পরের স্পেসিং, লাইন স্পেসিং এবং প্যারাগ্রাফ পজিশন ও ফ্লো কন্ট্রোল (Alignment, KeepWithNext, KeepTogether, PageBreakBefore)।",
+    descriptionEn: "Comprehensive Microsoft Word Layout Paragraph controls including Left Indent, Right Indent, First Line & Hanging Indent, Before Spacing, After Spacing, Line Spacing, and Paragraph Position & Flow (Alignment, KeepWithNext, KeepTogether, PageBreakBefore).",
+    features: [
+      {
+        name: "বাম ইন্ডেন্ট নির্ধারণ (Left Indent)",
+        nameEn: "Set Paragraph Left Indent (LeftIndent)",
+        voiceCmd: "প্যারাগ্রাফের বামে ০.৫ ইঞ্চি ইন্ডেন্ট করো",
+        voiceCmdEn: "Set paragraph left indent to 0.5 inches",
+        chatPrompt: "Set paragraph left indent to 0.5 inches (36 pt)",
+        aiAction: "layout_set_paragraph_indent (left_indent=36.0) দিয়ে প্যারাগ্রাফের বাম মার্জিন থেকে দূরত্ব নির্ধারণ করা হয় (ParagraphFormat.LeftIndent)। ইঞ্চি, সেমি ও পয়েন্ট সাপোর্ট করে।",
+        category: "Indentation"
+      },
+      {
+        name: "ডান ইন্ডেন্ট নির্ধারণ (Right Indent)",
+        nameEn: "Set Paragraph Right Indent (RightIndent)",
+        voiceCmd: "প্যারাগ্রাফের ডানে ০.২৫ ইঞ্চি ইন্ডেন্ট করো",
+        voiceCmdEn: "Set paragraph right indent to 0.25 inches",
+        chatPrompt: "Set paragraph right indent to 0.25 inches (18 pt)",
+        aiAction: "layout_set_paragraph_indent (right_indent=18.0) দিয়ে প্যারাগ্রাফের ডান মার্জিন থেকে দূরত্ব নির্ধারণ করা হয় (ParagraphFormat.RightIndent)।",
+        category: "Indentation"
+      },
+      {
+        name: "প্রথম লাইন ও হ্যাংগিং ইন্ডেন্ট (First Line & Hanging Indent)",
+        nameEn: "Set First Line / Hanging Indent (FirstLineIndent)",
+        voiceCmd: "প্রথম লাইন ০.৫ ইঞ্চি ইন্ডেন্ট করো",
+        voiceCmdEn: "Set first line indent to 0.5 inches",
+        chatPrompt: "Set first line indent to 0.5 inches or hanging indent to 0.5 inches",
+        aiAction: "layout_set_paragraph_indent (first_line_indent=36.0 / hanging_indent=36.0) দিয়ে অনুচ্ছেদের প্রথম লাইন অথবা পরবর্তী লাইনগুলোর ইন্ডেন্টেশন কাস্টমাইজ করা হয়।",
+        category: "Indentation"
+      },
+      {
+        name: "পূর্বে স্পেসিং নির্ধারণ (Before Spacing)",
+        nameEn: "Set Space Before Paragraph (SpaceBefore)",
+        voiceCmd: "প্যারাগ্রাফের পূর্বে ১২ পয়েন্ট স্পেস দাও",
+        voiceCmdEn: "Set paragraph space before to 12 pt",
+        chatPrompt: "Set space before paragraph to 12 points",
+        aiAction: "layout_set_paragraph_spacing (before_spacing=12.0) দিয়ে প্যারাগ্রাফের উপরের দূরত্ব নির্ধারণ করা হয় (ParagraphFormat.SpaceBefore)।",
+        category: "Spacing"
+      },
+      {
+        name: "পরে স্পেসিং নির্ধারণ (After Spacing)",
+        nameEn: "Set Space After Paragraph (SpaceAfter)",
+        voiceCmd: "প্যারাগ্রাফের পরে ৬ পয়েন্ট স্পেস দাও",
+        voiceCmdEn: "Set paragraph space after to 6 pt",
+        chatPrompt: "Set space after paragraph to 6 points",
+        aiAction: "layout_set_paragraph_spacing (after_spacing=6.0) দিয়ে প্যারাগ্রাফের নিচের দূরত্ব নির্ধারণ করা হয় (ParagraphFormat.SpaceAfter)।",
+        category: "Spacing"
+      },
+      {
+        name: "লাইন স্পেসিং কনফিগারেশন (Line Spacing)",
+        nameEn: "Configure Paragraph Line Spacing Rule",
+        voiceCmd: "লাইন স্পেসিং ১.৫ নির্ধারণ করো",
+        voiceCmdEn: "Set line spacing to 1.5",
+        chatPrompt: "Set paragraph line spacing to 1.5 lines",
+        aiAction: "layout_set_paragraph_spacing (line_spacing_rule='1.5') দিয়ে অনুচ্ছেদের লাইনগুলোর মাঝের স্পেসিং (Single, 1.5, Double, Multiple) সেট করা হয়।",
+        category: "Spacing"
+      },
+      {
+        name: "প্যারাগ্রাফ পজিশন ও অ্যালাইনমেন্ট (Paragraph Position & Alignment)",
+        nameEn: "Set Paragraph Alignment (Left, Center, Right, Justify)",
+        voiceCmd: "প্যারাগ্রাফ পজিশন সেন্টার করো",
+        voiceCmdEn: "Align paragraph center",
+        chatPrompt: "Set paragraph position alignment to center or justify",
+        aiAction: "layout_set_paragraph_position (alignment='center') দিয়ে প্যারাগ্রাফের অনুভূমিক সারিবদ্ধতা (Left, Center, Right, Justify) নির্ধারণ করা হয় (ParagraphFormat.Alignment)।",
+        category: "Position & Flow"
+      },
+      {
+        name: "প্যারাগ্রাফ পেজিনেশন ও ফ্লো কন্ট্রোল (Pagination & Text Flow)",
+        nameEn: "Keep With Next, Keep Together & Page Break Before",
+        voiceCmd: "পরবর্তী প্যারাগ্রাফের সাথে যুক্ত রাখো",
+        voiceCmdEn: "Keep paragraph with next",
+        chatPrompt: "Configure paragraph flow to keep with next and keep lines together",
+        aiAction: "layout_set_paragraph_position (keep_with_next=True, keep_together=True, page_break_before=True) দিয়ে প্যারাগ্রাফের পৃষ্ঠা বিভাজন ও ফ্লো রুল সেট করা হয়।",
+        category: "Position & Flow"
+      },
+      {
+        name: "প্যারাগ্রাফ লেআউট স্ট্যাটাস (Get Paragraph Layout Status)",
+        nameEn: "Query Current Paragraph Indent, Spacing & Position",
+        voiceCmd: "প্যারাগ্রাফের অবস্থা চেক করো",
+        voiceCmdEn: "Check paragraph layout status",
+        chatPrompt: "Get current paragraph layout indent, spacing, and position values",
+        aiAction: "layout_get_paragraph এর মাধ্যমে সক্রিয় প্যারাগ্রাফের মার্জিন ইন্ডেন্টেশন, স্পেসিং পয়েন্ট ও অ্যালাইনমেন্ট নিরীক্ষা করা হয়।",
+        category: "Status & Inspection"
+      },
+      {
+        name: "প্যারাগ্রাফ সেন্ট্রাল রাউটার (Manage Layout Paragraph)",
+        nameEn: "Unified Paragraph Layout Management Router",
+        voiceCmd: "প্যারাগ্রাফ রিসেট করো",
+        voiceCmdEn: "Reset paragraph layout to defaults",
+        chatPrompt: "Manage paragraph layout with sub_action 'reset' or combined settings",
+        aiAction: "manage_layout_paragraph কেন্দ্রীয় রাউটারের সাহায্যে indent, spacing, position, status ও reset অপারেশন একযোগে পরিচালনা করা হয়।",
+        category: "Unified Management"
+      }
+    ]
   }
 ];
