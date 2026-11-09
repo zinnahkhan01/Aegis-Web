@@ -3423,5 +3423,78 @@ export const MS_WORD_STEPS = [
         category: "Unified Management"
       }
     ]
+  },
+  {
+    stepNumber: "Step 38",
+    menuName: "5. DESIGN MENU ➔ 5.1 Document Formatting",
+    title: "ডিজাইন মেনু: ডকুমেন্ট ফরম্যাটিং, থিম, কালার প্যালেট, ফন্ট পেয়ারিং, প্যারাগ্রাফ স্পেসিং ও ডিফল্ট সেটিংস",
+    titleEn: "Design Menu: Document Formatting, Themes, Color Schemes, Font Pairings, Paragraph Spacing Presets & Set as Default",
+    subtitle: "সম্পূর্ণ ডকুমেন্টের ভিজ্যুয়াল লুক এক ক্লিকে পরিবর্তন করার জন্য অফিসিয়াল থিম (.thmx), ১২টি থিম কালার, টাইপোগ্রাফিক ফন্ট পেয়ারিং, প্যারাগ্রাফ স্পেসিং প্রিসেট ও Normal.dotm গ্লোবাল টেমপ্লেটে সেভ করার পূর্ণাঙ্গ অটোমেশন।",
+    badge: "Design Formatting",
+    commands: [
+      {
+        name: "ডকুমেন্ট থিম প্রয়োগ (Document Themes)",
+        nameEn: "Apply Document Theme (.thmx)",
+        voiceCmd: "ডকুমেন্টে Facet থিম সেট করো",
+        voiceCmdEn: "Set document theme to 'Facet'",
+        chatPrompt: "Apply document theme with theme_name 'Facet'",
+        aiAction: "design_document_theme দিয়ে ডকুমেন্টে অফিসিয়াল Office .thmx থিম (Facet, Integral, Slice, Ion, Office ইত্যাদি) প্রয়োগ করে সার্বিক কালার, ফন্ট ও স্টাইল সেট আপডেট করা হয়।",
+        category: "Themes"
+      },
+      {
+        name: "থিম কালার প্যালেট (Theme Colors)",
+        nameEn: "Theme Color Scheme & Palette",
+        voiceCmd: "কালার প্যালেট ব্লু করো",
+        voiceCmdEn: "Set theme color scheme to 'Blue'",
+        chatPrompt: "Change theme colors with palette_name 'Blue'",
+        aiAction: "design_theme_colors দিয়ে ডকুমেন্টের ১২টি থিম কালার (Dark 1/2, Light 1/2, Accent 1..6, Hyperlinks) প্রিসেট বা কাস্টম হেক্স কোড অনুযায়ী পরিবর্তন করা হয়।",
+        category: "Colors"
+      },
+      {
+        name: "থিম ফন্ট পেয়ারিং (Theme Fonts)",
+        nameEn: "Theme Font Pairing (Major & Minor)",
+        voiceCmd: "থিম ফন্ট Georgia করো",
+        voiceCmdEn: "Set theme font pairing to 'Georgia' (Headings Georgia, Body Garamond)",
+        chatPrompt: "Set theme fonts with font_scheme 'Georgia' heading_font 'Georgia' body_font 'Garamond'",
+        aiAction: "design_theme_fonts দিয়ে ডকুমেন্টের ThemeFontScheme (MajorFont/শিরোনাম এবং MinorFont/মূল বক্তব্য) পেয়ারিং নির্ধারণ করা হয়।",
+        category: "Fonts"
+      },
+      {
+        name: "প্যারাগ্রাফ স্পেসিং প্রিসেট (Paragraph Spacing)",
+        nameEn: "Style Set Paragraph Spacing Presets",
+        voiceCmd: "প্যারাগ্রাফ স্পেসিং কম্প্যাক্ট করো",
+        voiceCmdEn: "Set paragraph spacing to 'compact'",
+        chatPrompt: "Configure paragraph spacing with spacing_preset 'compact'",
+        aiAction: "design_paragraph_spacing দিয়ে পুরো ডকুমেন্টের জন্য Word Design ট্যাবের অফিসিয়াল স্পেসিং প্রিসেট (No Space, Compact, Tight, Open, Relaxed, Double) প্রয়োগ করা হয়।",
+        category: "Paragraph Spacing"
+      },
+      {
+        name: "থিম ইফেক্টস (Theme Effects)",
+        nameEn: "Theme Visual Effects",
+        voiceCmd: "থিম ইফেক্ট গ্লসি করো",
+        voiceCmdEn: "Set theme effects to 'Glossy'",
+        chatPrompt: "Apply theme effects with effect_name 'Glossy'",
+        aiAction: "design_theme_effects দিয়ে ডকুমেন্টের শেপ, স্মার্টআর্ট ও টেবিল গ্রাফিক্সের ভিজ্যুয়াল ইফেক্ট স্কিম (Office, Glossy, Ribbon, Smoky ইত্যাদি) নির্ধারণ করা হয়।",
+        category: "Effects"
+      },
+      {
+        name: "ডিফল্ট হিসেবে সংরক্ষণ (Set as Default)",
+        nameEn: "Set as Default Template (Normal.dotm)",
+        voiceCmd: "এই ডিজাইনটি ডিফল্ট হিসেবে সেভ করো",
+        voiceCmdEn: "Save current formatting as default template",
+        chatPrompt: "Set as default design formatting with save_template True",
+        aiAction: "design_set_as_default বর্তমান ডকুমেন্টের থিম, ফন্ট, কালার ও প্যারাগ্রাফ স্টাইল সেটিংস সরাসরি Normal.dotm গ্লোবাল টেমপ্লেটে সেভ করে যাতে ভবিষ্যৎ সব নতুন ফাইলে এই স্টাইল বজায় থাকে।",
+        category: "Set as Default"
+      },
+      {
+        name: "সেন্ট্রাল ডকুমেন্ট ফরম্যাটিং রাউটার (Manage Document Formatting)",
+        nameEn: "Manage Document Formatting Unified Router",
+        voiceCmd: "ডকুমেন্ট ফরম্যাটিং ম্যানেজ করো",
+        voiceCmdEn: "Manage document formatting with action 'theme'",
+        chatPrompt: "Manage document formatting with sub_action 'theme' theme_name 'Facet'",
+        aiAction: "manage_document_formatting কেন্দ্রীয় কন্ট্রোলার দিয়ে থিম, কালার, ফন্ট, প্যারাগ্রাফ স্পেসিং, ইফেক্ট ও ডিফল্ট টেমপ্লেট সেটিং সামগ্রিকভাবে পরিচালনা করা হয়।",
+        category: "Unified Management"
+      }
+    ]
   }
 ];
