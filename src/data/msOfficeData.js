@@ -4483,5 +4483,97 @@ export const MS_WORD_STEPS = [
         category: "Unified Management"
       }
     ]
+  },
+  {
+    id: "word-step-50",
+    menu: "References",
+    menuBn: "রেফারেন্সেস মেনু",
+    section: "7.1 Table of Contents",
+    sectionBn: "৭.১ সূচিপত্র (Table of Contents)",
+    description: "Academic, Research, Thesis, Book এবং Professional Document-এর জন্য অত্যন্ত গুরুত্বপূর্ণ সূচিপত্র তৈরি ও পরিচালনা: Automatic Table 1, Automatic Table 2, Manual Table, Custom Table of Contents, Update Table (Entire Table vs. Page Numbers Only), Remove Table of Contents এবং বিস্তারিত স্ট্যাটাস পর্যবেক্ষণ।",
+    descriptionEn: "Essential Table of Contents automation for Academic, Research, Thesis, Book, and Professional Documents: Automatic Table 1, Automatic Table 2, Manual Table, Custom Table of Contents, Update Table (Entire vs. Page Numbers Only), Remove Table of Contents, and Status Inspection.",
+    features: [
+      {
+        name: "অটোমেটিক টেবিল ১ (Automatic Table 1)",
+        nameEn: "Insert Automatic Table 1 (Contents)",
+        voiceCmd: "অটোমেটিক টেবিল ১ সূচিপত্র দাও",
+        voiceCmdEn: "Insert automatic table 1",
+        chatPrompt: "Insert Automatic Table 1 with 'Contents' heading and Headings 1-3",
+        aiAction: "reference_insert_toc (table_type='automatic_1') দিয়ে 'Contents' হেডিং এবং Heading 1-3 ভিত্তিক স্বয়ংক্রিয় সূচিপত্র সন্নিবেশ করা হয়।",
+        category: "Automatic TOC"
+      },
+      {
+        name: "অটোমেটিক টেবিল ২ (Automatic Table 2)",
+        nameEn: "Insert Automatic Table 2 (Table of Contents)",
+        voiceCmd: "ডকুমেন্টে সূচিপত্র তৈরি করো",
+        voiceCmdEn: "Insert automatic table of contents",
+        chatPrompt: "Insert Automatic Table 2 with 'Table of Contents' heading and hyperlinks",
+        aiAction: "reference_insert_toc (table_type='automatic_2') দিয়ে 'Table of Contents' / 'সূচিপত্র' হেডিং ও ক্লিকযোগ্য হাইপারলিংকসহ স্বয়ংক্রিয় সূচিপত্র তৈরি করা হয়।",
+        category: "Automatic TOC"
+      },
+      {
+        name: "ম্যানুয়াল সূচিপত্র (Manual Table)",
+        nameEn: "Insert Manual Table of Contents Template",
+        voiceCmd: "ম্যানুয়াল সূচিপত্র যোগ করো",
+        voiceCmdEn: "Insert manual table of contents",
+        chatPrompt: "Insert a manual table of contents structure with custom dot leader tabs and sample chapters",
+        aiAction: "reference_insert_toc (table_type='manual') দিয়ে হেডিং স্টাইল ব্যতীত ব্যবহারকারীর হাতে টাইপ করার জন্য ডট লিডার ট্যাব স্টপযুক্ত হায়ারার্কিকাল সূচিপত্র টেমপ্লেট যুক্ত করা হয়।",
+        category: "Manual TOC"
+      },
+      {
+        name: "কাস্টম সূচিপত্র (Custom Table of Contents)",
+        nameEn: "Configure Custom Table of Contents",
+        voiceCmd: "লেভেল ৪ পর্যন্ত কাস্টম সূচিপত্র দাও",
+        voiceCmdEn: "Create custom table of contents with 4 levels",
+        chatPrompt: "Create custom TOC with lower_heading_level=4, tab_leader=1, and insert_page_break_after=True",
+        aiAction: "reference_insert_toc (table_type='custom', lower_heading_level=4, tab_leader=1, insert_page_break_after=True) দিয়ে হেডিং লেভেল (১-৯), ট্যাব লিডার শৈলী ও পেজ ব্রেক কাস্টমাইজ করা যায়।",
+        category: "Custom TOC"
+      },
+      {
+        name: "সম্পূর্ণ সূচিপত্র আপডেট (Update Entire Table)",
+        nameEn: "Update Entire Table of Contents",
+        voiceCmd: "সূচিপত্র আপডেট করো",
+        voiceCmdEn: "Update entire table of contents",
+        chatPrompt: "Update entire table of contents including heading text and page numbers",
+        aiAction: "reference_update_toc (update_type='entire') দিয়ে ডকুমেন্টের সূচিপত্রের শিরোনাম ও পৃষ্ঠা নম্বর উভয়ই পুনরায় স্ক্যান করে রিফ্রেশ করা হয় (toc.Update())।",
+        category: "Update"
+      },
+      {
+        name: "শুধু পৃষ্ঠা নম্বর আপডেট (Update Page Numbers Only)",
+        nameEn: "Update Page Numbers Only",
+        voiceCmd: "সূচিপত্রের শুধু পৃষ্ঠা নম্বর আপডেট করো",
+        voiceCmdEn: "Update page numbers only in table of contents",
+        chatPrompt: "Update page numbers only in table of contents without altering headings",
+        aiAction: "reference_update_toc (update_type='page_numbers_only') দিয়ে শিরোনাম পরিবর্তন না করে কেবল বর্তমান পৃষ্ঠা সংখ্যাগুলো আপডেট করা হয় (toc.UpdatePageNumbers())।",
+        category: "Update"
+      },
+      {
+        name: "সূচিপত্র মুছে ফেলা (Remove Table of Contents)",
+        nameEn: "Remove Table of Contents & Title Heading",
+        voiceCmd: "সূচিপত্র মুছে ফেলো",
+        voiceCmdEn: "Remove table of contents",
+        chatPrompt: "Delete table of contents and clean up the preceding heading paragraph",
+        aiAction: "reference_remove_toc (remove_heading=True) দিয়ে ডকুমেন্ট থেকে সূচিপত্র ফিল্ড এবং সংলগ্ন টাইটেল হেডার পরিষ্কারভাবে ডিলিট করা হয় (toc.Delete())।",
+        category: "Removal"
+      },
+      {
+        name: "সূচিপত্র অবস্থা নিরীক্ষা (Get TOC Status)",
+        nameEn: "Query Table of Contents Count & Configuration",
+        voiceCmd: "সূচিপত্রের অবস্থা চেক করো",
+        voiceCmdEn: "Check table of contents status",
+        chatPrompt: "Get total TOC count, levels, hyperlink settings, tab leader style, and entry summary",
+        aiAction: "reference_get_toc_status এর মাধ্যমে ডকুমেন্টের মোট সূচিপত্র সংখ্যা, লেভেল পরিধি, ডট লিডার এবং এন্ট্রি প্রিভিউ বিস্তারিতভাবে নিরীক্ষা করা হয়।",
+        category: "Status & Inspection"
+      },
+      {
+        name: "সূচিপত্র সেন্ট্রাল রাউটার (Manage Reference TOC)",
+        nameEn: "Unified Table of Contents Management Router",
+        voiceCmd: "সূচিপত্র পরিচালনা করো",
+        voiceCmdEn: "Manage reference table of contents",
+        chatPrompt: "Manage table of contents via central router with sub_action: automatic_1, automatic_2, manual, custom, update, remove, status",
+        aiAction: "manage_reference_toc কেন্দ্রীয় রাউটারের সাহায্যে সূচিপত্র সন্নিবেশ, আপডেট, রিমুভ ও স্ট্যাটাস যাচাই সংক্রান্ত সকল অপারেশন সমন্বিতভাবে পরিচালনা করা হয়।",
+        category: "Unified Management"
+      }
+    ]
   }
 ];
