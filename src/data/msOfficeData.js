@@ -4750,5 +4750,133 @@ export const MS_WORD_STEPS = [
         category: "Unified Management"
       }
     ]
+  },
+  {
+    id: "word-step-53",
+    menu: "References",
+    menuBn: "রেফারেন্সেস মেনু",
+    section: "7.4 Citations & Bibliography",
+    sectionBn: "৭.৪ সাইটেশন ও গ্রন্থপঞ্জি (Citations & Bibliography)",
+    description: "একাডেমিক রিসার্চ পেপার, থিসিস এবং প্রফেশনাল ডকুমেন্টে বই, জার্নাল ও ওয়েব সোর্স যোগ করা, ইন-টেক্সট সাইটেশন যুক্ত করা, সাইটেশন স্টাইল (APA, MLA, Chicago, IEEE, Harvard) পরিবর্তন এবং স্বয়ংক্রিয় গ্রন্থপঞ্জি (Bibliography, Works Cited, References List) সন্নিবেশ করার পূর্ণাঙ্গ সুবিধা।",
+    descriptionEn: "Complete academic citations and bibliography management in Microsoft Word: Add sources (Book, Journal, Conference, Web), insert in-text citations, switch styles (APA, MLA, Chicago, IEEE, Harvard), and generate automated Bibliography, Works Cited, or References List.",
+    features: [
+      {
+        name: "ইন-টেক্সট সাইটেশন যুক্ত করা (Insert In-text Citation)",
+        nameEn: "Insert In-text Citation Field",
+        voiceCmd: "একটি সাইটেশন দাও",
+        voiceCmdEn: "Insert in-text citation",
+        chatPrompt: "Insert citation field at current cursor position for tag='Zinnah2026' or author='Zinnah Sir', year='2026'",
+        aiAction: "reference_insert_citation দিয়ে কার্সর অবস্থানে ওয়ার্ডের নেটিভ CITATION ফিল্ড যুক্ত করা হয় যা নির্বাচিত স্টাইলে স্বয়ংক্রিয়ভাবে ফরম্যাট হয়।",
+        category: "Citations"
+      },
+      {
+        name: "নতুন উৎস যোগ করা (Add New Source)",
+        nameEn: "Add New Reference Source to Database",
+        voiceCmd: "একটি নতুন সোর্স যোগ করো",
+        voiceCmdEn: "Add new bibliography source",
+        chatPrompt: "Add a new Book or Journal source with tag='Einstein1905', title='Special Relativity', author='Albert Einstein', year='1905'",
+        aiAction: "reference_add_source দিয়ে ওয়ার্ডের এক্সএমএল বিব্লিওগ্রাফি ডাটাবেসে বই, জার্নাল বা ওয়েবসাইটের পূর্ণাঙ্গ তথ্য যুক্ত করা হয়।",
+        category: "Sources Database"
+      },
+      {
+        name: "সোর্স ম্যানেজার ও উৎস তালিকা (Manage Sources)",
+        nameEn: "Manage Sources & Source Manager Dialog",
+        voiceCmd: "সোর্স ম্যানেজার খোলো",
+        voiceCmdEn: "Open source manager dialog",
+        chatPrompt: "Open Word Source Manager dialog or list all registered bibliographic sources in the document",
+        aiAction: "reference_manage_sources দিয়ে ডকুমেন্টে সংরক্ষিত সকল উৎসের তালিকা পরিদর্শন ও ওয়ার্ডের সোর্স ম্যানেজার ডায়ালগ ওপেন করা হয়।",
+        category: "Sources Database"
+      },
+      {
+        name: "সাইটেশন স্টাইল - APA (Citation Style - APA)",
+        nameEn: "Set Citation Style to APA",
+        voiceCmd: "সাইটেশন স্টাইল APA করো",
+        voiceCmdEn: "Set citation style to APA",
+        chatPrompt: "Change document citation and bibliography style to APA",
+        aiAction: "reference_set_citation_style (style='APA') দিয়ে ডকুমেন্টের সকল ইন-টেক্সট সাইটেশন ও গ্রন্থপঞ্জি APA ফরম্যাটে আপডেট করা হয়।",
+        category: "Citation Style"
+      },
+      {
+        name: "সাইটেশন স্টাইল - MLA (Citation Style - MLA)",
+        nameEn: "Set Citation Style to MLA",
+        voiceCmd: "সাইটেশন স্টাইল MLA করো",
+        voiceCmdEn: "Set citation style to MLA",
+        chatPrompt: "Change document citation and bibliography style to MLA",
+        aiAction: "reference_set_citation_style (style='MLA') দিয়ে ডকুমেন্টের রেফারেন্স ফরম্যাট আধুনিক MLA স্টাইলে রূপান্তর করা হয়।",
+        category: "Citation Style"
+      },
+      {
+        name: "সাইটেশন স্টাইল - Chicago (Citation Style - Chicago)",
+        nameEn: "Set Citation Style to Chicago",
+        voiceCmd: "সাইটেশন স্টাইল শিকাগো করো",
+        voiceCmdEn: "Set citation style to Chicago",
+        chatPrompt: "Change document citation and bibliography style to Chicago",
+        aiAction: "reference_set_citation_style (style='Chicago') দিয়ে ওয়ার্ডের বিল্ট-ইন শিকাগো স্টাইল প্রয়োগ করা হয়।",
+        category: "Citation Style"
+      },
+      {
+        name: "সাইটেশন স্টাইল - IEEE (Citation Style - IEEE)",
+        nameEn: "Set Citation Style to IEEE",
+        voiceCmd: "সাইটেশন স্টাইল IEEE করো",
+        voiceCmdEn: "Set citation style to IEEE",
+        chatPrompt: "Change document citation and bibliography style to IEEE numbering format",
+        aiAction: "reference_set_citation_style (style='IEEE') দিয়ে ইঞ্জিনিয়ারিং ও টেকনিক্যাল ডকুমেন্টের জন্য স্ট্যান্ডার্ড ব্র্যাকেটেড [1] ফরম্যাট কার্যকর করা হয়।",
+        category: "Citation Style"
+      },
+      {
+        name: "সাইটেশন স্টাইল - Harvard (Citation Style - Harvard)",
+        nameEn: "Set Citation Style to Harvard (if installed)",
+        voiceCmd: "সাইটেশন স্টাইল হার্ভার্ড করো",
+        voiceCmdEn: "Set citation style to Harvard Anglia",
+        chatPrompt: "Set citation style to Harvard (Harvard - Anglia) if installed in Word style directory",
+        aiAction: "reference_set_citation_style (style='Harvard - Anglia') দিয়ে হার্ভার্ড স্টাইল ইনস্টল থাকা সাপেক্ষে যাচাই করে প্রয়োগ করা হয়।",
+        category: "Citation Style"
+      },
+      {
+        name: "গ্রন্থপঞ্জি সন্নিবেশ (Insert Bibliography)",
+        nameEn: "Insert Standard Bibliography Section",
+        voiceCmd: "একটি গ্রন্থপঞ্জি যুক্ত করো",
+        voiceCmdEn: "Insert bibliography field",
+        chatPrompt: "Insert Bibliography heading and automated wdFieldBibliography at the end of the document",
+        aiAction: "reference_insert_bibliography (bib_type='bibliography') দিয়ে 'Bibliography' শিরোনামসহ সকল সাইটেশনের স্বয়ংক্রিয় বর্ণানুক্রমিক তালিকা ইনসার্ট করা হয়।",
+        category: "Bibliography"
+      },
+      {
+        name: "কাজের উদ্ধৃতি তালিকা (Insert Works Cited)",
+        nameEn: "Insert Works Cited Section",
+        voiceCmd: "Works Cited তালিকা তৈরি করো",
+        voiceCmdEn: "Insert Works Cited section",
+        chatPrompt: "Insert Works Cited heading and automated bibliography field",
+        aiAction: "reference_insert_bibliography (bib_type='works_cited') দিয়ে MLA রীতি অনুযায়ী 'Works Cited' সেকশন তৈরি করা হয়।",
+        category: "Bibliography"
+      },
+      {
+        name: "তথ্যসূত্র তালিকা (Insert References List)",
+        nameEn: "Insert References List Section",
+        voiceCmd: "তথ্যসূত্র তালিকা যোগ করো",
+        voiceCmdEn: "Insert references list section",
+        chatPrompt: "Insert References heading and automated bibliography field",
+        aiAction: "reference_insert_bibliography (bib_type='references_list') দিয়ে APA/IEEE পেপারের উপযোগী 'References' সেকশন সন্নিবেশ করা হয়।",
+        category: "Bibliography"
+      },
+      {
+        name: "সাইটেশন স্ট্যাটাস ও পরিদর্শন (Get Citations Status)",
+        nameEn: "Check Citations, Sources Count & Active Style",
+        voiceCmd: "সাইটেশনের অবস্থা চেক করো",
+        voiceCmdEn: "Check citations and sources status",
+        chatPrompt: "Inspect active citation style, total registered sources, and citation field counts in the document",
+        aiAction: "reference_get_citations_status দিয়ে ডকুমেন্টের বর্তমান সক্রিয় স্টাইল, মোট উৎসের সংখ্যা ও ফিল্ড মেট্রিক রিটার্ন করা হয়।",
+        category: "Status & Inspection"
+      },
+      {
+        name: "সাইটেশন সেন্ট্রাল রাউটার (Manage Citations & Bibliography)",
+        nameEn: "Unified Citations & Bibliography Management Router",
+        voiceCmd: "সাইটেশন পরিচালনা করো",
+        voiceCmdEn: "Manage reference citations",
+        chatPrompt: "Manage citations and bibliography via unified router with sub_action: insert_citation, add_source, manage_sources, set_style, insert_bibliography, status",
+        aiAction: "manage_reference_citations কেন্দ্রীয় রাউটারের সাহায্যে সাইটেশন ও গ্রন্থপঞ্জি সংক্রান্ত যেকোনো নির্দেশ নির্ভুলভাবে পরিচালিত হয়।",
+        category: "Unified Management"
+      }
+    ]
   }
 ];
