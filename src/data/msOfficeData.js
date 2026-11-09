@@ -2942,5 +2942,123 @@ export const MS_WORD_STEPS = [
         category: "Unified Management"
       }
     ]
+  },
+  {
+    stepNumber: "Step 34",
+    menuName: "Insert Menu ➔ 3.8 Text",
+    title: "ইনসার্ট মেনু: টেক্সট বক্স, কুইক পার্টস ও টেক্সট এলিমেন্টস (3.8 Text)",
+    titleEn: "Insert Menu: Text Box, Quick Parts, WordArt, Drop Cap & Text Elements",
+    subtitle: "ডকুমেন্টে টেক্সট বক্স, কুইক পার্টস বিল্ডিং ব্লক, ডকুমেন্ট মেটাডাটা প্রোপার্টিজ, ডায়নামিক ফিল্ডস, স্টাইলিশ ওয়ার্ডআর্ট, ড্রপ ক্যাপ, ডিজিটাল স্বাক্ষর ব্লক, তারিখ-সময় ও এক্সটার্নাল ফাইল ইনসার্ট।",
+    badge: "Text Elements",
+    commands: [
+      {
+        name: "টেক্সট বক্স যোগ (Text Box)",
+        nameEn: "Insert Text Box",
+        voiceCmd: "ডকুমেন্টে একটি টেক্সট বক্স যোগ করো: 'বিশেষ বিজ্ঞপ্তি'",
+        voiceCmdEn: "Insert bordered text box with text 'Important Notice'",
+        chatPrompt: "Insert a text box with text 'Executive Summary' and preset 'bordered' at position left 100 top 120",
+        aiAction: "insert_textbox এর মাধ্যমে কাস্টম স্টাইল, বর্ডার ও ফিল কালারসহ ফ্লোটিং টেক্সট বক্স ইনসার্ট করে।",
+        category: "Text Box"
+      },
+      {
+        name: "কোট টেক্সট বক্স (Quote Box)",
+        nameEn: "Quote Text Box Preset",
+        voiceCmd: "একটি কোট টেক্সট বক্স যোগ করো: 'উদ্ভাবনই নেতৃত্ব নির্ধারণ করে'",
+        voiceCmdEn: "Insert quote text box 'Innovation distinguishes between a leader and a follower'",
+        chatPrompt: "Insert text box with preset 'quote' and text 'Design is not just what it looks like'",
+        aiAction: "উদ্ধৃতি বা সাইড নোটের জন্য প্রি-স্টাইলড কোট টেক্সট বক্স যুক্ত করে।",
+        category: "Text Box"
+      },
+      {
+        name: "কুইক পার্টস যোগ (Quick Parts)",
+        nameEn: "Insert Quick Part",
+        voiceCmd: "ডকুমেন্টে ডিসক্লেইমার কুইক পার্ট যোগ করো",
+        voiceCmdEn: "Insert quick part disclaimer boilerplate",
+        chatPrompt: "Insert quick part with name 'disclaimer' at end of document",
+        aiAction: "insert_quick_part এর মাধ্যমে ডিসক্লেইমার, কনফিডেনশিয়ালিটি বা কোম্পানি হেডারের মতো পুনঃব্যবহারযোগ্য ব্লক যোগ করে।",
+        category: "Quick Parts"
+      },
+      {
+        name: "ডকুমেন্ট প্রোপার্টি (Document Property)",
+        nameEn: "Insert Document Property",
+        voiceCmd: "ডকুমেন্ট প্রোপার্টি হিসেবে author যোগ করো",
+        voiceCmdEn: "Insert document property field Author",
+        chatPrompt: "Insert document property 'Author' with prefix 'Prepared by: '",
+        aiAction: "insert_document_property কল করে ডকুমেন্টের মেটাডাটা প্রোপার্টি ফিল্ড যুক্ত করে যা স্বয়ংক্রিয়ভাবে সিঙ্ক হয়।",
+        category: "Document Property"
+      },
+      {
+        name: "ডায়নামিক ফিল্ড (Insert Field)",
+        nameEn: "Insert Dynamic Word Field",
+        voiceCmd: "ডকুমেন্টে মোট পৃষ্ঠাসংখ্যার ফিল্ড যোগ করো",
+        voiceCmdEn: "Insert dynamic field NumPages",
+        chatPrompt: "Insert field with field_name 'numpages'",
+        aiAction: "insert_field এর মাধ্যমে Date, Time, FileName, FileSize, NumPages ইত্যাদি ডায়নামিক ফিল্ড যুক্ত করে।",
+        category: "Field"
+      },
+      {
+        name: "স্টাইলিশ ওয়ার্ডআর্ট (WordArt)",
+        nameEn: "Insert WordArt",
+        voiceCmd: "স্টাইলিশ ওয়ার্ডআর্ট যোগ করো: 'Aegis Supervex'",
+        voiceCmdEn: "Insert stylish WordArt text 'Aegis Supervex' preset 1",
+        chatPrompt: "Insert wordart with text 'Annual Report 2026' and font size 36 bold",
+        aiAction: "insert_wordart এর মাধ্যমে আকর্ষণীয় থ্রিডি ও শ্যাডো স্টাইলসহ ওয়ার্ডআর্ট হেডলাইন তৈরি করে।",
+        category: "WordArt"
+      },
+      {
+        name: "ড্রপ ক্যাপ প্রয়োগ (Drop Cap)",
+        nameEn: "Apply Drop Cap",
+        voiceCmd: "প্রথম প্যারাগ্রাফে ৩ লাইনের ড্রপ ক্যাপ দাও",
+        voiceCmdEn: "Apply drop cap on paragraph 1 lines to drop 3",
+        chatPrompt: "Apply drop cap with position 'dropped' on paragraph 1 with 3 lines to drop",
+        aiAction: "apply_drop_cap এর মাধ্যমে অনুচ্ছেদের প্রথম অক্ষরকে বড় ও দৃষ্টিনন্দন ড্রপ ক্যাপ স্টাইলে রূপান্তর করে।",
+        category: "Drop Cap"
+      },
+      {
+        name: "স্বাক্ষর লাইন ব্লক (Signature Line)",
+        nameEn: "Insert Signature Line",
+        voiceCmd: "স্বাক্ষর লাইন ব্লক যোগ করো: name: Zinnah Sir, title: Lead Architect",
+        voiceCmdEn: "Insert signature line for John Doe - Managing Director",
+        chatPrompt: "Insert signature line with signer_name 'Zinnah Sir' signer_title 'Chief Architect' organization 'Aegis AI Labs' with date",
+        aiAction: "insert_signature_line এর মাধ্যমে সাইনার নেম, পদবি, প্রতিষ্ঠান, ইমেইল ও তারিখসহ প্রফেশনাল স্বাক্ষর লাইন ব্লক তৈরি করে।",
+        category: "Signature Line"
+      },
+      {
+        name: "তারিখ ও সময় (Date & Time)",
+        nameEn: "Insert Date & Time",
+        voiceCmd: "ডকুমেন্টে আজকের তারিখ যোগ করো",
+        voiceCmdEn: "Insert current date and time with auto update",
+        chatPrompt: "Insert date and time with format 'date_long' and update_automatically false",
+        aiAction: "insert_date_time এর মাধ্যমে লং, শর্ট, আইএসও বা বাংলা ফরম্যাটে বর্তমান তারিখ ও সময় ইনসার্ট করে।",
+        category: "Date & Time"
+      },
+      {
+        name: "এক্সটার্নাল ফাইল থেকে টেক্সট (Text from File)",
+        nameEn: "Insert Text from File",
+        voiceCmd: "অন্য ফাইল থেকে টেক্সট ইনসার্ট করো: 'C:\\docs\\chapter1.docx'",
+        voiceCmdEn: "Insert text from external file 'C:\\docs\\notes.txt'",
+        chatPrompt: "Insert text from file with file_path 'C:\\docs\\chapter1.docx'",
+        aiAction: "insert_text_from_file দিয়ে অন্য যেকোনো .docx, .doc, .txt বা .rtf ফাইলের লেখা ডকুমেন্টে ইমপোর্ট করে।",
+        category: "Text from File"
+      },
+      {
+        name: "অবজেক্ট এম্বেড (Insert Object)",
+        nameEn: "Insert OLE Object",
+        voiceCmd: "ডকুমেন্টে ফাইল অবজেক্ট হিসেবে এম্বেড করো: 'C:\\data\\report.pdf'",
+        voiceCmdEn: "Embed file as OLE object with display as icon",
+        chatPrompt: "Insert object from file_path 'C:\\data\\report.pdf' display_as_icon true",
+        aiAction: "insert_object কল করে বাহ্যিক ফাইল বা অ্যাপ্লিকেশন ওএলই অবজেক্টকে আইকন অথবা সরাসরি ডকুমেন্টে এম্বেড করে।",
+        category: "Object"
+      },
+      {
+        name: "সেন্ট্রাল টেক্সট এলিমেন্টস রাউটার (Central Router)",
+        nameEn: "Manage Text Elements",
+        voiceCmd: "টেক্সট এলিমেন্টস অপশন থেকে কুইক পার্ট যোগ করো",
+        voiceCmdEn: "Manage insert text elements action 'textbox' text 'Important Notice'",
+        chatPrompt: "Manage insert text elements with action 'quick_part' name 'closing'",
+        aiAction: "manage_insert_text_elements কেন্দ্রীয় রাউটার দিয়ে ডায়নামিকালি সমস্ত টেক্সট বক্স, কুইক পার্টস, ড্রপ ক্যাপ ও ওয়ার্ডআর্ট অপারেশন সম্পাদন করে।",
+        category: "Unified Management"
+      }
+    ]
   }
 ];
