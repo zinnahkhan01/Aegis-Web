@@ -3760,5 +3760,69 @@ export const MS_WORD_STEPS = [
         category: "Unified Management"
       }
     ]
+  },
+  {
+    stepNumber: "Step 42",
+    menuName: "6. LAYOUT MENU ➔ 6.2 Page Setup: Orientation",
+    title: "লেআউট মেনু: পেজ সেটআপ - ওরিয়েন্টেশন (পোর্ট্রেট ও ল্যান্ডস্কেপ)",
+    titleEn: "Layout Menu: Page Setup - Orientation (Portrait & Landscape)",
+    subtitle: "ডকুমেন্টের পৃষ্ঠা ও সেকশনের প্রদর্শনের দিক (Orientation) পরিবর্তন—স্ট্যান্ডার্ড খাড়া/লম্বালম্বি পোর্ট্রেট (Portrait, wdOrientPortrait = 0) মোড, অনুভূমিক চওড়া/আড়াআড়ি ল্যান্ডস্কেপ (Landscape, wdOrientLandscape = 1) মোড, ডায়নামিক ওরিয়েন্টেশন টগল, সেকশনভিত্তিক ওরিয়েন্টেশন এবং সেন্ট্রাল পেজ সেটআপ ওরিয়েন্টেশন রাউটার।",
+    badge: "Page Orientation",
+    commands: [
+      {
+        name: "পোর্ট্রেট ওরিয়েন্টেশন (Portrait Mode)",
+        nameEn: "Portrait Page Orientation (Vertical)",
+        voiceCmd: "পেজ পোর্ট্রেট করো",
+        voiceCmdEn: "Set page orientation to portrait",
+        chatPrompt: "Set page orientation to 'portrait' for whole document",
+        aiAction: "layout_set_orientation দিয়ে ডকুমেন্টের পৃষ্ঠাকে স্ট্যান্ডার্ড উল্লম্ব বা লম্বালম্বি (Portrait, wdOrientPortrait = 0, উচ্চতা > প্রস্থ) মোডে সেট করা হয়।",
+        category: "Orientation"
+      },
+      {
+        name: "ল্যান্ডস্কেপ ওরিয়েন্টেশন (Landscape Mode)",
+        nameEn: "Landscape Page Orientation (Horizontal)",
+        voiceCmd: "পেজ ল্যান্ডস্কেপ করো",
+        voiceCmdEn: "Set page orientation to landscape",
+        chatPrompt: "Set page orientation to 'landscape' for whole document",
+        aiAction: "layout_set_orientation দিয়ে বড় টেবিল, চার্ট বা বিস্তৃত প্রতিবেদনের জন্য পৃষ্ঠাকে অনুভূমিক বা আড়াআড়ি (Landscape, wdOrientLandscape = 1, প্রস্থ > উচ্চতা) মোডে রূপান্তর করা হয়।",
+        category: "Orientation"
+      },
+      {
+        name: "ওরিয়েন্টেশন টগল (Toggle Orientation)",
+        nameEn: "Toggle Page Orientation (Portrait ⮂ Landscape)",
+        voiceCmd: "পেজ ওরিয়েন্টেশন টগল করো",
+        voiceCmdEn: "Toggle page orientation",
+        chatPrompt: "Toggle page orientation between portrait and landscape",
+        aiAction: "layout_set_orientation দিয়ে বর্তমান ডকুমেন্টের ওরিয়েন্টেশন স্বয়ংক্রিয়ভাবে বিপরীত মোডে (পোর্ট্রেট থাকলে ল্যান্ডস্কেপ, ল্যান্ডস্কেপ থাকলে পোর্ট্রেট) পরিবর্তন করা হয়।",
+        category: "Orientation"
+      },
+      {
+        name: "সেকশন ওরিয়েন্টেশন (Section-Scoped Orientation)",
+        nameEn: "Per-Section Orientation & Section Break",
+        voiceCmd: "সেকশন ২ ল্যান্ডস্কেপ করো",
+        voiceCmdEn: "Set section 2 orientation to landscape",
+        chatPrompt: "Set page orientation to 'landscape' apply_to 'this_section' section_index 2",
+        aiAction: "layout_set_orientation দিয়ে ডকুমেন্টের নির্দিষ্ট সেকশনে অথবা পরবর্তী পৃষ্ঠা থেকে (this_point_forward) সেকশন ব্রেক তৈরি করে ভিন্ন ওরিয়েন্টেশন প্রয়োগ করা হয়।",
+        category: "Section Scope"
+      },
+      {
+        name: "ওরিয়েন্টেশন কোয়েরি ও স্ট্যাটাস (Get Orientation Status)",
+        nameEn: "Query Current Orientation & Page Dimensions",
+        voiceCmd: "বর্তমান ওরিয়েন্টেশন কত চেক করো",
+        voiceCmdEn: "Check current document orientation and page dimensions",
+        chatPrompt: "Get current document page orientation, dimensions, and sections count",
+        aiAction: "layout_get_orientation দিয়ে সক্রিয় ওয়ার্ড ডকুমেন্টের প্রতিটি সেকশনের বর্তমান ওরিয়েন্টেশন, পৃষ্ঠার উচ্চতা-প্রস্থ (ইঞ্চি ও সেন্টিমিটারে) এবং মোট সেকশন সংখ্যা বিস্তারিতভাবে জানা যায়।",
+        category: "Orientation Status"
+      },
+      {
+        name: "ওরিয়েন্টেশন সেন্ট্রাল রাউটার (Manage Page Setup Orientation)",
+        nameEn: "Unified Page Setup Orientation Router",
+        voiceCmd: "ওরিয়েন্টেশন রিসেট করো",
+        voiceCmdEn: "Reset page orientation to default portrait",
+        chatPrompt: "Manage page setup orientation with sub_action 'reset'",
+        aiAction: "manage_page_setup_orientation কেন্দ্রীয় রাউটারের মাধ্যমে পোর্ট্রেট, ল্যান্ডস্কেপ, টগল, বর্তমান তথ্য নিরীক্ষা বা সরাসরি ডিফল্ট পোর্ট্রেটে রিসেট পরিচালনা করা হয়।",
+        category: "Unified Management"
+      }
+    ]
   }
 ];
